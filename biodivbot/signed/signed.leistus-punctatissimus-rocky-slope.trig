@@ -1,0 +1,60 @@
+@prefix this: <https://w3id.org/np/temp/RAlmrY_Uqvj1XFK82GLGFMRmAgvNjk4WnkgSua0EDxGg0> .
+@prefix sub: <https://w3id.org/np/temp/RAlmrY_Uqvj1XFK82GLGFMRmAgvNjk4WnkgSua0EDxGg0/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  sub:association a <https://w3id.org/biolink/vocab/OrganismTaxonToEnvironmentAssociation>;
+    <https://w3id.org/biolink/vocab/object> <http://purl.obolibrary.org/obo/ENVO_01000319>;
+    <https://w3id.org/biolink/vocab/predicate> <http://purl.obolibrary.org/obo/RO_0002303>;
+    <https://w3id.org/biolink/vocab/subject> sub:taxon .
+  
+  sub:taxon <https://w3id.org/kpxl/biodiv/terms/hasTaxonName> <https://www.checklistbank.org/dataset/9880/taxon/3T39W> .
+}
+
+sub:provenance {
+  sub:assertion dct:source <https://doi.org/10.3897/zookeys.740.23495>;
+    <http://rs.tdwg.org/dwc/terms/basisOfRecord> <http://rs.tdwg.org/dwc/terms/Occurrence>;
+    prov:wasAttributedTo orcid:0000-0002-4587-3476, orcid:0000-0002-6753-4897 .
+}
+
+sub:pubinfo {
+  <http://purl.obolibrary.org/obo/ENVO_01000319> nt:hasLabelFromApi "rocky slope - A rocky slope is a slope which has a surface primarily composed of rock." .
+  
+  <http://purl.obolibrary.org/obo/RO_0002303> nt:hasLabelFromApi "has habitat - x 'has habitat' y if and only if: x is an organism, y is a habitat, and y can sustain and allow the growth of a population of xs." .
+  
+  orcid:0000-0002-4587-3476 foaf:name "Roberto Pizzolotto" .
+  
+  orcid:0000-0002-6753-4897 foaf:name "Pietro Brandmayr" .
+  
+  this: a <https://w3id.org/kpxl/biodiv/terms/BiodivNanopub>;
+    dct:created "2026-02-06T16:06:26.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAcrl-l7bWTBLTblgq2jjQwJvlADseCwSIX5SKdCyuHS8/biodiv-bot>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    npx:hasNanopubType <https://w3id.org/kpxl/biodiv/terms/BiodivNanopub>;
+    npx:introduces sub:association;
+    npx:supersedes <https://w3id.org/np/temp/RAwKTkxguG4VuJF_FS58jtT9yFQgTdpCY8oWkDXVqNDg0>;
+    rdfs:label "Leistus (Pogonophorus) punctatissimus Breit, 1914 (species) - has habitat - rocky slope" .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA02++z5u4lp9mezK+bcL3VSL7lM/6frtnds7+95fIUiivEHv4BgoPVN66BleoQQzBntB1x1ohMJNnbC0G+R839IUKB1vNlGgdDwMcHdbUTzpeGncHyhmTDCc4bZt1Yg24uub1SX+T2+JVQLmIkjkExAC0x6nvK1vEB9TZKqf5SdnUN2kG9cwK0nRQDhAX47cZR8FP8k4WfjZbyvXZVJpfY1zfS+dwHJbMdNjzQT818iVbGGtTXQQzk+HCU4ThiUc13XHhubJzl24T+ufYcjonPvRZzMsTMwmq0oWzvrLsiRXM02AZRwYU9rBf/8FRUdfliomT1+dEgScbSTG1wXnlfwIDAQAB";
+    npx:hasSignature "mR5quWjlQYj0IQ/OFu2hIF96sWKRZk9/86FDHyiYUr3jxQCZ2BATQkbb7R/WrspPYjikeKt84dUgiylP/ENI6oX7mYJl42qJEAOoYIbm0scDuz0N96GJYYx5r3Ei1WOtOtXGpIQiEtTstKYcSjPq5ZdlpC+e6quO6HEJBr2GNzRB2DQQasrA7W78LwdXT7M2LPqj60tdzup7jj++qFjOBTpjK2gmOF4OT8KaYxmmG3sEZFY47ebGRZ/Ts2aFMAswbqa5/oR7DTUriFqKGDuEGD93Zz/RwoPoaXdIFW3K50O1u8I/onbDPYjXhp+m+SdHQkYwehrdOcqjjFSNDGdcDw==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy <https://w3id.org/np/RAcrl-l7bWTBLTblgq2jjQwJvlADseCwSIX5SKdCyuHS8/biodiv-bot> .
+  
+  <https://www.checklistbank.org/dataset/9880/taxon/3T39W> nt:hasLabelFromApi "Leistus (Pogonophorus) punctatissimus Breit, 1914 (species)" .
+}
