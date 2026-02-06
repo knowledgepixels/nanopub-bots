@@ -23,13 +23,14 @@
 }
 
 :assertion {
-  <http://id.crossref.org/issn/2052-4463> dct:title "Scientific Data" .
-  
   <https://doi.org/10.1038/sdata.2016.18> a fabio:Article;
     dct:abstract "There is an urgent need to improve the infrastructure supporting the reuse of scholarly data. A diverse set of stakeholders—representing academia, industry, funding agencies, and scholarly publishers—have come together to design and jointly endorse a concise and measureable set of principles that we refer to as the FAIR Data Principles. The intent is that these may act as a guideline for those wishing to enhance the reusability of their data holdings. Distinct from peer initiatives that focus on the human scholar, the FAIR Principles put specific emphasis on enhancing the ability of machines to automatically find and use the data, in addition to supporting its reuse by individuals. This Comment is the first formal publication of the FAIR Principles, and includes the rationale behind them, and some exemplar implementations in the community.";
     dct:date "2016-03-15";
     dct:title "The FAIR Guiding Principles for scientific data management and stewardship" ;
-    bibo:authorList :author-list .
+    bibo:authorList :author-list;
+    dct:isPartOf <http://id.crossref.org/issn/2052-4463> .
+
+  <http://id.crossref.org/issn/2052-4463> dct:title "Scientific Data" .
 
   :author-list rdf:_1 orcid:0000-0001-6960-357X .
   :author-list rdf:_2 orcid:0000-0003-4727-9435 .
@@ -147,13 +148,12 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-06T12:00:00.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-02-06T11:35:49.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
-    dct:isPartOf <https://doi.org/10.1038/sdata.2016.18>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1038/sdata.2016.18>;
-    npx:supersedes <https://w3id.org/np/temp/RA-u2BCjc2LsoBPPu-lIaiBX0axI576XkVndSROo__VsY>;
+    npx:supersedes <https://w3id.org/np/temp/RAiiTpTb9ja-ucKEQSt_G317KWLWItNa-yTqpa0dZIgYw>;
     rdfs:label "The FAIR Guiding Principles for scientific data management and stewardship" .
 
   orcid:0000-0001-6960-357X foaf:name "Mark D. Wilkinson" .

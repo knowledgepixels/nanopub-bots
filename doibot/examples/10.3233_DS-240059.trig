@@ -23,13 +23,14 @@
 }
 
 :assertion {
-  <http://id.crossref.org/issn/2451-8492> dct:title "Data Science" .
-  
   <https://doi.org/10.3233/DS-240059> a fabio:ResourcePaper;
     dct:abstract "Measuring data drift is essential in machine learning applications where model scoring (evaluation) is done on data samples that differ from those used in training. The Kullback-Leibler divergence is a common measure of shifted probability distributions, for which discretized versions are invented to deal with binned or categorical data. We present the Unstable Population Indicator, a robust, flexible and numerically stable, discretized implementation of Jeffrey's divergence, along with an implementation in a Python package that can deal with continuous, discrete, ordinal and nominal data in a variety of popular data types. We show the numerical and statistical properties in controlled experiments. It is not advised to employ a common cut-off to distinguish stable from unstable populations, but rather to let that cut-off depend on the use case.";
     dct:date "2024-06-26";
     dct:title "Measuring Data Drift with the Unstable Population Indicator" ;
-    bibo:authorList :author-list .
+    bibo:authorList :author-list;
+    dct:isPartOf <http://id.crossref.org/issn/2451-8492> .
+
+  <http://id.crossref.org/issn/2451-8492> dct:title "Data Science" .
 
   :author-list rdf:_1 orcid:0000-0003-2581-8370 .
   :author-list rdf:_2 orcid:0009-0003-5030-0108 .
@@ -60,7 +61,7 @@
 :pubinfo {
   : dct:created "2026-02-06T10:09:35.651+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
-    dct:isPartOf <https://doi.org/10.3233/DS-240059>;
+    npx:introduces <https://doi.org/10.3233/DS-240059>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     rdfs:label "Measuring Data Drift with the Unstable Population Indicator" .

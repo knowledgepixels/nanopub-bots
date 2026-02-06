@@ -23,13 +23,14 @@
 }
 
 :assertion {
-  <http://id.crossref.org/issn/2376-5992> dct:title "PeerJ Computer Science" .
-  
   <https://doi.org/10.7717/peerj-cs.387> a fabio:Article;
     dct:abstract "While the publication of Linked Data has become increasingly common, the process tends to be a relatively complicated and heavy-weight one. Linked Data is typically published by centralized entities in the form of larger dataset releases, which has the downside that there is a central bottleneck in the form of the organization or individual responsible for the releases. Moreover, certain kinds of data entries, in particular those with subjective or original content, currently do not fit into any existing dataset and are therefore more difficult to publish. To address these problems, we present here an approach to use nanopublications and a decentralized network of services to allow users to directly publish small Linked Data statements through a simple and user-friendly interface, called Nanobench, powered by semantic templates that are themselves published as nanopublications. The published nanopublications are cryptographically verifiable and can be queried through a redundant and decentralized network of services, based on the grlc API generator and a new quad extension of Triple Pattern Fragments. We show here that these two kinds of services are complementary and together allow us to query nanopublications in a reliable and efficient manner. We also show that Nanobench makes it indeed very easy for users to publish Linked Data statements, even for those who have no prior experience in Linked Data publishing.";
     dct:date "2021-03-08";
     dct:title "Semantic micro-contributions with decentralized nanopublication services" ;
-    bibo:authorList :author-list .
+    bibo:authorList :author-list;
+    dct:isPartOf <http://id.crossref.org/issn/2376-5992> .
+
+  <http://id.crossref.org/issn/2376-5992> dct:title "PeerJ Computer Science" .
 
   :author-list rdf:_1 orcid:0000-0002-1267-0234 .
   :author-list rdf:_2 orcid:0000-0001-5118-256X .
@@ -77,13 +78,12 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-06T12:00:00.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-02-06T11:35:49.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
-    dct:isPartOf <https://doi.org/10.7717/peerj-cs.387>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.7717/peerj-cs.387>;
-    npx:supersedes <https://w3id.org/np/temp/RAhwrYOvSR6QUNGlkh16tPu_cxUnSiG-9rqtVzyzne7Ok>;
+    npx:supersedes <https://w3id.org/np/temp/RA_y-jmfOZBH5wDdhEBYo_7RNgKDfG1dSwYMS6fz4keis>;
     rdfs:label "Semantic micro-contributions with decentralized nanopublication services" .
 
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .

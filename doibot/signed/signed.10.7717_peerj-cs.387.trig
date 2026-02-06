@@ -1,5 +1,5 @@
-@prefix this: <https://w3id.org/np/temp/RA_y-jmfOZBH5wDdhEBYo_7RNgKDfG1dSwYMS6fz4keis> .
-@prefix sub: <https://w3id.org/np/temp/RA_y-jmfOZBH5wDdhEBYo_7RNgKDfG1dSwYMS6fz4keis/> .
+@prefix this: <https://w3id.org/np/temp/RAT8m1PSgAvEojFRNGXxeSrDRvaYRmDI6eKFN149OkkyA> .
+@prefix sub: <https://w3id.org/np/temp/RAT8m1PSgAvEojFRNGXxeSrDRvaYRmDI6eKFN149OkkyA/> .
 @prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
@@ -27,6 +27,7 @@ sub:assertion {
   <https://doi.org/10.7717/peerj-cs.387> a fabio:Article;
     dct:abstract "While the publication of Linked Data has become increasingly common, the process tends to be a relatively complicated and heavy-weight one. Linked Data is typically published by centralized entities in the form of larger dataset releases, which has the downside that there is a central bottleneck in the form of the organization or individual responsible for the releases. Moreover, certain kinds of data entries, in particular those with subjective or original content, currently do not fit into any existing dataset and are therefore more difficult to publish. To address these problems, we present here an approach to use nanopublications and a decentralized network of services to allow users to directly publish small Linked Data statements through a simple and user-friendly interface, called Nanobench, powered by semantic templates that are themselves published as nanopublications. The published nanopublications are cryptographically verifiable and can be queried through a redundant and decentralized network of services, based on the grlc API generator and a new quad extension of Triple Pattern Fragments. We show here that these two kinds of services are complementary and together allow us to query nanopublications in a reliable and efficient manner. We also show that Nanobench makes it indeed very easy for users to publish Linked Data statements, even for those who have no prior experience in Linked Data publishing.";
     dct:date "2021-03-08";
+    dct:isPartOf <http://id.crossref.org/issn/2376-5992>;
     dct:title "Semantic micro-contributions with decentralized nanopublication services";
     bibo:authorList sub:author-list .
   
@@ -85,17 +86,16 @@ sub:pubinfo {
   
   orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
   
-  this: dct:created "2026-02-06T12:00:00.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-02-06T11:35:49.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
-    dct:isPartOf <https://doi.org/10.7717/peerj-cs.387>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.7717/peerj-cs.387>;
-    npx:supersedes <https://w3id.org/np/temp/RAhwrYOvSR6QUNGlkh16tPu_cxUnSiG-9rqtVzyzne7Ok>;
+    npx:supersedes <https://w3id.org/np/temp/RA_y-jmfOZBH5wDdhEBYo_7RNgKDfG1dSwYMS6fz4keis>;
     rdfs:label "Semantic micro-contributions with decentralized nanopublication services" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "Q/0MUci+KD2D14TV9rVpwEMZN8Pxv9t5WcLHdj3TU+FgcTs5C3pMWcKuXj5TYKhOewUcA1qkONAJ2oVFojfMPgIF+JSCkalS+PlzTQe/mTlnoIF85At7C2okHlJPRHUZr/AADncSFHILzh3Y47NN/1HkzogOxiNU6TAOFpMAiyVa9pwE6eDKnLTmIUWHZzPL7A7gimyWlsWVAno3BdqWjtm6CBfgylJzJdM8kNlWJZu5v3kDoCvXhXu4yiovCFOAMgV3NLC3VRztGWyA4uU2coU8TCw3j8B3uK8hhvG2Yh1JnqpT7Z9SbHfJh64exi6DBu8U2BPe5uI4a58ThVZfWQ==";
+    npx:hasSignature "nCBBOiCUZZ8N+EP3LTM4/PP5VWGqM63ZlJgV5jdW9YUdROi/eIjcURji6qGRdqeF6ZP066Lgs+UgR2nWI2bTSi3ijzAE3hirI1y8fCOrnMPhUvOVbzQ6CZsbKe3j3yOsE1Rd6htjisNomFdBYyFlpwVRM0zWjxJRJI+fHkgvFBZ6NuUyrn8VRTPLK4sh/RtP0q2ka/xOenJdc7V/J5XgWX036H5qeGffhhoNcGH+RUTMyemdtOnII9s485AGjjyjOrZUyBcJ08FBcRhqs2ntqpqihD1Cs6YcDE7daWVc+rSxJ/jgcYMZqzM9E7QN3MZAISFMhRiJAfJ0RQM26P8U4A==";
     npx:hasSignatureTarget this: .
 }

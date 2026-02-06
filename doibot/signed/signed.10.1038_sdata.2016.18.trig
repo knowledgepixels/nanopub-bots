@@ -1,5 +1,5 @@
-@prefix this: <https://w3id.org/np/temp/RAiiTpTb9ja-ucKEQSt_G317KWLWItNa-yTqpa0dZIgYw> .
-@prefix sub: <https://w3id.org/np/temp/RAiiTpTb9ja-ucKEQSt_G317KWLWItNa-yTqpa0dZIgYw/> .
+@prefix this: <https://w3id.org/np/temp/RAxZN8ISdmVlyzmv3H-7bH7SMEM0EW4ZoYD22pkNVg1Nc> .
+@prefix sub: <https://w3id.org/np/temp/RAxZN8ISdmVlyzmv3H-7bH7SMEM0EW4ZoYD22pkNVg1Nc/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -25,6 +25,7 @@ sub:assertion {
   <https://doi.org/10.1038/sdata.2016.18> a fabio:Article;
     dct:abstract "There is an urgent need to improve the infrastructure supporting the reuse of scholarly data. A diverse set of stakeholders—representing academia, industry, funding agencies, and scholarly publishers—have come together to design and jointly endorse a concise and measureable set of principles that we refer to as the FAIR Data Principles. The intent is that these may act as a guideline for those wishing to enhance the reusability of their data holdings. Distinct from peer initiatives that focus on the human scholar, the FAIR Principles put specific emphasis on enhancing the ability of machines to automatically find and use the data, in addition to supporting its reuse by individuals. This Comment is the first formal publication of the FAIR Principles, and includes the rationale behind them, and some exemplar implementations in the community.";
     dct:date "2016-03-15";
+    dct:isPartOf <http://id.crossref.org/issn/2052-4463>;
     dct:title "The FAIR Guiding Principles for scientific data management and stewardship";
     bibo:authorList sub:author-list .
   
@@ -298,17 +299,16 @@ sub:pubinfo {
   
   orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
   
-  this: dct:created "2026-02-06T12:00:00.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-02-06T11:35:49.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
-    dct:isPartOf <https://doi.org/10.1038/sdata.2016.18>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1038/sdata.2016.18>;
-    npx:supersedes <https://w3id.org/np/temp/RA-u2BCjc2LsoBPPu-lIaiBX0axI576XkVndSROo__VsY>;
+    npx:supersedes <https://w3id.org/np/temp/RAiiTpTb9ja-ucKEQSt_G317KWLWItNa-yTqpa0dZIgYw>;
     rdfs:label "The FAIR Guiding Principles for scientific data management and stewardship" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "do2ZtUgzKZaalsWseaUP4vpa/HDEfYJPfd48B+HUmUwf/AkBLAnwsA4DgefwApAXOQAMGqvE4lkAoMkud7yZF57szSn0Dz7KqTVnBjcfK3xkAWMT73zrYUcDrAuCKFQzWIfril0GrZkGmCG38yPRqUiAmuSsBFfdKg+G0S5aR+kdTpos1UvQlCfybfGBI0CwanlHRU8nfIyu5GgjcnVCzUIdSxn4U3otSURBdcmxp5KrNalqYviXa0fSjXSLL/nTB21ESVLGUnf6e0C/eBz+ZV4bmhjMzO1MdjjzmCmbyUYYYOVZ/m25TEHAwapLFjboEUZ3mW2YsXP4lmcEw5RWcQ==";
+    npx:hasSignature "UKPIm9uxZRy5vZCtUqFS4mSPcICY5vJVp/w3WXxXmUTgSbp+pfYI7iCMkg6VXr+NetKCm5y/rACOHapSGY26PhYTFeD5m9rwX1uiMYZjddXq3UPT4ePJlOHYyhJR7G6KmyKvUpz7BrOOHSPX4W6V8JtO8wi8SSQTQTqnbai0lJM3mY3aBlgqekRtZLkhzBFFSYSQx2V5Rvj4Xo7+xIxHSLV9sbbDElUjZ3i6YBIsfcrJa66GrwkBiuIYCovPYjWbOhjC7wScXc4+ONLaW5n9Du93LSZZYArhbBYaqVR97hO8uuU8mNNqi78LcEasSsDOKZCNtokRbXymnQq8l/E0Cg==";
     npx:hasSignatureTarget this: .
 }
