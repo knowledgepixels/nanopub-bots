@@ -1,0 +1,203 @@
+@prefix : <https://w3id.org/np/temp> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix ror: <https://ror.org/> .
+@prefix schema: <http://schema.org/> .
+
+:Head {
+  : a np:Nanopublication;
+    np:hasAssertion :assertion;
+    np:hasProvenance :provenance;
+    np:hasPublicationInfo :pubinfo .
+}
+
+:assertion {
+  <http://id.crossref.org/issn/2052-4463> dct:title "Scientific Data" .
+  
+  <https://doi.org/10.1038/sdata.2016.18> a fabio:Article;
+    dct:abstract "There is an urgent need to improve the infrastructure supporting the reuse of scholarly data. A diverse set of stakeholders—representing academia, industry, funding agencies, and scholarly publishers—have come together to design and jointly endorse a concise and measureable set of principles that we refer to as the FAIR Data Principles. The intent is that these may act as a guideline for those wishing to enhance the reusability of their data holdings. Distinct from peer initiatives that focus on the human scholar, the FAIR Principles put specific emphasis on enhancing the ability of machines to automatically find and use the data, in addition to supporting its reuse by individuals. This Comment is the first formal publication of the FAIR Principles, and includes the rationale behind them, and some exemplar implementations in the community.";
+    dct:date "2016-03-15";
+    dct:title "The FAIR Guiding Principles for scientific data management and stewardship" ;
+    bibo:authorList :author-list .
+
+  :author-list rdf:_1 orcid:0000-0001-6960-357X .
+  :author-list rdf:_2 orcid:0000-0003-4727-9435 .
+  :author-list rdf:_3 orcid:0000-0002-0209-4480 .
+  :author-list rdf:_4 orcid:0000-0003-0179-7384 .
+  :author-list rdf:_5 orcid:0000-0002-8042-4131 .
+  :author-list rdf:_6 orcid:0000-0003-2829-6715 .
+  :author-list rdf:_7 orcid:0000-0003-4155-5910 .
+  :author-list rdf:_8 orcid:0000-0003-0327-638X .
+  :author-list rdf:_9 orcid:0000-0002-1164-1351 .
+  :author-list rdf:_10 orcid:0000-0002-7618-7292 .
+  :author-list rdf:_11 :jildau-bouwman .
+  :author-list rdf:_12 orcid:0000-0001-8686-0017 .
+  :author-list rdf:_13 orcid:0000-0003-4060-7360 .
+  :author-list rdf:_14 orcid:0000-0003-1304-1939 .
+  :author-list rdf:_15 orcid:0000-0001-5654-2392 .
+  :author-list rdf:_16 orcid:0000-0001-8599-7345 .
+  :author-list rdf:_17 orcid:0000-0001-6444-1436 .
+  :author-list rdf:_18 orcid:0000-0002-5301-3142 .
+  :author-list rdf:_19 orcid:0000-0002-4368-8058 .
+  :author-list rdf:_20 orcid:0000-0003-3499-8262 .
+  :author-list rdf:_21 orcid:0000-0002-5711-4872 .
+  :author-list rdf:_22 orcid:0000-0003-0183-6910 .
+  :author-list rdf:_23 orcid:0000-0003-1219-2137 .
+  :author-list rdf:_24 orcid:0000-0001-5212-7052 .
+  :author-list rdf:_25 orcid:0000-0001-8641-4930 .
+  :author-list rdf:_26 orcid:0000-0003-4450-3112 .
+  :author-list rdf:_27 orcid:0000-0001-6825-9439 .
+  :author-list rdf:_28 orcid:0000-0002-1267-0234 .
+  :author-list rdf:_29 :ruben-kok .
+  :author-list rdf:_30 orcid:0000-0002-7352-1400 .
+  :author-list rdf:_31 orcid:0000-0003-2401-4223 .
+  :author-list rdf:_32 orcid:0000-0002-8406-3871 .
+  :author-list rdf:_33 :albert-mons .
+  :author-list rdf:_34 orcid:0000-0001-9610-5728 .
+  :author-list rdf:_35 orcid:0000-0003-3165-5344 .
+  :author-list rdf:_36 orcid:0000-0001-9853-5668 .
+  :author-list rdf:_37 orcid:0000-0002-8691-772X .
+  :author-list rdf:_38 :rene-van-schaik .
+  :author-list rdf:_39 orcid:0000-0001-5306-5690 .
+  :author-list rdf:_40 orcid:0000-0001-8888-635X .
+  :author-list rdf:_41 orcid:0000-0002-7516-6246 .
+  :author-list rdf:_42 orcid:0000-0003-1386-0731 .
+  :author-list rdf:_43 :george-strawn .
+  :author-list rdf:_44 orcid:0000-0002-0979-3401 .
+  :author-list rdf:_45 orcid:0000-0002-7633-1442 .
+  :author-list rdf:_46 :johan-van-der-lei .
+  :author-list rdf:_47 orcid:0000-0003-1377-9386 .
+  :author-list rdf:_48 orcid:0000-0002-4836-6568 .
+  :author-list rdf:_49 orcid:0000-0001-9773-4008 .
+  :author-list rdf:_50 :peter-wittenburg .
+  :author-list rdf:_51 orcid:0000-0002-1279-5133 .
+  :author-list rdf:_52 orcid:0000-0001-6935-9028 .
+  :author-list rdf:_53 orcid:0000-0003-3934-0072 .
+  
+  orcid:0000-0001-6960-357X foaf:name "Mark D. Wilkinson" .
+  orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
+  orcid:0000-0002-0209-4480 foaf:name "IJsbrand Jan Aalbersberg" .
+  orcid:0000-0003-0179-7384 foaf:name "Gabrielle Appleton" .
+  orcid:0000-0002-8042-4131 foaf:name "Myles Axton" .
+  orcid:0000-0003-2829-6715 foaf:name "Arie Baak" .
+  orcid:0000-0003-4155-5910 foaf:name "Niklas Blomberg" .
+  orcid:0000-0003-0327-638X foaf:name "Jan-Willem Boiten" .
+  orcid:0000-0002-1164-1351 foaf:name "Luiz Bonino da Silva Santos" .
+  orcid:0000-0002-7618-7292 foaf:name "Philip E. Bourne" .
+  :jildau-bouwman foaf:name "Jildau Bouwman" .
+  orcid:0000-0001-8686-0017 foaf:name "Anthony J. Brookes" .
+  orcid:0000-0003-4060-7360 foaf:name "Tim Clark" .
+  orcid:0000-0003-1304-1939 foaf:name "Mercè Crosas" .
+  orcid:0000-0001-5654-2392 foaf:name "Ingrid Dillo" .
+  orcid:0000-0001-8599-7345 foaf:name "Olivier Dumon" .
+  orcid:0000-0001-6444-1436 foaf:name "Scott Edmunds" .
+  orcid:0000-0002-5301-3142 foaf:name "Chris T. Evelo" .
+  orcid:0000-0002-4368-8058 foaf:name "Richard Finkers" .
+  orcid:0000-0003-3499-8262 foaf:name "Alejandra Gonzalez-Beltran" .
+  orcid:0000-0002-5711-4872 foaf:name "Alasdair J.G. Gray" .
+  orcid:0000-0003-0183-6910 foaf:name "Paul Groth" .
+  orcid:0000-0003-1219-2137 foaf:name "Carole Goble" .
+  orcid:0000-0001-5212-7052 foaf:name "Jeffrey S. Grethe" .
+  orcid:0000-0001-8641-4930 foaf:name "Jaap Heringa" .
+  orcid:0000-0003-4450-3112 foaf:name "Peter A.C 't Hoen" .
+  orcid:0000-0001-6825-9439 foaf:name "Rob Hooft" .
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  :ruben-kok foaf:name "Ruben Kok" .
+  orcid:0000-0002-7352-1400 foaf:name "Joost Kok" .
+  orcid:0000-0003-2401-4223 foaf:name "Scott J. Lusher" .
+  orcid:0000-0002-8406-3871 foaf:name "Maryann E. Martone" .
+  :albert-mons foaf:name "Albert Mons" .
+  orcid:0000-0001-9610-5728 foaf:name "Abel L. Packer" .
+  orcid:0000-0003-3165-5344 foaf:name "Bengt Persson" .
+  orcid:0000-0001-9853-5668 foaf:name "Philippe Rocca-Serra" .
+  orcid:0000-0002-8691-772X foaf:name "Marco Roos" .
+  :rene-van-schaik foaf:name "Rene van Schaik" .
+  orcid:0000-0001-5306-5690 foaf:name "Susanna-Assunta Sansone" .
+  orcid:0000-0001-8888-635X foaf:name "Erik Schultes" .
+  orcid:0000-0002-7516-6246 foaf:name "Thierry Sengstag" .
+  orcid:0000-0003-1386-0731 foaf:name "Ted Slater" .
+  :george-strawn foaf:name "George Strawn" .
+  orcid:0000-0002-0979-3401 foaf:name "Morris A. Swertz" .
+  orcid:0000-0002-7633-1442 foaf:name "Mark Thompson" .
+  :johan-van-der-lei foaf:name "Johan van der Lei" .
+  orcid:0000-0003-1377-9386 foaf:name "Erik van Mulligen" .
+  orcid:0000-0002-4836-6568 foaf:name "Jan Velterop" .
+  orcid:0000-0001-9773-4008 foaf:name "Andra Waagmeester" .
+  :peter-wittenburg foaf:name "Peter Wittenburg" .
+  orcid:0000-0002-1279-5133 foaf:name "Katherine Wolstencroft" .
+  orcid:0000-0001-6935-9028 foaf:name "Jun Zhao" .
+  orcid:0000-0003-3934-0072 foaf:name "Barend Mons" .
+
+}
+
+:provenance {
+  :assertion prov:wasAttributedTo orcid:0000-0001-6960-357X, orcid:0000-0003-4727-9435, orcid:0000-0002-0209-4480, orcid:0000-0003-0179-7384, orcid:0000-0002-8042-4131, orcid:0000-0003-2829-6715, orcid:0000-0003-4155-5910, orcid:0000-0003-0327-638X, orcid:0000-0002-1164-1351, orcid:0000-0002-7618-7292, orcid:0000-0001-8686-0017, orcid:0000-0003-4060-7360, orcid:0000-0003-1304-1939, orcid:0000-0001-5654-2392, orcid:0000-0001-8599-7345, orcid:0000-0001-6444-1436, orcid:0000-0002-5301-3142, orcid:0000-0002-4368-8058, orcid:0000-0003-3499-8262, orcid:0000-0002-5711-4872, orcid:0000-0003-0183-6910, orcid:0000-0003-1219-2137, orcid:0000-0001-5212-7052, orcid:0000-0001-8641-4930, orcid:0000-0003-4450-3112, orcid:0000-0001-6825-9439, orcid:0000-0002-1267-0234, orcid:0000-0002-7352-1400, orcid:0000-0003-2401-4223, orcid:0000-0002-8406-3871, orcid:0000-0001-9610-5728, orcid:0000-0003-3165-5344, orcid:0000-0001-9853-5668, orcid:0000-0002-8691-772X, orcid:0000-0001-5306-5690, orcid:0000-0001-8888-635X, orcid:0000-0002-7516-6246, orcid:0000-0003-1386-0731, orcid:0000-0002-0979-3401, orcid:0000-0002-7633-1442, orcid:0000-0003-1377-9386, orcid:0000-0002-4836-6568, orcid:0000-0001-9773-4008, orcid:0000-0002-1279-5133, orcid:0000-0001-6935-9028, orcid:0000-0003-3934-0072 .
+  :assertion prov:wasDerivedFrom <https://doi.org/10.1038/sdata.2016.18> .
+}
+
+:pubinfo {
+  : dct:created "2026-02-06T12:00:00.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:isPartOf <https://doi.org/10.1038/sdata.2016.18>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    rdfs:label "The FAIR Guiding Principles for scientific data management and stewardship" .
+
+  orcid:0000-0001-6960-357X foaf:name "Mark D. Wilkinson" .
+  orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
+  orcid:0000-0002-0209-4480 foaf:name "IJsbrand Jan Aalbersberg" .
+  orcid:0000-0003-0179-7384 foaf:name "Gabrielle Appleton" .
+  orcid:0000-0002-8042-4131 foaf:name "Myles Axton" .
+  orcid:0000-0003-2829-6715 foaf:name "Arie Baak" .
+  orcid:0000-0003-4155-5910 foaf:name "Niklas Blomberg" .
+  orcid:0000-0003-0327-638X foaf:name "Jan-Willem Boiten" .
+  orcid:0000-0002-1164-1351 foaf:name "Luiz Bonino da Silva Santos" .
+  orcid:0000-0002-7618-7292 foaf:name "Philip E. Bourne" .
+  orcid:0000-0001-8686-0017 foaf:name "Anthony J. Brookes" .
+  orcid:0000-0003-4060-7360 foaf:name "Tim Clark" .
+  orcid:0000-0003-1304-1939 foaf:name "Mercè Crosas" .
+  orcid:0000-0001-5654-2392 foaf:name "Ingrid Dillo" .
+  orcid:0000-0001-8599-7345 foaf:name "Olivier Dumon" .
+  orcid:0000-0001-6444-1436 foaf:name "Scott Edmunds" .
+  orcid:0000-0002-5301-3142 foaf:name "Chris T. Evelo" .
+  orcid:0000-0002-4368-8058 foaf:name "Richard Finkers" .
+  orcid:0000-0003-3499-8262 foaf:name "Alejandra Gonzalez-Beltran" .
+  orcid:0000-0002-5711-4872 foaf:name "Alasdair J.G. Gray" .
+  orcid:0000-0003-0183-6910 foaf:name "Paul Groth" .
+  orcid:0000-0003-1219-2137 foaf:name "Carole Goble" .
+  orcid:0000-0001-5212-7052 foaf:name "Jeffrey S. Grethe" .
+  orcid:0000-0001-8641-4930 foaf:name "Jaap Heringa" .
+  orcid:0000-0003-4450-3112 foaf:name "Peter A.C 't Hoen" .
+  orcid:0000-0001-6825-9439 foaf:name "Rob Hooft" .
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0002-7352-1400 foaf:name "Joost Kok" .
+  orcid:0000-0003-2401-4223 foaf:name "Scott J. Lusher" .
+  orcid:0000-0002-8406-3871 foaf:name "Maryann E. Martone" .
+  orcid:0000-0001-9610-5728 foaf:name "Abel L. Packer" .
+  orcid:0000-0003-3165-5344 foaf:name "Bengt Persson" .
+  orcid:0000-0001-9853-5668 foaf:name "Philippe Rocca-Serra" .
+  orcid:0000-0002-8691-772X foaf:name "Marco Roos" .
+  orcid:0000-0001-5306-5690 foaf:name "Susanna-Assunta Sansone" .
+  orcid:0000-0001-8888-635X foaf:name "Erik Schultes" .
+  orcid:0000-0002-7516-6246 foaf:name "Thierry Sengstag" .
+  orcid:0000-0003-1386-0731 foaf:name "Ted Slater" .
+  orcid:0000-0002-0979-3401 foaf:name "Morris A. Swertz" .
+  orcid:0000-0002-7633-1442 foaf:name "Mark Thompson" .
+  orcid:0000-0003-1377-9386 foaf:name "Erik van Mulligen" .
+  orcid:0000-0002-4836-6568 foaf:name "Jan Velterop" .
+  orcid:0000-0001-9773-4008 foaf:name "Andra Waagmeester" .
+  orcid:0000-0002-1279-5133 foaf:name "Katherine Wolstencroft" .
+  orcid:0000-0001-6935-9028 foaf:name "Jun Zhao" .
+  orcid:0000-0003-3934-0072 foaf:name "Barend Mons" .
+}

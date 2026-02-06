@@ -1,0 +1,99 @@
+@prefix this: <https://w3id.org/np/temp/RAhwrYOvSR6QUNGlkh16tPu_cxUnSiG-9rqtVzyzne7Ok> .
+@prefix sub: <https://w3id.org/np/temp/RAhwrYOvSR6QUNGlkh16tPu_cxUnSiG-9rqtVzyzne7Ok/> .
+@prefix schema: <http://schema.org/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  <http://id.crossref.org/issn/2376-5992> dct:title "PeerJ Computer Science" .
+  
+  <https://doi.org/10.7717/peerj-cs.387> a fabio:Article;
+    dct:abstract "While the publication of Linked Data has become increasingly common, the process tends to be a relatively complicated and heavy-weight one. Linked Data is typically published by centralized entities in the form of larger dataset releases, which has the downside that there is a central bottleneck in the form of the organization or individual responsible for the releases. Moreover, certain kinds of data entries, in particular those with subjective or original content, currently do not fit into any existing dataset and are therefore more difficult to publish. To address these problems, we present here an approach to use nanopublications and a decentralized network of services to allow users to directly publish small Linked Data statements through a simple and user-friendly interface, called Nanobench, powered by semantic templates that are themselves published as nanopublications. The published nanopublications are cryptographically verifiable and can be queried through a redundant and decentralized network of services, based on the grlc API generator and a new quad extension of Triple Pattern Fragments. We show here that these two kinds of services are complementary and together allow us to query nanopublications in a reliable and efficient manner. We also show that Nanobench makes it indeed very easy for users to publish Linked Data statements, even for those who have no prior experience in Linked Data publishing.";
+    dct:date "2021-03-08";
+    dct:title "Semantic micro-contributions with decentralized nanopublication services";
+    bibo:authorList sub:author-list .
+  
+  orcid:0000-0001-5118-256X schema:affiliation ror:00cv9y106;
+    foaf:name "Ruben Taelman" .
+  
+  orcid:0000-0001-9842-9718 schema:affiliation ror:027m9bs27, ror:04dkp9463;
+    foaf:name "Stian Soiland-Reyes" .
+  
+  orcid:0000-0002-1267-0234 schema:affiliation ror:008xxew50;
+    foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0002-1501-1082 schema:affiliation ror:02jz4aj89;
+    foaf:name "Vincent Emonet" .
+  
+  orcid:0000-0003-4727-9435 schema:affiliation ror:02jz4aj89;
+    foaf:name "Michel Dumontier" .
+  
+  ror:008xxew50 foaf:name "Department of Computer Science, Vrije Universiteit Amsterdam, Amsterdam, Netherlands" .
+  
+  ror:00cv9y106 foaf:name "IDLab, Ghent University, Ghent, Belgium" .
+  
+  ror:01pb0m710 foaf:name "SciFY, Athens, Greece" .
+  
+  ror:027m9bs27 foaf:name "Department of Computer Science, The University of Manchester, Manchester, UK" .
+  
+  ror:02jz4aj89 foaf:name "Institute of Data Science, Maastricht University, Maastricht, Netherlands" .
+  
+  ror:04dkp9463 foaf:name "Informatics Institute, University of Amsterdam, Amsterdam, Netherlands" .
+  
+  sub:author-list rdf:_1 orcid:0000-0002-1267-0234;
+    rdf:_2 orcid:0000-0001-5118-256X;
+    rdf:_3 orcid:0000-0002-1501-1082;
+    rdf:_4 sub:haris-antonatos;
+    rdf:_5 orcid:0000-0001-9842-9718;
+    rdf:_6 orcid:0000-0003-4727-9435 .
+  
+  sub:haris-antonatos schema:affiliation ror:01pb0m710;
+    foaf:name "Haris Antonatos" .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0001-5118-256X, orcid:0000-0001-9842-9718,
+      orcid:0000-0002-1267-0234, orcid:0000-0002-1501-1082, orcid:0000-0003-4727-9435;
+    prov:wasDerivedFrom <https://doi.org/10.7717/peerj-cs.387> .
+}
+
+sub:pubinfo {
+  orcid:0000-0001-5118-256X foaf:name "Ruben Taelman" .
+  
+  orcid:0000-0001-9842-9718 foaf:name "Stian Soiland-Reyes" .
+  
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0002-1501-1082 foaf:name "Vincent Emonet" .
+  
+  orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
+  
+  this: dct:created "2026-02-06T12:00:00.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:isPartOf <https://doi.org/10.7717/peerj-cs.387>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    rdfs:label "Semantic micro-contributions with decentralized nanopublication services" .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
+    npx:hasSignature "YrhFBaDDbl4+5uMiXOdHlr6SNewySlXQJLemKqiJbj2e6CjdPHxppDxJkQ0xRNcQARvH12uoD6Z7FOPFlh+4zC7i2Yi0kqaDHVRGMXX6LQ5SmED1Hygw8YQsWhJw7Tiv/QKlyxKJjzGCeu5Ug8J5uU5fmqdIuXtbd/6UU+jR0BU5gvX81bFR6AKvXVGhRDH2hTp/koep62gJGC7ld33lR0H7WsZm9isC4AqBfdDJZ1QHK9SN85uomHMmD7Tug4O1vGmJWCdBCAOzrLIf9ZDU64BHd3//KhBGkBonZklXjs2GLBYes571L0rAeBZcX1E88UXwwTfLoBzh1m79FIbBKQ==";
+    npx:hasSignatureTarget this: .
+}

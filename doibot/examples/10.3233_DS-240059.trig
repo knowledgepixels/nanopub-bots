@@ -1,0 +1,72 @@
+@prefix : <https://w3id.org/np/temp> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix ror: <https://ror.org/> .
+@prefix schema: <http://schema.org/> .
+
+:Head {
+  : a np:Nanopublication;
+    np:hasAssertion :assertion;
+    np:hasProvenance :provenance;
+    np:hasPublicationInfo :pubinfo .
+}
+
+:assertion {
+  <http://id.crossref.org/issn/2451-8492> dct:title "Data Science" .
+  
+  <https://doi.org/10.3233/DS-240059> a fabio:ResourcePaper;
+    dct:abstract "Measuring data drift is essential in machine learning applications where model scoring (evaluation) is done on data samples that differ from those used in training. The Kullback-Leibler divergence is a common measure of shifted probability distributions, for which discretized versions are invented to deal with binned or categorical data. We present the Unstable Population Indicator, a robust, flexible and numerically stable, discretized implementation of Jeffrey's divergence, along with an implementation in a Python package that can deal with continuous, discrete, ordinal and nominal data in a variety of popular data types. We show the numerical and statistical properties in controlled experiments. It is not advised to employ a common cut-off to distinguish stable from unstable populations, but rather to let that cut-off depend on the use case.";
+    dct:date "2024-06-26";
+    dct:title "Measuring Data Drift with the Unstable Population Indicator" ;
+    bibo:authorList :author-list .
+
+  :author-list rdf:_1 orcid:0000-0003-2581-8370 .
+  :author-list rdf:_2 orcid:0009-0003-5030-0108 .
+  
+  orcid:0000-0003-2581-8370 schema:affiliation ror:04dkp9463,
+      ror:05xvt9f17;
+    schema:email "datascience@marcelhaas.com";
+    foaf:name "Marcel R. Haas" .
+  
+  orcid:0009-0003-5030-0108 schema:affiliation ror:04b8v1s79,
+      ror:04dkp9463;
+    schema:email "L.Sibbald@tilburguniversity.edu";
+    foaf:name "Lisette Sibbald" .
+
+  ror:04b8v1s79 foaf:name "Department of Methodology and Statistics and Department of Cognitive Neuropsychology, Tilburg University, Prof. Cobbenhagenlaan 125, 5037 DB Tilburg, The Netherlands" .
+  
+  ror:04dkp9463 foaf:name "Business Intelligence, University of Amsterdam, Spui 21, 1012WX Amsterdam, The Netherlands" .
+  
+  ror:05xvt9f17 foaf:name "Public Health and Primary Care, Leiden University Medical Center, Albinusdreef 2, The Netherlands" .
+  
+}
+
+:provenance {
+  :assertion prov:wasAttributedTo orcid:0000-0003-2581-8370, orcid:0009-0003-5030-0108 .
+  :assertion prov:wasDerivedFrom <http://id.crossref.org/issn/2451-8492> .
+}
+
+:pubinfo {
+  : dct:created "2026-02-06T10:09:35.651+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:isPartOf <https://doi.org/10.3233/DS-240059>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    rdfs:label "Measuring Data Drift with the Unstable Population Indicator" .
+
+  orcid:0000-0003-2581-8370 foaf:name "Marcel R. Haas" .
+  
+  orcid:0009-0003-5030-0108 foaf:name "Lisette Sibbald" .
+}
+
