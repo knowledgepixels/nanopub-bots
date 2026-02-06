@@ -82,6 +82,8 @@
     dct:isPartOf <https://doi.org/10.7717/peerj-cs.387>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.7717/peerj-cs.387>;
+    npx:supersedes <https://w3id.org/np/temp/RAhwrYOvSR6QUNGlkh16tPu_cxUnSiG-9rqtVzyzne7Ok>;
     rdfs:label "Semantic micro-contributions with decentralized nanopublication services" .
 
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .

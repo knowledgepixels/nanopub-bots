@@ -1,5 +1,5 @@
-@prefix this: <https://w3id.org/np/temp/RAhwrYOvSR6QUNGlkh16tPu_cxUnSiG-9rqtVzyzne7Ok> .
-@prefix sub: <https://w3id.org/np/temp/RAhwrYOvSR6QUNGlkh16tPu_cxUnSiG-9rqtVzyzne7Ok/> .
+@prefix this: <https://w3id.org/np/temp/RA_y-jmfOZBH5wDdhEBYo_7RNgKDfG1dSwYMS6fz4keis> .
+@prefix sub: <https://w3id.org/np/temp/RA_y-jmfOZBH5wDdhEBYo_7RNgKDfG1dSwYMS6fz4keis/> .
 @prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
@@ -90,10 +90,12 @@ sub:pubinfo {
     dct:isPartOf <https://doi.org/10.7717/peerj-cs.387>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.7717/peerj-cs.387>;
+    npx:supersedes <https://w3id.org/np/temp/RAhwrYOvSR6QUNGlkh16tPu_cxUnSiG-9rqtVzyzne7Ok>;
     rdfs:label "Semantic micro-contributions with decentralized nanopublication services" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "YrhFBaDDbl4+5uMiXOdHlr6SNewySlXQJLemKqiJbj2e6CjdPHxppDxJkQ0xRNcQARvH12uoD6Z7FOPFlh+4zC7i2Yi0kqaDHVRGMXX6LQ5SmED1Hygw8YQsWhJw7Tiv/QKlyxKJjzGCeu5Ug8J5uU5fmqdIuXtbd/6UU+jR0BU5gvX81bFR6AKvXVGhRDH2hTp/koep62gJGC7ld33lR0H7WsZm9isC4AqBfdDJZ1QHK9SN85uomHMmD7Tug4O1vGmJWCdBCAOzrLIf9ZDU64BHd3//KhBGkBonZklXjs2GLBYes571L0rAeBZcX1E88UXwwTfLoBzh1m79FIbBKQ==";
+    npx:hasSignature "Q/0MUci+KD2D14TV9rVpwEMZN8Pxv9t5WcLHdj3TU+FgcTs5C3pMWcKuXj5TYKhOewUcA1qkONAJ2oVFojfMPgIF+JSCkalS+PlzTQe/mTlnoIF85At7C2okHlJPRHUZr/AADncSFHILzh3Y47NN/1HkzogOxiNU6TAOFpMAiyVa9pwE6eDKnLTmIUWHZzPL7A7gimyWlsWVAno3BdqWjtm6CBfgylJzJdM8kNlWJZu5v3kDoCvXhXu4yiovCFOAMgV3NLC3VRztGWyA4uU2coU8TCw3j8B3uK8hhvG2Yh1JnqpT7Z9SbHfJh64exi6DBu8U2BPe5uI4a58ThVZfWQ==";
     npx:hasSignatureTarget this: .
 }
