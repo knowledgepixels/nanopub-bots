@@ -1,5 +1,5 @@
-@prefix this: <https://w3id.org/np/temp/RAT8m1PSgAvEojFRNGXxeSrDRvaYRmDI6eKFN149OkkyA> .
-@prefix sub: <https://w3id.org/np/temp/RAT8m1PSgAvEojFRNGXxeSrDRvaYRmDI6eKFN149OkkyA/> .
+@prefix this: <https://w3id.org/np/temp/RASFYJSOlS-ucaUG6tsSZdGjOUZ6Huk--sJSwafa1utWU> .
+@prefix sub: <https://w3id.org/np/temp/RASFYJSOlS-ucaUG6tsSZdGjOUZ6Huk--sJSwafa1utWU/> .
 @prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
@@ -91,11 +91,12 @@ sub:pubinfo {
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.7717/peerj-cs.387>;
-    npx:supersedes <https://w3id.org/np/temp/RA_y-jmfOZBH5wDdhEBYo_7RNgKDfG1dSwYMS6fz4keis>;
+    npx:supersedes <https://w3id.org/np/temp/RAT8m1PSgAvEojFRNGXxeSrDRvaYRmDI6eKFN149OkkyA>;
     rdfs:label "Semantic micro-contributions with decentralized nanopublication services" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "nCBBOiCUZZ8N+EP3LTM4/PP5VWGqM63ZlJgV5jdW9YUdROi/eIjcURji6qGRdqeF6ZP066Lgs+UgR2nWI2bTSi3ijzAE3hirI1y8fCOrnMPhUvOVbzQ6CZsbKe3j3yOsE1Rd6htjisNomFdBYyFlpwVRM0zWjxJRJI+fHkgvFBZ6NuUyrn8VRTPLK4sh/RtP0q2ka/xOenJdc7V/J5XgWX036H5qeGffhhoNcGH+RUTMyemdtOnII9s485AGjjyjOrZUyBcJ08FBcRhqs2ntqpqihD1Cs6YcDE7daWVc+rSxJ/jgcYMZqzM9E7QN3MZAISFMhRiJAfJ0RQM26P8U4A==";
-    npx:hasSignatureTarget this: .
+    npx:hasSignature "bCMUGmcOKwza2vyDXnV0ag8sifqh7JviGCGq3v21u8CaqVH3A5Qrh67WqfntXkZ0DUhgAG5glFWpi6I50EYlB0CKOQOm+I4c8mkzA5Q6FzOwTWV5bRVZTS7u43C1cWSe7RPYDRNc+5ZHK9HdddmYrdnFnOub5IhO9FwAXCMxW2iGEbazwVzJhuVIkcexFy702RZzCKbczhYSDcPAitj08cEPPfsoVON5vtPlmEdTEp5djmUfaiUF0uGoMMBgAQxFp/I27i3ZrbmFBbrUZfK22VIhIUWAFbMfpudrb6aq7APZ98zOPCJTyak354J4sJzLQydroZV0gERnKCbe1TI3GA==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

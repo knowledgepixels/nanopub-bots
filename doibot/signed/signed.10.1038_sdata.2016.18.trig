@@ -1,5 +1,5 @@
-@prefix this: <https://w3id.org/np/temp/RAxZN8ISdmVlyzmv3H-7bH7SMEM0EW4ZoYD22pkNVg1Nc> .
-@prefix sub: <https://w3id.org/np/temp/RAxZN8ISdmVlyzmv3H-7bH7SMEM0EW4ZoYD22pkNVg1Nc/> .
+@prefix this: <https://w3id.org/np/temp/RAoFQ1eUTp-SIksNUGvZncahKpntov7DL9DUkantk6Sgs> .
+@prefix sub: <https://w3id.org/np/temp/RAoFQ1eUTp-SIksNUGvZncahKpntov7DL9DUkantk6Sgs/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -304,11 +304,12 @@ sub:pubinfo {
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1038/sdata.2016.18>;
-    npx:supersedes <https://w3id.org/np/temp/RAiiTpTb9ja-ucKEQSt_G317KWLWItNa-yTqpa0dZIgYw>;
+    npx:supersedes <https://w3id.org/np/temp/RAxZN8ISdmVlyzmv3H-7bH7SMEM0EW4ZoYD22pkNVg1Nc>;
     rdfs:label "The FAIR Guiding Principles for scientific data management and stewardship" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "UKPIm9uxZRy5vZCtUqFS4mSPcICY5vJVp/w3WXxXmUTgSbp+pfYI7iCMkg6VXr+NetKCm5y/rACOHapSGY26PhYTFeD5m9rwX1uiMYZjddXq3UPT4ePJlOHYyhJR7G6KmyKvUpz7BrOOHSPX4W6V8JtO8wi8SSQTQTqnbai0lJM3mY3aBlgqekRtZLkhzBFFSYSQx2V5Rvj4Xo7+xIxHSLV9sbbDElUjZ3i6YBIsfcrJa66GrwkBiuIYCovPYjWbOhjC7wScXc4+ONLaW5n9Du93LSZZYArhbBYaqVR97hO8uuU8mNNqi78LcEasSsDOKZCNtokRbXymnQq8l/E0Cg==";
-    npx:hasSignatureTarget this: .
+    npx:hasSignature "ZlFQ98GFLp9HfYijOp1pRKIBj9di3vJ9OutE8yUNbm5XoZKCooscxc8AUQkZK4EdIwcZl+9Uv/xAz8k+sbHAxdG+5BHD/PBc20MCUDDcRcwtMx3T0plmk3pVYJrLPklz0fJHLpEz7eytdqCK9U2wwDhAFspTvp/dBHaMseRbT6A5NA7NSdCeXB/cG0I+b0ZnPACbX3uVqg/XSFpmHyPJa9EUaF9qNUMcy1Q2FVJYonboaLlgimDGelREd0mPIpqqFVDxapg7bvazaw7KWDEwFgA87zn99Y0O6Hd1k0SQ9paARbn1fc24BWfMu5LwMvwmLJUpzlwdL2xDH0I1Z0ynbQ==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

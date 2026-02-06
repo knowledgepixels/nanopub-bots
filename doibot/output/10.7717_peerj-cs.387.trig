@@ -83,7 +83,7 @@
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.7717/peerj-cs.387>;
-    npx:supersedes <https://w3id.org/np/temp/RA_y-jmfOZBH5wDdhEBYo_7RNgKDfG1dSwYMS6fz4keis>;
+    npx:supersedes <https://w3id.org/np/temp/RAT8m1PSgAvEojFRNGXxeSrDRvaYRmDI6eKFN149OkkyA>;
     rdfs:label "Semantic micro-contributions with decentralized nanopublication services" .
 
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
@@ -95,4 +95,6 @@
   orcid:0000-0001-9842-9718 foaf:name "Stian Soiland-Reyes" .
   
   orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
+
+  :sig npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

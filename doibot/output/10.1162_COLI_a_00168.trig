@@ -55,7 +55,10 @@
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1162/COLI_a_00168>;
+    npx:supersedes <https://w3id.org/np/temp/RATNKMgnw-BR2yupJ1vpXMlCGWDC8YZ12K5wCnUcOYKa8>;
     rdfs:label "A Survey and Classification of Controlled Natural Languages" .
 
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+
+  :sig npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

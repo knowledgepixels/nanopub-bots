@@ -69,5 +69,7 @@
   orcid:0000-0003-2581-8370 foaf:name "Marcel R. Haas" .
   
   orcid:0009-0003-5030-0108 foaf:name "Lisette Sibbald" .
+
+  :sig npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }
 

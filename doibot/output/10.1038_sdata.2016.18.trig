@@ -153,7 +153,7 @@
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1038/sdata.2016.18>;
-    npx:supersedes <https://w3id.org/np/temp/RAiiTpTb9ja-ucKEQSt_G317KWLWItNa-yTqpa0dZIgYw>;
+    npx:supersedes <https://w3id.org/np/temp/RAxZN8ISdmVlyzmv3H-7bH7SMEM0EW4ZoYD22pkNVg1Nc>;
     rdfs:label "The FAIR Guiding Principles for scientific data management and stewardship" .
 
   orcid:0000-0001-6960-357X foaf:name "Mark D. Wilkinson" .
@@ -202,4 +202,6 @@
   orcid:0000-0002-1279-5133 foaf:name "Katherine Wolstencroft" .
   orcid:0000-0001-6935-9028 foaf:name "Jun Zhao" .
   orcid:0000-0003-3934-0072 foaf:name "Barend Mons" .
+
+  :sig npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }
