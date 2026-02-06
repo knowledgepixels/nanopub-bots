@@ -1,0 +1,58 @@
+@prefix : <https://w3id.org/np/temp> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ns1: <http://purl.org/np/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+:Head {
+  : a np:Nanopublication;
+    np:hasAssertion :assertion;
+    np:hasProvenance :provenance;
+    np:hasPublicationInfo :pubinfo .
+}
+
+:assertion {
+  :association a <https://w3id.org/biolink/vocab/OrganismTaxonToEnvironmentAssociation>;
+    <https://w3id.org/biolink/vocab/object> <http://purl.obolibrary.org/obo/ENVO_00005741>;
+    <https://w3id.org/biolink/vocab/predicate> <http://purl.obolibrary.org/obo/RO_0002303>;
+    <https://w3id.org/biolink/vocab/subject> :taxon .
+  
+  :taxon <https://w3id.org/kpxl/biodiv/terms/hasTaxonName> <https://www.checklistbank.org/dataset/3/taxon/4Kr1AjJo97PY1CncsOHK6> .
+}
+
+:provenance {
+  :assertion dct:source <https://doi.org/10.1002/ece3.927>;
+    <http://rs.tdwg.org/dwc/terms/basisOfRecord> <http://rs.tdwg.org/dwc/terms/Occurrence>;
+    prov:wasAttributedTo orcid:0000-0002-4587-3476, orcid:0000-0002-1704-4857, orcid:0000-0002-6753-4897 .
+}
+
+:pubinfo {
+  <http://purl.obolibrary.org/obo/ENVO_00005741> nt:hasLabelFromApi "alpine soil - Soil which is part of an alpine environment." .
+  
+  <http://purl.obolibrary.org/obo/RO_0002303> nt:hasLabelFromApi "has habitat - x 'has habitat' y if and only if: x is an organism, y is a habitat, and y can sustain and allow the growth of a population of xs." .
+  
+  orcid:0000-0002-4587-3476 foaf:name "Roberto Pizzolotto" .
+  
+  orcid:0000-0002-1704-4857 foaf:name "Mauro Gobbi" .
+  
+  orcid:0000-0002-6753-4897 foaf:name "Pietro Brandmayr" .
+  
+  : a <https://w3id.org/kpxl/biodiv/terms/BiodivNanopub>;
+    dct:created "2026-02-06T17:12:57.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAcrl-l7bWTBLTblgq2jjQwJvlADseCwSIX5SKdCyuHS8/biodiv-bot>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    npx:hasNanopubType <https://w3id.org/kpxl/biodiv/terms/BiodivNanopub>;
+    npx:introduces :association;
+    rdfs:label "Nebria (Oreonebria) castanea (Bonelli, 1810) (species) - has habitat - alpine soil" .
+  
+  <https://www.checklistbank.org/dataset/3/taxon/4Kr1AjJo97PY1CncsOHK6> nt:hasLabelFromApi "Nebria (Oreonebria) castanea (Bonelli, 1810) (species)" .
+
+  :sig npx:signedBy <https://w3id.org/np/RAcrl-l7bWTBLTblgq2jjQwJvlADseCwSIX5SKdCyuHS8/biodiv-bot> .
+}
