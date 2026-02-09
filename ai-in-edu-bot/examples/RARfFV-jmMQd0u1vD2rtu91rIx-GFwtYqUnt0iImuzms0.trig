@@ -1,0 +1,56 @@
+@prefix this: <https://w3id.org/np/RARfFV-jmMQd0u1vD2rtu91rIx-GFwtYqUnt0iImuzms0> .
+@prefix sub: <https://w3id.org/np/RARfFV-jmMQd0u1vD2rtu91rIx-GFwtYqUnt0iImuzms0/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  <https://doi.org/10.3389/feduc.2024.1288723> rdfs:label "Jauhiainen JS and Garagorry Guerra A (2024) Generative AI and education: dynamic personalization of pupils’ school learning material with ChatGPT. Front. Educ. 9:1288723" .
+  
+  sub:dynamic_learning_material_personalization a <https://w3id.org/spaces/AI-in-education/r/terms/AI-as-personalized-learning-tool>,
+      <https://w3id.org/spaces/AI-in-education/r/terms/AI-in-Education-approach>;
+    dct:description "The Dynamic personalization of learning material with ChatGPT approach uses ChatGPT to generate and continuously adapt instructional texts, questions, and illustrations in real time to match individual pupils’ knowledge levels during a lesson, thereby tailoring curriculum-aligned learning materials dynamically to each student’s understanding and performance.";
+    dct:source <https://doi.org/10.3389/feduc.2024.1288723>;
+    rdfs:label "Dynamic personalization of learning material with ChatGPT" .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-1267-0234 .
+}
+
+sub:pubinfo {
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  this: dct:created "2026-02-09T07:08:03.507Z"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-1267-0234;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    npx:introduces sub:dynamic_learning_material_personalization;
+    npx:wasCreatedAt <https://nanodash.petapico.org/>;
+    nt:wasCreatedFromProvenanceTemplate <https://w3id.org/np/RA7lSq6MuK_TIC6JMSHvLtee3lpLoZDOqLJCLXevnrPoU>;
+    nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RA0J4vUn_dekg-U1kK3AOEt02p9mT2WO03uGxLDec1jLw>,
+      <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
+    nt:wasCreatedFromTemplate <https://w3id.org/np/RA88tb2ths5RVTsT7cajUFPL1ONBbyfjk3THDe79FymQA> .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCjDGQCS1S+SRnERDuYDXOugdYUP0efEquHJEEHAbU/uLzBVlga89zqrNPCS7fBE6lArBUWEmT8eLKdMapyqvAzI1J3jUWTMhDJF+XFBkUiuiFfNSc4vJJcmi0yujtnuzXsRIG202jyaP4f5ULoskFwaZOSBZJfiE0dsB3D7DTIAQIDAQAB";
+    npx:hasSignature "oDni7Wjru+umqFq6w8SOK/SEKbFyEJ0yYmJTdbAqvb+n7r7RlEDfJUmK22Z+D2uw4nrV0jdyg7k7iiMGakxpUwb2dlPQtdvnz/pG8kXKg8zCqqeCVs0jIyG1KEtRLZlWZsAAvTFYNG+yRIr1sSGp32GE4pVY/o53OQchIHhHoV8=";
+    npx:hasSignatureTarget this:;
+    npx:signedBy orcid:0000-0002-1267-0234 .
+  
+  <https://w3id.org/spaces/AI-in-education/r/terms/AI-as-personalized-learning-tool>
+    nt:hasLabelFromApi "AI as personalized learning tool - Approach to use AI in education as a personalized learning tool." .
+}
+
