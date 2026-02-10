@@ -1,0 +1,99 @@
+@prefix : <http://purl.org/nanopub/temp/np1/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix ror: <https://ror.org/> .
+@prefix schema: <http://schema.org/> .
+
+:Head {
+  : a np:Nanopublication;
+    np:hasAssertion :assertion;
+    np:hasProvenance :provenance;
+    np:hasPublicationInfo :pubinfo .
+}
+
+:assertion {
+  <https://doi.org/10.7717/peerj-cs.281> a fabio:Article;
+    dct:date "2020-09-21";
+    dct:title "Towards FAIR protocols and workflows: the OpenPREDICT use case" ;
+    bibo:authorList :author-list;
+    dct:isPartOf <http://id.crossref.org/issn/2376-5992> .
+
+  <http://id.crossref.org/issn/2376-5992> dct:title "PeerJ Computer Science" .
+
+  :author-list rdf:_1 orcid:0000-0001-7769-4272 .
+  :author-list rdf:_2 orcid:0000-0002-4547-7000 .
+  :author-list rdf:_3 orcid:0000-0002-9725-2794 .
+  :author-list rdf:_4 :sandeep-ayyar .
+  :author-list rdf:_5 orcid:0000-0002-7635-9533 .
+  :author-list rdf:_6 orcid:0000-0002-1267-0234 .
+  :author-list rdf:_7 orcid:0000-0003-4727-9435 .
+
+  orcid:0000-0001-7769-4272 schema:affiliation ror:02jz4aj89;
+    foaf:name "Remzi Celebi" .
+
+  orcid:0000-0002-4547-7000 schema:affiliation ror:008xxew50;
+    foaf:name "Joao Rebelo Moreira" .
+
+  orcid:0000-0002-9725-2794 schema:affiliation ror:02jz4aj89;
+    foaf:name "Ahmed A. Hassan" .
+
+  :sandeep-ayyar schema:affiliation ror:00f54p054;
+    foaf:name "Sandeep Ayyar" .
+
+  orcid:0000-0002-7635-9533 schema:affiliation ror:00rbjv475;
+    foaf:name "Lars Ridder" .
+
+  orcid:0000-0002-1267-0234 schema:affiliation ror:008xxew50;
+    foaf:name "Tobias Kuhn" .
+
+  orcid:0000-0003-4727-9435 schema:affiliation ror:02jz4aj89;
+    foaf:name "Michel Dumontier" .
+
+  ror:02jz4aj89 foaf:name "Institute of Data Science, Maastricht University, Maastricht, Netherlands" .
+
+  ror:008xxew50 foaf:name "Department of Computer Science, Vrije Universiteit Amsterdam, Amsterdam, Netherlands" .
+
+  ror:00f54p054 foaf:name "Department of Medical Informatics, Stanford University, Stanford, United States" .
+
+  ror:00rbjv475 foaf:name "Netherlands eScience Center, Amsterdam, Netherlands" .
+
+}
+
+:provenance {
+  :assertion prov:wasAttributedTo orcid:0000-0001-7769-4272, orcid:0000-0002-4547-7000, orcid:0000-0002-9725-2794, orcid:0000-0002-7635-9533, orcid:0000-0002-1267-0234, orcid:0000-0003-4727-9435 .
+  :assertion prov:wasDerivedFrom <https://doi.org/10.7717/peerj-cs.281> .
+}
+
+:pubinfo {
+  : dct:created "2026-02-10T15:28:23.659+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.7717/peerj-cs.281>;
+    rdfs:label "Towards FAIR protocols and workflows: the OpenPREDICT use case" .
+
+  orcid:0000-0001-7769-4272 foaf:name "Remzi Celebi" .
+
+  orcid:0000-0002-4547-7000 foaf:name "Joao Rebelo Moreira" .
+
+  orcid:0000-0002-9725-2794 foaf:name "Ahmed A. Hassan" .
+
+  orcid:0000-0002-7635-9533 foaf:name "Lars Ridder" .
+
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+
+  orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
+
+  :sig npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}
