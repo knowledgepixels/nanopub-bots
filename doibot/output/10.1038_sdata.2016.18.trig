@@ -1,4 +1,4 @@
-@prefix : <https://w3id.org/np/temp> .
+@prefix : <http://purl.org/nanopub/temp/np1/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -148,12 +148,12 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-06T11:35:49.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-02-10T12:00:00.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1038/sdata.2016.18>;
-    npx:supersedes <https://w3id.org/np/temp/RAxZN8ISdmVlyzmv3H-7bH7SMEM0EW4ZoYD22pkNVg1Nc>;
+    npx:supersedes <https://w3id.org/np/temp/RAoFQ1eUTp-SIksNUGvZncahKpntov7DL9DUkantk6Sgs>;
     rdfs:label "The FAIR Guiding Principles for scientific data management and stewardship" .
 
   orcid:0000-0001-6960-357X foaf:name "Mark D. Wilkinson" .

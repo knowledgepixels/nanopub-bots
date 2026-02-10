@@ -1,5 +1,5 @@
-@prefix this: <https://w3id.org/np/temp/RAmXb7USstpbsjsl6Mw_GiLbyijMqR58-4Q-SzrE09zvE> .
-@prefix sub: <https://w3id.org/np/temp/RAmXb7USstpbsjsl6Mw_GiLbyijMqR58-4Q-SzrE09zvE/> .
+@prefix this: <https://w3id.org/np/RANea8Wr7-vHfenxkhTrPUUwNNbIvDkbEkHgJDCTnsg7s> .
+@prefix sub: <https://w3id.org/np/RANea8Wr7-vHfenxkhTrPUUwNNbIvDkbEkHgJDCTnsg7s/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix nt: <https://w3id.org/np/o/ntemplate/> .
@@ -47,16 +47,17 @@ sub:pubinfo {
   orcid:0000-0003-4829-4776 foaf:name "Barbara Valle" .
   
   this: a <https://w3id.org/kpxl/biodiv/terms/BiodivNanopub>;
-    dct:created "2026-02-06T16:57:17.000+01:00"^^xsd:dateTime;
+    dct:created "2026-02-10T12:00:00.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAcrl-l7bWTBLTblgq2jjQwJvlADseCwSIX5SKdCyuHS8/biodiv-bot>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     npx:hasNanopubType <https://w3id.org/kpxl/biodiv/terms/BiodivNanopub>;
     npx:introduces sub:association;
+    npx:supersedes <https://w3id.org/np/temp/RAmXb7USstpbsjsl6Mw_GiLbyijMqR58-4Q-SzrE09zvE>;
     rdfs:label "Nebria (Alpaeonebria) germarii Heer, 1837 (species) - has habitat - scree" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA02++z5u4lp9mezK+bcL3VSL7lM/6frtnds7+95fIUiivEHv4BgoPVN66BleoQQzBntB1x1ohMJNnbC0G+R839IUKB1vNlGgdDwMcHdbUTzpeGncHyhmTDCc4bZt1Yg24uub1SX+T2+JVQLmIkjkExAC0x6nvK1vEB9TZKqf5SdnUN2kG9cwK0nRQDhAX47cZR8FP8k4WfjZbyvXZVJpfY1zfS+dwHJbMdNjzQT818iVbGGtTXQQzk+HCU4ThiUc13XHhubJzl24T+ufYcjonPvRZzMsTMwmq0oWzvrLsiRXM02AZRwYU9rBf/8FRUdfliomT1+dEgScbSTG1wXnlfwIDAQAB";
-    npx:hasSignature "PdxfaMjxJUo8i6tJX5GUZprJOp039b/7l32b0h2XrGSHnMuLKMenCEdgCv3ow/l4r46UZfTERevAfNs5E+lrs+zWzFyRShmWatTZNZfaCKcbLIdejiIa+yF6QoSlCX3dMkE2/F8Pvc6yYk4u9wNllI3Se1dxMxYy7UOe5LPZ7TF1nxoxJ0hKosuYvYGXauQ6z75dm92H5iViNhyf8g6nqnn0qrw7K7rzndOJskITyL2JrYNpaMhYFhcDwSAOVy6k+pkAWOIu5YkUDX8lkZXzsZJy5cpeqPW6zFcXaan0urZ7M///VX/StNVo+aOVD4zUnPdvxbfsiS2LO21CNAXb/Q==";
+    npx:hasSignature "iqs4j5RVz1tD3Kwy+yZ5PkUR6z/vzotmOEBEk2J59xNvBQF4QJ2pBxKyKagfk7DDAwLOxyV6W7414XOzymrTi3NmVQYnT5ViT9Xd/srNlzyba5L02Kg+80xf7wiF3cSmU/9kQSoIvj+mNM0IBaMCp90Y0klRHWyKNd2n7cm/ENJFZz8eh/ui4ZgI8iv91qLtanEwpdPQ0dIY/Po2sD/7HGpmIlV9IMj9qG64IjQMpx3VfHmYc9/D6qHBbrt2iQKOlWe2MxL+g7BoNLv/JNSSTwiQ39QmqFs2safKE92o+xOMa+PGIMzZOsI6kHFoJJC5TwQ6kOhL1RIUeL63H0Rzow==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAcrl-l7bWTBLTblgq2jjQwJvlADseCwSIX5SKdCyuHS8/biodiv-bot> .
   

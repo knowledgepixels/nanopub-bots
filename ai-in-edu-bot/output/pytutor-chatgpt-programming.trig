@@ -1,4 +1,4 @@
-@prefix : <https://w3id.org/np/temp> .
+@prefix : <http://purl.org/nanopub/temp/np1/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix nt: <https://w3id.org/np/o/ntemplate/> .
@@ -33,10 +33,11 @@
 :pubinfo {
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
   
-  : dct:created "2026-02-09T07:40:07.000Z"^^xsd:dateTime;
+  : dct:created "2026-02-10T12:00:00.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAVkNLhqtCY6sVZMWqyyUkzmHJyd8-0naSJ_S_CNbabf0/ai-in-edu-bot>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     npx:introduces :chatgpt_based_intelligent_tutoring_for_programming;
+    npx:supersedes <https://w3id.org/np/temp/RA_kgEjML8F7JxYh3U2LDKv7kFFIEosAn5fHqQ-SV0oHM>;
     rdfs:label "ChatGPT-based intelligent tutoring for programming education (PyTutor)" .
   
   <https://w3id.org/spaces/AI-in-education/r/terms/AI-as-personalized-learning-tool>

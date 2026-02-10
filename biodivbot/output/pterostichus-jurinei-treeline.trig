@@ -1,4 +1,4 @@
-@prefix : <https://w3id.org/np/temp> .
+@prefix : <http://purl.org/nanopub/temp/np1/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -45,11 +45,12 @@
   orcid:0000-0002-6753-4897 foaf:name "Pietro Brandmayr" .
   
   : a <https://w3id.org/kpxl/biodiv/terms/BiodivNanopub>;
-    dct:created "2026-02-06T16:57:17.000+01:00"^^xsd:dateTime;
+    dct:created "2026-02-10T12:00:00.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAcrl-l7bWTBLTblgq2jjQwJvlADseCwSIX5SKdCyuHS8/biodiv-bot>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     npx:hasNanopubType <https://w3id.org/kpxl/biodiv/terms/BiodivNanopub>;
     npx:introduces :association;
+    npx:supersedes <https://w3id.org/np/temp/RAi0SzYZAVP4GOvtAbkE3V8jnHAyWKZ1_PdQJ4ywc1NUc>;
     rdfs:label "Pterostichus (Oreophilus) jurinei (Panzer, 1802) (species) - has habitat - alpine tree line ecotone" .
   
   <https://www.checklistbank.org/dataset/3/taxon/oXDto78zsie19xK9t39ms2> nt:hasLabelFromApi "Pterostichus (Oreophilus) jurinei (Panzer, 1802) (species)" .

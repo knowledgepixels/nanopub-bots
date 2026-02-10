@@ -1,4 +1,4 @@
-@prefix : <https://w3id.org/np/temp> .
+@prefix : <http://purl.org/nanopub/temp/np1/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -50,12 +50,12 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-06T11:50:35.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-02-10T12:00:00.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1162/COLI_a_00168>;
-    npx:supersedes <https://w3id.org/np/temp/RATNKMgnw-BR2yupJ1vpXMlCGWDC8YZ12K5wCnUcOYKa8>;
+    npx:supersedes <https://w3id.org/np/temp/RArsEyakpD-49TQFisRSXTawKLDD2cpj-NC-Aoh56mGDI>;
     rdfs:label "A Survey and Classification of Controlled Natural Languages" .
 
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .

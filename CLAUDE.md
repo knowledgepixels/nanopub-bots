@@ -22,7 +22,7 @@ Each bot has its own directory with a consistent layout:
 |---|---|---|
 | `doibot` | Academic papers (via DOI/Crossref) | `~/.nanopub/doibot_id_rsa` |
 | `biodivbot` | Organism-environment associations (BioLink, ENVO, UBERON ontologies) | `~/.nanopub/biodivbot_id_rsa` |
-| `ai-in-edu-bot` | AI approaches in education research | `~/.nanopub/ai-in-edu-bot_id` |
+| `ai-in-edu-bot` | AI approaches in education research | `~/.nanopub/ai-in-edu-bot_id_rsa` |
 
 ## Nanopublication Structure
 

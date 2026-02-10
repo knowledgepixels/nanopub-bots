@@ -1,5 +1,5 @@
-@prefix this: <https://w3id.org/np/temp/RAL4kkhKD7mA7Hl3RwrO1yExYWoB1n5-r1VGfkDuFxvzw> .
-@prefix sub: <https://w3id.org/np/temp/RAL4kkhKD7mA7Hl3RwrO1yExYWoB1n5-r1VGfkDuFxvzw/> .
+@prefix this: <https://w3id.org/np/RAtzSIX7Iv_GCtJNYjymWxj5ggoAJQi9WIHDWdHFlYhOA> .
+@prefix sub: <https://w3id.org/np/RAtzSIX7Iv_GCtJNYjymWxj5ggoAJQi9WIHDWdHFlYhOA/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix nt: <https://w3id.org/np/o/ntemplate/> .
@@ -42,17 +42,17 @@ sub:pubinfo {
   orcid:0000-0002-6753-4897 foaf:name "Pietro Brandmayr" .
   
   this: a <https://w3id.org/kpxl/biodiv/terms/BiodivNanopub>;
-    dct:created "2026-02-06T16:06:26.000+01:00"^^xsd:dateTime;
+    dct:created "2026-02-10T12:00:00.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAcrl-l7bWTBLTblgq2jjQwJvlADseCwSIX5SKdCyuHS8/biodiv-bot>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     npx:hasNanopubType <https://w3id.org/kpxl/biodiv/terms/BiodivNanopub>;
     npx:introduces sub:association;
-    npx:supersedes <https://w3id.org/np/temp/RAXQvt8NntUkRzL1KcWFbKz5zzpAJdbKhJr93uBsYeAZI>;
+    npx:supersedes <https://w3id.org/np/temp/RAL4kkhKD7mA7Hl3RwrO1yExYWoB1n5-r1VGfkDuFxvzw>;
     rdfs:label "Leistus (Pogonophorus) punctatissimus Breit, 1914 (species) - has habitat - alpine biome" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA02++z5u4lp9mezK+bcL3VSL7lM/6frtnds7+95fIUiivEHv4BgoPVN66BleoQQzBntB1x1ohMJNnbC0G+R839IUKB1vNlGgdDwMcHdbUTzpeGncHyhmTDCc4bZt1Yg24uub1SX+T2+JVQLmIkjkExAC0x6nvK1vEB9TZKqf5SdnUN2kG9cwK0nRQDhAX47cZR8FP8k4WfjZbyvXZVJpfY1zfS+dwHJbMdNjzQT818iVbGGtTXQQzk+HCU4ThiUc13XHhubJzl24T+ufYcjonPvRZzMsTMwmq0oWzvrLsiRXM02AZRwYU9rBf/8FRUdfliomT1+dEgScbSTG1wXnlfwIDAQAB";
-    npx:hasSignature "stZn0LEsOfq8u5yaVSF3oMhlTVE0CJtCVO8sZQw+3XgKPvXoz808On3eev+10TG6r9S6K0E5xsJQ8uAOMCcuZ7zZiZF/UEISlkbpMW3h5NpRCE3E+c7BeIwjEUX4Wl62ZVDtKGFLblJkJfozLPws/XAHPNXADuQ0FodYJr9uuFajGJ0X22XQ982v//OzkSt81tem4/sfrugx8/ioN9fq9JEf3EECigB9uLIHMSFzuyUdyz5SIgw7wTxJv/Zk2qARZbmCiwa43wog/s9KyKEzTI0SwUisJQSt57zJwQ97gAQtTBCNdKrJ1zrAUg0xeRwsQku2t7Gj/+S3HqUH16q5Gg==";
+    npx:hasSignature "hfSiuWyuVL0lgegMnNS7bMrilaWlWvEmiYjdJN+MJr9PLic8/w3CyNhCEi20APSUlbqV9joTYUtXdqefQqU+jG6S3lMxJlF1k0ecuJSrJhaGpsdkT5G8devy0bEHPOMmh8pifPJI7JUBdw57zhcz5+UgSk2VbiWb4BkgpzNk/tWOtXl4sjtsjlFUcrwpyORiWvX1v+IC1s8V+3f5txvaRpyM6uVWoS1i6wSICCe5pLZVoxVDRceJer09jTc3Hb8/BaZaT2lTPNF8EwRXR664WRyyRWstbfjlHTgG7I75m4Gm6OlGyj9zMxipC11mbLou8t+oOAPQHUqvPBRn+uEEeA==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAcrl-l7bWTBLTblgq2jjQwJvlADseCwSIX5SKdCyuHS8/biodiv-bot> .
   

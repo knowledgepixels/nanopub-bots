@@ -1,5 +1,5 @@
-@prefix this: <https://w3id.org/np/temp/RAi0SzYZAVP4GOvtAbkE3V8jnHAyWKZ1_PdQJ4ywc1NUc> .
-@prefix sub: <https://w3id.org/np/temp/RAi0SzYZAVP4GOvtAbkE3V8jnHAyWKZ1_PdQJ4ywc1NUc/> .
+@prefix this: <https://w3id.org/np/RALoaxy_XSyGYx4G3enZC4sPx6JPUFKk4OrWEkixFCpAg> .
+@prefix sub: <https://w3id.org/np/RALoaxy_XSyGYx4G3enZC4sPx6JPUFKk4OrWEkixFCpAg/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix nt: <https://w3id.org/np/o/ntemplate/> .
@@ -44,16 +44,17 @@ sub:pubinfo {
   orcid:0000-0002-6753-4897 foaf:name "Pietro Brandmayr" .
   
   this: a <https://w3id.org/kpxl/biodiv/terms/BiodivNanopub>;
-    dct:created "2026-02-06T16:57:17.000+01:00"^^xsd:dateTime;
+    dct:created "2026-02-10T12:00:00.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAcrl-l7bWTBLTblgq2jjQwJvlADseCwSIX5SKdCyuHS8/biodiv-bot>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     npx:hasNanopubType <https://w3id.org/kpxl/biodiv/terms/BiodivNanopub>;
     npx:introduces sub:association;
+    npx:supersedes <https://w3id.org/np/temp/RAi0SzYZAVP4GOvtAbkE3V8jnHAyWKZ1_PdQJ4ywc1NUc>;
     rdfs:label "Pterostichus (Oreophilus) jurinei (Panzer, 1802) (species) - has habitat - alpine tree line ecotone" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA02++z5u4lp9mezK+bcL3VSL7lM/6frtnds7+95fIUiivEHv4BgoPVN66BleoQQzBntB1x1ohMJNnbC0G+R839IUKB1vNlGgdDwMcHdbUTzpeGncHyhmTDCc4bZt1Yg24uub1SX+T2+JVQLmIkjkExAC0x6nvK1vEB9TZKqf5SdnUN2kG9cwK0nRQDhAX47cZR8FP8k4WfjZbyvXZVJpfY1zfS+dwHJbMdNjzQT818iVbGGtTXQQzk+HCU4ThiUc13XHhubJzl24T+ufYcjonPvRZzMsTMwmq0oWzvrLsiRXM02AZRwYU9rBf/8FRUdfliomT1+dEgScbSTG1wXnlfwIDAQAB";
-    npx:hasSignature "M6WAlIjfUjNxFHA3misJgNJnZQIdmYjaDhMxej3YKXlR87cMhEgw9U1zMPEsqFjxyjbiGB7ssVvXJktUjodLBa88hJD49vl/okKt1HeyTPCgGE+IknZBk7xTTXmT6vGT9NLaO1t6ZHhFRavafNzjznbWvxrDw+02PWTTFaIWvYxhNVuv1eNYwi9o65F6+ZuqJh5shqOR9ZiTYV1c+YBOFIDNzUVeUMF6NrnYlmSGrj6pWMDuxjL1YRORnuvi/JQlO7QxyVC7B6wzFrsKDqNL72LDqncCViq5DGaRs1JH7yulv4D3lYCcrXGN4Wm0U4e/e3wd3iM41IcFY2gk6KH8Sw==";
+    npx:hasSignature "KGC4xmWhk/hjRU4LezD1eZe9IvYzyefNsCSUsLdEmFBr3taq1NNbFpoHzSwczUOcCV8w9NSh2pTKr7jZsUzypmdVxmk/Uo+wNFv0TqspR3vNpnnnaSAuocMlw60Uwgd7xJgkVQ0UBEN0aILUfd0uuR6+YquaJLbjf3AqRSWhr6uYLiP2JtGVGS1R9MNFTGGrFJzDOvOzmbmAvSyx7kSGmcnkESQqLUNOQRNkABtDLJX6iVoN8e/BCEHEzyNjeaq9zIQ+lre5oRZ4Iefr+sh/ZqVt9LK8VuNRMj9Sw0lJANG3V9DFmf5EN29uN90HPtSwg5l+ay14I3AeTTP7OUJZzQ==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAcrl-l7bWTBLTblgq2jjQwJvlADseCwSIX5SKdCyuHS8/biodiv-bot> .
   

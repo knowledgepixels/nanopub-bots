@@ -1,5 +1,5 @@
-@prefix this: <https://w3id.org/np/temp/RAAyRPkA6_x6squyv1H7rJQHG5MS45fZ8hJhR8L_ZZEwk> .
-@prefix sub: <https://w3id.org/np/temp/RAAyRPkA6_x6squyv1H7rJQHG5MS45fZ8hJhR8L_ZZEwk/> .
+@prefix this: <https://w3id.org/np/RAUjanh7hadbVQEr_n1mgvyqsczhCP_PSggMZo8P7Eebs> .
+@prefix sub: <https://w3id.org/np/RAUjanh7hadbVQEr_n1mgvyqsczhCP_PSggMZo8P7Eebs/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix nt: <https://w3id.org/np/o/ntemplate/> .
@@ -44,16 +44,17 @@ sub:pubinfo {
   orcid:0000-0002-6753-4897 foaf:name "Pietro Brandmayr" .
   
   this: a <https://w3id.org/kpxl/biodiv/terms/BiodivNanopub>;
-    dct:created "2026-02-06T17:12:57.000+01:00"^^xsd:dateTime;
+    dct:created "2026-02-10T12:00:00.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAcrl-l7bWTBLTblgq2jjQwJvlADseCwSIX5SKdCyuHS8/biodiv-bot>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     npx:hasNanopubType <https://w3id.org/kpxl/biodiv/terms/BiodivNanopub>;
     npx:introduces sub:association;
+    npx:supersedes <https://w3id.org/np/temp/RAAyRPkA6_x6squyv1H7rJQHG5MS45fZ8hJhR8L_ZZEwk>;
     rdfs:label "Nebria (Oreonebria) castanea (Bonelli, 1810) (species) - has habitat - alpine soil" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA02++z5u4lp9mezK+bcL3VSL7lM/6frtnds7+95fIUiivEHv4BgoPVN66BleoQQzBntB1x1ohMJNnbC0G+R839IUKB1vNlGgdDwMcHdbUTzpeGncHyhmTDCc4bZt1Yg24uub1SX+T2+JVQLmIkjkExAC0x6nvK1vEB9TZKqf5SdnUN2kG9cwK0nRQDhAX47cZR8FP8k4WfjZbyvXZVJpfY1zfS+dwHJbMdNjzQT818iVbGGtTXQQzk+HCU4ThiUc13XHhubJzl24T+ufYcjonPvRZzMsTMwmq0oWzvrLsiRXM02AZRwYU9rBf/8FRUdfliomT1+dEgScbSTG1wXnlfwIDAQAB";
-    npx:hasSignature "AX1mR91RaPGyD96Cjy4Cq1pCKqaKIt8uqb/XUiGvif7GOUsI3zo5BVfn2Rh0uP6i+o+nCo/JegFPcozvXcfj12lUdvrGQTdquWpb1bh6OF/9tndprOT/pZbvJBsiBu2MrKFU/wWnVv2TXylezbqv3x79NLKtx/mMYMH6VZHZEW1XCjUAQqPBK7Wc1E1KPMnG7zhRs6tH/bt+kdjvvetrGK3xOJR8YaTQgqp1ZuiSdXwBMg9T5EWR6XhzVMNyedD5z//nFsD+tMBdODa8TdqXyKngSDxfuw8Jq/8MHPe9anoxpR+8mPJhVo1mT61GZO+0AgFRHDZ9olGigJzICt2lUA==";
+    npx:hasSignature "siA0Rz09bFfRtxsPJyQtrNCLPOBfOzlRZU0VUVbIbpw7xLxiopHmrST7H4lpWXTAZgEmgk7fmPU73nQ1wffvQKTvgkSAeNlhy1qYHOINfOAct4aazXKiOawCYbrWewQYlSagCzrghSX2Cs1ubWcBtK6da03gcsQixsQEVV5+2+85Za9tynpo9GWAKxW4yqlohBoJqe4IHvNOs9axMryO3CKAI6P9ZVWbbUSQ7ZVDYMYoSmHao5QansqsI1oDjVK4hoEfgDozghmLCar0CuK5hrEpm3A6yf7lVWNNh2g298reK/57/uPDe0hfMeGU9kVn5zBxhjBDq9SdPaBxtxZLOQ==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAcrl-l7bWTBLTblgq2jjQwJvlADseCwSIX5SKdCyuHS8/biodiv-bot> .
   
