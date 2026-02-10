@@ -1,11 +1,12 @@
-@prefix this: <https://w3id.org/np/RAOvVB2VwlZqvHUuw5pLg0wr-cTdy6PeuL4nrdswe36UU> .
-@prefix sub: <https://w3id.org/np/RAOvVB2VwlZqvHUuw5pLg0wr-cTdy6PeuL4nrdswe36UU/> .
+@prefix this: <https://w3id.org/np/RA_GIUH-snoCN79bQppivD4ltx9xs525E4PTicp3Q6RJ4> .
+@prefix sub: <https://w3id.org/np/RA_GIUH-snoCN79bQppivD4ltx9xs525E4PTicp3Q6RJ4/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix nt: <https://w3id.org/np/o/ntemplate/> .
 @prefix npx: <http://purl.org/nanopub/x/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
@@ -34,12 +35,13 @@ sub:provenance {
 sub:pubinfo {
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
   
-  this: dct:created "2026-02-10T13:35:46.056Z"^^xsd:dateTime;
+  this: dct:created "2026-02-10T13:43:51.152Z"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     npx:hasNanopubType npx:declaredBy;
     npx:introduces <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
-    npx:supersedes <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM>;
+    npx:supersedes <https://w3id.org/np/RAOvVB2VwlZqvHUuw5pLg0wr-cTdy6PeuL4nrdswe36UU>;
+    rdfs:label "DOI bot";
     nt:wasCreatedFromProvenanceTemplate <https://w3id.org/np/RA7lSq6MuK_TIC6JMSHvLtee3lpLoZDOqLJCLXevnrPoU>;
     nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RA0J4vUn_dekg-U1kK3AOEt02p9mT2WO03uGxLDec1jLw>,
       <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
@@ -47,7 +49,7 @@ sub:pubinfo {
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "en+hU5pHYyT1IV/kwbZrwLDn9VfZeU9zaKYtUpawy6ETiw1+j4gTZcYz0C594QtbbPYaohBjy2Sh23AvhnyHXAp+EnY0ok6g9Q1n4HQkqvbZa1XsJlhPglCSDTyBAEb81fYXQZem8p5OejFyaN6mB/hI3Zf+B4EWsXOOZGFEWNVb5O21xBwHXvfSZS1PPNdDjXTT8DdfSs80u4Vx9u+tZDdrHdGRM8UbA6l2/jplPyiKri1AxwvlfoFK11tjJ4nIDqCgGN+LrN3wvukyJaJX3wUhximGXu2kHidLWM1I1ocMdGB0wfDRObPwnuoSB2TAlfDmpxinEqVPQP7vlQ/16A==";
+    npx:hasSignature "Vf09vPoGWQ6kRopXaVtkBPcvwPPeS9++asa23lVisLHQr+gpFW9FdeHQ8SjS6cNA9pmGPHEMeEIRm7RsHc3QmZ2H7hNaqE8wjhMwNILm8C9MYhu8+x9tIpZsvTVco+XFkRylDKhqUjZLTewq2eLn0I862cfgLnWVL2k3936cdLyYUrYKfQC9U9STbphYqg4S9YTm3ZMf1QX80bLo8o/6mdHWrWjd3DaXrlHlW1/AB9rQK51+er3+TdNB6w3/zLXsVHR96WCe/FFMpTuVY1mDTt2g5qw1gGfCGCOfY9LKoUL+BlWhmaMGAb/RZhGNGNw6iMJ8yaltZhu7pPVZBE61VQ==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }
