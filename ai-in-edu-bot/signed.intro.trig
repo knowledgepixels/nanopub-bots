@@ -1,10 +1,11 @@
-@prefix this: <https://w3id.org/np/RAVkNLhqtCY6sVZMWqyyUkzmHJyd8-0naSJ_S_CNbabf0> .
-@prefix sub: <https://w3id.org/np/RAVkNLhqtCY6sVZMWqyyUkzmHJyd8-0naSJ_S_CNbabf0/> .
+@prefix this: <https://w3id.org/np/RA7hJLFsUVJnKzdcTrSK7S49rFrWQ9jRIHVN2lOAGimHM> .
+@prefix sub: <https://w3id.org/np/RA7hJLFsUVJnKzdcTrSK7S49rFrWQ9jRIHVN2lOAGimHM/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix nt: <https://w3id.org/np/o/ntemplate/> .
 @prefix npx: <http://purl.org/nanopub/x/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -17,13 +18,14 @@ sub:Head {
 }
 
 sub:assertion {
-  sub:ai-in-edu-bot a npx:Bot, npx:SoftwareAgent, <https://w3id.org/spaces/genaikg/r/ontology/GenAI-Agent>;
-    <http://purl.org/vocab/frbr/core#owner> orcid:0000-0002-1267-0234;
-    foaf:name "AI-in-Edu bot" .
-  
-  sub:decl npx:declaredBy sub:ai-in-edu-bot;
+  sub:decl npx:declaredBy <https://w3id.org/np/RAVkNLhqtCY6sVZMWqyyUkzmHJyd8-0naSJ_S_CNbabf0/ai-in-edu-bot>;
     npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7wtogQOHJO4ma+HTxdNL2b83kKHopztAlm96edli6yOnm0kHwY9Rea1hsqsOGQga0UZSkpzpfgqk6AUufPU/pwjstYTZVIp3ws0zrZ92u4b4EaImOYDSaJNroxLoajEdDsA0/acoX6eP7rqhOHAuQpZyQQq8+8ptR397z3rx1sC2I3Zgd+90lcgm/m5nZIdOPRqD4R5OozX1T6vvzNtZiggUO6Ww1NyIjZe/3wlavyT0T6k4uPcnkpJw0x60CXwXXOUgCYgi25Q1Hs9fZJx7vmBJ7V6sALv2ExOymiItvdTOgYInOcTNw7GoP2JkooavGl9A8aPgy4q+xbP0fqIqFwIDAQAB" .
+  
+  <https://w3id.org/np/RAVkNLhqtCY6sVZMWqyyUkzmHJyd8-0naSJ_S_CNbabf0/ai-in-edu-bot>
+    a npx:Bot, npx:SoftwareAgent, <https://w3id.org/spaces/genaikg/r/ontology/GenAI-Agent>;
+    <http://purl.org/vocab/frbr/core#owner> orcid:0000-0002-1267-0234;
+    foaf:name "AI-in-Edu bot" .
 }
 
 sub:provenance {
@@ -33,11 +35,13 @@ sub:provenance {
 sub:pubinfo {
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
   
-  this: dct:created "2026-02-08T18:16:12.180+01:00"^^xsd:dateTime;
-    dct:creator sub:ai-in-edu-bot;
+  this: dct:created "2026-02-10T13:57:37.767Z"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAVkNLhqtCY6sVZMWqyyUkzmHJyd8-0naSJ_S_CNbabf0/ai-in-edu-bot>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     npx:hasNanopubType npx:declaredBy;
-    npx:introduces sub:ai-in-edu-bot;
+    npx:introduces <https://w3id.org/np/RAVkNLhqtCY6sVZMWqyyUkzmHJyd8-0naSJ_S_CNbabf0/ai-in-edu-bot>;
+    npx:supersedes <https://w3id.org/np/RAVkNLhqtCY6sVZMWqyyUkzmHJyd8-0naSJ_S_CNbabf0>;
+    rdfs:label "AI-in-Edu bot";
     nt:wasCreatedFromProvenanceTemplate <https://w3id.org/np/RA7lSq6MuK_TIC6JMSHvLtee3lpLoZDOqLJCLXevnrPoU>;
     nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RA0J4vUn_dekg-U1kK3AOEt02p9mT2WO03uGxLDec1jLw>,
       <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
@@ -45,7 +49,7 @@ sub:pubinfo {
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7wtogQOHJO4ma+HTxdNL2b83kKHopztAlm96edli6yOnm0kHwY9Rea1hsqsOGQga0UZSkpzpfgqk6AUufPU/pwjstYTZVIp3ws0zrZ92u4b4EaImOYDSaJNroxLoajEdDsA0/acoX6eP7rqhOHAuQpZyQQq8+8ptR397z3rx1sC2I3Zgd+90lcgm/m5nZIdOPRqD4R5OozX1T6vvzNtZiggUO6Ww1NyIjZe/3wlavyT0T6k4uPcnkpJw0x60CXwXXOUgCYgi25Q1Hs9fZJx7vmBJ7V6sALv2ExOymiItvdTOgYInOcTNw7GoP2JkooavGl9A8aPgy4q+xbP0fqIqFwIDAQAB";
-    npx:hasSignature "2wcHtys1iRCjbsS40v8QCe4lh74tlJXb1ooAsk3NEJOZoeUbL2KJHSlb07ECuUJ3yv2GG3mcidzEPTCUZlt/QtDg0+NRGgFPfYTEVbM5uxYg1UDkqP907jWlJ1M/CUinDsRWaYtCobu7BSVrIkAhODB4YaYbu/HuMowAMxwq3EOpZqccsbgBK0CtFEWyOmnw9IJUjoHZbCWig9quIWxi8pk9mPHS5fv01wA2h7rRffdGo+YlRbLwGUU7DBtwaWW8Wx1h/6SwBXHts2WwNdyfrtw3qDpHOr2wbkFnuJ/MBlU9y8y6Mr1YUIWYS2bTrh3sQg4SUr++U4U0FpIT5PmxEQ==";
+    npx:hasSignature "H4rPP4N6kucqXINHeYAxw9cQNnYb7hnoMNLSXBcYTsfvjY3xTKWvCP3WIzBzFWyXgPh63XotHklSaKpyr/Vppw0rPqIqbjif86phV1KR0rBTmu15dWzHcNFfEDFEJ/LQ6fbb9XwuxxHrpuRVKqEoyEjAoRtrLpof9oxk0OK7GKgTsZRcCgSvxPmBjrzsNRSVr3GSBX5RI0ZYcvq2lPno/WfO+2rmsL6wAMn69PbaV6zNr2zpPhSHeqCLBJeaL+L0ukWWUAvir3MQQ1avHqycM5LWG2QYmUi90xxgEboUiK8NzAHHFMr/6H5ty4UN2G9TK0DHHJYb1J/zrd75Rq6Fsg==";
     npx:hasSignatureTarget this:;
-    npx:signedBy sub:ai-in-edu-bot .
+    npx:signedBy <https://w3id.org/np/RAVkNLhqtCY6sVZMWqyyUkzmHJyd8-0naSJ_S_CNbabf0/ai-in-edu-bot> .
 }
