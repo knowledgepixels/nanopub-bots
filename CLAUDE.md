@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a **data repository** (not a code project) containing nanopublications created by three specialized bots. Nanopublications are minimalist semantic publications in RDF Trig format, cryptographically signed with RSA keys. There are no build, test, or lint commands.
+This is a **data repository** containing nanopublications created by three specialized bots. Nanopublications are minimalist semantic publications in RDF Trig format, cryptographically signed with RSA keys.
 
 The project creator is Tobias Kuhn (ORCID: 0000-0002-1267-0234).
 
@@ -33,6 +33,45 @@ Every nanopub (`.trig` file) contains four named graphs:
 4. **PublicationInfo** — metadata, bot identity, and RSA signature (in signed versions)
 
 The `plain.introtemplate.trig` at the repo root is a template for introducing new bots to the nanopub network.
+
+## nanopub-java CLI
+
+The `./np` wrapper script runs the nanopub-java CLI from the sibling `../nanopub-java` repo. If the JAR isn't built yet:
+
+```bash
+mvn -f ../nanopub-java clean package -DskipTests
+```
+
+### Key commands
+
+```bash
+./np sign <file.trig>                    # Sign a nanopub (uses ~/.nanopub/id_rsa by default)
+./np sign -k ~/.nanopub/doibot_id_rsa <file.trig>   # Sign with a specific bot key
+./np publish <signed.trig>               # Publish to the nanopub network
+./np check <file.trig>                   # Validate a nanopub
+./np retract -i <nanopub-uri-or-file>    # Create a retraction nanopub
+./np retract -i <nanopub-uri> -p         # Retract and publish the retraction
+```
+
+### Superseding nanopublications
+
+To publish an updated version of a nanopub, add an `npx:supersedes` triple in the `pubinfo` graph pointing to the old nanopub's URI:
+
+```turtle
+this:pubinfo {
+  this: ...
+    npx:supersedes <https://w3id.org/np/RAold...> ;
+    ...
+}
+```
+
+Then sign and publish the new nanopub. The old one remains immutable on the network but is marked as superseded.
+
+For index nanopubs, `mkindex -x <old-index-uri>` adds the supersedes link automatically:
+
+```bash
+./np mkindex -x <old-index-uri> -o new-index.trig -t "Title" file1.trig file2.trig
+```
 
 ## External Dependencies
 

@@ -1,0 +1,16 @@
+#!/bin/bash
+# Wrapper to run nanopub-java CLI from within this repo.
+# Assumes ../nanopub-java has been built with: mvn -f ../nanopub-java clean package -DskipTests
+
+set -e
+
+SCRIPTDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+NANOPUBJAR=$(find "$SCRIPTDIR/../nanopub-java/target/" -maxdepth 1 -name "nanopub-*-jar-with-dependencies.jar" 2>/dev/null | sort -n | tail -1)
+
+if [ -z "$NANOPUBJAR" ]; then
+  echo "ERROR: No nanopub jar found. Build it first:" >&2
+  echo "  mvn -f ../nanopub-java clean package -DskipTests" >&2
+  exit 1
+fi
+
+exec java -Dsun.jnu.encoding=utf8 -Dfile.encoding=utf8 -jar "$NANOPUBJAR" "$@"
