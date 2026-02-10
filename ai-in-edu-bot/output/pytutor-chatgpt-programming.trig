@@ -1,0 +1,46 @@
+@prefix : <https://w3id.org/np/temp> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+:Head {
+  : a np:Nanopublication;
+    np:hasAssertion :assertion;
+    np:hasProvenance :provenance;
+    np:hasPublicationInfo :pubinfo .
+}
+
+:assertion {
+  <https://doi.org/10.1016/j.caeai.2024.100309> rdfs:label "Yang ACM, Lin JY, Lin CY, and Ogata H (2024) Enhancing python learning with PyTutor: Efficacy of a ChatGPT-Based intelligent tutoring system in programming education. Comput. Educ.: Artif. Intell. 100309" .
+  
+  :chatgpt_based_intelligent_tutoring_for_programming a <https://w3id.org/spaces/AI-in-education/r/terms/AI-as-personalized-learning-tool>,
+      <https://w3id.org/spaces/AI-in-education/r/terms/AI-in-Education-approach>;
+    dct:description "The PyTutor approach uses a ChatGPT-based intelligent tutoring system that provides continuous guidance, problem-solving hints, and detailed code explanations for beginner Python programmers through a structured multi-level hint system progressing from pseudocode to cloze code to basic and advanced solutions, dynamically adapting to each student's level.";
+    dct:source <https://doi.org/10.1016/j.caeai.2024.100309>;
+    rdfs:label "ChatGPT-based intelligent tutoring for programming education (PyTutor)" .
+}
+
+:provenance {
+  :assertion prov:wasAttributedTo orcid:0000-0002-1267-0234 .
+}
+
+:pubinfo {
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  : dct:created "2026-02-09T07:40:07.000Z"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAVkNLhqtCY6sVZMWqyyUkzmHJyd8-0naSJ_S_CNbabf0/ai-in-edu-bot>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    npx:introduces :chatgpt_based_intelligent_tutoring_for_programming;
+    rdfs:label "ChatGPT-based intelligent tutoring for programming education (PyTutor)" .
+  
+  <https://w3id.org/spaces/AI-in-education/r/terms/AI-as-personalized-learning-tool>
+    nt:hasLabelFromApi "AI as personalized learning tool - Approach to use AI in education as a personalized learning tool." .
+
+  :sig npx:signedBy <https://w3id.org/np/RAVkNLhqtCY6sVZMWqyyUkzmHJyd8-0naSJ_S_CNbabf0/ai-in-edu-bot> .
+}

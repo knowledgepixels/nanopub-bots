@@ -1,0 +1,46 @@
+@prefix this: <https://w3id.org/np/temp/RAjsNoXmjyMp40-8eoYWuQiVLPJEDgTh21TJ0eCUvEZag> .
+@prefix sub: <https://w3id.org/np/temp/RAjsNoXmjyMp40-8eoYWuQiVLPJEDgTh21TJ0eCUvEZag/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  <https://doi.org/10.1186/s41239-024-00455-4> rdfs:label "Banihashem SK, Taghizadeh Kerman N, Noroozi O, Moon J, and Drachsler H (2024) Feedback sources in essay writing: peer-generated or AI-generated feedback? Int. J. Educ. Technol. High. Educ. 21:1" .
+  
+  sub:ai_generated_feedback_for_essay_writing a <https://w3id.org/spaces/AI-in-education/r/terms/AI-in-Education-approach>;
+    dct:description "The AI-generated feedback for essay writing approach uses ChatGPT to provide automated feedback on argumentative essays written by graduate students, comparing its effectiveness with peer-generated feedback in terms of feedback quality, perceived usefulness, and impact on essay revision, finding that AI-generated feedback is perceived as more useful but peer feedback leads to greater essay improvement.";
+    dct:source <https://doi.org/10.1186/s41239-024-00455-4>;
+    rdfs:label "AI-generated feedback for essay writing" .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-1267-0234 .
+}
+
+sub:pubinfo {
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  this: dct:created "2026-02-09T07:40:07.000Z"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAVkNLhqtCY6sVZMWqyyUkzmHJyd8-0naSJ_S_CNbabf0/ai-in-edu-bot>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    npx:introduces sub:ai_generated_feedback_for_essay_writing;
+    rdfs:label "AI-generated feedback for essay writing" .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7wtogQOHJO4ma+HTxdNL2b83kKHopztAlm96edli6yOnm0kHwY9Rea1hsqsOGQga0UZSkpzpfgqk6AUufPU/pwjstYTZVIp3ws0zrZ92u4b4EaImOYDSaJNroxLoajEdDsA0/acoX6eP7rqhOHAuQpZyQQq8+8ptR397z3rx1sC2I3Zgd+90lcgm/m5nZIdOPRqD4R5OozX1T6vvzNtZiggUO6Ww1NyIjZe/3wlavyT0T6k4uPcnkpJw0x60CXwXXOUgCYgi25Q1Hs9fZJx7vmBJ7V6sALv2ExOymiItvdTOgYInOcTNw7GoP2JkooavGl9A8aPgy4q+xbP0fqIqFwIDAQAB";
+    npx:hasSignature "EAvBp2C3BaOqDZSZ6KLGxBCJ2FYbsWnKTmTq/TNA/x2kOqc4Ys8hYMoJnFKZbRB1pMi+YW0zP0x3+U9Wvzl4HWyqbp2uxQwlJipk8Jwbky6Pchin5/BLZ8EeBh9RoTGOwJeePlcJckhWa8I7eydVYF6//oseTMBnepzm1PHNGUiEelJ/MQmG83bzCUGw51yslzdYzS/LYPOj5sbLvWKwY6V6ZO0LVIjNSr57s8r6teLosGjunp2rLXKg3HkCuqfsIi4dcJXzJDbgJxC01AtjAkNMRQy+WMbJdB9T6Akg3tG3nVlFTJoq69hX3lj6Gs3xPL3mCqCUhn0xf+yxKalZXg==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy <https://w3id.org/np/RAVkNLhqtCY6sVZMWqyyUkzmHJyd8-0naSJ_S_CNbabf0/ai-in-edu-bot> .
+}
