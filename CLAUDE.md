@@ -73,6 +73,18 @@ For index nanopubs, `mkindex -x <old-index-uri>` adds the supersedes link automa
 ./np mkindex -x <old-index-uri> -o new-index.trig -t "Title" file1.trig file2.trig
 ```
 
+## Workflow: creating/updating nanopubs
+
+1. Edit the output file in `<bot>/output/`
+2. Sign: `./np sign -k <key-file> <bot>/output/<name>.trig -o <bot>/signed/signed.<name>.trig`
+3. Publish: `./np publish <bot>/signed/signed.<name>.trig`
+
+When updating an existing nanopub, add `npx:supersedes` in the output file's pubinfo graph pointing to the old signed URI before re-signing.
+
+### Temp URI prefix
+
+Output files **must** use `@prefix : <http://purl.org/nanopub/temp/np1/> .` as the base prefix. This is the standard nanopub temp URI that gets replaced with a proper trusty URI (`https://w3id.org/np/RA...`) during signing. Using `<https://w3id.org/np/temp>` instead causes the signed URI to incorrectly contain `/temp/`.
+
 ## External Dependencies
 
 - **Nanopub network**: Published via nanodash.knowledgepixels.com / nanodash.petapico.org
