@@ -27,17 +27,17 @@
 }
 
 :provenance {
-  :assertion prov:wasDerivedFrom <https://w3id.org/np/RAVkNLhqtCY6sVZMWqyyUkzmHJyd8-0naSJ_S_CNbabf0/ai-in-edu-bot> .
+  :assertion prov:wasDerivedFrom <https://doi.org/10.1016/j.caeai.2024.100309> .
 }
 
 :pubinfo {
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
   
-  : dct:created "2026-02-10T15:00:00.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-02-10T16:00:00.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAVkNLhqtCY6sVZMWqyyUkzmHJyd8-0naSJ_S_CNbabf0/ai-in-edu-bot>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     npx:introduces :chatgpt_based_intelligent_tutoring_for_programming;
-    npx:supersedes <https://w3id.org/np/RAwNPnxbtbQTb429I85_d-1HeoxOGtQuV_C4l-h-RvL1w>;
+    npx:supersedes <https://w3id.org/np/RAfYA1kRbd8zH6LNR8jbnMER3YNveW7vl1utB4F9E6pbc>;
     rdfs:label "ChatGPT-based intelligent tutoring for programming education (PyTutor)" .
   
   <https://w3id.org/spaces/AI-in-education/r/terms/AI-as-personalized-learning-tool>

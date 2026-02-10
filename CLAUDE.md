@@ -84,6 +84,12 @@ When updating an existing nanopub:
 - Add/update `npx:supersedes` in the pubinfo graph pointing to the old signed URI
 - Then re-sign and publish
 
+### Provenance patterns per bot
+
+- **doibot**: `prov:wasAttributedTo` (paper authors) + `prov:wasDerivedFrom` (paper DOI)
+- **biodivbot**: `prov:wasAttributedTo` (researchers who made the observation)
+- **ai-in-edu-bot**: `prov:wasDerivedFrom` (paper DOI)
+
 ### Temp URI prefix
 
 Output files **must** use `@prefix : <http://purl.org/nanopub/temp/np1/> .` as the base prefix. This is the standard nanopub temp URI that gets replaced with a proper trusty URI (`https://w3id.org/np/RA...`) during signing. Using `<https://w3id.org/np/temp>` instead causes the signed URI to incorrectly contain `/temp/`.
