@@ -26,17 +26,17 @@
 }
 
 :provenance {
-  :assertion prov:wasAttributedTo orcid:0000-0002-1267-0234 .
+  :assertion prov:wasDerivedFrom <https://w3id.org/np/RAVkNLhqtCY6sVZMWqyyUkzmHJyd8-0naSJ_S_CNbabf0/ai-in-edu-bot> .
 }
 
 :pubinfo {
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
   
-  : dct:created "2026-02-10T12:00:00.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-02-10T15:00:00.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAVkNLhqtCY6sVZMWqyyUkzmHJyd8-0naSJ_S_CNbabf0/ai-in-edu-bot>;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
     npx:introduces :ai_generated_feedback_for_essay_writing;
-    npx:supersedes <https://w3id.org/np/temp/RAjsNoXmjyMp40-8eoYWuQiVLPJEDgTh21TJ0eCUvEZag>;
+    npx:supersedes <https://w3id.org/np/RABIqBCu0O3jjIDwABaHOwWiQjVEXw2DtWI1tJ5S_Ql0k>;
     rdfs:label "AI-generated feedback for essay writing" .
 
   :sig npx:signedBy <https://w3id.org/np/RAVkNLhqtCY6sVZMWqyyUkzmHJyd8-0naSJ_S_CNbabf0/ai-in-edu-bot> .

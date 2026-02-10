@@ -79,7 +79,10 @@ For index nanopubs, `mkindex -x <old-index-uri>` adds the supersedes link automa
 2. Sign: `./np sign -k <key-file> <bot>/output/<name>.trig -o <bot>/signed/signed.<name>.trig`
 3. Publish: `./np publish <bot>/signed/signed.<name>.trig`
 
-When updating an existing nanopub, add `npx:supersedes` in the output file's pubinfo graph pointing to the old signed URI before re-signing.
+When updating an existing nanopub:
+- Update the `dct:created` timestamp to the current date/time
+- Add/update `npx:supersedes` in the pubinfo graph pointing to the old signed URI
+- Then re-sign and publish
 
 ### Temp URI prefix
 
