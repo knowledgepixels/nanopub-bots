@@ -84,6 +84,10 @@ When updating an existing nanopub:
 - Add/update `npx:supersedes` in the pubinfo graph pointing to the old signed URI
 - Then re-sign and publish
 
+### Personal information policy
+
+Only include personal information (names, email addresses, affiliations, ORCIDs, etc.) in a nanopublication if it is already permanently and openly published — e.g. expressed in a published scientific paper or made available online by the person themselves under a permanent open license (such as CC-BY).
+
 ### Provenance patterns per bot
 
 - **doibot**: `prov:wasAttributedTo` (paper authors) + `prov:wasDerivedFrom` (paper DOI)
