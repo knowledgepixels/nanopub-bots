@@ -1,0 +1,66 @@
+@prefix : <http://purl.org/nanopub/temp/np1/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix ror: <https://ror.org/> .
+@prefix schema: <http://schema.org/> .
+
+:Head {
+  : a np:Nanopublication;
+    np:hasAssertion :assertion;
+    np:hasProvenance :provenance;
+    np:hasPublicationInfo :pubinfo .
+}
+
+:assertion {
+  <https://doi.org/10.1007/11799511_7> a fabio:BookChapter;
+    dct:abstract "Linking the biomedical literature to other data resources is notoriously difficult and requires text mining. Text mining aims to automatically extract facts from literature. Since authors write in natural language, text mining is a great natural language processing challenge, which is far from being solved. We propose an alternative: If authors and editors summarize the main facts in a controlled natural language, text mining will become easier and more powerful. To demonstrate this approach, we use the language Attempto Controlled English (ACE). We define a simple model to capture the main aspects of protein interactions. To evaluate our approach, we collected a dataset of 459 paragraph headings about protein interaction from literature. 56% of these headings can be represented exactly in ACE and another 23% partially. These results indicate that our approach is feasible.";
+    dct:date "2006";
+    dct:title "Improving Text Mining with Controlled Natural Language: A Case Study for Protein Interactions" ;
+    bibo:authorList :author-list;
+    dct:isPartOf <http://id.crossref.org/issn/0302-9743> .
+
+  <http://id.crossref.org/issn/0302-9743> dct:title "Data Integration in the Life Sciences" .
+
+  :author-list rdf:_1 orcid:0000-0002-1267-0234 .
+  :author-list rdf:_2 :loic-royer .
+  :author-list rdf:_3 :norbert-e-fuchs .
+  :author-list rdf:_4 :michael-schroeder .
+
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  :loic-royer foaf:name "Loic Royer" .
+  :norbert-e-fuchs foaf:name "Norbert E. Fuchs" .
+  :michael-schroeder foaf:name "Michael Schroeder" .
+
+}
+
+:provenance {
+  :assertion prov:wasAttributedTo orcid:0000-0002-1267-0234, :loic-royer, :norbert-e-fuchs, :michael-schroeder .
+  :assertion prov:wasDerivedFrom <https://doi.org/10.1007/11799511_7> .
+}
+
+:pubinfo {
+  : dct:created "2026-02-10T17:47:13.369+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.1007/11799511_7>;
+    rdfs:label "Improving Text Mining with Controlled Natural Language: A Case Study for Protein Interactions" .
+
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  :loic-royer foaf:name "Loic Royer" .
+  :norbert-e-fuchs foaf:name "Norbert E. Fuchs" .
+  :michael-schroeder foaf:name "Michael Schroeder" .
+
+  :sig npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}

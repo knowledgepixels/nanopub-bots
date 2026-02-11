@@ -1,0 +1,73 @@
+@prefix this: <https://w3id.org/np/RA9OPnyNj7BPsCXWkvIrtXZZhlFOuub8lefTWxXkPCFFw> .
+@prefix sub: <https://w3id.org/np/RA9OPnyNj7BPsCXWkvIrtXZZhlFOuub8lefTWxXkPCFFw/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  <http://id.crossref.org/issn/0302-9743> dct:title "Data Integration in the Life Sciences" .
+  
+  <https://doi.org/10.1007/11799511_7> a fabio:BookChapter;
+    dct:abstract "Linking the biomedical literature to other data resources is notoriously difficult and requires text mining. Text mining aims to automatically extract facts from literature. Since authors write in natural language, text mining is a great natural language processing challenge, which is far from being solved. We propose an alternative: If authors and editors summarize the main facts in a controlled natural language, text mining will become easier and more powerful. To demonstrate this approach, we use the language Attempto Controlled English (ACE). We define a simple model to capture the main aspects of protein interactions. To evaluate our approach, we collected a dataset of 459 paragraph headings about protein interaction from literature. 56% of these headings can be represented exactly in ACE and another 23% partially. These results indicate that our approach is feasible.";
+    dct:date "2006";
+    dct:isPartOf <http://id.crossref.org/issn/0302-9743>;
+    dct:title "Improving Text Mining with Controlled Natural Language: A Case Study for Protein Interactions";
+    bibo:authorList sub:author-list .
+  
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  sub:author-list rdf:_1 orcid:0000-0002-1267-0234;
+    rdf:_2 sub:loic-royer;
+    rdf:_3 sub:norbert-e-fuchs;
+    rdf:_4 sub:michael-schroeder .
+  
+  sub:loic-royer foaf:name "Loic Royer" .
+  
+  sub:michael-schroeder foaf:name "Michael Schroeder" .
+  
+  sub:norbert-e-fuchs foaf:name "Norbert E. Fuchs" .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-1267-0234, sub:loic-royer, sub:michael-schroeder,
+      sub:norbert-e-fuchs;
+    prov:wasDerivedFrom <https://doi.org/10.1007/11799511_7> .
+}
+
+sub:pubinfo {
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  this: dct:created "2026-02-10T17:47:13.369+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.1007/11799511_7>;
+    rdfs:label "Improving Text Mining with Controlled Natural Language: A Case Study for Protein Interactions" .
+  
+  sub:loic-royer foaf:name "Loic Royer" .
+  
+  sub:michael-schroeder foaf:name "Michael Schroeder" .
+  
+  sub:norbert-e-fuchs foaf:name "Norbert E. Fuchs" .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
+    npx:hasSignature "br5TmLz33rFD4xbDILoZIiGcy8xKL8s21PY4mEj2Cs46D5pCSEhJ4YpJ4HTgdjR6U5jbAoOlWWX3mcVoHdF/5YJk7wyVWrLtUG+P4tj8yDs5nhAWtgCx6MyTs8gZcanjS3rs8lC4JMq9DjQ8DA1V/ubVIMlgxJrLO0/3CNEv8BhdIAv0Jl7XTx5q52aIfOKShDHmbqTeCCNh9CvXtYaCc653SPsW8wud2o0b3cF6ZWClwnO4O9/e1pUaNi5zUOrKJFrmEtvziFMOUwLshtc9qspmfXgBeT+gyiDeq9G2tN5wCFXUNULxxGXV58pnF0RjT8K2d0wBIQ+QLIbShGFMsA==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}
