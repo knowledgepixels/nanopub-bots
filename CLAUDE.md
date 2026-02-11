@@ -81,7 +81,12 @@ Use content negotiation to retrieve RDF directly from the DOI:
 curl -L -H 'Accept: text/turtle' 'https://doi.org/10.1007/11799511_7'
 ```
 
-This returns structured RDF (Turtle) with title, authors, ORCIDs, ROR affiliations, and other metadata. Verify the ORCIDs and RORs are correct, but this should normally be sufficient to construct the nanopub. The abstract (`dct:abstract`) is optional — include it when available from the metadata, but simply leave it out if not. Only perform additional web searches (CrossRef API, publisher pages, etc.) if the RDF is not returned or seems wrong/incomplete.
+This returns structured RDF (Turtle) with title, authors, ORCIDs, ROR affiliations, and other metadata. The abstract (`dct:abstract`) is optional — include it when available from the metadata, but simply leave it out if not. Only perform additional web searches (CrossRef API, publisher pages, etc.) if the RDF is not returned or seems wrong/incomplete.
+
+Always look up and verify author ORCIDs and organization RORs:
+
+- **ORCIDs**: Search at `https://pub.orcid.org/v3.0/search/?q=family-name:Last+AND+given-names:First` (Accept: application/json). Verify by fetching the person record at `https://pub.orcid.org/v3.0/<ORCID>/person`. Use ORCID URIs (e.g. `orcid:0000-0002-1267-0234`) instead of local identifiers whenever an ORCID is found.
+- **RORs**: Verify organization identifiers at `https://api.ror.org/v2/organizations/<ROR-ID>`.
 
 ## Workflow: creating/updating nanopubs
 
