@@ -78,10 +78,10 @@ For index nanopubs, `mkindex -x <old-index-uri>` adds the supersedes link automa
 Use content negotiation to retrieve RDF directly from the DOI:
 
 ```bash
-curl -L -H 'Accept: application/trig' 'https://doi.org/10.1007/11799511_7'
+curl -L -H 'Accept: text/turtle' 'https://doi.org/10.1007/11799511_7'
 ```
 
-This returns structured RDF with title, authors, ORCIDs, ROR affiliations, and other metadata. Verify the ORCIDs and RORs are correct, but this should normally be sufficient to construct the nanopub. Only perform additional web searches (CrossRef API, publisher pages, etc.) if the RDF is not returned or seems wrong/incomplete.
+This returns structured RDF (Turtle) with title, authors, ORCIDs, ROR affiliations, and other metadata. Verify the ORCIDs and RORs are correct, but this should normally be sufficient to construct the nanopub. Only perform additional web searches (CrossRef API, publisher pages, etc.) if the RDF is not returned or seems wrong/incomplete.
 
 ## Workflow: creating/updating nanopubs
 
