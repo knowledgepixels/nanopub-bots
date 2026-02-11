@@ -73,6 +73,16 @@ For index nanopubs, `mkindex -x <old-index-uri>` adds the supersedes link automa
 ./np mkindex -x <old-index-uri> -o new-index.trig -t "Title" file1.trig file2.trig
 ```
 
+## Retrieving metadata for DOI-based nanopubs
+
+Use content negotiation to retrieve RDF directly from the DOI:
+
+```bash
+curl -L -H 'Accept: application/trig' 'https://doi.org/10.1007/11799511_7'
+```
+
+This returns structured RDF with title, authors, ORCIDs, ROR affiliations, and other metadata. Verify the ORCIDs and RORs are correct, but this should normally be sufficient to construct the nanopub. Only perform additional web searches (CrossRef API, publisher pages, etc.) if the RDF is not returned or seems wrong/incomplete.
+
 ## Workflow: creating/updating nanopubs
 
 1. Edit the output file in `<bot>/output/`
