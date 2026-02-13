@@ -78,15 +78,43 @@ For index nanopubs, `mkindex -x <old-index-uri>` adds the supersedes link automa
 Use content negotiation to retrieve RDF directly from the DOI:
 
 ```bash
-curl -L -H 'Accept: text/turtle' 'https://doi.org/10.1007/11799511_7'
+curl -sL -H 'Accept: text/turtle' 'https://doi.org/10.1007/11799511_7'
 ```
 
 This returns structured RDF (Turtle) with title, authors, ORCIDs, ROR affiliations, and other metadata. The abstract (`dct:abstract`) is optional — include it when available from the metadata, but simply leave it out if not. Only perform additional web searches (CrossRef API, publisher pages, etc.) if the RDF is not returned or seems wrong/incomplete.
 
-Always look up and verify author ORCIDs and organization RORs:
+### Important caveats about DOI metadata
 
-- **ORCIDs**: Search at `https://pub.orcid.org/v3.0/search/?q=family-name:Last+AND+given-names:First` (Accept: application/json). Verify by fetching the person record at `https://pub.orcid.org/v3.0/<ORCID>/person`. Use ORCID URIs (e.g. `orcid:0000-0002-1267-0234`) instead of local identifiers whenever an ORCID is found.
-- **RORs**: Verify organization identifiers at `https://api.ror.org/v2/organizations/<ROR-ID>`.
+- **Author order is NOT preserved** in the RDF. Always verify author order from the actual paper/publisher page.
+- **ORCIDs are often missing** from the RDF. Some publishers include `owl:sameAs` ORCID links (e.g. IEEE, some Springer papers), but many don't. Always search ORCID separately when not present.
+- **CrossRef metadata can include non-authors** (e.g. guest editors). Verify the author list against the actual paper.
+
+### Looking up and verifying ORCIDs
+
+- **Search**: `https://pub.orcid.org/v3.0/search/?q=family-name:Last+AND+given-names:First` (Accept: application/json)
+- **Verify person**: `https://pub.orcid.org/v3.0/<ORCID>/person`
+- **Check employments** (for affiliations): `https://pub.orcid.org/v3.0/<ORCID>/employments`
+- **Check works** (to disambiguate common names): `https://pub.orcid.org/v3.0/<ORCID>/works`
+- For names with diacritics (e.g. Meroño-Peñuela), URL-encode the special characters in the search query.
+- Common names may return multiple results — verify by checking works or employment history.
+- Use ORCID URIs (e.g. `orcid:0000-0002-1267-0234`) instead of local identifiers whenever an ORCID is found.
+
+### Looking up and verifying RORs
+
+- **Search**: `https://api.ror.org/v2/organizations?query=<name>`
+- **Verify**: `https://api.ror.org/v2/organizations/<ROR-ID>` (use full URL like `https://ror.org/008xxew50`)
+
+### API usage tips
+
+When piping `curl` to `python3`, the output can arrive empty via stdin. The reliable pattern is to save to a file first, then parse:
+
+```bash
+curl -s -H 'Accept: application/json' '<url>' -o /tmp/result.json && python3 -c "
+import json
+with open('/tmp/result.json') as f:
+    data = json.load(f)
+..."
+```
 
 ## Workflow: creating/updating nanopubs
 
@@ -102,6 +130,22 @@ When updating an existing nanopub:
 ### Personal information policy
 
 Only include personal information (names, email addresses, affiliations, ORCIDs, etc.) in a nanopublication if it is already permanently and openly published — e.g. expressed in a published scientific paper or made available online by the person themselves under a permanent open license (such as CC-BY).
+
+### FaBiO types for doibot
+
+- `fabio:Article` — journal articles (with `dct:isPartOf` linking to ISSN)
+- `fabio:BookChapter` — book/proceedings chapters (e.g. LNCS/Springer, with `dct:isPartOf` linking to ISSN)
+- `fabio:ConferencePaper` — standalone conference papers without a journal ISSN (e.g. ACM, IEEE proceedings); `dct:isPartOf` can be omitted
+
+All doibot nanopubs use `npx:hasNanopubType fabio:ScholarlyWork` in pubinfo regardless of the specific FaBiO type.
+
+### Checking existing doibot nanopubs
+
+To see which papers already have nanopubs for a given author:
+
+```
+https://nanodash.knowledgepixels.com/query?runquery=RA7X8hbsozQjZCv4RfWGIgzEA6qr9Ds6RL5kQnB7GHThc/get-papers-for-author&queryparam_author=https://orcid.org/0000-0002-1267-0234
+```
 
 ### Provenance patterns per bot
 

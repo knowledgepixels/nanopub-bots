@@ -1,0 +1,69 @@
+@prefix this: <https://w3id.org/np/RA2Y3nedeecBUPv8Vj28CngJUz3Q1WaPHCoOD4DclU5mQ> .
+@prefix sub: <https://w3id.org/np/RA2Y3nedeecBUPv8Vj28CngJUz3Q1WaPHCoOD4DclU5mQ/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  <http://id.crossref.org/issn/0302-9743> dct:title "Lecture Notes in Computer Science" .
+  
+  <https://doi.org/10.1007/978-3-642-38288-8_33> a fabio:BookChapter;
+    dct:date "2013";
+    dct:isPartOf <http://id.crossref.org/issn/0302-9743>;
+    dct:title "Broadening the Scope of Nanopublications";
+    bibo:authorList sub:author-list;
+    bibo:pageEnd "501";
+    bibo:pageStart "487" .
+  
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0002-4808-1845 foaf:name "Michael Krauthammer" .
+  
+  sub:author-list rdf:_1 orcid:0000-0002-1267-0234;
+    rdf:_2 sub:paolo-emilio-barbano;
+    rdf:_3 sub:mate-levente-nagy;
+    rdf:_4 orcid:0000-0002-4808-1845 .
+  
+  sub:mate-levente-nagy foaf:name "Mate Levente Nagy" .
+  
+  sub:paolo-emilio-barbano foaf:name "Paolo Emilio Barbano" .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-1267-0234, orcid:0000-0002-4808-1845;
+    prov:wasDerivedFrom <https://doi.org/10.1007/978-3-642-38288-8_33> .
+}
+
+sub:pubinfo {
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0002-4808-1845 foaf:name "Michael Krauthammer" .
+  
+  this: dct:created "2026-02-13T12:10:38.267+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.1007/978-3-642-38288-8_33>;
+    rdfs:label "Broadening the Scope of Nanopublications" .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
+    npx:hasSignature "iCiTE2v3v9UxMIAYSR7nBXgbZ98Gfh1/umLkfT/qDf5yhqe7Aq+GoGe+oIg6hcNkWL0WQXDji/yMKrUuQiNPFMQOxARDjYOy8t2JC1j8D06xHINHZssY1MXo3t17fue5omnL1/TFG7s61MzCLR19sQ3mPKlt4STHB4Qtv8fmiB9SPtH2h77Pdz5L3+OPSe/NWzxRSz59oaxjt5aa494dFWpdnFI1R9+ySxyJO4Q/iZftizLrgmMo7iJ6pSiU3kx3ku9TYrGVuyIuU6tLsFo+RZV2fwT2StWQFrqiqAgFmaNuTQK2nPbC/1ecQaxDX0hwtPluH1ombNJUUp9gWsgU1Q==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}

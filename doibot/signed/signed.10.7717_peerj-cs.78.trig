@@ -1,0 +1,98 @@
+@prefix this: <https://w3id.org/np/RAjpPQOpiLWit8MFRYywDmHgvbGx1MX27aCC6ZEpf_Hv8> .
+@prefix sub: <https://w3id.org/np/RAjpPQOpiLWit8MFRYywDmHgvbGx1MX27aCC6ZEpf_Hv8/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  <http://id.crossref.org/issn/2376-5992> dct:title "PeerJ Computer Science" .
+  
+  <https://doi.org/10.7717/peerj-cs.78> a fabio:Article;
+    dct:date "2016-08-22";
+    dct:isPartOf <http://id.crossref.org/issn/2376-5992>;
+    dct:title "Decentralized provenance-aware publishing with nanopublications";
+    bibo:authorList sub:author-list;
+    bibo:pageStart "e78";
+    bibo:volume "2" .
+  
+  orcid:0000-0001-6818-334X foaf:name "Christine Chichester" .
+  
+  orcid:0000-0001-7112-3516 foaf:name "Axel-Cyrille Ngonga Ngomo" .
+  
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0002-4808-1845 foaf:name "Michael Krauthammer" .
+  
+  orcid:0000-0002-8596-222X foaf:name "Ruben Verborgh" .
+  
+  orcid:0000-0003-0169-8159 foaf:name "Núria Queralt-Rosinach" .
+  
+  orcid:0000-0003-3094-139X foaf:name "Raffaele Viglianti" .
+  
+  orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
+  
+  sub:author-list rdf:_1 orcid:0000-0002-1267-0234;
+    rdf:_2 orcid:0000-0001-6818-334X;
+    rdf:_3 orcid:0000-0002-4808-1845;
+    rdf:_4 orcid:0000-0003-0169-8159;
+    rdf:_5 orcid:0000-0002-8596-222X;
+    rdf:_6 sub:george-giannakopoulos;
+    rdf:_7 orcid:0000-0001-7112-3516;
+    rdf:_8 orcid:0000-0003-3094-139X;
+    rdf:_9 orcid:0000-0003-4727-9435 .
+  
+  sub:george-giannakopoulos foaf:name "George Giannakopoulos" .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0001-6818-334X, orcid:0000-0001-7112-3516,
+      orcid:0000-0002-1267-0234, orcid:0000-0002-4808-1845, orcid:0000-0002-8596-222X, orcid:0000-0003-0169-8159,
+      orcid:0000-0003-3094-139X, orcid:0000-0003-4727-9435;
+    prov:wasDerivedFrom <https://doi.org/10.7717/peerj-cs.78> .
+}
+
+sub:pubinfo {
+  orcid:0000-0001-6818-334X foaf:name "Christine Chichester" .
+  
+  orcid:0000-0001-7112-3516 foaf:name "Axel-Cyrille Ngonga Ngomo" .
+  
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0002-4808-1845 foaf:name "Michael Krauthammer" .
+  
+  orcid:0000-0002-8596-222X foaf:name "Ruben Verborgh" .
+  
+  orcid:0000-0003-0169-8159 foaf:name "Núria Queralt-Rosinach" .
+  
+  orcid:0000-0003-3094-139X foaf:name "Raffaele Viglianti" .
+  
+  orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
+  
+  this: dct:created "2026-02-13T11:54:44.925+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.7717/peerj-cs.78>;
+    rdfs:label "Decentralized provenance-aware publishing with nanopublications" .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
+    npx:hasSignature "fUkYFd3P5+wOLhe2RJaTltMYpAKZLeO0IcUp3oC/ozF/CXgyxE24993it5Wmhs2UD/oGpDo4HRUHbD2ZW9fshYiJwmgTccsuNA/VmTtq43bwwB4CHPx6/IynkVxH6AmYjgacpDqWQsgofCUq0xmvaNFdalhnESMSmRlEGBCp+2Zp59/iH/dp3qKM4tS+Nt917qzD1tDyJmyDj0866HqQRMDoEK6my7hmKnJwzYBfXFAzVXsoeZEVQWJoZd4GDUKj/fHgJilO6yyOied23rjXJzUp5CQs+U1wwUbrm4hYuUs5P4FgUJDGurf6x6QXzcAOGlmFI9BLM9amGIarrXcIVg==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}

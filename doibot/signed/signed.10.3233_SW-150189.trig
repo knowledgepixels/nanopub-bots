@@ -1,0 +1,85 @@
+@prefix this: <https://w3id.org/np/RApRnYHZRsFz8nCTXRvDbFdlJWgdMEepw5Iw8hCY4zU0o> .
+@prefix sub: <https://w3id.org/np/RApRnYHZRsFz8nCTXRvDbFdlJWgdMEepw5Iw8hCY4zU0o/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  <http://id.crossref.org/issn/2210-4968> dct:title "Semantic Web" .
+  
+  <https://doi.org/10.3233/SW-150189> a fabio:Article;
+    dct:date "2016-06-23";
+    dct:isPartOf <http://id.crossref.org/issn/2210-4968>;
+    dct:title "Publishing DisGeNET as nanopublications";
+    bibo:authorList sub:author-list;
+    bibo:pageEnd "528";
+    bibo:pageStart "519";
+    bibo:volume "7" .
+  
+  orcid:0000-0001-6818-334X foaf:name "Christine Chichester" .
+  
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0002-7534-7661 foaf:name "Ferran Sanz" .
+  
+  orcid:0000-0002-9383-528X foaf:name "Laura I. Furlong" .
+  
+  orcid:0000-0003-0169-8159 foaf:name "Núria Queralt-Rosinach" .
+  
+  orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
+  
+  sub:author-list rdf:_1 orcid:0000-0003-0169-8159;
+    rdf:_2 orcid:0000-0002-1267-0234;
+    rdf:_3 orcid:0000-0001-6818-334X;
+    rdf:_4 orcid:0000-0003-4727-9435;
+    rdf:_5 orcid:0000-0002-7534-7661;
+    rdf:_6 orcid:0000-0002-9383-528X .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0001-6818-334X, orcid:0000-0002-1267-0234,
+      orcid:0000-0002-7534-7661, orcid:0000-0002-9383-528X, orcid:0000-0003-0169-8159, orcid:0000-0003-4727-9435;
+    prov:wasDerivedFrom <https://doi.org/10.3233/SW-150189> .
+}
+
+sub:pubinfo {
+  orcid:0000-0001-6818-334X foaf:name "Christine Chichester" .
+  
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0002-7534-7661 foaf:name "Ferran Sanz" .
+  
+  orcid:0000-0002-9383-528X foaf:name "Laura I. Furlong" .
+  
+  orcid:0000-0003-0169-8159 foaf:name "Núria Queralt-Rosinach" .
+  
+  orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
+  
+  this: dct:created "2026-02-13T12:26:06.904+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.3233/SW-150189>;
+    rdfs:label "Publishing DisGeNET as nanopublications" .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
+    npx:hasSignature "k5mNeN02SWG7WAfOgvRUtXAm7J4QRp8hX+zK2guH+ukQPnrQPP24QMb6IBMLROkK+cJ9oyPZM7GO1dLhvXFpZGNNh+JggwAmP78Wmd8/ncaNf+OZomphtT+SNSIM2MyrTaCF7R7mM9dik1eLemM98/pDU6e0CtDLMJy8ukCWg/vF28W0OVbi+vtwH8mHM+aYRAYrvE2G1TaNisUkf+FGewdkUdhKXXmqDxG/DOxLWezqjDXsgVXiiRDs8ioD85c5vf3V3LiVcbq7ORr4jQBlXaJgyyJINWKIGLWkqiwhGT45WzJmXL9qWb6r1uyT81SKX9uJPqY4ULOqj6yCKMxKgw==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}

@@ -1,0 +1,110 @@
+@prefix this: <https://w3id.org/np/RAn0hxYDPb1aXNzTW3YtFFpZ1AVvH34dW__A8PfLIbBv0> .
+@prefix sub: <https://w3id.org/np/RAn0hxYDPb1aXNzTW3YtFFpZ1AVvH34dW__A8PfLIbBv0/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  <http://id.crossref.org/issn/2052-4463> dct:title "Scientific Data" .
+  
+  <https://doi.org/10.1038/s41597-019-0184-5> a fabio:Article;
+    dct:date "2019-09-20";
+    dct:isPartOf <http://id.crossref.org/issn/2052-4463>;
+    dct:title "Evaluating FAIR maturity through a scalable, automated, community-governed framework";
+    bibo:authorList sub:author-list;
+    bibo:volume "6" .
+  
+  orcid:0000-0001-5306-5690 foaf:name "Susanna-Assunta Sansone" .
+  
+  orcid:0000-0001-6960-357X foaf:name "Mark D. Wilkinson" .
+  
+  orcid:0000-0001-8888-635X foaf:name "Erik Schultes" .
+  
+  orcid:0000-0001-9833-8031 foaf:name "Mario Prieto" .
+  
+  orcid:0000-0001-9853-5668 foaf:name "Philippe Rocca-Serra" .
+  
+  orcid:0000-0002-1164-1351 foaf:name "Luiz Olavo Bonino da Silva Santos" .
+  
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0002-2109-489X foaf:name "Dominique Batista" .
+  
+  orcid:0000-0003-1304-1939 foaf:name "Mercè Crosas" .
+  
+  orcid:0000-0003-2687-1982 foaf:name "Peter McQuilton" .
+  
+  orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
+  
+  sub:author-list rdf:_1 orcid:0000-0001-6960-357X;
+    rdf:_10 orcid:0000-0003-1304-1939;
+    rdf:_11 orcid:0000-0001-8888-635X;
+    rdf:_2 orcid:0000-0003-4727-9435;
+    rdf:_3 orcid:0000-0001-5306-5690;
+    rdf:_4 orcid:0000-0002-1164-1351;
+    rdf:_5 orcid:0000-0001-9833-8031;
+    rdf:_6 orcid:0000-0002-2109-489X;
+    rdf:_7 orcid:0000-0003-2687-1982;
+    rdf:_8 orcid:0000-0002-1267-0234;
+    rdf:_9 orcid:0000-0001-9853-5668 .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0001-5306-5690, orcid:0000-0001-6960-357X,
+      orcid:0000-0001-8888-635X, orcid:0000-0001-9833-8031, orcid:0000-0001-9853-5668, orcid:0000-0002-1164-1351,
+      orcid:0000-0002-1267-0234, orcid:0000-0002-2109-489X, orcid:0000-0003-1304-1939, orcid:0000-0003-2687-1982,
+      orcid:0000-0003-4727-9435;
+    prov:wasDerivedFrom <https://doi.org/10.1038/s41597-019-0184-5> .
+}
+
+sub:pubinfo {
+  orcid:0000-0001-5306-5690 foaf:name "Susanna-Assunta Sansone" .
+  
+  orcid:0000-0001-6960-357X foaf:name "Mark D. Wilkinson" .
+  
+  orcid:0000-0001-8888-635X foaf:name "Erik Schultes" .
+  
+  orcid:0000-0001-9833-8031 foaf:name "Mario Prieto" .
+  
+  orcid:0000-0001-9853-5668 foaf:name "Philippe Rocca-Serra" .
+  
+  orcid:0000-0002-1164-1351 foaf:name "Luiz Olavo Bonino da Silva Santos" .
+  
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0002-2109-489X foaf:name "Dominique Batista" .
+  
+  orcid:0000-0003-1304-1939 foaf:name "Mercè Crosas" .
+  
+  orcid:0000-0003-2687-1982 foaf:name "Peter McQuilton" .
+  
+  orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
+  
+  this: dct:created "2026-02-13T12:13:54.193+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.1038/s41597-019-0184-5>;
+    rdfs:label "Evaluating FAIR maturity through a scalable, automated, community-governed framework" .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
+    npx:hasSignature "hFCAp2n2ReGWHieN20Ea63twbE0xU5NE0HqUyTgqUWJlw879ktqEN7H/6Yi9KX3Rxd8T3NGQlMNnps4B7r7lvmsD3k9aKEH8Khh5Y0ikt2Qr0sxAYp2LQ+7DJjZ3WM/7pX7cEgGRghRb4zzGXBnCiZKl45X5mON4BtHWsKV/teESRAZj66rvTxYHF9EL/D3lVGy8D2XVljUgiw9fmjFY1WB4NYFVGzGzcsF6wVQbGe63cjsUN7hJJvDJItfg0difed8+kIP4i7M0rbeV2DhwNB5CuppR03AMIEY32ICOT5uYLPRZzZ1fAAgO+MKK4JxaYPyadMlN9pUyWdAPEz+boA==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}
