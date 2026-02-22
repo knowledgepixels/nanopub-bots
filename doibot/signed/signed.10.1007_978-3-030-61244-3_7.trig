@@ -1,0 +1,79 @@
+@prefix this: <https://w3id.org/np/RAxZ0qev1P7TROw0baRlrMOXuB7jtESos3IErGOOFmbQs> .
+@prefix sub: <https://w3id.org/np/RAxZ0qev1P7TROw0baRlrMOXuB7jtESos3IErGOOFmbQs/> .
+@prefix schema: <http://schema.org/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  <http://id.crossref.org/issn/0302-9743> dct:title "Lecture Notes in Computer Science" .
+  
+  <https://doi.org/10.1007/978-3-030-61244-3_7> a fabio:BookChapter;
+    dct:abstract "Scientific publishing is the means by which we communicate and share scientific knowledge, but this process currently often lacks transparency and machine-interpretable representations. Scientific articles are published in long coarse-grained text with complicated structures, and they are optimized for human readers and not for automated means of organization and access. Peer reviewing is the main method of quality assessment, but these peer reviews are nowadays rarely published and their own complicated structure and linking to the respective articles is not accessible. In order to address these problems and to better align scientific publishing with the principles of the Web and Linked Data, we propose here an approach to use nanopublications as a unifying model to represent in a semantic way the elements of publications, their assessments, as well as the involved processes, actors, and provenance in general. To evaluate our approach, we present a dataset of 627 nanopublications representing an interlinked network of the elements of articles (such as individual paragraphs) and their reviews (such as individual review comments). Focusing on the specific scenario of editors performing a meta-review, we introduce seven competency questions and show how they can be executed as SPARQL queries. We then present a prototype of a user interface for that scenario that shows different views on the set of review comments provided for a given manuscript, and we show in a user study that editors find the interface useful to answer their competency questions. In summary, we demonstrate that a unified and semantic publication model based on nanopublications can make scientific communication more effective and user-friendly.";
+    dct:date "2020";
+    dct:isPartOf <http://id.crossref.org/issn/0302-9743>;
+    dct:title "A Unified Nanopublication Model for Effective and User-Friendly Access to the Elements of Scientific Publishing";
+    bibo:authorList sub:author-list;
+    bibo:pageEnd "119";
+    bibo:pageStart "104" .
+  
+  orcid:0000-0002-1267-0234 schema:affiliation ror:008xxew50;
+    foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0002-3357-9130 schema:affiliation ror:00x7ekv49;
+    foaf:name "Davide Ceolin" .
+  
+  orcid:0000-0002-7114-6459 schema:affiliation ror:008xxew50;
+    foaf:name "Cristina-Iulia Bucur" .
+  
+  ror:008xxew50 foaf:name "Department of Computer Science, Vrije Universiteit Amsterdam, Amsterdam, Netherlands" .
+  
+  ror:00x7ekv49 foaf:name "Centrum Wiskunde & Informatica, Amsterdam, Netherlands" .
+  
+  sub:author-list rdf:_1 orcid:0000-0002-7114-6459;
+    rdf:_2 orcid:0000-0002-1267-0234;
+    rdf:_3 orcid:0000-0002-3357-9130 .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-1267-0234, orcid:0000-0002-3357-9130,
+      orcid:0000-0002-7114-6459;
+    prov:wasDerivedFrom <https://doi.org/10.1007/978-3-030-61244-3_7> .
+}
+
+sub:pubinfo {
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0002-3357-9130 foaf:name "Davide Ceolin" .
+  
+  orcid:0000-0002-7114-6459 foaf:name "Cristina-Iulia Bucur" .
+  
+  this: dct:created "2026-02-22T18:02:21.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.1007/978-3-030-61244-3_7>;
+    rdfs:label "A Unified Nanopublication Model for Effective and User-Friendly Access to the Elements of Scientific Publishing" .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
+    npx:hasSignature "Qf7BSk+dQAL+l+Mv9GZUgiNeYy7Hp3j4D+aSoXWaAX8LCnSa3LjxL2uz2vNPZVKSjiq7expinxeCVNf7d9zuRoH7URVChUM6nfKyW4WRaNR2q+NfsdoiH12bfpoE3RsFPH6bMV7OcIpjbsqFphOtYiuLxDjvE995ekDDYT5zSOqwvOO03h5xIBAb5hNzGOsiTmQxFW2pD/jJvBecpViqdqtiOsLyyw76k204ojMOl4uUiXDiWe3K5XxXEM1B+1FodpYxZ0gkGTZKeAwTCzsmZ3rzMf4ZOxLcLymg/zOAlI2sjeTKu9VVYIadIuey+7jPTjb2/7rv64xlyICfdL/A0Q==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}
