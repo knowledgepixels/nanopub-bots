@@ -1,0 +1,75 @@
+@prefix this: <https://w3id.org/np/RAVOJ8dwDlWjJXqg_eLBXU6NqUMVo-PTNZRYMGY4TuBjg> .
+@prefix sub: <https://w3id.org/np/RAVOJ8dwDlWjJXqg_eLBXU6NqUMVo-PTNZRYMGY4TuBjg/> .
+@prefix schema: <http://schema.org/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  <http://id.crossref.org/issn/0302-9743> dct:title "Lecture Notes in Computer Science" .
+  
+  <https://doi.org/10.1007/978-3-031-17105-5_6> a fabio:BookChapter;
+    dct:date "2022";
+    dct:isPartOf <http://id.crossref.org/issn/0302-9743>;
+    dct:title "Documenting the Creation, Manipulation and Evaluation of Links for Reuse and Reproducibility";
+    bibo:authorList sub:author-list;
+    bibo:pageEnd "96";
+    bibo:pageStart "81" .
+  
+  orcid:0000-0002-1267-0234 schema:affiliation ror:008xxew50;
+    foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0003-3425-0481 schema:affiliation ror:05sxf4h28;
+    foaf:name "Veruska Zamborlini" .
+  
+  ror:008xxew50 foaf:name "Department of Computer Science, Vrije Universiteit Amsterdam, Amsterdam, Netherlands" .
+  
+  ror:05sxf4h28 foaf:name "Federal University of Espírito Santo, Vitória, Brazil" .
+  
+  sub:al-idrissou foaf:name "Al Idrissou" .
+  
+  sub:author-list rdf:_1 sub:al-idrissou;
+    rdf:_2 orcid:0000-0003-3425-0481;
+    rdf:_3 orcid:0000-0002-1267-0234 .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-1267-0234, orcid:0000-0003-3425-0481,
+      sub:al-idrissou;
+    prov:wasDerivedFrom <https://doi.org/10.1007/978-3-031-17105-5_6> .
+}
+
+sub:pubinfo {
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0003-3425-0481 foaf:name "Veruska Zamborlini" .
+  
+  this: dct:created "2026-02-22T20:43:15.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.1007/978-3-031-17105-5_6>;
+    rdfs:label "Documenting the Creation, Manipulation and Evaluation of Links for Reuse and Reproducibility" .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
+    npx:hasSignature "FJofxomixKRgoAbuqFtdF1tKtV8lT8/gWuWT5H9dDOk5aLSgjExls2ZICuBtT7gHgjGp1nY++Eji1Nfvb0WyCgAvNTMathLdF5uw7QZKlx9XuRckkj8UWNQ+MhtucRwHfmcx9PGIuOSUHRilp4E5/0MQVANbd/kg/GHwpq7BwloLQ4H4+3YZBNeVPj+6F0WqROiA8JHX50gxdKj8i20CMh9nLY0ZBdKuhVxkcw5qRi3kA6toUedq5JYAtBSR2jLSqT+K5hO3ZoCpPviMlBCeMLQavDEnCZlzNVlWzkemZ2zbL1GfT6MzY/3oS/4XX+NKCWNq2zUKzg3RG43YiTkdGw==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}
