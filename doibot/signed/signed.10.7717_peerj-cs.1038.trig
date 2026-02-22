@@ -1,0 +1,81 @@
+@prefix this: <https://w3id.org/np/RAFTcnP9fBOBEtsBSmI4zGtMertVyuomkJ_NXfNB3hS18> .
+@prefix sub: <https://w3id.org/np/RAFTcnP9fBOBEtsBSmI4zGtMertVyuomkJ_NXfNB3hS18/> .
+@prefix schema: <http://schema.org/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  <http://id.crossref.org/issn/2376-5992> dct:title "PeerJ Computer Science" .
+  
+  <https://doi.org/10.7717/peerj-cs.1038> a fabio:Article;
+    dct:abstract "Understanding the complexity of restricted research data is vitally important in the current new era of Open Science. While the FAIR Guiding Principles have been introduced to help researchers to make data Findable, Accessible, Interoperable and Reusable, it is still unclear how the notions of FAIR and Openness can be applied in the context of restricted data. Many methods have been proposed in support of the implementation of the principles, but there is yet no consensus among the scientific community as to the suitable mechanisms of making restricted data FAIR. We present here a systematic literature review to identify the methods applied by scientists when researching restricted data in a FAIR-compliant manner in the context of the FAIR principles. Through the employment of a descriptive and iterative study design, we aim to answer the following three questions: (1) What methods have been proposed to apply the FAIR principles to restricted data?, (2) How can the relevant aspects of the methods proposed be categorized?, (3) What is the maturity of the methods proposed in applying the FAIR principles to restricted data?. After analysis of the 40 included publications, we noticed that the methods found, reflect the stages of the Data Life Cycle, and can be divided into the following Classes: Data Collection, Metadata Representation, Data Processing, Anonymization, Data Publication, Data Usage and Post Data Usage. We observed that a large number of publications used 'Access Control' and 'Usage and License Terms' methods, while others such as 'Embargo on Data Release' and the use of 'Synthetic Data' were used in fewer instances. In conclusion, we are presenting the first extensive literature review on the methods applied to confidential data in the context of FAIR, providing a comprehensive conceptual framework for future research on restricted access data.";
+    dct:date "2022-07-20";
+    dct:isPartOf <http://id.crossref.org/issn/2376-5992>;
+    dct:title "Aligning restricted access data with FAIR: a systematic review";
+    bibo:authorList sub:author-list .
+  
+  orcid:0000-0001-8004-0464 schema:affiliation ror:008xxew50;
+    foaf:name "Margherita Martorana" .
+  
+  orcid:0000-0001-8772-7904 schema:affiliation ror:008xxew50;
+    foaf:name "Ronald Siebes" .
+  
+  orcid:0000-0002-1267-0234 schema:affiliation ror:008xxew50;
+    foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0002-7748-4715 schema:affiliation ror:008xxew50;
+    foaf:name "Jacco van Ossenbruggen" .
+  
+  ror:008xxew50 foaf:name "Department of Computer Science, Vrije Universiteit Amsterdam, Amsterdam, Netherlands" .
+  
+  sub:author-list rdf:_1 orcid:0000-0001-8004-0464;
+    rdf:_2 orcid:0000-0002-1267-0234;
+    rdf:_3 orcid:0000-0001-8772-7904;
+    rdf:_4 orcid:0000-0002-7748-4715 .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0001-8004-0464, orcid:0000-0001-8772-7904,
+      orcid:0000-0002-1267-0234, orcid:0000-0002-7748-4715;
+    prov:wasDerivedFrom <https://doi.org/10.7717/peerj-cs.1038> .
+}
+
+sub:pubinfo {
+  orcid:0000-0001-8004-0464 foaf:name "Margherita Martorana" .
+  
+  orcid:0000-0001-8772-7904 foaf:name "Ronald Siebes" .
+  
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0002-7748-4715 foaf:name "Jacco van Ossenbruggen" .
+  
+  this: dct:created "2026-02-22T17:00:59.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.7717/peerj-cs.1038>;
+    rdfs:label "Aligning restricted access data with FAIR: a systematic review" .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
+    npx:hasSignature "iEqVT/IWBUNXKfL1zgOyRNyxR3MZGWU8JVQhicOw9kFEa/gUDro59EVvP1OE58Je/bA0Ii4TQtouPPQfuHG5Yuw4vBy9UiDkDou7P7LngdGywfgtAIXgcORvj5QlPaHI/+Bnjq/utyDCYHaD8ya4P7s04slEOqCkklgUSrgzB27b6GN8+mozk0tiq67H/1JKICsssTRVxPDo4QFVveQKZ8hXErmRPmR/YwwtKfhEQP726SZyFfqzS6WgdyU5WmSzuM9Y+sMdg3B33u+9s/XuHCM6sxEH+eJc7CKCMR0MLfDTrRbJXL8J0lxqrM0UUr10YfgvEomkETnfRhJF0tIHPw==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}
