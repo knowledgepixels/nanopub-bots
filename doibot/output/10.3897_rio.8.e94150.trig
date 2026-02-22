@@ -1,0 +1,87 @@
+@prefix : <http://purl.org/nanopub/temp/np1/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix ror: <https://ror.org/> .
+@prefix schema: <http://schema.org/> .
+
+:Head {
+  : a np:Nanopublication;
+    np:hasAssertion :assertion;
+    np:hasProvenance :provenance;
+    np:hasPublicationInfo :pubinfo .
+}
+
+:assertion {
+  <https://doi.org/10.3897/rio.8.e94150> a fabio:Article;
+    dct:abstract "Beginning in 1995, early Internet pioneers proposed Digital Objects as encapsulations of data and metadata made accessible through persistent identifier resolution services. In recent years, this Digital Object Architecture has been extended to include the FAIR Guiding Principles, resulting in the concept of a FAIR Digital Object (FDO), a minimal, uniform container making any digital resource machine-actionable. Beginning in 2009, nanopublications were independently conceived as a minimal, uniform container making individual semantic assertions and their associated provenance metadata, machine-actionable. These two technologies share the same vision of a data infrastructure, and act as instances of Machine-Actionable Containers (MACs) that make use of minimal uniform standards to enable FAIR operations. Here, we compare the structure and computational behaviors of the existing nanopublication infrastructure, to those in the proposed FAIR Digital Object Framework. Although developed independently there are clear parallels between the vision and the approach of nanopublication and FDOF. We find a remarkable congruence between the currently proposed FDO requirements and the existing nanopublication infrastructure, including several FDO-like qualities already embodied in the nanopublication ecosystem.";
+    dct:date "2022-10-12";
+    dct:title "The Comparative Anatomy of Nanopublications and FAIR Digital Objects" ;
+    bibo:authorList :author-list;
+    bibo:volume "8";
+    dct:isPartOf <http://id.crossref.org/issn/2367-7163> .
+
+  <http://id.crossref.org/issn/2367-7163> dct:title "Research Ideas and Outcomes" .
+
+  :author-list rdf:_1 orcid:0000-0001-8888-635X .
+  :author-list rdf:_2 orcid:0000-0003-2195-3997 .
+  :author-list rdf:_3 orcid:0000-0002-1267-0234 .
+  :author-list rdf:_4 orcid:0000-0001-7525-9218 .
+  :author-list rdf:_5 orcid:0000-0002-1164-1351 .
+  :author-list rdf:_6 orcid:0000-0003-3934-0072 .
+
+  orcid:0000-0001-8888-635X foaf:name "Erik Schultes" .
+
+  orcid:0000-0003-2195-3997 foaf:name "Barbara Magagna" .
+
+  orcid:0000-0002-1267-0234 schema:affiliation ror:008xxew50;
+    foaf:name "Tobias Kuhn" .
+
+  orcid:0000-0001-7525-9218 schema:affiliation ror:03kqpb082;
+    foaf:name "Marek Suchánek" .
+
+  orcid:0000-0002-1164-1351 schema:affiliation ror:006hf6230;
+    foaf:name "Luiz Bonino da Silva Santos" .
+
+  orcid:0000-0003-3934-0072 schema:affiliation ror:05xvt9f17;
+    foaf:name "Barend Mons" .
+
+  ror:008xxew50 foaf:name "Department of Computer Science, Vrije Universiteit Amsterdam, Amsterdam, Netherlands" .
+  ror:03kqpb082 foaf:name "Czech Technical University in Prague, Prague, Czech Republic" .
+  ror:006hf6230 foaf:name "University of Twente, Enschede, Netherlands" .
+  ror:05xvt9f17 foaf:name "Leiden University Medical Center, Leiden, Netherlands" .
+
+}
+
+:provenance {
+  :assertion prov:wasAttributedTo orcid:0000-0001-8888-635X, orcid:0000-0003-2195-3997, orcid:0000-0002-1267-0234, orcid:0000-0001-7525-9218, orcid:0000-0002-1164-1351, orcid:0000-0003-3934-0072 .
+  :assertion prov:wasDerivedFrom <https://doi.org/10.3897/rio.8.e94150> .
+}
+
+:pubinfo {
+  : dct:created "2026-02-22T20:38:10.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.3897/rio.8.e94150>;
+    rdfs:label "The Comparative Anatomy of Nanopublications and FAIR Digital Objects" .
+
+  orcid:0000-0001-8888-635X foaf:name "Erik Schultes" .
+  orcid:0000-0003-2195-3997 foaf:name "Barbara Magagna" .
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0001-7525-9218 foaf:name "Marek Suchánek" .
+  orcid:0000-0002-1164-1351 foaf:name "Luiz Bonino da Silva Santos" .
+  orcid:0000-0003-3934-0072 foaf:name "Barend Mons" .
+
+  :sig npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}
