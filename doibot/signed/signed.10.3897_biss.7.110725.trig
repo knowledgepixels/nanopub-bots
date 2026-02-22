@@ -1,0 +1,104 @@
+@prefix this: <https://w3id.org/np/RAt3k76l7MtqIryewqUzpoAv54ozLoQjC6UDZBnUHPnlc> .
+@prefix sub: <https://w3id.org/np/RAt3k76l7MtqIryewqUzpoAv54ozLoQjC6UDZBnUHPnlc/> .
+@prefix schema: <http://schema.org/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  <http://id.crossref.org/issn/2535-0897> dct:title "Biodiversity Information Science and Standards" .
+  
+  <https://doi.org/10.3897/biss.7.110725> a fabio:Article;
+    dct:date "2023-08-09";
+    dct:isPartOf <http://id.crossref.org/issn/2535-0897>;
+    dct:title "Nanopublications for Biodiversity Go Live";
+    bibo:authorList sub:author-list;
+    bibo:volume "7" .
+  
+  orcid:0000-0001-8558-6845 schema:affiliation ror:01znaqx63;
+    foaf:name "Teodor Georgiev" .
+  
+  orcid:0000-0001-9488-1870 schema:affiliation ror:0387prb75;
+    foaf:name "Daniel Mietchen" .
+  
+  orcid:0000-0002-1267-0234 schema:affiliation ror:008xxew50;
+    foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0002-2186-5033 foaf:name "Lyubomir Penev" .
+  
+  orcid:0000-0003-0768-1286 schema:affiliation ror:04m60en37;
+    foaf:name "Richard L. Pyle" .
+  
+  orcid:0000-0003-4766-1247 foaf:name "Seyhan Demirov" .
+  
+  orcid:0009-0001-3489-2751 schema:affiliation ror:01znaqx63;
+    foaf:name "Iva Boyadzhieva" .
+  
+  ror:008xxew50 foaf:name "Department of Computer Science, Vrije Universiteit Amsterdam, Amsterdam, Netherlands" .
+  
+  ror:01znaqx63 foaf:name "Pensoft Publishers, Sofia, Bulgaria" .
+  
+  ror:0387prb75 foaf:name "FIZ Karlsruhe – Leibniz Institute for Information Infrastructure, Karlsruhe, Germany" .
+  
+  ror:04m60en37 foaf:name "Bishop Museum, Honolulu, United States" .
+  
+  sub:author-list rdf:_1 orcid:0000-0002-2186-5033;
+    rdf:_2 orcid:0000-0002-1267-0234;
+    rdf:_3 orcid:0000-0003-0768-1286;
+    rdf:_4 orcid:0000-0001-9488-1870;
+    rdf:_5 orcid:0000-0003-4766-1247;
+    rdf:_6 orcid:0009-0001-3489-2751;
+    rdf:_7 orcid:0000-0001-8558-6845 .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0001-8558-6845, orcid:0000-0001-9488-1870,
+      orcid:0000-0002-1267-0234, orcid:0000-0002-2186-5033, orcid:0000-0003-0768-1286, orcid:0000-0003-4766-1247,
+      orcid:0009-0001-3489-2751;
+    prov:wasDerivedFrom <https://doi.org/10.3897/biss.7.110725> .
+}
+
+sub:pubinfo {
+  orcid:0000-0001-8558-6845 foaf:name "Teodor Georgiev" .
+  
+  orcid:0000-0001-9488-1870 foaf:name "Daniel Mietchen" .
+  
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0002-2186-5033 foaf:name "Lyubomir Penev" .
+  
+  orcid:0000-0003-0768-1286 foaf:name "Richard L. Pyle" .
+  
+  orcid:0000-0003-4766-1247 foaf:name "Seyhan Demirov" .
+  
+  orcid:0009-0001-3489-2751 foaf:name "Iva Boyadzhieva" .
+  
+  this: dct:created "2026-02-22T20:03:42.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.3897/biss.7.110725>;
+    rdfs:label "Nanopublications for Biodiversity Go Live" .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
+    npx:hasSignature "QkCJwYrld30YxU6zzhOpNOolbALgLikFRJ0o/E1SvOAbs4gHJTYzS1YIFK2w44XZdz7n8/08frZmmzUUxUv455LLqd11vy+Ou6jRhECdoPY2I+pTbNy47VEZrE6m0biABo2YkAmZUvRdFiQuMO4jfyqH4QzQJhNsnBwo6hPxF48WhG+ppSf3Ra/XbqzDCOe2IfB9f5LZLexA1n4wa9mljBc9LNS603CzrpFW+VNUTUhMzjfRMzeneSOw4HbewVI9/4Vnaj7dGnszerByZBAyV/+fRnq3PcKyq3p4OG3WPJtXXZbBNq5LFqDdozd+dvqvt1YbeMld2/EChRxFtLGLJA==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}

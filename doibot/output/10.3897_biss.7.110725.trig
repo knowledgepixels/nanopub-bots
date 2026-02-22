@@ -1,0 +1,90 @@
+@prefix : <http://purl.org/nanopub/temp/np1/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix ror: <https://ror.org/> .
+@prefix schema: <http://schema.org/> .
+
+:Head {
+  : a np:Nanopublication;
+    np:hasAssertion :assertion;
+    np:hasProvenance :provenance;
+    np:hasPublicationInfo :pubinfo .
+}
+
+:assertion {
+  <https://doi.org/10.3897/biss.7.110725> a fabio:Article;
+    dct:date "2023-08-09";
+    dct:title "Nanopublications for Biodiversity Go Live" ;
+    bibo:authorList :author-list;
+    bibo:volume "7";
+    dct:isPartOf <http://id.crossref.org/issn/2535-0897> .
+
+  <http://id.crossref.org/issn/2535-0897> dct:title "Biodiversity Information Science and Standards" .
+
+  :author-list rdf:_1 orcid:0000-0002-2186-5033 .
+  :author-list rdf:_2 orcid:0000-0002-1267-0234 .
+  :author-list rdf:_3 orcid:0000-0003-0768-1286 .
+  :author-list rdf:_4 orcid:0000-0001-9488-1870 .
+  :author-list rdf:_5 orcid:0000-0003-4766-1247 .
+  :author-list rdf:_6 orcid:0009-0001-3489-2751 .
+  :author-list rdf:_7 orcid:0000-0001-8558-6845 .
+
+  orcid:0000-0002-2186-5033 foaf:name "Lyubomir Penev" .
+
+  orcid:0000-0002-1267-0234 schema:affiliation ror:008xxew50;
+    foaf:name "Tobias Kuhn" .
+
+  orcid:0000-0003-0768-1286 schema:affiliation ror:04m60en37;
+    foaf:name "Richard L. Pyle" .
+
+  orcid:0000-0001-9488-1870 schema:affiliation ror:0387prb75;
+    foaf:name "Daniel Mietchen" .
+
+  orcid:0000-0003-4766-1247 foaf:name "Seyhan Demirov" .
+
+  orcid:0009-0001-3489-2751 schema:affiliation ror:01znaqx63;
+    foaf:name "Iva Boyadzhieva" .
+
+  orcid:0000-0001-8558-6845 schema:affiliation ror:01znaqx63;
+    foaf:name "Teodor Georgiev" .
+
+  ror:008xxew50 foaf:name "Department of Computer Science, Vrije Universiteit Amsterdam, Amsterdam, Netherlands" .
+  ror:04m60en37 foaf:name "Bishop Museum, Honolulu, United States" .
+  ror:0387prb75 foaf:name "FIZ Karlsruhe – Leibniz Institute for Information Infrastructure, Karlsruhe, Germany" .
+  ror:01znaqx63 foaf:name "Pensoft Publishers, Sofia, Bulgaria" .
+}
+
+:provenance {
+  :assertion prov:wasAttributedTo orcid:0000-0002-2186-5033, orcid:0000-0002-1267-0234,
+      orcid:0000-0003-0768-1286, orcid:0000-0001-9488-1870, orcid:0000-0003-4766-1247,
+      orcid:0009-0001-3489-2751, orcid:0000-0001-8558-6845 .
+  :assertion prov:wasDerivedFrom <https://doi.org/10.3897/biss.7.110725> .
+}
+
+:pubinfo {
+  : dct:created "2026-02-22T20:03:42.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.3897/biss.7.110725>;
+    rdfs:label "Nanopublications for Biodiversity Go Live" .
+
+  orcid:0000-0002-2186-5033 foaf:name "Lyubomir Penev" .
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0003-0768-1286 foaf:name "Richard L. Pyle" .
+  orcid:0000-0001-9488-1870 foaf:name "Daniel Mietchen" .
+  orcid:0000-0003-4766-1247 foaf:name "Seyhan Demirov" .
+  orcid:0009-0001-3489-2751 foaf:name "Iva Boyadzhieva" .
+  orcid:0000-0001-8558-6845 foaf:name "Teodor Georgiev" .
+
+  :sig npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}
