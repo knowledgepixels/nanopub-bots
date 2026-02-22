@@ -1,0 +1,74 @@
+@prefix this: <https://w3id.org/np/RAz-WvUqhGgpt55eGSHL-kbAesZ5S5H3NDS0Zobw6j1yk> .
+@prefix sub: <https://w3id.org/np/RAz-WvUqhGgpt55eGSHL-kbAesZ5S5H3NDS0Zobw6j1yk/> .
+@prefix schema: <http://schema.org/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  <http://id.crossref.org/issn/2376-5992> dct:title "PeerJ Computer Science" .
+  
+  <https://doi.org/10.7717/peerj-cs.189> a fabio:Article;
+    dct:abstract "The analysis of literary works has experienced a surge in computer-assisted processing. To obtain insights into the community structures and social interactions portrayed in novels, the creation of social networks from novels has gained popularity. Many methods rely on identifying named entities and relations for the construction of these networks, but many of these tools are not specifically created for the literary domain. Furthermore, many of the studies on information extraction from literature typically focus on 19th and early 20th century source material. Because of this, it is unclear if these techniques are as suitable to modern-day literature as they are to those older novels. We present a study in which we evaluate natural language processing tools for the automatic extraction of social networks from novels as well as their network structure. We find that there are no significant differences between old and modern novels but that both are subject to a large amount of variance. Furthermore, we identify several issues that complicate named entity recognition in our set of novels and we present methods to remedy these. We see this work as a step in creating more culturally-aware AI systems.";
+    dct:date "2019-04-18";
+    dct:isPartOf <http://id.crossref.org/issn/2376-5992>;
+    dct:title "Evaluating named entity recognition tools for extracting social networks from novels";
+    bibo:authorList sub:author-list .
+  
+  orcid:0000-0001-9195-8203 schema:affiliation ror:043c0p156;
+    foaf:name "Marieke van Erp" .
+  
+  orcid:0000-0002-1267-0234 schema:affiliation ror:008xxew50;
+    foaf:name "Tobias Kuhn" .
+  
+  ror:008xxew50 foaf:name "Department of Computer Science, Vrije Universiteit Amsterdam, Amsterdam, Netherlands" .
+  
+  ror:043c0p156 foaf:name "KNAW Humanities Cluster, Amsterdam, Netherlands" .
+  
+  sub:author-list rdf:_1 sub:niels-dekker;
+    rdf:_2 orcid:0000-0002-1267-0234;
+    rdf:_3 orcid:0000-0001-9195-8203 .
+  
+  sub:niels-dekker schema:affiliation ror:008xxew50;
+    foaf:name "Niels Dekker" .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0001-9195-8203, orcid:0000-0002-1267-0234;
+    prov:wasDerivedFrom <https://doi.org/10.7717/peerj-cs.189> .
+}
+
+sub:pubinfo {
+  orcid:0000-0001-9195-8203 foaf:name "Marieke van Erp" .
+  
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  this: dct:created "2026-02-22T17:16:32.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.7717/peerj-cs.189>;
+    rdfs:label "Evaluating named entity recognition tools for extracting social networks from novels" .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
+    npx:hasSignature "aWoYY+VK7Ih726BZG/onF6FbJe3I3n9paR2qQTiSY0ugE440Vbl1nCCh4hqY+W1xcdqeAMZgXlde/mVLuCLNgGc9ZqFmWlG4dEqnc734lC2JmE0rKoMpuEy4ApLq0qfmu3mJhVGVKkgWh7W05AXDCkINzE7UQRj58vRNqTszO2M+WjfSe0VLds+J6XDG+pApHODQ3TRjci/xk4S918WYbdpAYoZ2D/H4I+mq6ic4pl0uMK2+IYm9CRpd+eauvOMlwfkq5g39+9jTxmCCblQ7ikrPjdezS9gf0jZ5Ws+oqEWRdmL2LvG18GSmAoLKULlVOq+hUlqpP3iiVkQ6APbyMQ==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}
