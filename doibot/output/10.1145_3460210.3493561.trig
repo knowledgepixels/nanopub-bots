@@ -1,0 +1,78 @@
+@prefix : <http://purl.org/nanopub/temp/np1/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix ror: <https://ror.org/> .
+@prefix schema: <http://schema.org/> .
+
+:Head {
+  : a np:Nanopublication;
+    np:hasAssertion :assertion;
+    np:hasProvenance :provenance;
+    np:hasPublicationInfo :pubinfo .
+}
+
+:assertion {
+  <https://doi.org/10.1145/3460210.3493561> a fabio:ConferencePaper;
+    dct:abstract "The use of semantic technologies is gaining significant traction in science communication with a wide array of applications in disciplines including the life sciences, computer science, and the social sciences. Languages like RDF, OWL, and other formalisms based on formal logic are applied to make scientific knowledge accessible not only to human readers but also to automated systems. These approaches have mostly focused on the structure of scientific publications themselves, on the used scientific methods and equipment, or on the structure of the used datasets. The core claims or hypotheses of scientific work have only been covered in a shallow manner, such as by linking mentioned entities to established identifiers. In this research, we therefore want to find out whether we can use existing semantic formalisms to fully express the content of high-level scientific claims using formal semantics in a systematic way. Analyzing the main claims from a sample of scientific articles from all disciplines, we find that their semantics are more complex than what a straight-forward application of formalisms like RDF or OWL account for, but we managed to elicit a clear semantic pattern which we call the \"super-pattern\". We show here how the instantiation of the five slots of this super-pattern leads to a strictly defined statement in higher-order logic. We successfully applied this super-pattern to an enlarged sample of scientific claims. We show that knowledge representation experts, when instructed to independently instantiate the super-pattern with given scientific claims, show a high degree of consistency and convergence given the complexity of the task and the subject. These results therefore open the door on the longer run for allowing researchers to express their high-level scientific findings in a manner they can be automatically interpreted. This in turn will allow for automated consistency checking, question answering, aggregation, and much more.";
+    dct:date "2021-12-02";
+    dct:title "Expressing High-Level Scientific Claims with Formal Semantics" ;
+    bibo:authorList :author-list;
+    bibo:pageStart "233";
+    bibo:pageEnd "240";
+    dct:isPartOf :kcap-2021 .
+
+  :kcap-2021 dct:title "Proceedings of the 11th Knowledge Capture Conference (K-CAP 2021)" .
+
+  :author-list rdf:_1 orcid:0000-0002-2241-8585 .
+  :author-list rdf:_2 orcid:0000-0002-1267-0234 .
+  :author-list rdf:_3 orcid:0000-0002-3357-9130 .
+  :author-list rdf:_4 orcid:0000-0002-7748-4715 .
+
+  orcid:0000-0002-2241-8585 schema:affiliation ror:008xxew50;
+    foaf:name "Cristina-Iulia Bucur" .
+
+  orcid:0000-0002-1267-0234 schema:affiliation ror:008xxew50;
+    foaf:name "Tobias Kuhn" .
+
+  orcid:0000-0002-3357-9130 schema:affiliation ror:00x7ekv49;
+    foaf:name "Davide Ceolin" .
+
+  orcid:0000-0002-7748-4715 schema:affiliation ror:008xxew50;
+    foaf:name "Jacco van Ossenbruggen" .
+
+  ror:008xxew50 foaf:name "Department of Computer Science, Vrije Universiteit Amsterdam, Amsterdam, Netherlands" .
+  ror:00x7ekv49 foaf:name "Centrum Wiskunde & Informatica, Amsterdam, Netherlands" .
+
+}
+
+:provenance {
+  :assertion prov:wasAttributedTo orcid:0000-0002-2241-8585, orcid:0000-0002-1267-0234, orcid:0000-0002-3357-9130, orcid:0000-0002-7748-4715 .
+  :assertion prov:wasDerivedFrom <https://doi.org/10.1145/3460210.3493561> .
+}
+
+:pubinfo {
+  : dct:created "2026-02-22T17:46:18.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.1145/3460210.3493561>;
+    rdfs:label "Expressing High-Level Scientific Claims with Formal Semantics" .
+
+  orcid:0000-0002-2241-8585 foaf:name "Cristina-Iulia Bucur" .
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0002-3357-9130 foaf:name "Davide Ceolin" .
+  orcid:0000-0002-7748-4715 foaf:name "Jacco van Ossenbruggen" .
+
+  :sig npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}
