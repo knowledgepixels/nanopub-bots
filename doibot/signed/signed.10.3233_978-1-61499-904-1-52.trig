@@ -1,0 +1,62 @@
+@prefix this: <https://w3id.org/np/RAjWXV2CVxtuCIxXxL4fRIdmk32d4h1MAvdOldr6Qf4FY> .
+@prefix sub: <https://w3id.org/np/RAjWXV2CVxtuCIxXxL4fRIdmk32d4h1MAvdOldr6Qf4FY/> .
+@prefix schema: <http://schema.org/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  <http://id.crossref.org/issn/0922-6389> dct:title "Frontiers in Artificial Intelligence and Applications" .
+  
+  <https://doi.org/10.3233/978-1-61499-904-1-52> a fabio:BookChapter;
+    dct:abstract "Scientific communication still mainly relies on natural language written in scientific papers, which makes the described knowledge very difficult to access with automatic means. We can therefore only make limited use of formal knowledge organization methods to support researchers and other interested parties with features such as automatic aggregations, fact checking, consistency checking, question answering, and powerful semantic search. Existing approaches to solve this problem by improving the scientific communication methods have either very restricted coverage, require formal logic skills on the side of the researchers, or depend on unreliable machine learning for the formalization of knowledge. Here, I propose an approach to this problem that is general, intuitive, and flexible. It is based on a unique kind of controlled natural language, called AIDA, consisting of English sentences that are atomic, independent, declarative, and absolute. Such sentences can then serve as nodes in a network of scientific claims linked to publications, researchers, and domain elements. I present here some small studies on preliminary applications of this language. The results indicate that it is well accepted by users and provides a good basis for the creation of a knowledge graph of scientific findings.";
+    dct:date "2018";
+    dct:isPartOf <http://id.crossref.org/issn/0922-6389>;
+    dct:title "Using the AIDA Language to Formally Organize Scientific Claims";
+    bibo:authorList sub:author-list .
+  
+  orcid:0000-0002-1267-0234 schema:affiliation ror:008xxew50;
+    foaf:name "Tobias Kuhn" .
+  
+  ror:008xxew50 foaf:name "Department of Computer Science, Vrije Universiteit Amsterdam, Amsterdam, Netherlands" .
+  
+  sub:author-list rdf:_1 orcid:0000-0002-1267-0234 .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-1267-0234;
+    prov:wasDerivedFrom <https://doi.org/10.3233/978-1-61499-904-1-52> .
+}
+
+sub:pubinfo {
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  this: dct:created "2026-02-22T19:44:42.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.3233/978-1-61499-904-1-52>;
+    rdfs:label "Using the AIDA Language to Formally Organize Scientific Claims" .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
+    npx:hasSignature "Vd9H+qwfq1Huewl/b5kERmVstj9f4BkPI6PIiNRfzk5XdUqyBdBPdBxoXgKhjx5THYB1Whxc+xU7EM9fuwc6fK9ixTtdaJH8yAhjj1LaYFMsWOAcK1kd6qZ5QG2KJl6O1R/uG/DyPdhFESyQk7FS8GNKynzSTyD7m3ri393MC7Lwi2XWevfs3qXZ1mM7Xn2SxetBJtJdQNyeJ7srmxsy8tGTsO20Eh81ZtNs9piCPH0CzFs6I6ytR/4ayw7/dDSjQi/PLZJzDzyRqDCVnPIw8ssOuOnkM0QZXpBApxELxJR6Oqwbk5alCjXqs7d2AYg7kvo6gsllH2WgcIJ+cohqJw==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}
