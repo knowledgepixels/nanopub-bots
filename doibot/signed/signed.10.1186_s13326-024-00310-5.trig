@@ -1,0 +1,79 @@
+@prefix this: <https://w3id.org/np/RAA1vf_GK8NLXPv36aXQIWMda4KwSayKMDcI3XP-T090A> .
+@prefix sub: <https://w3id.org/np/RAA1vf_GK8NLXPv36aXQIWMda4KwSayKMDcI3XP-T090A/> .
+@prefix schema: <http://schema.org/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  <http://id.crossref.org/issn/2041-1480> dct:title "Journal of Biomedical Semantics" .
+  
+  <https://doi.org/10.1186/s13326-024-00310-5> a fabio:Article;
+    dct:abstract "Background: In today's landscape of data management, the importance of knowledge graphs and ontologies is escalating as critical mechanisms aligned with the FAIR Guiding Principles—ensuring data and metadata are Findable, Accessible, Interoperable, and Reusable. We discuss three challenges that may hinder the effective exploitation of the full potential of FAIR knowledge graphs. Results: We introduce \"semantic units\" as a conceptual solution, although currently exemplified only in a limited prototype. Semantic units structure a knowledge graph into identifiable and semantically meaningful subgraphs by adding another layer of triples on top of the conventional data layer. Semantic units and their subgraphs are represented by their own resource that instantiates a corresponding semantic unit class. We distinguish statement and compound units as basic categories of semantic units. A statement unit is the smallest, independent proposition that is semantically meaningful for a human reader. Depending on the relation of its underlying proposition, it consists of one or more triples. Organizing a knowledge graph into statement units results in a partition of the graph, with each triple belonging to exactly one statement unit. A compound unit, on the other hand, is a semantically meaningful collection of statement and compound units that form larger subgraphs. Some semantic units organize the graph into different levels of representational granularity, others orthogonally into different types of granularity trees or different frames of reference, structuring and organizing the knowledge graph into partially overlapping, partially enclosed subgraphs, each of which can be referenced by its own resource. Conclusions: Semantic units, applicable in RDF/OWL and labeled property graphs, offer support for making statements about statements and facilitate graph-alignment, subgraph-matching, knowledge graph profiling, and for management of access restrictions to sensitive data. Additionally, we argue that organizing the graph into semantic units promotes the differentiation of ontological and discursive information, and that it also supports the differentiation of multiple frames of reference within the graph.";
+    dct:date "2024-05-27";
+    dct:isPartOf <http://id.crossref.org/issn/2041-1480>;
+    dct:title "Semantic units: organizing knowledge graphs into semantically meaningful units of representation";
+    bibo:authorList sub:author-list .
+  
+  orcid:0000-0001-8149-5890 schema:affiliation ror:01q3tbs38;
+    foaf:name "Robert Hoehndorf" .
+  
+  orcid:0000-0002-1267-0234 schema:affiliation ror:008xxew50;
+    foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0002-8280-0487 schema:affiliation ror:04aj4c181;
+    foaf:name "Lars Vogt" .
+  
+  ror:008xxew50 foaf:name "Department of Computer Science, Vrije Universiteit Amsterdam, Amsterdam, Netherlands" .
+  
+  ror:01q3tbs38 foaf:name "King Abdullah University of Science and Technology (KAUST)" .
+  
+  ror:04aj4c181 foaf:name "TIB – Leibniz Information Centre for Science and Technology and University Library" .
+  
+  sub:author-list rdf:_1 orcid:0000-0002-8280-0487;
+    rdf:_2 orcid:0000-0002-1267-0234;
+    rdf:_3 orcid:0000-0001-8149-5890 .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0001-8149-5890, orcid:0000-0002-1267-0234,
+      orcid:0000-0002-8280-0487;
+    prov:wasDerivedFrom <https://doi.org/10.1186/s13326-024-00310-5> .
+}
+
+sub:pubinfo {
+  orcid:0000-0001-8149-5890 foaf:name "Robert Hoehndorf" .
+  
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0002-8280-0487 foaf:name "Lars Vogt" .
+  
+  this: dct:created "2026-02-22T17:12:15.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.1186/s13326-024-00310-5>;
+    rdfs:label "Semantic units: organizing knowledge graphs into semantically meaningful units of representation" .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
+    npx:hasSignature "hanHiUqgo/bsqD4GpJUL7Rpv1FfKhVL8hv/AW7v8H6WJnIetcIOkJhkwGjkfjnfT83VYX181wch7z/6mLdCcX+CLi8Gi22A9sK0IfpMhdx53mKpDU2eea5zWIgtEJxZTMKiPxigxPx/pJkWKT8kr3VfaQBae+woLnUbhCULHY+IYoBpSTa9JAtXmbCP0FmReaelr2k32o46orYkNxDv+aCVBtDcQpD09Ejyj23YmOZ9x8283pTASZ5VcHQaR8XL1rEYszTpMec8EmicFe+EmEQrxpJmnKRQxTVKTXToAALTVzdHTgxiFCxElHMdPhkXZToBVU+855yh5zBjsFoe1Qg==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}

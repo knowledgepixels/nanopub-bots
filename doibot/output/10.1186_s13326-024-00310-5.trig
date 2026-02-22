@@ -1,0 +1,72 @@
+@prefix : <http://purl.org/nanopub/temp/np1/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix ror: <https://ror.org/> .
+@prefix schema: <http://schema.org/> .
+
+:Head {
+  : a np:Nanopublication;
+    np:hasAssertion :assertion;
+    np:hasProvenance :provenance;
+    np:hasPublicationInfo :pubinfo .
+}
+
+:assertion {
+  <https://doi.org/10.1186/s13326-024-00310-5> a fabio:Article;
+    dct:abstract "Background: In today's landscape of data management, the importance of knowledge graphs and ontologies is escalating as critical mechanisms aligned with the FAIR Guiding Principles—ensuring data and metadata are Findable, Accessible, Interoperable, and Reusable. We discuss three challenges that may hinder the effective exploitation of the full potential of FAIR knowledge graphs. Results: We introduce \"semantic units\" as a conceptual solution, although currently exemplified only in a limited prototype. Semantic units structure a knowledge graph into identifiable and semantically meaningful subgraphs by adding another layer of triples on top of the conventional data layer. Semantic units and their subgraphs are represented by their own resource that instantiates a corresponding semantic unit class. We distinguish statement and compound units as basic categories of semantic units. A statement unit is the smallest, independent proposition that is semantically meaningful for a human reader. Depending on the relation of its underlying proposition, it consists of one or more triples. Organizing a knowledge graph into statement units results in a partition of the graph, with each triple belonging to exactly one statement unit. A compound unit, on the other hand, is a semantically meaningful collection of statement and compound units that form larger subgraphs. Some semantic units organize the graph into different levels of representational granularity, others orthogonally into different types of granularity trees or different frames of reference, structuring and organizing the knowledge graph into partially overlapping, partially enclosed subgraphs, each of which can be referenced by its own resource. Conclusions: Semantic units, applicable in RDF/OWL and labeled property graphs, offer support for making statements about statements and facilitate graph-alignment, subgraph-matching, knowledge graph profiling, and for management of access restrictions to sensitive data. Additionally, we argue that organizing the graph into semantic units promotes the differentiation of ontological and discursive information, and that it also supports the differentiation of multiple frames of reference within the graph.";
+    dct:date "2024-05-27";
+    dct:title "Semantic units: organizing knowledge graphs into semantically meaningful units of representation" ;
+    bibo:authorList :author-list;
+    dct:isPartOf <http://id.crossref.org/issn/2041-1480> .
+
+  <http://id.crossref.org/issn/2041-1480> dct:title "Journal of Biomedical Semantics" .
+
+  :author-list rdf:_1 orcid:0000-0002-8280-0487 .
+  :author-list rdf:_2 orcid:0000-0002-1267-0234 .
+  :author-list rdf:_3 orcid:0000-0001-8149-5890 .
+
+  orcid:0000-0002-8280-0487 schema:affiliation ror:04aj4c181;
+    foaf:name "Lars Vogt" .
+
+  orcid:0000-0002-1267-0234 schema:affiliation ror:008xxew50;
+    foaf:name "Tobias Kuhn" .
+
+  orcid:0000-0001-8149-5890 schema:affiliation ror:01q3tbs38;
+    foaf:name "Robert Hoehndorf" .
+
+  ror:04aj4c181 foaf:name "TIB – Leibniz Information Centre for Science and Technology and University Library" .
+  ror:008xxew50 foaf:name "Department of Computer Science, Vrije Universiteit Amsterdam, Amsterdam, Netherlands" .
+  ror:01q3tbs38 foaf:name "King Abdullah University of Science and Technology (KAUST)" .
+
+}
+
+:provenance {
+  :assertion prov:wasAttributedTo orcid:0000-0002-8280-0487, orcid:0000-0002-1267-0234, orcid:0000-0001-8149-5890 .
+  :assertion prov:wasDerivedFrom <https://doi.org/10.1186/s13326-024-00310-5> .
+}
+
+:pubinfo {
+  : dct:created "2026-02-22T17:12:15.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.1186/s13326-024-00310-5>;
+    rdfs:label "Semantic units: organizing knowledge graphs into semantically meaningful units of representation" .
+
+  orcid:0000-0002-8280-0487 foaf:name "Lars Vogt" .
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0001-8149-5890 foaf:name "Robert Hoehndorf" .
+
+  :sig npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}
