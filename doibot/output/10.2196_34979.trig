@@ -1,0 +1,71 @@
+@prefix : <http://purl.org/nanopub/temp/np1/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix ror: <https://ror.org/> .
+@prefix schema: <http://schema.org/> .
+
+:Head {
+  : a np:Nanopublication;
+    np:hasAssertion :assertion;
+    np:hasProvenance :provenance;
+    np:hasPublicationInfo :pubinfo .
+}
+
+:assertion {
+  <https://doi.org/10.2196/34979> a fabio:Article;
+    dct:abstract "Background: In the poorly studied field of physician suicide, various factors can contribute to misinformation or information distortion, which in turn can influence evidence-based policies and prevention of suicide in this unique population. Objective: The aim of this paper is to use nanopublications as a scientific publishing approach to establish a citation network of claims in peer-reviewed publications about the rate of suicide among US physicians. Methods: A list of articles from a previously published scoping literature review on physician suicide was used to identify those articles that commented on or investigated suicidal behaviors of physician populations, including students, postgraduate trainees, and practicing physicians. The included articles were from peer-reviewed publications and asserted a claim about the annual rate of physician suicide. Manual data extraction was performed to collect article (or resource) type, title, authors, digital object identifier or URI, publication year, claim (about annual physician suicide rate), data of last access of the article (eg, for a webpage), and citations supporting the claim. Additional articles, websites, or other links were only added to the set of claims if they were cited by a peer-reviewed article already included in the data set. A nanopublication was created for each article or resource using Nanobench with an investigator-developed literature-based claim nanopublication template. Results: A set of 49 claims concerning the rate of US physician suicide was represented as nanopublications. Analysis of the claim network revealed that (1) the network is not fully connected, (2) no single primary source of the claim could be identified, and (3) all end-point citations had a claim with no further citation, had no apparent claim, or could not be accessed to verify the claim. The nanopublication strategy also enabled the capture of variant claims published on a website. Conclusions: Nanopublications remain to be adopted in broader scientific publishing in medicine, especially in publishing about physician mental health and suicide. This proof-of-concept study highlights an opportunity for more coordinated research efforts in the subject of physician suicide. Our work integrates these various claims and enables the verification of nonauthoritative assertions, thereby better equipping researchers to advance evidence-based knowledge and to make informed statements in the advocacy of physician suicide prevention. Representing physician suicide rate claims as nanopublications can be extended and improved in future work.";
+    dct:date "2022-07-01";
+    dct:title "Representing Physician Suicide Claims as Nanopublications: Proof-of-Concept Study Creating Claim Networks" ;
+    bibo:authorList :author-list;
+    dct:isPartOf <http://id.crossref.org/issn/2563-6316> .
+
+  <http://id.crossref.org/issn/2563-6316> dct:title "JMIRx Med" .
+
+  :author-list rdf:_1 orcid:0000-0002-6007-4023 .
+  :author-list rdf:_2 orcid:0000-0002-1267-0234 .
+  :author-list rdf:_3 orcid:0000-0003-4727-9435 .
+
+  orcid:0000-0002-6007-4023 schema:affiliation ror:02jz4aj89;
+    foaf:name "Tiffany I. Leung" .
+
+  orcid:0000-0002-1267-0234 schema:affiliation ror:008xxew50;
+    foaf:name "Tobias Kuhn" .
+
+  orcid:0000-0003-4727-9435 schema:affiliation ror:02jz4aj89;
+    foaf:name "Michel Dumontier" .
+
+  ror:02jz4aj89 foaf:name "Maastricht University" .
+  ror:008xxew50 foaf:name "Department of Computer Science, Vrije Universiteit Amsterdam, Amsterdam, Netherlands" .
+
+}
+
+:provenance {
+  :assertion prov:wasAttributedTo orcid:0000-0002-6007-4023, orcid:0000-0002-1267-0234, orcid:0000-0003-4727-9435 .
+  :assertion prov:wasDerivedFrom <https://doi.org/10.2196/34979> .
+}
+
+:pubinfo {
+  : dct:created "2026-02-22T17:25:21.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.2196/34979>;
+    rdfs:label "Representing Physician Suicide Claims as Nanopublications: Proof-of-Concept Study Creating Claim Networks" .
+
+  orcid:0000-0002-6007-4023 foaf:name "Tiffany I. Leung" .
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
+
+  :sig npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}
