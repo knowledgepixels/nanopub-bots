@@ -1,0 +1,75 @@
+@prefix : <http://purl.org/nanopub/temp/np1/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix ror: <https://ror.org/> .
+@prefix schema: <http://schema.org/> .
+
+:Head {
+  : a np:Nanopublication;
+    np:hasAssertion :assertion;
+    np:hasProvenance :provenance;
+    np:hasPublicationInfo :pubinfo .
+}
+
+:assertion {
+  <https://doi.org/10.1007/978-3-319-67256-4_23> a fabio:BookChapter;
+    dct:abstract "Climate change, vaccination, abortion, Trump: Many topics are surrounded by fierce controversies. The nature of such heated debates and their elements have been studied extensively in the social science literature. More recently, various computational approaches to controversy analysis have appeared, using new data sources such as Wikipedia, which help us now better understand these phenomena. However, compared to what social sciences have discovered about such debates, the existing computational approaches mostly focus on just a few of the many important aspects around the concept of controversies. In order to link the two strands, we provide and evaluate here a controversy model that is both, rooted in the findings of the social science literature and at the same time strongly linked to computational methods. We show how this model can lead to computational controversy analytics that have full coverage over all the crucial aspects that make up a controversy.";
+    dct:date "2017";
+    dct:title "Computational Controversy" ;
+    bibo:authorList :author-list;
+    bibo:pageStart "288";
+    bibo:pageEnd "300";
+    dct:isPartOf <http://id.crossref.org/issn/0302-9743> .
+
+  <http://id.crossref.org/issn/0302-9743> dct:title "Lecture Notes in Computer Science" .
+
+  :author-list rdf:_1 orcid:0000-0002-5130-4309 .
+  :author-list rdf:_2 orcid:0000-0002-1267-0234 .
+  :author-list rdf:_3 orcid:0000-0001-7331-1174 .
+  :author-list rdf:_4 orcid:0000-0001-9402-1133 .
+
+  orcid:0000-0002-5130-4309 foaf:name "Benjamin Timmermans" .
+
+  orcid:0000-0002-1267-0234 schema:affiliation ror:008xxew50;
+    foaf:name "Tobias Kuhn" .
+
+  orcid:0000-0001-7331-1174 foaf:name "Kaspar Beelen" .
+
+  orcid:0000-0001-9402-1133 schema:affiliation ror:008xxew50;
+    foaf:name "Lora Aroyo" .
+
+  ror:008xxew50 foaf:name "Department of Computer Science, Vrije Universiteit Amsterdam, Amsterdam, Netherlands" .
+
+}
+
+:provenance {
+  :assertion prov:wasAttributedTo orcid:0000-0002-5130-4309, orcid:0000-0002-1267-0234, orcid:0000-0001-7331-1174, orcid:0000-0001-9402-1133 .
+  :assertion prov:wasDerivedFrom <https://doi.org/10.1007/978-3-319-67256-4_23> .
+}
+
+:pubinfo {
+  : dct:created "2026-02-22T19:57:18.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.1007/978-3-319-67256-4_23>;
+    rdfs:label "Computational Controversy" .
+
+  orcid:0000-0002-5130-4309 foaf:name "Benjamin Timmermans" .
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0001-7331-1174 foaf:name "Kaspar Beelen" .
+  orcid:0000-0001-9402-1133 foaf:name "Lora Aroyo" .
+
+  :sig npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}
