@@ -78,12 +78,12 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-10T12:00:00.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-02-22T10:51:40.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
-    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.7717/peerj-cs.387>;
-    npx:supersedes <https://w3id.org/np/temp/RASFYJSOlS-ucaUG6tsSZdGjOUZ6Huk--sJSwafa1utWU>;
+    npx:supersedes <https://w3id.org/np/RAClabf2_nh8Xn_qGnASQojIAX-o4E7wqv5WfiEVTKdw8> ;
     rdfs:label "Semantic micro-contributions with decentralized nanopublication services" .
 
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .

@@ -76,11 +76,12 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-10T15:28:23.659+01:00"^^xsd:dateTime;
+  : dct:created "2026-02-22T10:51:40.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
-    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.7717/peerj-cs.281>;
+    npx:supersedes <https://w3id.org/np/RAvEQzAVYzMqAXeKyGeXryvNOi7m22PNNebV10HV7E7q8> ;
     rdfs:label "Towards FAIR protocols and workflows: the OpenPREDICT use case" .
 
   orcid:0000-0001-7769-4272 foaf:name "Remzi Celebi" .

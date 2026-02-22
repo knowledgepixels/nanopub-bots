@@ -148,12 +148,12 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-10T12:00:00.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-02-22T10:51:40.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
-    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1038/sdata.2016.18>;
-    npx:supersedes <https://w3id.org/np/temp/RAoFQ1eUTp-SIksNUGvZncahKpntov7DL9DUkantk6Sgs>;
+    npx:supersedes <https://w3id.org/np/RAf3JPCTEgbQhfcdJlI0w9jB2Un-MgX6QMnxIpg179Kus> ;
     rdfs:label "The FAIR Guiding Principles for scientific data management and stewardship" .
 
   orcid:0000-0001-6960-357X foaf:name "Mark D. Wilkinson" .

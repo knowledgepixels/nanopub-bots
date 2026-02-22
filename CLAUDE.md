@@ -129,7 +129,11 @@ When updating an existing nanopub:
 
 ### Personal information policy
 
-Only include personal information (names, email addresses, affiliations, ORCIDs, etc.) in a nanopublication if it is already permanently and openly published — e.g. expressed in a published scientific paper or made available online by the person themselves under a permanent open license (such as CC-BY).
+Only include personal information (names, email addresses, affiliations, ORCIDs, etc.) in a nanopublication if it is already permanently and openly published — e.g. expressed in a published scientific paper or made available online by the person themselves under a permanent open license (such as CC0 or CC-BY).
+
+### License
+
+All bot nanopublications must be published under **CC0** (https://creativecommons.org/publicdomain/zero/1.0/), not CC-BY.
 
 ### FaBiO types for doibot
 

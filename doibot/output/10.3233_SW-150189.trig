@@ -61,11 +61,12 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-13T12:26:06.904+01:00"^^xsd:dateTime;
+  : dct:created "2026-02-22T10:51:40.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
-    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.3233/SW-150189>;
+    npx:supersedes <https://w3id.org/np/RApRnYHZRsFz8nCTXRvDbFdlJWgdMEepw5Iw8hCY4zU0o> ;
     rdfs:label "Publishing DisGeNET as nanopublications" .
 
   orcid:0000-0003-0169-8159 foaf:name "Núria Queralt-Rosinach" .

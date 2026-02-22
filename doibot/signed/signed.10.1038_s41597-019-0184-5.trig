@@ -1,5 +1,5 @@
-@prefix this: <https://w3id.org/np/RAn0hxYDPb1aXNzTW3YtFFpZ1AVvH34dW__A8PfLIbBv0> .
-@prefix sub: <https://w3id.org/np/RAn0hxYDPb1aXNzTW3YtFFpZ1AVvH34dW__A8PfLIbBv0/> .
+@prefix this: <https://w3id.org/np/RAuSQWTXRTrgk_ONfl-7p6_MM4D7ENoaJny9fbJwjzwLY> .
+@prefix sub: <https://w3id.org/np/RAuSQWTXRTrgk_ONfl-7p6_MM4D7ENoaJny9fbJwjzwLY/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -95,16 +95,17 @@ sub:pubinfo {
   
   orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
   
-  this: dct:created "2026-02-13T12:13:54.193+01:00"^^xsd:dateTime;
+  this: dct:created "2026-02-22T10:51:40.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
-    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1038/s41597-019-0184-5>;
+    npx:supersedes <https://w3id.org/np/RAn0hxYDPb1aXNzTW3YtFFpZ1AVvH34dW__A8PfLIbBv0>;
     rdfs:label "Evaluating FAIR maturity through a scalable, automated, community-governed framework" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "hFCAp2n2ReGWHieN20Ea63twbE0xU5NE0HqUyTgqUWJlw879ktqEN7H/6Yi9KX3Rxd8T3NGQlMNnps4B7r7lvmsD3k9aKEH8Khh5Y0ikt2Qr0sxAYp2LQ+7DJjZ3WM/7pX7cEgGRghRb4zzGXBnCiZKl45X5mON4BtHWsKV/teESRAZj66rvTxYHF9EL/D3lVGy8D2XVljUgiw9fmjFY1WB4NYFVGzGzcsF6wVQbGe63cjsUN7hJJvDJItfg0difed8+kIP4i7M0rbeV2DhwNB5CuppR03AMIEY32ICOT5uYLPRZzZ1fAAgO+MKK4JxaYPyadMlN9pUyWdAPEz+boA==";
+    npx:hasSignature "jZsNJaaIVbyY2n6ar5WPhsJpEUiYaEFSfUJ730Ep91psLq4lPd33F2x89idABQ8CBfSlxWpldPqh4DwzZuvoVppYNIM1f3iRqatpQHu9x4WuS9H3R/+vjOpIB3Gqqf2t/mJI3+DFj5cyJF7O2QB1AyZIjN9fz+RmUae4ItpfMz3ZT8xSpDfDShq5YCAxFs9DgrVMk+FtAk2LzXpeV7i1oulZ9H8ul2pAeNG63Ma4rvCkPg2W4QkDw29p1yoykvinnegyG1V9yWRqftjsR97ZwxwIiAUf9TZ/gJuwe2pKEOR29fNFf5ctXJj8m5IM/IZM9Z9Hmy+30iu1cQk6WwyjmA==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

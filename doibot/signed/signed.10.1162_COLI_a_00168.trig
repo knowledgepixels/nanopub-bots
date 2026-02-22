@@ -1,5 +1,5 @@
-@prefix this: <https://w3id.org/np/RA-NixI7h9Go2z1rCE7sBoXiv0CRbRArbN8f3Mv__JbnA> .
-@prefix sub: <https://w3id.org/np/RA-NixI7h9Go2z1rCE7sBoXiv0CRbRArbN8f3Mv__JbnA/> .
+@prefix this: <https://w3id.org/np/RAMF8AQkPqN9UVQoy5XYVq2NEcsZv5mY7VOuYqI64cWn0> .
+@prefix sub: <https://w3id.org/np/RAMF8AQkPqN9UVQoy5XYVq2NEcsZv5mY7VOuYqI64cWn0/> .
 @prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
@@ -49,17 +49,17 @@ sub:provenance {
 sub:pubinfo {
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
   
-  this: dct:created "2026-02-10T12:00:00.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-02-22T10:51:40.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
-    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1162/COLI_a_00168>;
-    npx:supersedes <https://w3id.org/np/temp/RArsEyakpD-49TQFisRSXTawKLDD2cpj-NC-Aoh56mGDI>;
+    npx:supersedes <https://w3id.org/np/RA-NixI7h9Go2z1rCE7sBoXiv0CRbRArbN8f3Mv__JbnA>;
     rdfs:label "A Survey and Classification of Controlled Natural Languages" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "YKFZwin3q/zE1DO28H4EuOb7Fx/lcs4kRkFpqUYTD+cmzdsNjsLrgzqxAt3UvhF1HMdXiCdL5LDGGKrTIPRZz1PI+/5euvzaVWNEAzVZ6mZlEH8rDYQKWmOBwfc9cc6aPjgjys8y08q3JpqjqMIDwwMnud1FLEYq+Ps7Locnnz4+vJ1bGqWRZApguhfc9HBcqV372MH+mmTqizql1WfyxrC1YSrKqhe9ZlEgTd87ls6Zk/9Xr8K/6GbEAuZvW1A/ehXRraiLXvrZevUheXlHuddDL0KTOsdXEW/iV78waEN17vyIQJxhuWeW+4z08EK6Egmayq1TlFZkAt974x1y4Q==";
+    npx:hasSignature "j2TDl/ttnbQGCksv83oFzePSUY9CYx+UJqxSkvTJnBMVMlwdBEVmKOmdqG1QB40UKNujTDOpEQiAK5iNovZYkheeJMN2NWwrMwz7ZhB0YGFmYcMQ/AwPtSNEGQ1oNTxHG7IFFpjx30rcjJcpHwsnAh9OK+1p4wvtmQpnuTTMFkMYR03ReH4q2Fy4ArdtZr7bbwSCLvp/FZ7NOuSudlpcKbfD0loChHuX7IHiOCt8zdDpOMKKn1PlcGqeVcAWpfABCvvrIxScwKzFTNJ2mkbUK8HAp9g2LJMUN/EUUpTFCjcGDWiLVls0ihf9qcZOYQzGONkk5cOeZV1syQQmP58Iiw==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

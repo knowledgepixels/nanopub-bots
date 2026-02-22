@@ -1,5 +1,5 @@
-@prefix this: <https://w3id.org/np/RA9YpXw3uvDrvd8feeJLTFqRFcMQIRTQ4lVlfOZhYskXk> .
-@prefix sub: <https://w3id.org/np/RA9YpXw3uvDrvd8feeJLTFqRFcMQIRTQ4lVlfOZhYskXk/> .
+@prefix this: <https://w3id.org/np/RA3jbVz5n7kzkSBbFeKkyb2xj84bP8zrA0i40-cNxX9xs> .
+@prefix sub: <https://w3id.org/np/RA3jbVz5n7kzkSBbFeKkyb2xj84bP8zrA0i40-cNxX9xs/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -49,16 +49,17 @@ sub:pubinfo {
   
   orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
   
-  this: dct:created "2026-02-13T12:08:23.513+01:00"^^xsd:dateTime;
+  this: dct:created "2026-02-22T10:51:40.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
-    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1109/TKDE.2015.2419657>;
+    npx:supersedes <https://w3id.org/np/RA9YpXw3uvDrvd8feeJLTFqRFcMQIRTQ4lVlfOZhYskXk>;
     rdfs:label "Making Digital Artifacts on the Web Verifiable and Reliable" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "cNcTqH76j/j0a6bVLA9lGZSKzR4XOiKu0DxmJZjeifM4IW5K4qcjZauA4q2+gSrCPWVD45qlPPkM5RNHD8MFhz7w1iBvIDx2J1dkQxAudjzTP9pnxcvNE8Vo9sx79Owoet9QCJ2imHqkIqbA7ahovWtm1plaEg+EW+yY9izSe3mKBWRPUcXmrkWz+FczSOqSa4nWhi0q6gmtgTL6uc+Al8yevoSR+ow8QkQ0EIElOM3l4lDY/u9MK+jw88+BAXAYu4COrswDsaWN/wbfORHgtBZMU7bXL8wvJnzG8NuAYMu48BUm7XwuaCxGMVeTNfdI6EEIo/4HfGbxB0KY+mQTmg==";
+    npx:hasSignature "O+ZVFpVAdUZS6FQ5E/Q9H2zoCfpZN1i19jadLEUyXj9mGwtvqnJb2I0Z2emfpPzk12KjcP89b/3J9/eJek6Uq3qU33Ju5yCIgeWslgDaj1yS41/Dw3+s7CVOcYt8XXc5ukKLviYApXUC5DmbiFBiDywfnyNfWuLChNm5galYl9QX6M6Zjwofx6zPPeavhKdlgRafKDJqY/zNGOmKPGPHwv22BsC8fBQlXScrS1uiqM8QZnZaGeOjXftKafabrwr4uFVzBjykhX6JWlHMR5rv2Bxb4fnzQFgQYac+kHbiiPPbid8dQAd1KJ7dqwVysa+20Tq4QbNKTN0mjqYa+0eXgQ==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

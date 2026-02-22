@@ -74,11 +74,12 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-13T12:13:54.193+01:00"^^xsd:dateTime;
+  : dct:created "2026-02-22T10:51:40.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
-    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1038/s41597-019-0184-5>;
+    npx:supersedes <https://w3id.org/np/RAn0hxYDPb1aXNzTW3YtFFpZ1AVvH34dW__A8PfLIbBv0> ;
     rdfs:label "Evaluating FAIR maturity through a scalable, automated, community-governed framework" .
 
   orcid:0000-0001-6960-357X foaf:name "Mark D. Wilkinson" .

@@ -1,5 +1,5 @@
-@prefix this: <https://w3id.org/np/RA9OPnyNj7BPsCXWkvIrtXZZhlFOuub8lefTWxXkPCFFw> .
-@prefix sub: <https://w3id.org/np/RA9OPnyNj7BPsCXWkvIrtXZZhlFOuub8lefTWxXkPCFFw/> .
+@prefix this: <https://w3id.org/np/RA5OYsuycbDDSV7IUGHMxp5WpSga4LSmf0HJB-Q-wPBa8> .
+@prefix sub: <https://w3id.org/np/RA5OYsuycbDDSV7IUGHMxp5WpSga4LSmf0HJB-Q-wPBa8/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -52,11 +52,12 @@ sub:provenance {
 sub:pubinfo {
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
   
-  this: dct:created "2026-02-10T17:47:13.369+01:00"^^xsd:dateTime;
+  this: dct:created "2026-02-22T10:51:40.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
-    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1007/11799511_7>;
+    npx:supersedes <https://w3id.org/np/RA9OPnyNj7BPsCXWkvIrtXZZhlFOuub8lefTWxXkPCFFw>;
     rdfs:label "Improving Text Mining with Controlled Natural Language: A Case Study for Protein Interactions" .
   
   sub:loic-royer foaf:name "Loic Royer" .
@@ -67,7 +68,7 @@ sub:pubinfo {
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "br5TmLz33rFD4xbDILoZIiGcy8xKL8s21PY4mEj2Cs46D5pCSEhJ4YpJ4HTgdjR6U5jbAoOlWWX3mcVoHdF/5YJk7wyVWrLtUG+P4tj8yDs5nhAWtgCx6MyTs8gZcanjS3rs8lC4JMq9DjQ8DA1V/ubVIMlgxJrLO0/3CNEv8BhdIAv0Jl7XTx5q52aIfOKShDHmbqTeCCNh9CvXtYaCc653SPsW8wud2o0b3cF6ZWClwnO4O9/e1pUaNi5zUOrKJFrmEtvziFMOUwLshtc9qspmfXgBeT+gyiDeq9G2tN5wCFXUNULxxGXV58pnF0RjT8K2d0wBIQ+QLIbShGFMsA==";
+    npx:hasSignature "j205xKCQ6h/T69uodeh7qtYy0HBTLKahq1aBgsUBswyth0YEWlPvSKvqiPNEU6147I+kvcceT9yKub9Yc7i5PNfVJBrG7chWucWxhQSB+OHpmu/FiV9w/jkueZ+XKQiyHeaHzLNnSMKEx1LG4O6j9MHw/KGmypUFTZH6Iu9QD7+3Y+UmlFfAfvj0Ek9pnu5PWuuEBj15A3Obfn5QKJjTAcGYTOn2snrr2TVf+qHoXNpaFNuQMZY+utM2r0bYRdXIL0v2pbywUeiRZgy3/F93OKmR4lt70Ku5xP4UQxJiLBIEpozXJV8M+Vx1lJDyXtHCLjMCaKKR9N1wLecL52VcHg==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

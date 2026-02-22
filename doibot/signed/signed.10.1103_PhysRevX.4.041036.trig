@@ -1,5 +1,5 @@
-@prefix this: <https://w3id.org/np/RA4Beon9w-Pw_vnnXrENmHDWDdFbRpZr0kNhzfUvZUK_E> .
-@prefix sub: <https://w3id.org/np/RA4Beon9w-Pw_vnnXrENmHDWDdFbRpZr0kNhzfUvZUK_E/> .
+@prefix this: <https://w3id.org/np/RA0W3ttYBINcPTIfd6lghVk4GBNOPIF3dLTHTd3vZHNnQ> .
+@prefix sub: <https://w3id.org/np/RA0W3ttYBINcPTIfd6lghVk4GBNOPIF3dLTHTd3vZHNnQ/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -53,16 +53,17 @@ sub:pubinfo {
   
   orcid:0000-0002-9898-0101 foaf:name "Dirk Helbing" .
   
-  this: dct:created "2026-02-11T07:15:01.238+01:00"^^xsd:dateTime;
+  this: dct:created "2026-02-22T10:51:40.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
-    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1103/PhysRevX.4.041036>;
+    npx:supersedes <https://w3id.org/np/RA4Beon9w-Pw_vnnXrENmHDWDdFbRpZr0kNhzfUvZUK_E>;
     rdfs:label "Inheritance Patterns in Citation Networks Reveal Scientific Memes" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "mH9O693LDKmTFnxmLaS16Zz6LDDXEVtrPzJPxYpIkV3O8Sr4YlLKSHmcfH4Gw7kyZ1EQdFYmtlUxutzwmdmFYpyj1+aBnYvFtU/oqo6RP9S8J8wwAcjidUm5a/I1rJv1fqNI5xJUJQqBBD4mUhs3UVlIu+65Zxjs9iWFL1CQpBwJ+6IuBPjy+ZxSNjTrRmKGw2X6sSxrMKqI8ND9d/F+myAsf3L+LyS3GmVGE/nCBuaU9cIm79uvTuCTUU2AXKDHkFnMhy+HCw4A17eDiUgpCzjSyxEAnF6iJL5N80VWOqIUATDWUajVcZg8zNdlgJPnXJiHSgph6gPHjdsPrt6niw==";
+    npx:hasSignature "jmZVxzpRjb0k8QFU9R52wZRWlkOwvY3tuVVu36cUe9U/rO0et9yDrQMw86Wkses0KwYko8fnOlQn5jslWwpZ/37AYrlMgZXJQ/8z3kauFNJt97GCpkPG/zIGZLOVdAZ5sDoxRF81IZvcS7+pSzPhSTmmaFhXSMTvLNNLR2gNaOgE+JxkXpx331dM30Ke2vvZlyCfJ0bY1bM3kCyup+t7NjtrEyNO6UBnlDCuAkZ3JFS59xKsf9C0qxId+cLasG+nwHqCNQYk340qgvndOx6f7Sh1RBefGKw7J3wpm2aJmrk2lJIVpt27IXfS6Vx/Ql5o3WW54oMQ/9LGVosf6qkn4w==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

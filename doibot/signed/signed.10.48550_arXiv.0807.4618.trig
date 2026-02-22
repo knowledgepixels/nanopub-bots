@@ -1,5 +1,5 @@
-@prefix this: <https://w3id.org/np/RAJpZo5Wc51pxyJIODVmSm34S4Z5Q7g4gPCe3aTZao3EA> .
-@prefix sub: <https://w3id.org/np/RAJpZo5Wc51pxyJIODVmSm34S4Z5Q7g4gPCe3aTZao3EA/> .
+@prefix this: <https://w3id.org/np/RAX-jgxWX9C8ISf-GI7jHC_iq0Rm1NnMXsJevV7ro1GY4> .
+@prefix sub: <https://w3id.org/np/RAX-jgxWX9C8ISf-GI7jHC_iq0Rm1NnMXsJevV7ro1GY4/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -43,16 +43,17 @@ sub:provenance {
 sub:pubinfo {
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
   
-  this: dct:created "2026-02-11T07:30:00.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-02-22T10:51:40.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
-    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.48550/arXiv.0807.4618>;
+    npx:supersedes <https://w3id.org/np/RAJpZo5Wc51pxyJIODVmSm34S4Z5Q7g4gPCe3aTZao3EA>;
     rdfs:label "AceWiki: A Natural and Expressive Semantic Wiki" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "FYdjdfVF6YlOXdtHRN0toX10hx2m1V8QuScsjNNCH9lilBUFJrDbsFvSqIc5fjERwSnusCJPVcfJwL8hVTrg8bkEaIaDay9sQr6MrUEbO0Wt196yGfH78m9TDOkF+1Z/FGmNULduHoSUB/WgY3oUbivdiSDAyX77xAdTAsHemJMqW71mM2oNSt3Kb2MESMq+ih5d8fOlYWGl4WbNh+BzVWIVpBycxl0WKqMhByexnpHMDdugZ1dqmxcmHCHqMj4frw+aXTZzEWkYtPyI6/T6ovg5SKjA9AzpIGvBt3lApkmKHDjwC2Q5pnk+CV3MQ8vhqsIn0MLQ6VQCZvG/WRcYng==";
+    npx:hasSignature "N0oZP5PtqOAPpaclVG04Y2fKptg8Uw3k0JJctpYGqzLO7bt2DorhYNbMI5VWoT8NLepKQSUq4UrKViegQgL1D7eK5yDwT0xEbdwkUTBY2be1SfiFNpE2HdMMrThDkreT6yHzeJF7B6fZg5YDMi9nXg2Js+hBcEJdbOIHJZks15fAG93nBCoEPoRZA3Mu7+irYVS51VvsyCoV97Ohq9BnQwYL4FQw69tpYuKnra5A6MTvXZGNmrdghuscAedWHnhou0HAs5+aRiMJZoPpB/5i8/ABsGqw7KocF6m0l8s5ysyvW1YAxCQ9OZmpmUKvUArPNrzuIAmWyQI+J+zg9bAmzg==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

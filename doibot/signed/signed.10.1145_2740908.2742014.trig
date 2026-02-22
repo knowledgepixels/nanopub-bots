@@ -1,5 +1,5 @@
-@prefix this: <https://w3id.org/np/RASVwclwhXInbLyMk61olxSHDhUFrXZ1tGzJpRxFIOofw> .
-@prefix sub: <https://w3id.org/np/RASVwclwhXInbLyMk61olxSHDhUFrXZ1tGzJpRxFIOofw/> .
+@prefix this: <https://w3id.org/np/RA0SLh0jrgrcu6AH2gI2VbJV9g7-fh-QRCClaibDmYDdY> .
+@prefix sub: <https://w3id.org/np/RA0SLh0jrgrcu6AH2gI2VbJV9g7-fh-QRCClaibDmYDdY/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -40,16 +40,17 @@ sub:provenance {
 sub:pubinfo {
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
   
-  this: dct:created "2026-02-13T12:23:30.485+01:00"^^xsd:dateTime;
+  this: dct:created "2026-02-22T10:51:40.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
-    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1145/2740908.2742014>;
+    npx:supersedes <https://w3id.org/np/RASVwclwhXInbLyMk61olxSHDhUFrXZ1tGzJpRxFIOofw>;
     rdfs:label "Science Bots: A Model for the Future of Scientific Computation?" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "R1egEo8UC1Oo7GT93jQtn2ZD4e5JkTHCYLcloqHjQ6xAK4S9ikhw3OGkfV+SNykAnpBinPQmV9I/oGMZUe1dJngcyyJOk2ds/NhVtFuctJ5o3R2axuCWuw//SRYabneHsKU7ClH97NJYCk3RcN4jBraHtmI+K8QPcvELI8h33HaOtZt1+UQ/LAMU0SUKnnm1sJN5dAtZInTiRch5v5zqgaiJLBX45pRCt2uIQotMMrAJWbq5yhwHXtKB9p7tdcTdLAkNRjr7eVtyf+zBk8ButZPYjJJuAeAk/QyG/avugnTt6P3/STlrMziwGnZj6ssm+c+QtLWjNW5GsPQVTO3O2g==";
+    npx:hasSignature "kxkyujvk/cnKyDXBMmWKmlnxWGf+JBnhcwaMi9pXpzRhYjlfp1Gpzbv/ku7g27GA4XUnqRIdrVGhCLKLnnQn7rJ28kaFkvGJmM2jHg22UWXB+0782vAxwn2Kb16br8qN3+E0tQujJw1BFvkVh0WOeBtUzKbPBtL0+IJr8YSFiaZWoJZqNM5SnrLTr4YCpelJeApchqLswoUGe4CcEMG2pXYUupl0rCS3hzrNuOLUrnSaCMpzS4apgedG4DIsqQCFI3EpOakPr7wftsoDBetTLhBXXyMGf4rdTZK7p51sl193vIYQ3buLWnTJQiJ66Ts66E6YIChElbnr+fUfJBiJww==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

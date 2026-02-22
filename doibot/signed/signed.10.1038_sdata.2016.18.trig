@@ -1,5 +1,5 @@
-@prefix this: <https://w3id.org/np/RAf3JPCTEgbQhfcdJlI0w9jB2Un-MgX6QMnxIpg179Kus> .
-@prefix sub: <https://w3id.org/np/RAf3JPCTEgbQhfcdJlI0w9jB2Un-MgX6QMnxIpg179Kus/> .
+@prefix this: <https://w3id.org/np/RAnLfi9hhU1XyoKq_7KqIUpzi1DdDv0t0ri3iZyA4vdYE> .
+@prefix sub: <https://w3id.org/np/RAnLfi9hhU1XyoKq_7KqIUpzi1DdDv0t0ri3iZyA4vdYE/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -299,17 +299,17 @@ sub:pubinfo {
   
   orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
   
-  this: dct:created "2026-02-10T12:00:00.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-02-22T10:51:40.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
-    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1038/sdata.2016.18>;
-    npx:supersedes <https://w3id.org/np/temp/RAoFQ1eUTp-SIksNUGvZncahKpntov7DL9DUkantk6Sgs>;
+    npx:supersedes <https://w3id.org/np/RAf3JPCTEgbQhfcdJlI0w9jB2Un-MgX6QMnxIpg179Kus>;
     rdfs:label "The FAIR Guiding Principles for scientific data management and stewardship" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "DWSAf8IrzwtJxzGZcWja+H1ZvNqkc/aDQezZPHsDoV0F8IjVRZOTohYEys4LoqvfmtgKnMAteDS1aT7M5RjxhuxYKesFrKFRYPj6mXoLo5GLmWgPz/UX38KbATG+2guzjWiobXHgeIHza9Jebbdt5Sh60II2Fyb2MRmPfmKBWISOELfbTwQX4RM7eKbyqLVoEVGc9xUe0Jt3XDknQ4g7TJJY0J+HtJIQXMgS7ie5+mufpOegrQakN3uzCPzrUGOMDqYh786zlPMRoZRAMcCeqzahb7TWfa9GOvku/ywItA2CCRSa9eFtUPrusN7v+4EwD7z4zp0dfefD/tq7+G0Oow==";
+    npx:hasSignature "oEoKJGesMyfEcWy/TIW9OQsdbTijXxEQkAdQS+kHo88QrjjDIPUfqS2WubddxtRBz5S4Rdm0JSJJaifDwIX3axVPtyzcBS9ITwD+UgEE7oyVUVnNRgCsXJmB3GSUNs4UHO9YzD31GEX6whd6RhSVNrEW8L3/s6dLaHZQyVerXpFddicYweGRDshZOaHbCZnQ+UEwIPijnp3b66OpvmKS5wlK4bPS9Z/iysVcvwhGASOzWOpGv8TCUYUPBeMB1kLtBOJEJ8AJ9gpB3xDQgoKdtyi10nuVRAmdZHHs/CBxFs90+ejRgQVLzn6DfsuTkg4M50QlElGwuSOuNKnUXi6JsA==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }
