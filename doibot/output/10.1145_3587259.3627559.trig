@@ -1,0 +1,77 @@
+@prefix : <http://purl.org/nanopub/temp/np1/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix ror: <https://ror.org/> .
+@prefix schema: <http://schema.org/> .
+
+:Head {
+  : a np:Nanopublication;
+    np:hasAssertion :assertion;
+    np:hasProvenance :provenance;
+    np:hasPublicationInfo :pubinfo .
+}
+
+:assertion {
+  <https://doi.org/10.1145/3587259.3627559> a fabio:ConferencePaper;
+    dct:abstract "In response to the increasing volume of research data being generated, more and more data portals have been designed to facilitate data findability and accessibility. However, a significant portion of this data remains confidential or restricted due to its sensitive nature, such as patient data or census microdata. While maintaining confidentiality prohibits its public release, the emergence of portals supporting rich metadata can help enable researchers to at least discover the existence of restricted access data, empowering them to assess the suitability of the data before requesting access. Existing standards, such as CSV on the Web and RDF Data Cube, have been adopted to facilitate data management, integration, and re-use of data on the Web. However, the current landscape still lacks adequate standards not only to effectively describe restricted access data while preserving confidentiality but also to facilitate its discovery. In this work, we investigate the relationship between the structural, statistical, and semantic elements of restricted access tabular data, and we explore how such relationship can be formally modeled in a way that is Findable, Accessible, Interoperable, and Reusable. We introduce the DataSet-Variable Ontology (DSV), that by combining CSV on the Web and RDF Data Cube standards, leveraging semantic technologies and Linked Data principles, and introducing variable-level metadata, aims to capture high-quality metadata to support the management and re-use of restricted access data on the Web. As evaluation, we conducted a case study where we applied DSV to four different datasets from different statistical governmental agencies. We employed a set of competency questions to assess the ontology's ability to support knowledge discovery and data exploration. By describing high-quality metadata, both at the dataset- and variable levels, while maintaining data privacy, this novel ontology facilitates data interoperability, discovery, and re-use and it empowers researchers to manage, integrate, and analyze complex restricted access data sources.";
+    dct:date "2023-12-05";
+    dct:title "Advancing data sharing and reusability for restricted access data on the Web: introducing the DataSet-Variable Ontology" ;
+    bibo:authorList :author-list;
+    bibo:pageStart "83";
+    bibo:pageEnd "91";
+    dct:isPartOf :kcap-2023 .
+
+  :kcap-2023 dct:title "Proceedings of the 12th Knowledge Capture Conference (K-CAP 2023)" .
+
+  :author-list rdf:_1 orcid:0000-0001-8004-0464 .
+  :author-list rdf:_2 orcid:0000-0002-1267-0234 .
+  :author-list rdf:_3 orcid:0000-0001-8772-7904 .
+  :author-list rdf:_4 orcid:0000-0002-7748-4715 .
+
+  orcid:0000-0001-8004-0464 schema:affiliation ror:008xxew50;
+    foaf:name "Margherita Martorana" .
+
+  orcid:0000-0002-1267-0234 schema:affiliation ror:008xxew50;
+    foaf:name "Tobias Kuhn" .
+
+  orcid:0000-0001-8772-7904 schema:affiliation ror:008xxew50;
+    foaf:name "Ronald Siebes" .
+
+  orcid:0000-0002-7748-4715 schema:affiliation ror:008xxew50;
+    foaf:name "Jacco van Ossenbruggen" .
+
+  ror:008xxew50 foaf:name "Department of Computer Science, Vrije Universiteit Amsterdam, Amsterdam, Netherlands" .
+
+}
+
+:provenance {
+  :assertion prov:wasAttributedTo orcid:0000-0001-8004-0464, orcid:0000-0002-1267-0234, orcid:0000-0001-8772-7904, orcid:0000-0002-7748-4715 .
+  :assertion prov:wasDerivedFrom <https://doi.org/10.1145/3587259.3627559> .
+}
+
+:pubinfo {
+  : dct:created "2026-02-22T20:45:15.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.1145/3587259.3627559>;
+    rdfs:label "Advancing data sharing and reusability for restricted access data on the Web: introducing the DataSet-Variable Ontology" .
+
+  orcid:0000-0001-8004-0464 foaf:name "Margherita Martorana" .
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0001-8772-7904 foaf:name "Ronald Siebes" .
+  orcid:0000-0002-7748-4715 foaf:name "Jacco van Ossenbruggen" .
+
+  :sig npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}

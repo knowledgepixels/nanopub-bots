@@ -1,0 +1,83 @@
+@prefix this: <https://w3id.org/np/RAdz-aHYBhV1c2WpieJnDhP3_LptK4YHc_vRaZa9Q2Mac> .
+@prefix sub: <https://w3id.org/np/RAdz-aHYBhV1c2WpieJnDhP3_LptK4YHc_vRaZa9Q2Mac/> .
+@prefix schema: <http://schema.org/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  <https://doi.org/10.1145/3587259.3627559> a fabio:ConferencePaper;
+    dct:abstract "In response to the increasing volume of research data being generated, more and more data portals have been designed to facilitate data findability and accessibility. However, a significant portion of this data remains confidential or restricted due to its sensitive nature, such as patient data or census microdata. While maintaining confidentiality prohibits its public release, the emergence of portals supporting rich metadata can help enable researchers to at least discover the existence of restricted access data, empowering them to assess the suitability of the data before requesting access. Existing standards, such as CSV on the Web and RDF Data Cube, have been adopted to facilitate data management, integration, and re-use of data on the Web. However, the current landscape still lacks adequate standards not only to effectively describe restricted access data while preserving confidentiality but also to facilitate its discovery. In this work, we investigate the relationship between the structural, statistical, and semantic elements of restricted access tabular data, and we explore how such relationship can be formally modeled in a way that is Findable, Accessible, Interoperable, and Reusable. We introduce the DataSet-Variable Ontology (DSV), that by combining CSV on the Web and RDF Data Cube standards, leveraging semantic technologies and Linked Data principles, and introducing variable-level metadata, aims to capture high-quality metadata to support the management and re-use of restricted access data on the Web. As evaluation, we conducted a case study where we applied DSV to four different datasets from different statistical governmental agencies. We employed a set of competency questions to assess the ontology's ability to support knowledge discovery and data exploration. By describing high-quality metadata, both at the dataset- and variable levels, while maintaining data privacy, this novel ontology facilitates data interoperability, discovery, and re-use and it empowers researchers to manage, integrate, and analyze complex restricted access data sources.";
+    dct:date "2023-12-05";
+    dct:isPartOf sub:kcap-2023;
+    dct:title "Advancing data sharing and reusability for restricted access data on the Web: introducing the DataSet-Variable Ontology";
+    bibo:authorList sub:author-list;
+    bibo:pageEnd "91";
+    bibo:pageStart "83" .
+  
+  orcid:0000-0001-8004-0464 schema:affiliation ror:008xxew50;
+    foaf:name "Margherita Martorana" .
+  
+  orcid:0000-0001-8772-7904 schema:affiliation ror:008xxew50;
+    foaf:name "Ronald Siebes" .
+  
+  orcid:0000-0002-1267-0234 schema:affiliation ror:008xxew50;
+    foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0002-7748-4715 schema:affiliation ror:008xxew50;
+    foaf:name "Jacco van Ossenbruggen" .
+  
+  ror:008xxew50 foaf:name "Department of Computer Science, Vrije Universiteit Amsterdam, Amsterdam, Netherlands" .
+  
+  sub:author-list rdf:_1 orcid:0000-0001-8004-0464;
+    rdf:_2 orcid:0000-0002-1267-0234;
+    rdf:_3 orcid:0000-0001-8772-7904;
+    rdf:_4 orcid:0000-0002-7748-4715 .
+  
+  sub:kcap-2023 dct:title "Proceedings of the 12th Knowledge Capture Conference (K-CAP 2023)" .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0001-8004-0464, orcid:0000-0001-8772-7904,
+      orcid:0000-0002-1267-0234, orcid:0000-0002-7748-4715;
+    prov:wasDerivedFrom <https://doi.org/10.1145/3587259.3627559> .
+}
+
+sub:pubinfo {
+  orcid:0000-0001-8004-0464 foaf:name "Margherita Martorana" .
+  
+  orcid:0000-0001-8772-7904 foaf:name "Ronald Siebes" .
+  
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0002-7748-4715 foaf:name "Jacco van Ossenbruggen" .
+  
+  this: dct:created "2026-02-22T20:45:15.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.1145/3587259.3627559>;
+    rdfs:label "Advancing data sharing and reusability for restricted access data on the Web: introducing the DataSet-Variable Ontology" .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
+    npx:hasSignature "UR6+wT/FCZd6YkOIKQkpcbNVzXjigMmoKv1/Ona0k78UwEfe29LqyAaST9h+3YbGO/8y+E/Woe15qFq2koywSPVol0sL1Rfg03SM728HK6rOiEBdQ8UbQIvbzLG8ycZb4lD17uq7vSsnb+9sX5vbj8MAhckeo16Cjyjr7d7fVJPMEI7Er5IBpgRXumWg6oi0b0O3HwvHAx+4jy9kYse3/Q36Hs26G3ZQ1EaJY5gaZzrxtuQ96FPD5D0hycIusPQIUX0nZO1yPPNfFrblFalKQ8iQsH5Hk9IEissdqKrCm/n2fk/ifOBH5oG9hL/jxUURTX/vxhmZTffKb9QVdnjALg==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}
