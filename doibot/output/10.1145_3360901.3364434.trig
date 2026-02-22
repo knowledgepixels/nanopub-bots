@@ -1,0 +1,73 @@
+@prefix : <http://purl.org/nanopub/temp/np1/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix ror: <https://ror.org/> .
+@prefix schema: <http://schema.org/> .
+
+:Head {
+  : a np:Nanopublication;
+    np:hasAssertion :assertion;
+    np:hasProvenance :provenance;
+    np:hasPublicationInfo :pubinfo .
+}
+
+:assertion {
+  <https://doi.org/10.1145/3360901.3364434> a fabio:ConferencePaper;
+    dct:abstract "Scientific publishing seems to be at a turning point. Its paradigm has stayed basically the same for 300 years but is now challenged by the increasing volume of articles that makes it very hard for scientists to stay up to date in their respective fields. In fact, many have pointed out serious flaws of current scientific publishing practices, including the lack of accuracy and efficiency of the reviewing process. To address some of these problems, we apply here the general principles of the Web and the Semantic Web to scientific publishing, focusing on the reviewing process. We want to determine if a fine-grained model of the scientific publishing workflow can help us make the reviewing processes better organized and more accurate, by ensuring that review comments are created with formal links and semantics from the start. Our contributions include a novel model called Linkflows that allows for such detailed and semantically rich representations of reviews and the reviewing processes. We evaluate our approach on a manually curated dataset from several recent Computer Science journals and conferences that come with open peer reviews. We gathered ground-truth data by contacting the original reviewers and asking them to categorize their own review comments according to our model. Comparing this ground truth to answers provided by model experts, peers, and automated techniques confirms that our approach of formally capturing the reviewers' intentions from the start prevents substantial discrepancies compared to when this information is later extracted from the plain-text comments. In general, our analysis shows that our model is well understood and easy to apply, and it revealed the semantic properties of such review comments.";
+    dct:date "2019-09-23";
+    dct:title "Peer Reviewing Revisited: Assessing Research with Interlinked Semantic Comments" ;
+    bibo:authorList :author-list;
+    bibo:pageStart "179";
+    bibo:pageEnd "187";
+    dct:isPartOf :kcap-2019 .
+
+  :kcap-2019 dct:title "Proceedings of the 10th International Conference on Knowledge Capture (K-CAP 2019)" .
+
+  :author-list rdf:_1 orcid:0000-0002-2241-8585 .
+  :author-list rdf:_2 orcid:0000-0002-1267-0234 .
+  :author-list rdf:_3 orcid:0000-0002-3357-9130 .
+
+  orcid:0000-0002-2241-8585 schema:affiliation ror:008xxew50;
+    foaf:name "Cristina-Iulia Bucur" .
+
+  orcid:0000-0002-1267-0234 schema:affiliation ror:008xxew50;
+    foaf:name "Tobias Kuhn" .
+
+  orcid:0000-0002-3357-9130 schema:affiliation ror:00x7ekv49;
+    foaf:name "Davide Ceolin" .
+
+  ror:008xxew50 foaf:name "Department of Computer Science, Vrije Universiteit Amsterdam, Amsterdam, Netherlands" .
+  ror:00x7ekv49 foaf:name "Centrum Wiskunde & Informatica, Amsterdam, Netherlands" .
+
+}
+
+:provenance {
+  :assertion prov:wasAttributedTo orcid:0000-0002-2241-8585, orcid:0000-0002-1267-0234, orcid:0000-0002-3357-9130 .
+  :assertion prov:wasDerivedFrom <https://doi.org/10.1145/3360901.3364434> .
+}
+
+:pubinfo {
+  : dct:created "2026-02-22T17:32:05.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.1145/3360901.3364434>;
+    rdfs:label "Peer Reviewing Revisited: Assessing Research with Interlinked Semantic Comments" .
+
+  orcid:0000-0002-2241-8585 foaf:name "Cristina-Iulia Bucur" .
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0002-3357-9130 foaf:name "Davide Ceolin" .
+
+  :sig npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}
