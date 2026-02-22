@@ -1,0 +1,68 @@
+@prefix this: <https://w3id.org/np/RAZFtvz4YFhQFCFRPhpp8aFJq2UBvP4YRY5NdmmHMJmw4> .
+@prefix sub: <https://w3id.org/np/RAZFtvz4YFhQFCFRPhpp8aFJq2UBvP4YRY5NdmmHMJmw4/> .
+@prefix schema: <http://schema.org/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  <http://id.crossref.org/issn/1865-0929> dct:title "Communications in Computer and Information Science" .
+  
+  <https://doi.org/10.1007/978-3-319-67468-1_3> a fabio:BookChapter;
+    dct:abstract "The number of scientific articles has grown rapidly over the years and there are no signs that this growth will slow down in the near future. Because of this, it becomes increasingly difficult to keep up with the latest developments in a scientific field. To address this problem, we present here an approach to help researchers learn about the latest developments and findings by extracting in a normalized form core claims from scientific articles. This normalized representation is a controlled natural language of English sentences called AIDA, which has been proposed in previous work as a method to formally structure and organize scientific findings and discourse. We show how such AIDA sentences can be automatically extracted by detecting the core claim of an article, checking for AIDA compliance, and – if necessary – transforming it into a compliant sentence. While our algorithm is still far from perfect, our results indicate that the different steps are feasible and they support the claim that AIDA sentences might be a promising approach to improve scientific communication in the future.";
+    dct:date "2017";
+    dct:isPartOf <http://id.crossref.org/issn/1865-0929>;
+    dct:title "Extracting Core Claims from Scientific Articles";
+    bibo:authorList sub:author-list;
+    bibo:pageEnd "46";
+    bibo:pageStart "32" .
+  
+  orcid:0000-0002-1267-0234 schema:affiliation ror:008xxew50;
+    foaf:name "Tobias Kuhn" .
+  
+  ror:008xxew50 foaf:name "Department of Computer Science, Vrije Universiteit Amsterdam, Amsterdam, Netherlands" .
+  
+  sub:author-list rdf:_1 sub:tom-jansen;
+    rdf:_2 orcid:0000-0002-1267-0234 .
+  
+  sub:tom-jansen schema:affiliation ror:008xxew50;
+    foaf:name "Tom Jansen" .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-1267-0234, sub:tom-jansen;
+    prov:wasDerivedFrom <https://doi.org/10.1007/978-3-319-67468-1_3> .
+}
+
+sub:pubinfo {
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  this: dct:created "2026-02-22T19:34:21.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.1007/978-3-319-67468-1_3>;
+    rdfs:label "Extracting Core Claims from Scientific Articles" .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
+    npx:hasSignature "HNJvz/7ye7B1d/AgXb/NN+ZkOncBoJOvMLjbyShhjeSwXz2f1iaUOsiu+K6Rz9bCP2TCiPpgHvhOstm57CpNvZ7BX/vSI2vt1KO77XiKrFcSoTZpSk644VLX3zuQxUgxD+R18zduSpCKBq610g0GmOLlvvY/VfBJTlHZxNINnUB1HRYotoQBaMsSZftdFZUuPOpf+Tlu/Tl9Kz15m8RpflIJsW/kF4yADBKer2b3oOCKNYqlwNEfQ/gPEY/KEItU6twUpAxD0kmVLnC+iOUJkLZ2RvPezxg4ftKbcz2lgCTe8Yie477QU1Vo2nPPPeDCivey/WCiXSHBF/Y2DXkjPQ==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}
