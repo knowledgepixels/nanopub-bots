@@ -1,0 +1,76 @@
+@prefix : <http://purl.org/nanopub/temp/np1/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix ror: <https://ror.org/> .
+@prefix schema: <http://schema.org/> .
+
+:Head {
+  : a np:Nanopublication;
+    np:hasAssertion :assertion;
+    np:hasProvenance :provenance;
+    np:hasPublicationInfo :pubinfo .
+}
+
+:assertion {
+  <https://doi.org/10.1007/978-3-031-65990-4_26> a fabio:BookChapter;
+    dct:date "2024";
+    dct:title "FAIR Implementation Profiles for Social Science" ;
+    bibo:authorList :author-list;
+    bibo:pageStart "284";
+    bibo:pageEnd "290";
+    dct:isPartOf <http://id.crossref.org/issn/1865-0929> .
+
+  <http://id.crossref.org/issn/1865-0929> dct:title "Communications in Computer and Information Science" .
+
+  :author-list rdf:_1 orcid:0000-0002-1261-9930 .
+  :author-list rdf:_2 orcid:0000-0002-6978-5278 .
+  :author-list rdf:_3 orcid:0000-0001-9131-3528 .
+  :author-list rdf:_4 orcid:0000-0002-1267-0234 .
+
+  orcid:0000-0002-1261-9930 schema:affiliation ror:008xxew50;
+    foaf:name "Shuai Wang" .
+
+  orcid:0000-0002-6978-5278 schema:affiliation ror:057w15z03;
+    foaf:name "Angelica Maineri" .
+
+  orcid:0000-0001-9131-3528 foaf:name "Navroop K. Singh" .
+
+  orcid:0000-0002-1267-0234 schema:affiliation ror:008xxew50;
+    foaf:name "Tobias Kuhn" .
+
+  ror:008xxew50 foaf:name "Department of Computer Science, Vrije Universiteit Amsterdam, Amsterdam, Netherlands" .
+  ror:057w15z03 foaf:name "Erasmus University Rotterdam, Rotterdam, Netherlands" .
+
+}
+
+:provenance {
+  :assertion prov:wasAttributedTo orcid:0000-0002-1261-9930, orcid:0000-0002-6978-5278, orcid:0000-0001-9131-3528, orcid:0000-0002-1267-0234 .
+  :assertion prov:wasDerivedFrom <https://doi.org/10.1007/978-3-031-65990-4_26> .
+}
+
+:pubinfo {
+  : dct:created "2026-02-22T20:47:25.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.1007/978-3-031-65990-4_26>;
+    rdfs:label "FAIR Implementation Profiles for Social Science" .
+
+  orcid:0000-0002-1261-9930 foaf:name "Shuai Wang" .
+  orcid:0000-0002-6978-5278 foaf:name "Angelica Maineri" .
+  orcid:0000-0001-9131-3528 foaf:name "Navroop K. Singh" .
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+
+  :sig npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}
