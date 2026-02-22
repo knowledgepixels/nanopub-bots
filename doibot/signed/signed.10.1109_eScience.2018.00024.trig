@@ -1,5 +1,5 @@
-@prefix this: <https://w3id.org/np/RA9eI9jkWJ3ftivKCGaf6ToV1HQuTGfC96QjFakL7w3b4> .
-@prefix sub: <https://w3id.org/np/RA9eI9jkWJ3ftivKCGaf6ToV1HQuTGfC96QjFakL7w3b4/> .
+@prefix this: <https://w3id.org/np/RAvv5T9KPJzFDD6Q4wki7mysExLli_7RtdmTZvnIzlx2U> .
+@prefix sub: <https://w3id.org/np/RAvv5T9KPJzFDD6Q4wki7mysExLli_7RtdmTZvnIzlx2U/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -22,6 +22,7 @@ sub:Head {
 sub:assertion {
   <https://doi.org/10.1109/eScience.2018.00024> a fabio:ConferencePaper;
     dct:date "2018-10";
+    dct:isPartOf sub:escience-2018;
     dct:title "Nanopublications: A Growing Resource of Provenance-Centric Scientific Linked Data";
     bibo:authorList sub:author-list;
     bibo:pageEnd "92";
@@ -72,6 +73,8 @@ sub:assertion {
     rdf:_7 orcid:0000-0002-9383-528X;
     rdf:_8 orcid:0000-0003-0169-8159;
     rdf:_9 orcid:0000-0001-6818-334X .
+  
+  sub:escience-2018 dct:title "2018 IEEE 14th International Conference on e-Science (e-Science)" .
 }
 
 sub:provenance {
@@ -114,17 +117,17 @@ sub:pubinfo {
   
   orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
   
-  this: dct:created "2026-02-22T10:51:40.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-02-22T11:02:28.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1109/eScience.2018.00024>;
-    npx:supersedes <https://w3id.org/np/RAl_OQSiU0L-77wOhcf6PgXVxur4wAytpNmlnZDdaNbh0>;
+    npx:supersedes <https://w3id.org/np/RA9eI9jkWJ3ftivKCGaf6ToV1HQuTGfC96QjFakL7w3b4>;
     rdfs:label "Nanopublications: A Growing Resource of Provenance-Centric Scientific Linked Data" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "q4k5OiNIkewF3wO+Vz0LkIXhwTX+ua7V84PArN1xHcbglPesgdLpRzJNSO/f2gT6fs6XWE96NhCiHGjQpBH3TjcVQZ0HmUsJ/N0G4p5ZagsB6CaAjvknUCzTCUH+0zeqs9NZb6Z6Mv7Za/Xw15iAkOqcMptx8l0PP+NAMSdazcv5T6vTJ2CQDW537Zn2mlrT/Nkelw+5d/GX2pSyMQQAznSuTntS6KK1vhoTPs1yTWXB++T7ThD6H7fmB4fd6BAloHRTfSWsfvgtCeYooaDxjrsKlB3Tyo6oeKtlxSabkMS/MN9efjeVAaCNYBQ/+HvgnRvRZTY2TIF9NlTDvSoUhQ==";
+    npx:hasSignature "BpChNse+tQvb0rzc9Fwf/+hXqtoZfteEjfyWgsjoVpusmKQv+BTEm/yheSOtlRg8hNN9oBJLW3nST1OG7RHP+qVUfv84yRtxyzOkRcidLJy1pwnOoQYhC5wgwACLEtEyIEU2TQ9O9XK1t7tx7wXTSg1W1kW0eEXogsRMvKjzYD7lF5zLzjgFzqwvxBuVi0tIPzFbnmeUbyvfSaEchtxsThRC5hakrC1os8AOa3Yks5h/63jdc09AdGmwHdLoqvzu+7GLG3PuncSj4Yfjz0edpubkPB7lxR6tqDKX1vnSOPq04gFircgoCVk0VPXwmsvl67J8LCoJADTpLDr0w/1CNw==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

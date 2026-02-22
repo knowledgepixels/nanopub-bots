@@ -28,7 +28,10 @@
     dct:title "Nanopublications: A Growing Resource of Provenance-Centric Scientific Linked Data" ;
     bibo:authorList :author-list;
     bibo:pageStart "83";
-    bibo:pageEnd "92" .
+    bibo:pageEnd "92" ;
+    dct:isPartOf :escience-2018 .
+
+  :escience-2018 dct:title "2018 IEEE 14th International Conference on e-Science (e-Science)" .
 
   :author-list rdf:_1 orcid:0000-0002-1267-0234 .
   :author-list rdf:_2 orcid:0000-0003-4646-5842 .
@@ -84,12 +87,12 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-22T10:51:40.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-02-22T11:02:28.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1109/eScience.2018.00024>;
-    npx:supersedes <https://w3id.org/np/RAl_OQSiU0L-77wOhcf6PgXVxur4wAytpNmlnZDdaNbh0> ;
+    npx:supersedes <https://w3id.org/np/RA9eI9jkWJ3ftivKCGaf6ToV1HQuTGfC96QjFakL7w3b4> ;
     rdfs:label "Nanopublications: A Growing Resource of Provenance-Centric Scientific Linked Data" .
 
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
