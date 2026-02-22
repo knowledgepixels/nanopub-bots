@@ -127,6 +127,16 @@ When updating an existing nanopub:
 - Add/update `npx:supersedes` in the pubinfo graph pointing to the old signed URI
 - Then re-sign and publish
 
+### Getting the current timestamp
+
+Always use local time (not UTC) with the correct timezone offset:
+
+```bash
+date +"%Y-%m-%dT%H:%M:%S.000+01:00"
+```
+
+Do **not** use `date -u` — that gives UTC time but the `+01:00` suffix would then be wrong (off by one hour).
+
 ### Personal information policy
 
 Only include personal information (names, email addresses, affiliations, ORCIDs, etc.) in a nanopublication if it is already permanently and openly published — e.g. expressed in a published scientific paper or made available online by the person themselves under a permanent open license (such as CC0 or CC-BY).
