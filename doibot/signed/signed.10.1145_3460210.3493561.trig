@@ -1,5 +1,5 @@
-@prefix this: <https://w3id.org/np/RAlv5lNecArWiIpm21CZRF71DX3aESwTuJSL5tF0H0J48> .
-@prefix sub: <https://w3id.org/np/RAlv5lNecArWiIpm21CZRF71DX3aESwTuJSL5tF0H0J48/> .
+@prefix this: <https://w3id.org/np/RAXTZgKi-aszn_8uUgAlPr6D1FRzMDKnv5R_zpzox0hGs> .
+@prefix sub: <https://w3id.org/np/RAXTZgKi-aszn_8uUgAlPr6D1FRzMDKnv5R_zpzox0hGs/> .
 @prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
@@ -34,11 +34,11 @@ sub:assertion {
   orcid:0000-0002-1267-0234 schema:affiliation ror:008xxew50;
     foaf:name "Tobias Kuhn" .
   
-  orcid:0000-0002-2241-8585 schema:affiliation ror:008xxew50;
-    foaf:name "Cristina-Iulia Bucur" .
-  
   orcid:0000-0002-3357-9130 schema:affiliation ror:00x7ekv49;
     foaf:name "Davide Ceolin" .
+  
+  orcid:0000-0002-7114-6459 schema:affiliation ror:008xxew50;
+    foaf:name "Cristina-Iulia Bucur" .
   
   orcid:0000-0002-7748-4715 schema:affiliation ror:008xxew50;
     foaf:name "Jacco van Ossenbruggen" .
@@ -47,7 +47,7 @@ sub:assertion {
   
   ror:00x7ekv49 foaf:name "Centrum Wiskunde & Informatica, Amsterdam, Netherlands" .
   
-  sub:author-list rdf:_1 orcid:0000-0002-2241-8585;
+  sub:author-list rdf:_1 orcid:0000-0002-7114-6459;
     rdf:_2 orcid:0000-0002-1267-0234;
     rdf:_3 orcid:0000-0002-3357-9130;
     rdf:_4 orcid:0000-0002-7748-4715 .
@@ -56,30 +56,31 @@ sub:assertion {
 }
 
 sub:provenance {
-  sub:assertion prov:wasAttributedTo orcid:0000-0002-1267-0234, orcid:0000-0002-2241-8585,
-      orcid:0000-0002-3357-9130, orcid:0000-0002-7748-4715;
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-1267-0234, orcid:0000-0002-3357-9130,
+      orcid:0000-0002-7114-6459, orcid:0000-0002-7748-4715;
     prov:wasDerivedFrom <https://doi.org/10.1145/3460210.3493561> .
 }
 
 sub:pubinfo {
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
   
-  orcid:0000-0002-2241-8585 foaf:name "Cristina-Iulia Bucur" .
-  
   orcid:0000-0002-3357-9130 foaf:name "Davide Ceolin" .
+  
+  orcid:0000-0002-7114-6459 foaf:name "Cristina-Iulia Bucur" .
   
   orcid:0000-0002-7748-4715 foaf:name "Jacco van Ossenbruggen" .
   
-  this: dct:created "2026-02-22T17:46:18.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-02-22T18:05:54.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1145/3460210.3493561>;
+    npx:supersedes <https://w3id.org/np/RAlv5lNecArWiIpm21CZRF71DX3aESwTuJSL5tF0H0J48>;
     rdfs:label "Expressing High-Level Scientific Claims with Formal Semantics" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "cVZ3wmPHTtQ/FlIn3H1YFstE2BixwBk3+wPRE8aTIMzltZ5gQQXzKLdvgn/E1Ymgn3BHZAU7kBzrxyDFRr0Bnomr82x1JNT2rMydorIcVSBK7/nrQlwhc/76C0wZ5rPeMxQCMstVqLDZBL5UhGoD4nl/f/Iqa4nsnm4s3kWx/mxqb5BTJ6Kj/EFsgBPYnWGjhn13b/6yYK3gR1SGfMpSueh2cKg/RF9YXDu71gxoO9T0uyBW2BfZy2x+oIKWFy0iqsOELWIh4optN7rr72h04FnROEKUkDckgOA/fy4rfQVHyyIyDRJEMNVHkiXyswNp9H5nD9yL69GNNZw84G3BUA==";
+    npx:hasSignature "qklTUSI0iWCkTfbMuRbyMF1qV4a10lpCZwIjtKGs39xkoGoLpbC1kwTM/rQdTxvjGmmwNi7kDkZOKoe159T+tE88cawX7eubma03YrA+QRIpc3StDXIJJvwt4wJK+yNlKySVdz0P2lfvjDBdUJTbXYGMZiCgFtAtjWC29Id3W2x8BFvfM0BDEdAZN7w0H6z3EZtqUWiU5otPfkeWYXv6/mi4k+MIxQBfH5LS6/O93HRyMVLHDwEIqxl+8x/GOzI8Dv8xpYQvTgkX29BMX/Yac3vnxrskAylyZwGNwt4vEo/t/vH5eERsnvnznt2CPy4pPjklfiT3ahpHIV92u5dJNQ==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }
