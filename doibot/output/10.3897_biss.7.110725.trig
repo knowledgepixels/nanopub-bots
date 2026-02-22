@@ -71,11 +71,12 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-22T20:03:42.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-02-22T21:42:40.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.3897/biss.7.110725>;
+    npx:supersedes <https://w3id.org/np/RAt3k76l7MtqIryewqUzpoAv54ozLoQjC6UDZBnUHPnlc>;
     rdfs:label "Nanopublications for Biodiversity Go Live" .
 
   orcid:0000-0002-2186-5033 foaf:name "Lyubomir Penev" .

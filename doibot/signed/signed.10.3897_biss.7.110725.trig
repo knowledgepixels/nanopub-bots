@@ -1,5 +1,5 @@
-@prefix this: <https://w3id.org/np/RAt3k76l7MtqIryewqUzpoAv54ozLoQjC6UDZBnUHPnlc> .
-@prefix sub: <https://w3id.org/np/RAt3k76l7MtqIryewqUzpoAv54ozLoQjC6UDZBnUHPnlc/> .
+@prefix this: <https://w3id.org/np/RAbKXOpP0lX7me5zmFI52msW4S0nXZbr6Prr3WCicOqrs> .
+@prefix sub: <https://w3id.org/np/RAbKXOpP0lX7me5zmFI52msW4S0nXZbr6Prr3WCicOqrs/> .
 @prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
@@ -89,16 +89,17 @@ sub:pubinfo {
   
   orcid:0009-0001-3489-2751 foaf:name "Iva Boyadzhieva" .
   
-  this: dct:created "2026-02-22T20:03:42.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-02-22T21:42:40.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.3897/biss.7.110725>;
+    npx:supersedes <https://w3id.org/np/RAt3k76l7MtqIryewqUzpoAv54ozLoQjC6UDZBnUHPnlc>;
     rdfs:label "Nanopublications for Biodiversity Go Live" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "QkCJwYrld30YxU6zzhOpNOolbALgLikFRJ0o/E1SvOAbs4gHJTYzS1YIFK2w44XZdz7n8/08frZmmzUUxUv455LLqd11vy+Ou6jRhECdoPY2I+pTbNy47VEZrE6m0biABo2YkAmZUvRdFiQuMO4jfyqH4QzQJhNsnBwo6hPxF48WhG+ppSf3Ra/XbqzDCOe2IfB9f5LZLexA1n4wa9mljBc9LNS603CzrpFW+VNUTUhMzjfRMzeneSOw4HbewVI9/4Vnaj7dGnszerByZBAyV/+fRnq3PcKyq3p4OG3WPJtXXZbBNq5LFqDdozd+dvqvt1YbeMld2/EChRxFtLGLJA==";
+    npx:hasSignature "N4az+p/ATc7ccNZQ5VY+UaLo947tkWKqYU8QkedmEOfWtQBf8zAl8d4t9JHqrhyQVG7Wuy08qRH8s/hcBJ3Mn6rJH/MyruTVnKp554KVZODFQN4uyD/+UntcCwqCTkOCQyzAcN9qJvdAw49N1lN1m09vwGUu9zHVE40HIFR+WfzxVlDjm9sThPVeigGIobk8EtVqNEf07dtTJRVWljEYicgp4yN8gu857WCbT3gLMpQNSwdPbqafwJXZHdXNWFgNP5BFcjgkSf8EoVByEUd3/kjgEEHKhvlq3nmvWvaMBn3AJHSlqk/nvYX5mkCHvN/ZpGU/WHfM+gYWQQz2SJ9JxQ==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

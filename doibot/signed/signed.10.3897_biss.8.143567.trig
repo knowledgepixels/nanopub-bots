@@ -1,5 +1,5 @@
-@prefix this: <https://w3id.org/np/RA0UTJ9VSDkUDmZjiJe1eNkNsgljlEZ_BAMo1cKR4ONQg> .
-@prefix sub: <https://w3id.org/np/RA0UTJ9VSDkUDmZjiJe1eNkNsgljlEZ_BAMo1cKR4ONQg/> .
+@prefix this: <https://w3id.org/np/RA0TI2Lw7bgjJVHxGWriqk4qSViWxsa5v6uGjuhiKNa3U> .
+@prefix sub: <https://w3id.org/np/RA0TI2Lw7bgjJVHxGWriqk4qSViWxsa5v6uGjuhiKNa3U/> .
 @prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
@@ -90,16 +90,17 @@ sub:pubinfo {
   
   orcid:0000-0002-4842-6487 foaf:name "Dimitris Koureas" .
   
-  this: dct:created "2026-02-22T20:28:23.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-02-22T21:42:40.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.3897/biss.8.143567>;
+    npx:supersedes <https://w3id.org/np/RA0UTJ9VSDkUDmZjiJe1eNkNsgljlEZ_BAMo1cKR4ONQg>;
     rdfs:label "Nanopublications: Universal, Anti-Silo and FAIR Method for Publishing, Annotating and Sharing of Open Linked Data for Biodiversity" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "QMjy+oCDrs1HblZpQOubyxe6qSMo/71SbN3FW/bN0WlKZUM87JXln2wEMdXYgSmudMZds2LQ8H6HT23TJwVczNYGZ44Pslx8g7NODSNkPNT1irawKJySiwOHUg0AVixCMUPK5t9h3KrJ1aSOQe4yv8Oql14S2OSjX/JiAR6id/gbxPYvrWyRY64+KI9BTKiVIue/6+EaggVPDsGX7hfNMZblycVNStQcrp3ZEKWMH8LDEtK2J1EXyWq7KoR4fTwpqZwkLeayONDJtErRUngc5izOPp8SaKLAuOHi1sOY+PEJU5qP+Njff2ND3cDOmSIRb2pq68Bt9Qy0t7EZfN+XLQ==";
+    npx:hasSignature "F1qvLk6ixSp3GLrK94O/Vahjcp6f7CCT4+qAjKXMuMYI0+ZSMk4wKZnR96CWD1SNaPCs7AW8XIIlVTPovD5fHC6o9TawDBpWozII6qF1lvUH+MgFpJW1K05gt2y8/6lFImfcbGnIoxkP46keNxH7X8f2nXXy2OCVW2efHYe5YUZD0IA6dtjvu9bMIWwKv4+A5XkRK/B74Gmau0hx9I4eKTmJzekfXpQme8L0v0dHyVDxU9HP1WGrbUjPX3RB2KB9yG8+TiBqqN0Aek3X5Q8RTicGJBkK0XuTSZN3uABFRqZ3HUZsK1339xGkn/oHgp7FfmpmBV6rzUTVwOVqYuteRA==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }
