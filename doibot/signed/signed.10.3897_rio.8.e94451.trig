@@ -1,0 +1,81 @@
+@prefix this: <https://w3id.org/np/RAMng7e2Gatirb7XKCOdHHw8V5sNjZW1sZ7dqrHuZzk54> .
+@prefix sub: <https://w3id.org/np/RAMng7e2Gatirb7XKCOdHHw8V5sNjZW1sZ7dqrHuZzk54/> .
+@prefix schema: <http://schema.org/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  <http://id.crossref.org/issn/2367-7163> dct:title "Research Ideas and Outcomes" .
+  
+  <https://doi.org/10.3897/rio.8.e94451> a fabio:Article;
+    dct:date "2022-10-12";
+    dct:isPartOf <http://id.crossref.org/issn/2367-7163>;
+    dct:title "FIPs and Practice";
+    bibo:authorList sub:author-list;
+    bibo:volume "8" .
+  
+  orcid:0000-0001-7525-9218 schema:affiliation ror:03kqpb082;
+    foaf:name "Marek Suchánek" .
+  
+  orcid:0000-0001-8888-635X foaf:name "Erik Schultes" .
+  
+  orcid:0000-0002-1267-0234 schema:affiliation ror:008xxew50;
+    foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0003-2195-3997 foaf:name "Barbara Magagna" .
+  
+  ror:008xxew50 foaf:name "Department of Computer Science, Vrije Universiteit Amsterdam, Amsterdam, Netherlands" .
+  
+  ror:03kqpb082 foaf:name "Czech Technical University in Prague, Prague, Czech Republic" .
+  
+  sub:author-list rdf:_1 orcid:0000-0003-2195-3997;
+    rdf:_2 orcid:0000-0001-8888-635X;
+    rdf:_3 orcid:0000-0001-7525-9218;
+    rdf:_4 orcid:0000-0002-1267-0234 .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0001-7525-9218, orcid:0000-0001-8888-635X,
+      orcid:0000-0002-1267-0234, orcid:0000-0003-2195-3997;
+    prov:wasDerivedFrom <https://doi.org/10.3897/rio.8.e94451> .
+}
+
+sub:pubinfo {
+  orcid:0000-0001-7525-9218 foaf:name "Marek Suchánek" .
+  
+  orcid:0000-0001-8888-635X foaf:name "Erik Schultes" .
+  
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0003-2195-3997 foaf:name "Barbara Magagna" .
+  
+  this: dct:created "2026-02-22T20:52:13.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.3897/rio.8.e94451>;
+    rdfs:label "FIPs and Practice" .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
+    npx:hasSignature "MaUOFloUaPSeUsIR2R28KPDidlF/PtVdyDan/iWbp/HPAhAbO1yWKvOY8P9wybuzuys443zdpbHc8hZp55QkBffNRKQaInEK4/DpBh9tzRlEsPvQK3PbDp68A2d8yr8s3/HS3FgcEilLOiUbTFw0JsszxBtQK1wj6FV54pHMFEgTOMiJE1FPpeikpV/N1SXAlFYFv3PgVeq52DFYTGNL4Rz83XBR+aRU8IOuINkwhb5GyBxxZ8s6acg5xaX5+EuCkIzL2mOfqUc0V+pB7XW6ADoGTaPn0aPGU3vquiwfuhPccBfcURnB5ExexpDPaAJfBwDZzEViZpW7UCr/T8lHrg==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}
