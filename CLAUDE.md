@@ -115,7 +115,7 @@ scripts/orcid-verify.sh 0000-0002-1267-0234      # show name + employment histor
 
 Common names may return multiple results — verify by checking works or employment history. Use ORCID URIs (e.g. `orcid:0000-0002-1267-0234`) in nanopubs.
 
-For works disambiguation: `curl -s -H 'Accept: application/json' https://pub.orcid.org/v3.0/<ORCID>/works`
+For works disambiguation: `scripts/orcid-works.sh 0000-0002-1267-0234`
 
 ### ROR lookup
 
@@ -123,7 +123,7 @@ For works disambiguation: `curl -s -H 'Accept: application/json' https://pub.orc
 scripts/ror-search.sh "Vrije Universiteit Amsterdam"
 ```
 
-To verify a specific ROR: `curl -s https://api.ror.org/v2/organizations/<ROR-ID>`
+To verify a specific ROR: `scripts/ror-verify.sh 008xxew50`
 
 ### Checking existing doibot nanopubs
 
