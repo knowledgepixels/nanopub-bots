@@ -42,15 +42,14 @@ The `./np` wrapper script runs the nanopub-java CLI from the sibling `../nanopub
 mvn -f ../nanopub-java clean package -DskipTests
 ```
 
-### Key commands
+Raw CLI reference (use the scripts below for common operations):
 
 ```bash
-./np sign <file.trig>                    # Sign a nanopub (uses ~/.nanopub/id_rsa by default)
-./np sign -k ~/.nanopub/doibot_id_rsa <file.trig>   # Sign with a specific bot key
-./np publish <signed.trig>               # Publish to the nanopub network
-./np check <file.trig>                   # Validate a nanopub
-./np retract -i <nanopub-uri-or-file>    # Create a retraction nanopub
-./np retract -i <nanopub-uri> -p         # Retract and publish the retraction
+./np sign -k <key> <file.trig> -o <out.trig>  # sign with specific key
+./np publish <signed.trig>                     # publish to nanopub network
+./np check <file.trig>                         # validate a nanopub
+./np retract -i <nanopub-uri-or-file>          # create a retraction nanopub
+./np retract -i <nanopub-uri> -p               # retract and publish
 ```
 
 ### Superseding nanopublications
@@ -73,69 +72,74 @@ For index nanopubs, `mkindex -x <old-index-uri>` adds the supersedes link automa
 ./np mkindex -x <old-index-uri> -o new-index.trig -t "Title" file1.trig file2.trig
 ```
 
-## Retrieving metadata for DOI-based nanopubs
+## Scripts
 
-Use content negotiation to retrieve RDF directly from the DOI:
+The `scripts/` directory contains helpers for common tasks. All scripts take `<name>` as the file basename without the `.trig` extension.
+
+### Signing and publishing
 
 ```bash
-curl -sL -H 'Accept: text/turtle' 'https://doi.org/10.1007/11799511_7'
+scripts/sign.sh <bot> <name>          # sign output/<name>.trig → signed/signed.<name>.trig
+scripts/publish.sh <bot> <name>       # publish signed/signed.<name>.trig
+scripts/sign-publish.sh <bot> <name>  # sign + publish in one step
+scripts/check.sh <bot> <name>         # validate output/<name>.trig
 ```
 
-This returns structured RDF (Turtle) with title, authors, ORCIDs, ROR affiliations, and other metadata. The abstract (`dct:abstract`) is optional — include it when available from the metadata, but simply leave it out if not. Only perform additional web searches (CrossRef API, publisher pages, etc.) if the RDF is not returned or seems wrong/incomplete.
-
-### Important caveats about DOI metadata
-
-- **Author order is NOT preserved** in the RDF. Always verify author order from the actual paper/publisher page.
-- **ORCIDs are often missing** from the RDF. Some publishers include `owl:sameAs` ORCID links (e.g. IEEE, some Springer papers), but many don't. Always search ORCID separately when not present.
-- **CrossRef metadata can include non-authors** (e.g. guest editors). Verify the author list against the actual paper.
-
-### Looking up and verifying ORCIDs
-
-- **Search**: `https://pub.orcid.org/v3.0/search/?q=family-name:Last+AND+given-names:First` (Accept: application/json)
-- **Verify person**: `https://pub.orcid.org/v3.0/<ORCID>/person`
-- **Check employments** (for affiliations): `https://pub.orcid.org/v3.0/<ORCID>/employments`
-- **Check works** (to disambiguate common names): `https://pub.orcid.org/v3.0/<ORCID>/works`
-- For names with diacritics (e.g. Meroño-Peñuela), URL-encode the special characters in the search query.
-- Common names may return multiple results — verify by checking works or employment history.
-- Use ORCID URIs (e.g. `orcid:0000-0002-1267-0234`) instead of local identifiers whenever an ORCID is found.
-
-### Looking up and verifying RORs
-
-- **Search**: `https://api.ror.org/v2/organizations?query=<name>`
-- **Verify**: `https://api.ror.org/v2/organizations/<ROR-ID>` (use full URL like `https://ror.org/008xxew50`)
-
-### API usage tips
-
-When piping `curl` to `python3`, the output can arrive empty via stdin. The reliable pattern is to save to a file first, then parse:
+### Timestamps
 
 ```bash
-curl -s -H 'Accept: application/json' '<url>' -o /tmp/result.json && python3 -c "
-import json
-with open('/tmp/result.json') as f:
-    data = json.load(f)
-..."
+scripts/timestamp.sh   # prints e.g. 2026-02-23T14:05:31.000+01:00
+```
+
+Always use local time (not UTC). Do **not** use `date -u`.
+
+### DOI metadata
+
+```bash
+scripts/doi-meta.sh 10.1007/11799511_7
+```
+
+Returns Turtle RDF with title, authors, ORCIDs, ROR affiliations, etc. The abstract (`dct:abstract`) is optional — include it when available, omit it when not. Only use CrossRef API or publisher pages if the RDF is missing or wrong.
+
+**Caveats:**
+- **Author order is NOT preserved** in the RDF. Always verify from the actual paper/publisher page.
+- **ORCIDs are often missing.** Some publishers include `owl:sameAs` ORCID links; many don't. Search separately.
+- **CrossRef can include non-authors** (e.g. guest editors). Verify against the actual paper.
+
+### ORCID lookup
+
+```bash
+scripts/orcid-search.sh Kuhn Tobias              # search by name (handles diacritics)
+scripts/orcid-verify.sh 0000-0002-1267-0234      # show name + employment history
+```
+
+Common names may return multiple results — verify by checking works or employment history. Use ORCID URIs (e.g. `orcid:0000-0002-1267-0234`) in nanopubs.
+
+For works disambiguation: `curl -s -H 'Accept: application/json' https://pub.orcid.org/v3.0/<ORCID>/works`
+
+### ROR lookup
+
+```bash
+scripts/ror-search.sh "Vrije Universiteit Amsterdam"
+```
+
+To verify a specific ROR: `curl -s https://api.ror.org/v2/organizations/<ROR-ID>`
+
+### Checking existing doibot nanopubs
+
+```bash
+scripts/check-author-nanopubs.sh 0000-0002-1267-0234   # prints query URL for nanodash
 ```
 
 ## Workflow: creating/updating nanopubs
 
 1. Edit the output file in `<bot>/output/`
-2. Sign: `./np sign -k <key-file> <bot>/output/<name>.trig -o <bot>/signed/signed.<name>.trig`
-3. Publish: `./np publish <bot>/signed/signed.<name>.trig`
+2. Sign and publish: `scripts/sign-publish.sh <bot> <name>`
 
 When updating an existing nanopub:
-- Update the `dct:created` timestamp to the exact current date/time (not rounded)
+- Update the `dct:created` timestamp: `scripts/timestamp.sh`
 - Add/update `npx:supersedes` in the pubinfo graph pointing to the old signed URI
 - Then re-sign and publish
-
-### Getting the current timestamp
-
-Always use local time (not UTC) with the correct timezone offset:
-
-```bash
-date +"%Y-%m-%dT%H:%M:%S.000+01:00"
-```
-
-Do **not** use `date -u` — that gives UTC time but the `+01:00` suffix would then be wrong (off by one hour).
 
 ### Personal information policy
 
@@ -152,14 +156,6 @@ All bot nanopublications must be published under **CC0** (https://creativecommon
 - `fabio:ConferencePaper` — standalone conference papers without a journal ISSN (e.g. ACM, IEEE proceedings); `dct:isPartOf` can be omitted
 
 All doibot nanopubs use `npx:hasNanopubType fabio:ScholarlyWork` in pubinfo regardless of the specific FaBiO type.
-
-### Checking existing doibot nanopubs
-
-To see which papers already have nanopubs for a given author:
-
-```
-https://nanodash.knowledgepixels.com/query?runquery=RA7X8hbsozQjZCv4RfWGIgzEA6qr9Ds6RL5kQnB7GHThc/get-papers-for-author&queryparam_author=https://orcid.org/0000-0002-1267-0234
-```
 
 ### Provenance patterns per bot
 
