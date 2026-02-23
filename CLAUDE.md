@@ -103,6 +103,8 @@ Fetches CrossRef metadata, auto-searches ORCID for each author, and writes a rea
 
 **Always verify author order against the publisher page** — CrossRef order is unreliable.
 
+**Do not run doi-to-trig.sh calls in parallel** — the script uses a per-process temp file for CrossRef data (now fixed), but the ORCID search calls inside also write to shared temp paths. Run sequentially.
+
 ### Doibot: inspect CrossRef metadata
 
 ```bash
@@ -119,6 +121,14 @@ scripts/find-missing-nanopubs.sh 0000-0002-1267-0234
 ```
 
 Compares an author's ORCID works list against `doibot/output/` and lists papers that don't have a nanopub yet.
+
+**Items to skip** in the output:
+- Preprints: `10.48550/arXiv.*`, `10.1101/*` (bioRxiv/medRxiv), `10.31219/osf.io/*`, `10.7287/peerj.preprints.*`
+- Author corrections and addenda (title starts with "Author Correction:", "Addendum:", "Authors' Response to Peer Reviews")
+- Items typed `[other]` (usually preprints, workshop abstracts, or non-standard documents)
+- Repository DOIs like `10.5167/*` (UZH institutional repository) — not in CrossRef
+
+**Malformed DOIs:** Some old ORCID entries use hyphens before chapter numbers instead of underscores (e.g. `10.1007/978-3-642-38288-8-33`). Try replacing the final `-` with `_` — the correctly formatted version may already have a nanopub.
 
 ### DOI metadata (raw Turtle)
 
@@ -137,6 +147,23 @@ scripts/orcid-works.sh 0000-0002-1267-0234       # list works (for disambiguatio
 ```
 
 Common names may return multiple results — verify by checking works or employment history. Use ORCID URIs (e.g. `orcid:0000-0002-1267-0234`) in nanopubs.
+
+**Do not run orcid-verify.sh / orcid-works.sh in parallel** — stdout gets interleaved and results become unreadable. Run sequentially.
+
+**Disambiguation heuristic:** If ORCID search returns exactly 1 match for someone in a specialized field, it's generally safe to accept. When multiple matches exist, `orcid-works.sh` is usually faster than `orcid-verify.sh` for disambiguation.
+
+### Frequently appearing co-authors (Tobias Kuhn's papers)
+
+These ORCIDs come up repeatedly and don't need re-lookup:
+
+| Name | ORCID |
+|---|---|
+| Michel Dumontier | 0000-0003-4727-9435 |
+| Michael Krauthammer | 0000-0002-4808-1845 |
+| Egon Willighagen | 0000-0001-7542-0286 |
+| Albert Meroño-Peñuela | 0000-0003-4646-5842 |
+| Victor de Boer | 0000-0001-9079-039X |
+| Guus Schreiber | 0000-0002-2400-1185 |
 
 ### ROR lookup
 
