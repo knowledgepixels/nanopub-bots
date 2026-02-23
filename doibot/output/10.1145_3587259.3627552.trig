@@ -1,0 +1,66 @@
+@prefix : <http://purl.org/nanopub/temp/np1/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix ror: <https://ror.org/> .
+@prefix schema: <http://schema.org/> .
+
+:Head {
+  : a np:Nanopublication;
+    np:hasAssertion :assertion;
+    np:hasProvenance :provenance;
+    np:hasPublicationInfo :pubinfo .
+}
+
+:assertion {
+  <https://doi.org/10.1145/3587259.3627552> a fabio:ConferencePaper;
+    dct:date "2023-12-05";
+    dct:title "The Role of Serendipity in User-Curated Music Playlists";
+    bibo:authorList :author-list;
+    bibo:pageStart "140";
+    bibo:pageEnd "147";
+    dct:isPartOf :proceedings .
+
+  :proceedings dct:title "Proceedings of the 12th Knowledge Capture Conference 2023" .
+
+  :author-list rdf:_1 orcid:0000-0001-9568-9581 .
+  :author-list rdf:_2 orcid:0000-0002-1267-0234 .
+  :author-list rdf:_3 orcid:0000-0002-3357-9130 .
+  :author-list rdf:_4 orcid:0000-0002-7748-4715 .
+
+  orcid:0000-0001-9568-9581 foaf:name "Valentina Maccatrozzo" .
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0002-3357-9130 foaf:name "Davide Ceolin" .
+  orcid:0000-0002-7748-4715 foaf:name "Jacco Van Ossenbruggen" .
+}
+
+:provenance {
+  :assertion prov:wasAttributedTo orcid:0000-0001-9568-9581, orcid:0000-0002-1267-0234, orcid:0000-0002-3357-9130, orcid:0000-0002-7748-4715 .
+  :assertion prov:wasDerivedFrom <https://doi.org/10.1145/3587259.3627552> .
+}
+
+:pubinfo {
+  : dct:created "2026-02-23T12:15:19.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.1145/3587259.3627552>;
+    rdfs:label "The Role of Serendipity in User-Curated Music Playlists" .
+
+  orcid:0000-0001-9568-9581 foaf:name "Valentina Maccatrozzo" .
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0002-3357-9130 foaf:name "Davide Ceolin" .
+  orcid:0000-0002-7748-4715 foaf:name "Jacco Van Ossenbruggen" .
+
+  :sig npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}
