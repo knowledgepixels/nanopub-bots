@@ -1,0 +1,62 @@
+@prefix this: <https://w3id.org/np/RABAgjeFyQ-4Bvuq3y0ghgppwlmfF-v4RkvI5_j9psAFA> .
+@prefix sub: <https://w3id.org/np/RABAgjeFyQ-4Bvuq3y0ghgppwlmfF-v4RkvI5_j9psAFA/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  <http://id.crossref.org/issn/0302-9743> dct:title "Lecture Notes in Computer Science" .
+  
+  <https://doi.org/10.1007/978-3-540-85658-0_3> a fabio:BookChapter;
+    dct:date "2008";
+    dct:isPartOf <http://id.crossref.org/issn/0302-9743>;
+    dct:title "Attempto Controlled English for Knowledge Representation";
+    bibo:authorList sub:author-list;
+    bibo:pageEnd "124";
+    bibo:pageStart "104" .
+  
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  sub:author-list rdf:_1 sub:norbert-e-fuchs;
+    rdf:_2 sub:kaarel-kaljurand;
+    rdf:_3 orcid:0000-0002-1267-0234 .
+  
+  sub:kaarel-kaljurand foaf:name "Kaarel Kaljurand" .
+  
+  sub:norbert-e-fuchs foaf:name "Norbert E. Fuchs" .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-1267-0234;
+    prov:wasDerivedFrom <https://doi.org/10.1007/978-3-540-85658-0_3> .
+}
+
+sub:pubinfo {
+  this: dct:created "2026-02-23T13:29:26.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.1007/978-3-540-85658-0_3>;
+    rdfs:label "Attempto Controlled English for Knowledge Representation" .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
+    npx:hasSignature "AQOLh1PIz5WDER2/SIESMx/yodBTyxhMoLvSt7hyYroCLwoxby+fGvXvdH6prVIUDLcjsS8oKi29VrFncxDkpDuLvgSgkebRhQLvOFxEPt1hurfX5kEOFwaMNV8kf50mbSDH6lhWoGfeEYy+3n/fHiMUzm1daJ0LMTpiUtRaSwt66tUAhKympUYrv3mjsrTeEHRufG48kvyMlLTyMSIcgtoCl5qshVrr2/UjjWcnSZ3v3kTq+tJNUthuR0tBLcFgSeJl5AcjE6EJibonLnwzP/gMcvBhT46L5bEtUrGJhCLe0rezzAFExMc0PKeCgU5RZxHTlbu4pKcOBZyTawHpsg==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}
