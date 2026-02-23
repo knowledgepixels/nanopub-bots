@@ -48,8 +48,10 @@ Raw CLI reference (use the scripts below for common operations):
 ./np sign -k <key> <file.trig> -o <out.trig>  # sign with specific key
 ./np publish <signed.trig>                     # publish to nanopub network
 ./np check <file.trig>                         # validate a nanopub
-./np retract -i <nanopub-uri-or-file>          # create a retraction nanopub
-./np retract -i <nanopub-uri> -p               # retract and publish
+# Retract a nanopub (must specify -s <signer-IRI> or you'll get a NullPointerException):
+./np retract -i <nanopub-uri-or-file> -k <key> -s <signer-IRI> -p
+# For doibot: -s https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot
+# (The docs imply -s must be an ORCID, but any IRI including the bot IRI works.)
 ```
 
 ### Superseding nanopublications
@@ -174,7 +176,20 @@ scripts/ror-search.sh "Vrije Universiteit Amsterdam"
 scripts/ror-verify.sh 008xxew50
 ```
 
-### Checking existing doibot nanopubs
+### Checking existing doibot nanopubs on the network
+
+**Before creating a nanopub for a paper, check whether one already exists on the network.** The `find-missing-nanopubs.sh` script only compares against local `doibot/output/` files — it will miss papers that were published by a previous session but whose local files were deleted.
+
+Query the nanopub network (returns SPARQL JSON):
+
+```bash
+# All papers by an author on the network:
+curl -s "https://query.knowledgepixels.com/api/RA7X8hbsozQjZCv4RfWGIgzEA6qr9Ds6RL5kQnB7GHThc/get-papers-for-author?author=https://orcid.org/0000-0002-1267-0234" | python3 -c "import sys,json; [print(b['label']['value'], '|', b['np']['value']) for b in json.load(sys.stdin)['results']['bindings']]"
+```
+
+Or use the nanodash UI: `https://nanodash.knowledgepixels.com/query?runquery=RA7X8hbsozQjZCv4RfWGIgzEA6qr9Ds6RL5kQnB7GHThc/get-papers-for-author&queryparam_author=https://orcid.org/0000-0002-1267-0234`
+
+**DOI case sensitivity:** DOIs are case-insensitive but the network treats them as separate URIs. If a paper already has a nanopub with `https://doi.org/10.1162/COLI_a_00168` (uppercase), creating one with the lowercase form will result in a duplicate. Always check the network before creating.
 
 ```bash
 scripts/check-author-nanopubs.sh 0000-0002-1267-0234   # prints query URL for nanodash
