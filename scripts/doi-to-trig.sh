@@ -18,7 +18,9 @@ if [[ -f "$OUTFILE" ]]; then
 fi
 
 echo "Fetching CrossRef metadata for ${DOI}..." >&2
-curl -sf "https://api.crossref.org/works/${DOI}" -o /tmp/doi-to-trig-cr.json
+CR_TMP="/tmp/doi-to-trig-cr-$$.json"
+curl -sf "https://api.crossref.org/works/${DOI}" -o "$CR_TMP"
+export NP_CR_TMP="$CR_TMP"
 
 export NP_DOI="$DOI"
 export NP_FILENAME="$FILENAME"
@@ -54,7 +56,7 @@ def short_orcid(uri):
 
 # ── parse CrossRef ────────────────────────────────────────────────────────────
 
-with open('/tmp/doi-to-trig-cr.json') as f:
+with open(os.environ['NP_CR_TMP']) as f:
     msg = json.load(f)
 
 if 'message' not in msg:

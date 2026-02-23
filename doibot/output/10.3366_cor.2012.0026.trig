@@ -1,0 +1,60 @@
+@prefix : <http://purl.org/nanopub/temp/np1/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix ror: <https://ror.org/> .
+@prefix schema: <http://schema.org/> .
+
+:Head {
+  : a np:Nanopublication;
+    np:hasAssertion :assertion;
+    np:hasProvenance :provenance;
+    np:hasPublicationInfo :pubinfo .
+}
+
+:assertion {
+  <https://doi.org/10.3366/cor.2012.0026> a fabio:Article;
+    dct:abstract "In this paper, we present Coral, an interface in which complex corpus queries can be expressed in a controlled subset of natural English. With the help of a predictive editor, users can compose queries and submit them to the Coral system, which then automatically translates them into formal AQL statements. We give an overview of the controlled natural language developed for Coral and describe the functionalities of the predictive editor provided for it. We also report on a user experiment in which the system was evaluated. The results show that, with Coral, corpora of annotated texts can be queried more easily and more quickly than with the existing ANNIS interface. Our system demonstrates that complex corpora can be accessed without the need to learn a complicated, formal query language.";
+    dct:date "2012-11";
+    dct:title "Coral: Corpus Access in Controlled Language";
+    bibo:authorList :author-list;
+    bibo:pageStart "187";
+    bibo:pageEnd "206";
+    dct:isPartOf <http://id.crossref.org/issn/1749-5032> .
+
+  <http://id.crossref.org/issn/1749-5032> dct:title "Corpora" .
+
+  :author-list rdf:_1 orcid:0000-0002-1267-0234 .
+  :author-list rdf:_2 :stefan-hofler .
+
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  :stefan-hofler foaf:name "Stefan Höfler" .
+}
+
+:provenance {
+  :assertion prov:wasAttributedTo orcid:0000-0002-1267-0234 .
+  :assertion prov:wasDerivedFrom <https://doi.org/10.3366/cor.2012.0026> .
+}
+
+:pubinfo {
+  : dct:created "2026-02-23T12:43:25.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.3366/cor.2012.0026>;
+    rdfs:label "Coral: Corpus Access in Controlled Language" .
+
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+
+  :sig npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}
