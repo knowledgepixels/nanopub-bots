@@ -1,0 +1,72 @@
+@prefix this: <https://w3id.org/np/RAfh9f3IsvzNPJ2maWeQyULWFCk55AshZg3Eo5NyZDB-E> .
+@prefix sub: <https://w3id.org/np/RAfh9f3IsvzNPJ2maWeQyULWFCk55AshZg3Eo5NyZDB-E/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  <http://id.crossref.org/issn/0302-9743> dct:title "Lecture Notes in Computer Science" .
+  
+  <https://doi.org/10.1007/978-3-319-49004-5_29> a fabio:BookChapter;
+    dct:date "2016";
+    dct:isPartOf <http://id.crossref.org/issn/0302-9743>;
+    dct:title "Data 2 Documents: Modular and Distributive Content Management in RDF";
+    bibo:authorList sub:author-list;
+    bibo:pageEnd "462";
+    bibo:pageStart "447" .
+  
+  orcid:0000-0001-9079-039X foaf:name "Victor de Boer" .
+  
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0002-2400-1185 foaf:name "Guus Schreiber" .
+  
+  sub:author-list rdf:_1 sub:niels-ockeloen;
+    rdf:_2 orcid:0000-0001-9079-039X;
+    rdf:_3 orcid:0000-0002-1267-0234;
+    rdf:_4 orcid:0000-0002-2400-1185 .
+  
+  sub:niels-ockeloen foaf:name "Niels Ockeloen" .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0001-9079-039X, orcid:0000-0002-1267-0234,
+      orcid:0000-0002-2400-1185;
+    prov:wasDerivedFrom <https://doi.org/10.1007/978-3-319-49004-5_29> .
+}
+
+sub:pubinfo {
+  orcid:0000-0001-9079-039X foaf:name "Victor de Boer" .
+  
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0002-2400-1185 foaf:name "Guus Schreiber" .
+  
+  this: dct:created "2026-02-23T11:53:20.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.1007/978-3-319-49004-5_29>;
+    rdfs:label "Data 2 Documents: Modular and Distributive Content Management in RDF" .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
+    npx:hasSignature "dB1ikzUpavgtEUvtZRP+CowAjo57j6J8Ha5EtYMWet6k6UTp84+pMjcXkuPvJt/eQAtP1ipnzaBxB/Eq6aQ4Ssz9yYmpPOZoai7k33QhiSiCWthal0Ide/ZYDHVinvi4oFrII+x6flzSfD8o54b9iqB7l287RDKZibsFjdw/tbaNwVdyFoyZVSyaSBGg/BFp8oMLqEAiumaNbRZQZhYXQecXzKjdkPXKmQRR3xtOvGrmU1UZ3C3EKh5zEIXumTTwvOolT+a8HcCwqdtUb+XPwU2MbmCdpyIZF+zwBrrvxNV4iTHACCUTL2dLaeorGlKczuQwIJLbl3IpSXak99+KZA==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}

@@ -1,0 +1,75 @@
+@prefix : <http://purl.org/nanopub/temp/np1/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix ror: <https://ror.org/> .
+@prefix schema: <http://schema.org/> .
+
+:Head {
+  : a np:Nanopublication;
+    np:hasAssertion :assertion;
+    np:hasProvenance :provenance;
+    np:hasPublicationInfo :pubinfo .
+}
+
+:assertion {
+  <https://doi.org/10.1145/3460210.3493546> a fabio:ConferencePaper;
+    dct:date "2021-12-02";
+    dct:title "User-friendly Composition of FAIR Workflows in a Notebook Environment";
+    bibo:authorList :author-list;
+    bibo:pageStart "1";
+    bibo:pageEnd "8";
+    dct:isPartOf :proceedings .
+
+  :proceedings dct:title "Proceedings of the 11th Knowledge Capture Conference" .
+
+  :author-list rdf:_1 orcid:0000-0002-9984-2720 .
+  :author-list rdf:_2 orcid:0000-0001-7769-4272 .
+  :author-list rdf:_3 orcid:0000-0003-1250-6968 .
+  :author-list rdf:_4 orcid:0000-0003-4096-0260 .
+  :author-list rdf:_5 orcid:0000-0002-7635-9533 .
+  :author-list rdf:_6 orcid:0000-0003-4727-9435 .
+  :author-list rdf:_7 orcid:0000-0002-1267-0234 .
+
+  orcid:0000-0002-9984-2720 foaf:name "Robin A. Richardson" .
+  orcid:0000-0001-7769-4272 foaf:name "Remzi Celebi" .
+  orcid:0000-0003-1250-6968 foaf:name "Sven van der Burg" .
+  orcid:0000-0003-4096-0260 foaf:name "Djura Smits" .
+  orcid:0000-0002-7635-9533 foaf:name "Lars Ridder" .
+  orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+}
+
+:provenance {
+  :assertion prov:wasAttributedTo orcid:0000-0002-9984-2720, orcid:0000-0001-7769-4272, orcid:0000-0003-1250-6968, orcid:0000-0003-4096-0260, orcid:0000-0002-7635-9533, orcid:0000-0003-4727-9435, orcid:0000-0002-1267-0234 .
+  :assertion prov:wasDerivedFrom <https://doi.org/10.1145/3460210.3493546> .
+}
+
+:pubinfo {
+  : dct:created "2026-02-23T11:52:47.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.1145/3460210.3493546>;
+    rdfs:label "User-friendly Composition of FAIR Workflows in a Notebook Environment" .
+
+  orcid:0000-0002-9984-2720 foaf:name "Robin A. Richardson" .
+  orcid:0000-0001-7769-4272 foaf:name "Remzi Celebi" .
+  orcid:0000-0003-1250-6968 foaf:name "Sven van der Burg" .
+  orcid:0000-0003-4096-0260 foaf:name "Djura Smits" .
+  orcid:0000-0002-7635-9533 foaf:name "Lars Ridder" .
+  orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+
+  :sig npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}

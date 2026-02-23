@@ -1,0 +1,68 @@
+@prefix this: <https://w3id.org/np/RANufceAdRZpr702sDmowNpnu771eRYR8ft5NyISzMY3k> .
+@prefix sub: <https://w3id.org/np/RANufceAdRZpr702sDmowNpnu771eRYR8ft5NyISzMY3k/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  <http://id.crossref.org/issn/2041-1480> dct:title "Journal of Biomedical Semantics" .
+  
+  <https://doi.org/10.1186/2041-1480-5-10> a fabio:Article;
+    dct:date "2014";
+    dct:isPartOf <http://id.crossref.org/issn/2041-1480>;
+    dct:title "Mining images in biomedical publications: Detection and analysis of gel diagrams";
+    bibo:authorList sub:author-list;
+    bibo:pageStart "10" .
+  
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0002-4808-1845 foaf:name "Michael Krauthammer" .
+  
+  sub:author-list rdf:_1 orcid:0000-0002-1267-0234;
+    rdf:_2 sub:mate-nagy;
+    rdf:_3 sub:thaibinh-luong;
+    rdf:_4 orcid:0000-0002-4808-1845 .
+  
+  sub:mate-nagy foaf:name "Mate Nagy" .
+  
+  sub:thaibinh-luong foaf:name "ThaiBinh Luong" .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-1267-0234, orcid:0000-0002-4808-1845;
+    prov:wasDerivedFrom <https://doi.org/10.1186/2041-1480-5-10> .
+}
+
+sub:pubinfo {
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0002-4808-1845 foaf:name "Michael Krauthammer" .
+  
+  this: dct:created "2026-02-23T11:53:27.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.1186/2041-1480-5-10>;
+    rdfs:label "Mining images in biomedical publications: Detection and analysis of gel diagrams" .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
+    npx:hasSignature "TiqsaRm264Iy8qtux9beQCmB4bbGVrFLCbgxZQWQdcwkIo3eBV9wGBy3aFnyEj5KrVQrgGK2PpVoAuWphbTXzZw25rScHKweFek5kjJbqbZaKXWa3+FMWpqWz2QLN4SMhIeB8AQeV640rdudmRuhkKcoLMPuZIG2nSRg8vUCg78Jc7M+CUIvKRXIZYWylS+4X+v1oNmBOTOfPWr0c5bizUsXYYJg4W594+K8F75Ag+SqMvLQu8ZkaY0JnlPPu4iAiP42F/A78x0lzssA03QnxLdFJFq3E2pjmAL0Q4phglesc+jJlqqffh3xlW0GEvOyRIHKCo974w5o8xCHi6ZRzA==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}

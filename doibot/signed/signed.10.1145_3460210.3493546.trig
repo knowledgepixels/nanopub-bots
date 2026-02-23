@@ -1,0 +1,90 @@
+@prefix this: <https://w3id.org/np/RAEpxvLaBCKLzifw2YZsbgjXqB1oivI9Wewm4T9xCW5s4> .
+@prefix sub: <https://w3id.org/np/RAEpxvLaBCKLzifw2YZsbgjXqB1oivI9Wewm4T9xCW5s4/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  <https://doi.org/10.1145/3460210.3493546> a fabio:ConferencePaper;
+    dct:date "2021-12-02";
+    dct:isPartOf sub:proceedings;
+    dct:title "User-friendly Composition of FAIR Workflows in a Notebook Environment";
+    bibo:authorList sub:author-list;
+    bibo:pageEnd "8";
+    bibo:pageStart "1" .
+  
+  orcid:0000-0001-7769-4272 foaf:name "Remzi Celebi" .
+  
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0002-7635-9533 foaf:name "Lars Ridder" .
+  
+  orcid:0000-0002-9984-2720 foaf:name "Robin A. Richardson" .
+  
+  orcid:0000-0003-1250-6968 foaf:name "Sven van der Burg" .
+  
+  orcid:0000-0003-4096-0260 foaf:name "Djura Smits" .
+  
+  orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
+  
+  sub:author-list rdf:_1 orcid:0000-0002-9984-2720;
+    rdf:_2 orcid:0000-0001-7769-4272;
+    rdf:_3 orcid:0000-0003-1250-6968;
+    rdf:_4 orcid:0000-0003-4096-0260;
+    rdf:_5 orcid:0000-0002-7635-9533;
+    rdf:_6 orcid:0000-0003-4727-9435;
+    rdf:_7 orcid:0000-0002-1267-0234 .
+  
+  sub:proceedings dct:title "Proceedings of the 11th Knowledge Capture Conference" .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0001-7769-4272, orcid:0000-0002-1267-0234,
+      orcid:0000-0002-7635-9533, orcid:0000-0002-9984-2720, orcid:0000-0003-1250-6968, orcid:0000-0003-4096-0260,
+      orcid:0000-0003-4727-9435;
+    prov:wasDerivedFrom <https://doi.org/10.1145/3460210.3493546> .
+}
+
+sub:pubinfo {
+  orcid:0000-0001-7769-4272 foaf:name "Remzi Celebi" .
+  
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0002-7635-9533 foaf:name "Lars Ridder" .
+  
+  orcid:0000-0002-9984-2720 foaf:name "Robin A. Richardson" .
+  
+  orcid:0000-0003-1250-6968 foaf:name "Sven van der Burg" .
+  
+  orcid:0000-0003-4096-0260 foaf:name "Djura Smits" .
+  
+  orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
+  
+  this: dct:created "2026-02-23T11:52:47.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.1145/3460210.3493546>;
+    rdfs:label "User-friendly Composition of FAIR Workflows in a Notebook Environment" .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
+    npx:hasSignature "Y7ZvoPiG01oxFiKbbvqUwLM56MOxrHOqQZanGRePdWxBI1/XOcNylSH6v/LhNB6u/P5wMTnatq1MRguHuRGZUDsxnJZeDo1vWu5kj1AffXxsJNEOSgCbVgfa7t0U+wCFCIYEd6QPgezDut4W22uQp9bOm4yFjnrmxKcMzLyg6OkWL7EDUrmk29mgskRbdhkmzfnAcG84o3vbPOG5qJQZ4PBq6lFi36LdmKzcWpTW3+jDrLk4iPehuTenK1++ieUXAv1OHZOGil6FfZL8iMBxGTIDv7Uq1SEu/oiQcK5lgCL2e3H0O6CQ3wonDB6bLp08hiXRBF2QwgRFYYBEOiOwUA==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}
