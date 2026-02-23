@@ -93,37 +93,57 @@ scripts/timestamp.sh   # prints e.g. 2026-02-23T14:05:31.000+01:00
 
 Always use local time (not UTC). Do **not** use `date -u`.
 
-### DOI metadata
+### Doibot: generate a draft nanopub from a DOI
+
+```bash
+scripts/doi-to-trig.sh 10.1145/3460210.3493567
+```
+
+Fetches CrossRef metadata, auto-searches ORCID for each author, and writes a ready-to-edit draft to `doibot/output/<name>.trig`. Authors whose ORCID was auto-found are marked `# VERIFY`; unresolved ones are left as blank nodes (`:<firstname>-<lastname>`) with `# TODO` comments listing any candidates. After reviewing and fixing the draft, sign and publish with `scripts/sign-publish.sh doibot <name>`.
+
+**Always verify author order against the publisher page** — CrossRef order is unreliable.
+
+### Doibot: inspect CrossRef metadata
+
+```bash
+scripts/crossref-meta.sh 10.1145/3460210.3493567   # title, type, author order, ISSN, abstract
+scripts/orcid-search-all.sh 10.1145/3460210.3493567 # ORCID lookup for all authors at once
+```
+
+Use these to manually inspect what `doi-to-trig.sh` will use, or to troubleshoot.
+
+### Doibot: find papers without nanopubs
+
+```bash
+scripts/find-missing-nanopubs.sh 0000-0002-1267-0234
+```
+
+Compares an author's ORCID works list against `doibot/output/` and lists papers that don't have a nanopub yet.
+
+### DOI metadata (raw Turtle)
 
 ```bash
 scripts/doi-meta.sh 10.1007/11799511_7
 ```
 
-Returns Turtle RDF with title, authors, ORCIDs, ROR affiliations, etc. The abstract (`dct:abstract`) is optional — include it when available, omit it when not. Only use CrossRef API or publisher pages if the RDF is missing or wrong.
-
-**Caveats:**
-- **Author order is NOT preserved** in the RDF. Always verify from the actual paper/publisher page.
-- **ORCIDs are often missing.** Some publishers include `owl:sameAs` ORCID links; many don't. Search separately.
-- **CrossRef can include non-authors** (e.g. guest editors). Verify against the actual paper.
+Returns raw Turtle RDF from DOI content negotiation. Useful for checking what the DOI resolver returns directly. Note: `doi-to-trig.sh` uses CrossRef instead, which has better-structured data.
 
 ### ORCID lookup
 
 ```bash
 scripts/orcid-search.sh Kuhn Tobias              # search by name (handles diacritics)
 scripts/orcid-verify.sh 0000-0002-1267-0234      # show name + employment history
+scripts/orcid-works.sh 0000-0002-1267-0234       # list works (for disambiguation)
 ```
 
 Common names may return multiple results — verify by checking works or employment history. Use ORCID URIs (e.g. `orcid:0000-0002-1267-0234`) in nanopubs.
-
-For works disambiguation: `scripts/orcid-works.sh 0000-0002-1267-0234`
 
 ### ROR lookup
 
 ```bash
 scripts/ror-search.sh "Vrije Universiteit Amsterdam"
+scripts/ror-verify.sh 008xxew50
 ```
-
-To verify a specific ROR: `scripts/ror-verify.sh 008xxew50`
 
 ### Checking existing doibot nanopubs
 
@@ -133,8 +153,12 @@ scripts/check-author-nanopubs.sh 0000-0002-1267-0234   # prints query URL for na
 
 ## Workflow: creating/updating nanopubs
 
-1. Edit the output file in `<bot>/output/`
-2. Sign and publish: `scripts/sign-publish.sh <bot> <name>`
+**Creating a new doibot nanopub:**
+1. `scripts/doi-to-trig.sh <doi>` — generates the draft, auto-resolves ORCIDs
+2. Review the draft in `doibot/output/<name>.trig`: fix `# TODO` items, verify `# VERIFY` ORCIDs, check author order against publisher page, add affiliations if known
+3. `scripts/sign-publish.sh doibot <name>`
+
+**Other bots** (biodivbot, ai-in-edu-bot): edit the output file manually, then sign and publish.
 
 When updating an existing nanopub:
 - Update the `dct:created` timestamp: `scripts/timestamp.sh`
