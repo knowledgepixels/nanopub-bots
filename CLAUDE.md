@@ -164,6 +164,8 @@ These ORCIDs come up repeatedly and don't need re-lookup:
 | Albert Meroño-Peñuela | 0000-0003-4646-5842 |
 | Victor de Boer | 0000-0001-9079-039X |
 | Guus Schreiber | 0000-0002-2400-1185 |
+| Martin Volk | 0000-0002-2063-4516 |
+| Kurt Winkler | 0000-0003-0197-9743 |
 
 ### ROR lookup
 

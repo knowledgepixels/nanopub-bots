@@ -1,0 +1,59 @@
+@prefix this: <https://w3id.org/np/RATHprjULjJupWIzQGyieCMVzf0gLPOFGGCN6VmAXj8FU> .
+@prefix sub: <https://w3id.org/np/RATHprjULjJupWIzQGyieCMVzf0gLPOFGGCN6VmAXj8FU/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  <http://id.crossref.org/issn/0891-2017> dct:title "Computational Linguistics" .
+  
+  <https://doi.org/10.1162/coli_a_00168> a fabio:Article;
+    dct:abstract "What is here called controlled natural language (CNL) has traditionally been given many different names. Especially during the last four decades, a wide variety of such languages have been designed. They are applied to improve communication among humans, to improve translation, or to provide natural and intuitive representations for formal notations. Despite the apparent differences, it seems sensible to put all these languages under the same umbrella. To bring order to the variety of languages, a general classification scheme is presented here. A comprehensive survey of existing English-based CNLs is given, listing and describing 100 languages from 1930 until today. Classification of these languages reveals that they form a single scattered cloud filling the conceptual space between natural languages such as English on the one end and formal languages such as propositional logic on the other. The goal of this article is to provide a common terminology and a common model for CNL, to contribute to the understanding of their general nature, to provide a starting point for researchers interested in the area, and to help developers to make design decisions.";
+    dct:date "2014-03";
+    dct:isPartOf <http://id.crossref.org/issn/0891-2017>;
+    dct:title "A Survey and Classification of Controlled Natural Languages";
+    bibo:authorList sub:author-list;
+    bibo:pageEnd "170";
+    bibo:pageStart "121" .
+  
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  sub:author-list rdf:_1 orcid:0000-0002-1267-0234 .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-1267-0234;
+    prov:wasDerivedFrom <https://doi.org/10.1162/coli_a_00168> .
+}
+
+sub:pubinfo {
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  this: dct:created "2026-02-23T12:52:36.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.1162/coli_a_00168>;
+    rdfs:label "A Survey and Classification of Controlled Natural Languages" .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
+    npx:hasSignature "L3mWRkxk3NYPmKQjrIhv4GeClOUtiO+icShO3f4Q+XMUgGWQ3FQyCc8rT6b+44M8nlZn2yge8DEKEOh6fGZTGriWYBqk0T2hLfZDuBdPYM1UnUv+81qvNtOTZopc4Ti6G37hxPlx1pwoeC1XDHSKzt2RuQrVo9ASSflS7tO4xkhGgL4sebqFxlQgaMkTWSRb8M/VlmpaMTZTRpDqto9dDL1GgtV9uLJWN9jHQXSMZoVKf8/j1+dlUu51Axb6sjFP0mhzZOD4BCBWBKELXv9xHV3sD0O0RIb364edQmP5CrbAxNeqE1TM6ono3q+1XSGizauO9OL68vp/4z2kVzOShw==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}
