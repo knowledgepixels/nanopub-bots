@@ -1,0 +1,148 @@
+@prefix : <http://purl.org/nanopub/temp/np1/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix ror: <https://ror.org/> .
+@prefix schema: <http://schema.org/> .
+
+:Head {
+  : a np:Nanopublication;
+    np:hasAssertion :assertion;
+    np:hasProvenance :provenance;
+    np:hasPublicationInfo :pubinfo .
+}
+
+:assertion {
+  <https://doi.org/10.12688/f1000research.54159.1> a fabio:Article;
+    dct:abstract "Scientific data analyses often combine several computational tools in automated pipelines, or workflows. Thousands of such workflows have been used in the life sciences, though their composition has remained a cumbersome manual process due to a lack of standards for annotation, assembly, and implementation. Recent technological advances have returned the long-standing vision of automated workflow composition into focus. This article summarizes a recent Lorentz Center workshop dedicated to automated composition of workflows in the life sciences. We survey previous initiatives to automate the composition process, and discuss the current state of the art and future perspectives. We start by drawing the “big picture” of the scientific workflow development life cycle, before surveying and discussing current methods, technologies and practices for semantic domain modelling, automation in workflow development, and workflow assessment. Finally, we derive a roadmap of individual and community-based actions to work toward the vision of automated workflow development in the forthcoming years. A central outcome of the workshop is a general description of the workflow life cycle in six stages: 1) scientific question or hypothesis, 2) conceptual workflow, 3) abstract workflow, 4) concrete workflow, 5) production workflow, and 6) scientific results. The transitions between stages are facilitated by diverse tools and methods, usually incorporating domain knowledge in some form. Formal semantic domain modelling is hard and often a bottleneck for the application of semantic technologies. However, life science communities have made considerable progress here in recent years and are continuously improving, renewing interest in the application of semantic technologies for workflow exploration, composition and instantiation. Combined with systematic benchmarking with reference data and large-scale deployment of production-stage workflows, such technologies enable a more systematic process of workflow development than we know today. We believe that this can lead to more robust, reusable, and sustainable workflows in the future.";
+    dct:date "2021-09-07";
+    dct:title "Perspectives on automated composition of workflows in the life sciences";
+    bibo:authorList :author-list;
+    bibo:pageStart "897";
+    dct:isPartOf <http://id.crossref.org/issn/2046-1402> .
+
+  <http://id.crossref.org/issn/2046-1402> dct:title "F1000Research" .
+
+  :author-list rdf:_1 orcid:0000-0003-1953-5606 .
+  :author-list rdf:_2 orcid:0000-0002-5865-8994 .
+  :author-list rdf:_3 orcid:0000-0001-6666-1520 .
+  :author-list rdf:_4 orcid:0000-0002-9708-6722 .
+  :author-list rdf:_5 orcid:0000-0003-4647-3877 .
+  :author-list rdf:_6 orcid:0000-0002-2196-0305 .
+  :author-list rdf:_7 orcid:0000-0003-4004-6479 .
+  :author-list rdf:_8 :ammar-ben-hadj-amor .
+  :author-list rdf:_9 orcid:0000-0002-0309-604X .
+  :author-list rdf:_10 orcid:0000-0002-6899-4262 .
+  :author-list rdf:_11 orcid:0000-0002-2961-9670 .
+  :author-list rdf:_12 orcid:0000-0001-8465-8341 .
+  :author-list rdf:_13 orcid:0000-0003-1219-2137 .
+  :author-list rdf:_14 orcid:0000-0001-6801-2559 .
+  :author-list rdf:_15 orcid:0000-0003-0183-6910 .
+  :author-list rdf:_16 orcid:0000-0001-9727-2544 .
+  :author-list rdf:_17 orcid:0000-0003-0984-0973 .
+  :author-list rdf:_18 orcid:0000-0002-1509-4981 .
+  :author-list rdf:_19 orcid:0000-0002-0097-1056 .
+  :author-list rdf:_20 orcid:0000-0001-6811-9196 .
+  :author-list rdf:_21 orcid:0000-0002-1267-0234 .
+  :author-list rdf:_22 orcid:0000-0003-1781-5508 .
+  :author-list rdf:_23 orcid:0000-0002-7552-1009 .
+  :author-list rdf:_24 orcid:0000-0002-7187-4683 .
+  :author-list rdf:_25 orcid:0000-0002-9984-2720 .
+  :author-list rdf:_26 orcid:0000-0002-9370-4677 .
+  :author-list rdf:_27 orcid:0000-0001-9842-9718 .
+  :author-list rdf:_28 orcid:0000-0002-6038-9025 .
+  :author-list rdf:_29 :szoke-szaniszlo .
+  :author-list rdf:_30 orcid:0000-0002-9609-9505 .
+  :author-list rdf:_31 orcid:0000-0003-0373-9372 .
+  :author-list rdf:_32 orcid:0000-0002-1279-5133 .
+
+  orcid:0000-0003-1953-5606 foaf:name "Anna-Lena Lamprecht" .
+  orcid:0000-0002-5865-8994 foaf:name "Magnus Palmblad" .
+  orcid:0000-0001-6666-1520 foaf:name "Jon Ison" .
+  orcid:0000-0002-9708-6722 foaf:name "Veit Schwämmle" .
+  orcid:0000-0003-4647-3877 foaf:name "Mohammad Sadnan Al Manir" .
+  orcid:0000-0002-2196-0305 foaf:name "Ilkay Altintas" .
+  orcid:0000-0003-4004-6479 foaf:name "Christopher J. O. Baker" .
+  :ammar-ben-hadj-amor foaf:name "Ammar Ben Hadj Amor" .
+  orcid:0000-0002-0309-604X foaf:name "Salvador Capella-Gutierrez" .
+  orcid:0000-0002-6899-4262 foaf:name "Paulos Charonyktakis" .
+  orcid:0000-0002-2961-9670 foaf:name "Michael R. Crusoe" .
+  orcid:0000-0001-8465-8341 foaf:name "Yolanda Gil" .
+  orcid:0000-0003-1219-2137 foaf:name "Carole Goble" .
+  orcid:0000-0001-6801-2559 foaf:name "Timothy J. Griffin" .
+  orcid:0000-0003-0183-6910 foaf:name "Paul Groth" .
+  orcid:0000-0001-9727-2544 foaf:name "Hans Ienasescu" .
+  orcid:0000-0003-0984-0973 foaf:name "Pratik Jagtap" .
+  orcid:0000-0002-1509-4981 foaf:name "Matúš Kalaš" .
+  orcid:0000-0002-0097-1056 foaf:name "Vedran Kasalica" .
+  orcid:0000-0001-6811-9196 foaf:name "Alireza Khanteymoori" .
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0003-1781-5508 foaf:name "Hailiang Mei" .
+  orcid:0000-0002-7552-1009 foaf:name "Hervé Ménager" .
+  orcid:0000-0002-7187-4683 foaf:name "Steffen Möller" .
+  orcid:0000-0002-9984-2720 foaf:name "Robin A. Richardson" .
+  orcid:0000-0002-9370-4677 foaf:name "Vincent Robert" .
+  orcid:0000-0001-9842-9718 foaf:name "Stian Soiland-Reyes" .
+  orcid:0000-0002-6038-9025 foaf:name "Robert Stevens" .
+  :szoke-szaniszlo foaf:name "Szoke Szaniszlo" .
+  orcid:0000-0002-9609-9505 foaf:name "Suzan Verberne" .
+  orcid:0000-0003-0373-9372 foaf:name "Aswin Verhoeven" .
+  orcid:0000-0002-1279-5133 foaf:name "Katherine Wolstencroft" .
+}
+
+:provenance {
+  :assertion prov:wasAttributedTo orcid:0000-0003-1953-5606, orcid:0000-0002-5865-8994, orcid:0000-0001-6666-1520, orcid:0000-0002-9708-6722, orcid:0000-0003-4647-3877, orcid:0000-0002-2196-0305, orcid:0000-0003-4004-6479, orcid:0000-0002-0309-604X, orcid:0000-0002-6899-4262, orcid:0000-0002-2961-9670, orcid:0000-0001-8465-8341, orcid:0000-0003-1219-2137, orcid:0000-0001-6801-2559, orcid:0000-0003-0183-6910, orcid:0000-0001-9727-2544, orcid:0000-0003-0984-0973, orcid:0000-0002-1509-4981, orcid:0000-0002-0097-1056, orcid:0000-0001-6811-9196, orcid:0000-0002-1267-0234, orcid:0000-0003-1781-5508, orcid:0000-0002-7552-1009, orcid:0000-0002-7187-4683, orcid:0000-0002-9984-2720, orcid:0000-0002-9370-4677, orcid:0000-0001-9842-9718, orcid:0000-0002-6038-9025, orcid:0000-0002-9609-9505, orcid:0000-0003-0373-9372, orcid:0000-0002-1279-5133 .
+  :assertion prov:wasDerivedFrom <https://doi.org/10.12688/f1000research.54159.1> .
+}
+
+:pubinfo {
+  : dct:created "2026-02-23T15:32:44.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.12688/f1000research.54159.1>;
+    rdfs:label "Perspectives on automated composition of workflows in the life sciences" .
+
+  orcid:0000-0003-1953-5606 foaf:name "Anna-Lena Lamprecht" .
+  orcid:0000-0002-5865-8994 foaf:name "Magnus Palmblad" .
+  orcid:0000-0001-6666-1520 foaf:name "Jon Ison" .
+  orcid:0000-0002-9708-6722 foaf:name "Veit Schwämmle" .
+  orcid:0000-0003-4647-3877 foaf:name "Mohammad Sadnan Al Manir" .
+  orcid:0000-0002-2196-0305 foaf:name "Ilkay Altintas" .
+  orcid:0000-0003-4004-6479 foaf:name "Christopher J. O. Baker" .
+  orcid:0000-0002-0309-604X foaf:name "Salvador Capella-Gutierrez" .
+  orcid:0000-0002-6899-4262 foaf:name "Paulos Charonyktakis" .
+  orcid:0000-0002-2961-9670 foaf:name "Michael R. Crusoe" .
+  orcid:0000-0003-1219-2137 foaf:name "Carole Goble" .
+  orcid:0000-0001-6801-2559 foaf:name "Timothy J. Griffin" .
+  orcid:0000-0003-0183-6910 foaf:name "Paul Groth" .
+  orcid:0000-0001-9727-2544 foaf:name "Hans Ienasescu" .
+  orcid:0000-0003-0984-0973 foaf:name "Pratik Jagtap" .
+  orcid:0000-0002-1509-4981 foaf:name "Matúš Kalaš" .
+  orcid:0000-0002-0097-1056 foaf:name "Vedran Kasalica" .
+  orcid:0000-0001-6811-9196 foaf:name "Alireza Khanteymoori" .
+  orcid:0000-0002-7552-1009 foaf:name "Hervé Ménager" .
+  orcid:0000-0002-7187-4683 foaf:name "Steffen Möller" .
+  orcid:0000-0001-8465-8341 foaf:name "Yolanda Gil" .
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0003-1781-5508 foaf:name "Hailiang Mei" .
+  orcid:0000-0002-9984-2720 foaf:name "Robin A. Richardson" .
+  orcid:0000-0002-9370-4677 foaf:name "Vincent Robert" .
+  orcid:0000-0001-9842-9718 foaf:name "Stian Soiland-Reyes" .
+  orcid:0000-0002-6038-9025 foaf:name "Robert Stevens" .
+  orcid:0000-0002-9609-9505 foaf:name "Suzan Verberne" .
+  orcid:0000-0003-0373-9372 foaf:name "Aswin Verhoeven" .
+  orcid:0000-0002-1279-5133 foaf:name "Katherine Wolstencroft" .
+
+  :sig npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}
