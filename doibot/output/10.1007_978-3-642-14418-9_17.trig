@@ -1,0 +1,91 @@
+@prefix : <http://purl.org/nanopub/temp/np1/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix ror: <https://ror.org/> .
+@prefix schema: <http://schema.org/> .
+
+:Head {
+  : a np:Nanopublication;
+    np:hasAssertion :assertion;
+    np:hasProvenance :provenance;
+    np:hasPublicationInfo :pubinfo .
+}
+
+:assertion {
+  <https://doi.org/10.1007/978-3-642-14418-9_17> a fabio:BookChapter;
+    dct:date "2010";
+    dct:title "On Controlled Natural Languages: Properties and Prospects";
+    bibo:authorList :author-list;
+    bibo:pageStart "281";
+    bibo:pageEnd "289";
+    dct:isPartOf <http://id.crossref.org/issn/0302-9743> .
+
+  <http://id.crossref.org/issn/0302-9743> dct:title "Lecture Notes in Computer Science" .
+
+  :author-list rdf:_1 orcid:0000-0002-2958-3428 .
+  :author-list rdf:_2 orcid:0000-0001-7703-3503 .
+  :author-list rdf:_3 orcid:0000-0002-3804-2498 .
+  :author-list rdf:_4 :danica-damljanovic .
+  :author-list rdf:_5 orcid:0000-0002-5759-2655 .
+  :author-list rdf:_6 :norbert-fuchs .
+  :author-list rdf:_7 :stefan-hoefler .
+  :author-list rdf:_8 :ken-jones .
+  :author-list rdf:_9 :kaarel-kaljurand .
+  :author-list rdf:_10 orcid:0000-0002-1267-0234 .
+  :author-list rdf:_11 :martin-luts .
+  :author-list rdf:_12 orcid:0000-0001-7864-5229 .
+  :author-list rdf:_13 :mike-rosner .
+  :author-list rdf:_14 orcid:0000-0001-8998-7005 .
+  :author-list rdf:_15 :john-sowa .
+
+  orcid:0000-0002-2958-3428 foaf:name "Adam Wyner" .
+  orcid:0000-0001-7703-3503 foaf:name "Krasimir Angelov" .
+  orcid:0000-0002-3804-2498 foaf:name "Guntis Barzdins" .
+  :danica-damljanovic foaf:name "Danica Damljanovic" .
+  orcid:0000-0002-5759-2655 foaf:name "Brian Davis" .
+  :norbert-fuchs foaf:name "Norbert Fuchs" .
+  :stefan-hoefler foaf:name "Stefan Hoefler" .
+  :ken-jones foaf:name "Ken Jones" .
+  :kaarel-kaljurand foaf:name "Kaarel Kaljurand" .
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  :martin-luts foaf:name "Martin Luts" .
+  orcid:0000-0001-7864-5229 foaf:name "Jonathan Pool" .
+  :mike-rosner foaf:name "Mike Rosner" .
+  orcid:0000-0001-8998-7005 foaf:name "Rolf Schwitter" .
+  :john-sowa foaf:name "John Sowa" .
+}
+
+:provenance {
+  :assertion prov:wasAttributedTo orcid:0000-0002-2958-3428, orcid:0000-0001-7703-3503, orcid:0000-0002-3804-2498, orcid:0000-0002-5759-2655, orcid:0000-0002-1267-0234, orcid:0000-0001-7864-5229, orcid:0000-0001-8998-7005 .
+  :assertion prov:wasDerivedFrom <https://doi.org/10.1007/978-3-642-14418-9_17> .
+}
+
+:pubinfo {
+  : dct:created "2026-02-23T13:37:38.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.1007/978-3-642-14418-9_17>;
+    rdfs:label "On Controlled Natural Languages: Properties and Prospects" .
+
+  orcid:0000-0002-2958-3428 foaf:name "Adam Wyner" .
+  orcid:0000-0001-7703-3503 foaf:name "Krasimir Angelov" .
+  orcid:0000-0002-3804-2498 foaf:name "Guntis Barzdins" .
+  orcid:0000-0002-5759-2655 foaf:name "Brian Davis" .
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0001-7864-5229 foaf:name "Jonathan Pool" .
+  orcid:0000-0001-8998-7005 foaf:name "Rolf Schwitter" .
+
+  :sig npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}

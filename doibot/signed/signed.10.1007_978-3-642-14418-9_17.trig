@@ -1,0 +1,114 @@
+@prefix this: <https://w3id.org/np/RAj4JnM3A7dUpngPKorXta80eU_ZKvv1NsI2FHaGXhJM0> .
+@prefix sub: <https://w3id.org/np/RAj4JnM3A7dUpngPKorXta80eU_ZKvv1NsI2FHaGXhJM0/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  <http://id.crossref.org/issn/0302-9743> dct:title "Lecture Notes in Computer Science" .
+  
+  <https://doi.org/10.1007/978-3-642-14418-9_17> a fabio:BookChapter;
+    dct:date "2010";
+    dct:isPartOf <http://id.crossref.org/issn/0302-9743>;
+    dct:title "On Controlled Natural Languages: Properties and Prospects";
+    bibo:authorList sub:author-list;
+    bibo:pageEnd "289";
+    bibo:pageStart "281" .
+  
+  orcid:0000-0001-7703-3503 foaf:name "Krasimir Angelov" .
+  
+  orcid:0000-0001-7864-5229 foaf:name "Jonathan Pool" .
+  
+  orcid:0000-0001-8998-7005 foaf:name "Rolf Schwitter" .
+  
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0002-2958-3428 foaf:name "Adam Wyner" .
+  
+  orcid:0000-0002-3804-2498 foaf:name "Guntis Barzdins" .
+  
+  orcid:0000-0002-5759-2655 foaf:name "Brian Davis" .
+  
+  sub:author-list rdf:_1 orcid:0000-0002-2958-3428;
+    rdf:_10 orcid:0000-0002-1267-0234;
+    rdf:_11 sub:martin-luts;
+    rdf:_12 orcid:0000-0001-7864-5229;
+    rdf:_13 sub:mike-rosner;
+    rdf:_14 orcid:0000-0001-8998-7005;
+    rdf:_15 sub:john-sowa;
+    rdf:_2 orcid:0000-0001-7703-3503;
+    rdf:_3 orcid:0000-0002-3804-2498;
+    rdf:_4 sub:danica-damljanovic;
+    rdf:_5 orcid:0000-0002-5759-2655;
+    rdf:_6 sub:norbert-fuchs;
+    rdf:_7 sub:stefan-hoefler;
+    rdf:_8 sub:ken-jones;
+    rdf:_9 sub:kaarel-kaljurand .
+  
+  sub:danica-damljanovic foaf:name "Danica Damljanovic" .
+  
+  sub:john-sowa foaf:name "John Sowa" .
+  
+  sub:kaarel-kaljurand foaf:name "Kaarel Kaljurand" .
+  
+  sub:ken-jones foaf:name "Ken Jones" .
+  
+  sub:martin-luts foaf:name "Martin Luts" .
+  
+  sub:mike-rosner foaf:name "Mike Rosner" .
+  
+  sub:norbert-fuchs foaf:name "Norbert Fuchs" .
+  
+  sub:stefan-hoefler foaf:name "Stefan Hoefler" .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0001-7703-3503, orcid:0000-0001-7864-5229,
+      orcid:0000-0001-8998-7005, orcid:0000-0002-1267-0234, orcid:0000-0002-2958-3428, orcid:0000-0002-3804-2498,
+      orcid:0000-0002-5759-2655;
+    prov:wasDerivedFrom <https://doi.org/10.1007/978-3-642-14418-9_17> .
+}
+
+sub:pubinfo {
+  orcid:0000-0001-7703-3503 foaf:name "Krasimir Angelov" .
+  
+  orcid:0000-0001-7864-5229 foaf:name "Jonathan Pool" .
+  
+  orcid:0000-0001-8998-7005 foaf:name "Rolf Schwitter" .
+  
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0002-2958-3428 foaf:name "Adam Wyner" .
+  
+  orcid:0000-0002-3804-2498 foaf:name "Guntis Barzdins" .
+  
+  orcid:0000-0002-5759-2655 foaf:name "Brian Davis" .
+  
+  this: dct:created "2026-02-23T13:37:38.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.1007/978-3-642-14418-9_17>;
+    rdfs:label "On Controlled Natural Languages: Properties and Prospects" .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
+    npx:hasSignature "W3gjDY3x4EbwwDVbeXni8CryonOTGKLCOanKu9HKYlhDNDx6gZd9gbKvEi1tIT4L1ifedOF4CBLl82ufES8blCUXRh35O+Vsx4EapcDPtSfWOB58tz7C7uD+gNJQdGkiA1Gk42MiC/ZRO89W6UGjXeT1jSVguK9/KASBw5PB3UXhZD0yvjlqWU5S3PQ0COsD+CYKRvLcgYgxOfmWZEc7ouX0C5rjd9gdYgNVdTYrTDlVea1C5xPteE6x16FG9+5ln2IFSbwZlYHgxbQS2trjvuGushzcWpCwDe7zQfzWjtgVxXBq7ZbnVYP2af+pKLPBdd+R49D9HtrNyYp+bmJrwg==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}
