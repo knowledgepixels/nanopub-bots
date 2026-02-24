@@ -1,13 +1,15 @@
-@prefix this: <https://w3id.org/np/RAarz4K1c2OdtztTcxU9wgwpFiSqsFH6b07O_c6FAuNNg> .
-@prefix sub: <https://w3id.org/np/RAarz4K1c2OdtztTcxU9wgwpFiSqsFH6b07O_c6FAuNNg/> .
+@prefix this: <https://w3id.org/np/RA2ULq5M5RJOgIz4ADJa3rSL_Rmdem1B3cO_6dVBlEyAU> .
+@prefix sub: <https://w3id.org/np/RA2ULq5M5RJOgIz4ADJa3rSL_Rmdem1B3cO_6dVBlEyAU/> .
+@prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -28,13 +30,21 @@ sub:assertion {
     bibo:pageEnd "147";
     bibo:pageStart "140" .
   
-  orcid:0000-0001-9568-9581 foaf:name "Valentina Maccatrozzo" .
+  orcid:0000-0001-9568-9581 schema:affiliation ror:008xxew50;
+    foaf:name "Valentina Maccatrozzo" .
   
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:008xxew50;
+    foaf:name "Tobias Kuhn" .
   
-  orcid:0000-0002-3357-9130 foaf:name "Davide Ceolin" .
+  orcid:0000-0002-3357-9130 schema:affiliation ror:00x7ekv49;
+    foaf:name "Davide Ceolin" .
   
-  orcid:0000-0002-7748-4715 foaf:name "Jacco Van Ossenbruggen" .
+  orcid:0000-0002-7748-4715 schema:affiliation ror:008xxew50;
+    foaf:name "Jacco Van Ossenbruggen" .
+  
+  ror:008xxew50 foaf:name "Vrije Universiteit Amsterdam" .
+  
+  ror:00x7ekv49 foaf:name "Centrum Wiskunde & Informatica, Amsterdam, Netherlands" .
   
   sub:author-list rdf:_1 orcid:0000-0001-9568-9581;
     rdf:_2 orcid:0000-0002-1267-0234;
@@ -59,16 +69,17 @@ sub:pubinfo {
   
   orcid:0000-0002-7748-4715 foaf:name "Jacco Van Ossenbruggen" .
   
-  this: dct:created "2026-02-23T12:15:19.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-02-24T21:00:57.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1145/3587259.3627552>;
+    npx:supersedes <https://w3id.org/np/RAarz4K1c2OdtztTcxU9wgwpFiSqsFH6b07O_c6FAuNNg>;
     rdfs:label "The Role of Serendipity in User-Curated Music Playlists" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "k8BOXbNNWKzggV95na9vt8P4WVl/5ROuOtmDP9vu8Jhi95tuV/BaC/hmY88Ivx6/O2kP33/xPTCI2NgMPykGMfADuMSs0RojfUBSpgGNG4mbtBC/Xfki/eF1VZLktT+5dNKRgP6mKxeo49IbH3TWORJEw9F3C6vonJJspOdgRd4QNA5IJLEwjWqu7OvNo0VZvtW68dv1uuYipVfEeFqKgfIQuPWfGkncM74eeT/cybfmWa6aPOOQ486MbjihhySx1GNxK/t5TQ1fTCD2+p7qkp0nd+hwAr7zo105Kckja61K2a/dhC7xHsVZXMJFj74Wx5L+Xc8LOvBcuY304vST8w==";
+    npx:hasSignature "aVSTHf52TjiF0lauIlgLHSBatYdALoDujmpA1labtI+noIqEd6jQfAxfW+THQAa2F+J94zyQ68dILi+iRKSEA+HiuxQyhPDZ/RGLiraKO3WVLkbKtm5W2km+yOdl+tigdqVkcdhF71UxUD9fZ7kVykIUVj/h7MxFPhOVIqsNGufXcJLgo03UCz7DI4yPXbL7J6atXx56CzROuGGIVN9FWcUDpnApx0jBpOhLO6VO3rJSYtvTZTv9c2T7++lAf4KeYCh15VwvejZnA5+pGQR2fy4VrTIw6rTMsC2Bl3cjFaj3xJgnfR+pEj4nmQrvLsPyQ3ZE60Q6UGihQmT5Dt+ENg==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }
