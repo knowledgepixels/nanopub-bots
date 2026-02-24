@@ -36,9 +36,13 @@
   :author-list rdf:_1 orcid:0000-0002-1267-0234 .
   :author-list rdf:_2 orcid:0000-0003-4727-9435 .
 
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:05a28rw58;
+    foaf:name "Tobias Kuhn" .
+  orcid:0000-0003-4727-9435 schema:affiliation ror:00f54p054;
+    foaf:name "Michel Dumontier" .
 
-  orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
+  ror:05a28rw58 foaf:name "ETH Zurich, Switzerland" .
+  ror:00f54p054 foaf:name "Stanford University, Stanford, United States" .
 
 }
 
@@ -48,12 +52,12 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-22T10:51:40.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-02-24T21:00:57.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1007/978-3-319-07443-6_27>;
-    npx:supersedes <https://w3id.org/np/RAfvmvclbDi-wR2a83ey64iquraTl-ej5F5JVSukB1480> ;
+    npx:supersedes <https://w3id.org/np/RAdJNLk4oHgzzjzC9nT_rl70fF4Nfy4grdrLMHx1QvSbY> ;
     rdfs:label "Trusty URIs: Verifiable, Immutable, and Permanent Digital Artifacts for Linked Data" .
 
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .

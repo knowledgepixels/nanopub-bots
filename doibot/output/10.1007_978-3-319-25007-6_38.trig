@@ -38,10 +38,20 @@
   :author-list rdf:_3 orcid:0000-0002-4808-1845 .
   :author-list rdf:_4 orcid:0000-0003-4727-9435 .
 
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
-  orcid:0000-0001-6818-334X foaf:name "Christine Chichester" .
-  orcid:0000-0002-4808-1845 foaf:name "Michael Krauthammer" .
-  orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:05a28rw58;
+    foaf:name "Tobias Kuhn" .
+  orcid:0000-0001-6818-334X schema:affiliation ror:002n09z45;
+    foaf:name "Christine Chichester" .
+  orcid:0000-0002-4808-1845 schema:affiliation ror:03v76x132;
+    foaf:name "Michael Krauthammer" .
+  orcid:0000-0003-4727-9435 schema:affiliation ror:00f54p054;
+    foaf:name "Michel Dumontier" .
+
+  ror:05a28rw58 foaf:name "ETH Zurich, Switzerland" .
+  ror:002n09z45 foaf:name "SIB Swiss Institute of Bioinformatics, Switzerland" .
+  ror:03v76x132 foaf:name "Yale University, New Haven, United States" .
+  ror:00f54p054 foaf:name "Stanford University, Stanford, United States" .
+
 }
 
 :provenance {
@@ -50,11 +60,12 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-23T12:36:06.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-02-24T21:00:57.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1007/978-3-319-25007-6_38>;
+    npx:supersedes <https://w3id.org/np/RA3Km4ZU2scW0ofyA9i5gOmNLgHFbflbduiiFWSqOug6I> ;
     rdfs:label "Publishing Without Publishers: A Decentralized Approach to Dissemination, Retrieval, and Archiving of Data" .
 
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .

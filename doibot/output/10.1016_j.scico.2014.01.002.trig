@@ -36,8 +36,14 @@
   :author-list rdf:_1 orcid:0000-0002-1267-0234 .
   :author-list rdf:_2 orcid:0000-0001-8087-1903 .
 
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
-  orcid:0000-0001-8087-1903 foaf:name "Alexandre Bergel" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:05a28rw58;
+    foaf:name "Tobias Kuhn" .
+  orcid:0000-0001-8087-1903 schema:affiliation ror:047gc3g35;
+    foaf:name "Alexandre Bergel" .
+
+  ror:05a28rw58 foaf:name "ETH Zurich, Switzerland" .
+  ror:047gc3g35 foaf:name "Universidad de Chile, Santiago, Chile" .
+
 }
 
 :provenance {
@@ -46,11 +52,12 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-23T12:15:28.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-02-24T21:00:57.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1016/j.scico.2014.01.002>;
+    npx:supersedes <https://w3id.org/np/RANA7hR6HL9CmQnFvjywmD9OUx__ycy2GEa9auKvT-g-U> ;
     rdfs:label "Verifiable source code documentation in controlled natural language" .
 
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .

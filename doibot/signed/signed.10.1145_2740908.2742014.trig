@@ -1,13 +1,15 @@
-@prefix this: <https://w3id.org/np/RA0SLh0jrgrcu6AH2gI2VbJV9g7-fh-QRCClaibDmYDdY> .
-@prefix sub: <https://w3id.org/np/RA0SLh0jrgrcu6AH2gI2VbJV9g7-fh-QRCClaibDmYDdY/> .
+@prefix this: <https://w3id.org/np/RAQ-Y_IhBVzKWrntPuM9IOow4b84QNbQblxjEJffA4DNs> .
+@prefix sub: <https://w3id.org/np/RAQ-Y_IhBVzKWrntPuM9IOow4b84QNbQblxjEJffA4DNs/> .
+@prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -27,7 +29,10 @@ sub:assertion {
     bibo:pageEnd "1062";
     bibo:pageStart "1061" .
   
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:05a28rw58;
+    foaf:name "Tobias Kuhn" .
+  
+  ror:05a28rw58 foaf:name "ETH Zurich, Switzerland" .
   
   sub:author-list rdf:_1 orcid:0000-0002-1267-0234 .
 }
@@ -40,17 +45,17 @@ sub:provenance {
 sub:pubinfo {
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
   
-  this: dct:created "2026-02-22T10:51:40.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-02-24T21:00:57.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1145/2740908.2742014>;
-    npx:supersedes <https://w3id.org/np/RASVwclwhXInbLyMk61olxSHDhUFrXZ1tGzJpRxFIOofw>;
+    npx:supersedes <https://w3id.org/np/RA0SLh0jrgrcu6AH2gI2VbJV9g7-fh-QRCClaibDmYDdY>;
     rdfs:label "Science Bots: A Model for the Future of Scientific Computation?" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "kxkyujvk/cnKyDXBMmWKmlnxWGf+JBnhcwaMi9pXpzRhYjlfp1Gpzbv/ku7g27GA4XUnqRIdrVGhCLKLnnQn7rJ28kaFkvGJmM2jHg22UWXB+0782vAxwn2Kb16br8qN3+E0tQujJw1BFvkVh0WOeBtUzKbPBtL0+IJr8YSFiaZWoJZqNM5SnrLTr4YCpelJeApchqLswoUGe4CcEMG2pXYUupl0rCS3hzrNuOLUrnSaCMpzS4apgedG4DIsqQCFI3EpOakPr7wftsoDBetTLhBXXyMGf4rdTZK7p51sl193vIYQ3buLWnTJQiJ66Ts66E6YIChElbnr+fUfJBiJww==";
+    npx:hasSignature "kXjTy5PX22y500q8ymT81ru0N1yA6Tx2QGDlTHgciBh/gBwDa4oisRv7CJpC44mB7ghCUOEHOV6mEAQ6D5QPO5QU3dqxc/XX5LCRSX6xR5CHu1cBIdy7mGhfrh1p+5qlXtqvgE/Uz2xPpc7tQS0Nkfa5rjGDLi6NA3ZT8lA6HxeXyl7Dut/jT0QxOrHVVq2Uf/rPl+oUMFV62PlaOq0Ecbdus4yYqjvms6AK/IwyT3n+UPi/M6jHxtxeWRAXY0BWD3rUQQy+0/UGxqCUPstpUuBopkKZkYW2xBvLoex2lCYxp02+ybegK8+4MezgXvrTgJDOuZcF0hQYX5PU+n5zig==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

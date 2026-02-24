@@ -1,13 +1,15 @@
-@prefix this: <https://w3id.org/np/RAS9F597YVC6u2Atsn52iLW29v_pqkdzS3qINzcpAbCLc> .
-@prefix sub: <https://w3id.org/np/RAS9F597YVC6u2Atsn52iLW29v_pqkdzS3qINzcpAbCLc/> .
+@prefix this: <https://w3id.org/np/RA_4ujoAli86c-kh9uETUSwPdyM7lid-k9SIICaesWdbw> .
+@prefix sub: <https://w3id.org/np/RA_4ujoAli86c-kh9uETUSwPdyM7lid-k9SIICaesWdbw/> .
+@prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -31,7 +33,10 @@ sub:assertion {
     bibo:pageStart "101";
     bibo:volume "4" .
   
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:02crff812;
+    foaf:name "Tobias Kuhn" .
+  
+  ror:02crff812 foaf:name "University of Zurich, Switzerland" .
   
   sub:author-list rdf:_1 orcid:0000-0002-1267-0234 .
 }
@@ -44,17 +49,17 @@ sub:provenance {
 sub:pubinfo {
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
   
-  this: dct:created "2026-02-22T10:51:40.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-02-24T21:00:57.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.3233/SW-2012-0063>;
-    npx:supersedes <https://w3id.org/np/RAj0RzjA87l1DcZ1Lota3JKl8HK7VNihWXCQLUFqAWqQk>;
+    npx:supersedes <https://w3id.org/np/RAS9F597YVC6u2Atsn52iLW29v_pqkdzS3qINzcpAbCLc>;
     rdfs:label "The understandability of OWL statements in controlled English" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "RK2aq+pgn4/c3beiWAZ5MnVKnjt69/rdEPoVML4LayVwuI02jOEirxksGaFEQFgDcSoxa1tcQLaqqmNaiZTr8TBo36NR9eGFjzFm7ZmlFIcoLc9pJwEpFqphULz97VvHF4VRgIPfg3LZD+DV8ena15j9MFaImIN58wC4J+egTtXU9cr9AQCxIHUduhs0hAHS1HpcH3+G6RBN12TUE2dcoToWEXyPKh2lRzAKFXBOZcoHG1llMzaV0rPBhTg0LbQUxgTUv7sdBvTiFQgHWeS6qH1p22Dke3K6NEZ18d3tdYhYeBLHhciltqVkUCfoEXMElDG6GU7cWZ4WRIhfz5ENyA==";
+    npx:hasSignature "EIF4Yf3PkYfd0h+xUwsbl8wTi9/wsTUTGoltvIncxRH5hRRgKbrOEcbAUXuF5ApNtj6usUPiLR5E0G6KRA4wjLjbwMUGIrZmCXkyt8LD8Q4aeWvJfPP91ntdqY3pDCJVBGNrj6wk+I25MbPvP70hsQMYolLrDrStpwbas0eOU1lJodqeoSy+qeGg4XLrJBo+glja/ZjyrM1A2qHZGMZvW+u01/a7O1gJlMFX7q5eXKXBKqWYuK78WsXeo5X+IIll3RqsRym12UKK6+yG5RhPhHBbtHhg8QELtiAGugrhPUVWjG7RsFDFveJygIx6BPawOOgK9We8YvW96wW3dOELcg==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

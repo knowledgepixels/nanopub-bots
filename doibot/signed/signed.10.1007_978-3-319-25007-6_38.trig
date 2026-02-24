@@ -1,13 +1,15 @@
-@prefix this: <https://w3id.org/np/RA3Km4ZU2scW0ofyA9i5gOmNLgHFbflbduiiFWSqOug6I> .
-@prefix sub: <https://w3id.org/np/RA3Km4ZU2scW0ofyA9i5gOmNLgHFbflbduiiFWSqOug6I/> .
+@prefix this: <https://w3id.org/np/RATiBhg9mOyCdsFNxB5rbpJa9BlGsx5BJrMOPQdG-VmVA> .
+@prefix sub: <https://w3id.org/np/RATiBhg9mOyCdsFNxB5rbpJa9BlGsx5BJrMOPQdG-VmVA/> .
+@prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -30,13 +32,25 @@ sub:assertion {
     bibo:pageEnd "672";
     bibo:pageStart "656" .
   
-  orcid:0000-0001-6818-334X foaf:name "Christine Chichester" .
+  orcid:0000-0001-6818-334X schema:affiliation ror:002n09z45;
+    foaf:name "Christine Chichester" .
   
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:05a28rw58;
+    foaf:name "Tobias Kuhn" .
   
-  orcid:0000-0002-4808-1845 foaf:name "Michael Krauthammer" .
+  orcid:0000-0002-4808-1845 schema:affiliation ror:03v76x132;
+    foaf:name "Michael Krauthammer" .
   
-  orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
+  orcid:0000-0003-4727-9435 schema:affiliation ror:00f54p054;
+    foaf:name "Michel Dumontier" .
+  
+  ror:002n09z45 foaf:name "SIB Swiss Institute of Bioinformatics, Switzerland" .
+  
+  ror:00f54p054 foaf:name "Stanford University, Stanford, United States" .
+  
+  ror:03v76x132 foaf:name "Yale University, New Haven, United States" .
+  
+  ror:05a28rw58 foaf:name "ETH Zurich, Switzerland" .
   
   sub:author-list rdf:_1 orcid:0000-0002-1267-0234;
     rdf:_2 orcid:0000-0001-6818-334X;
@@ -59,16 +73,17 @@ sub:pubinfo {
   
   orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
   
-  this: dct:created "2026-02-23T12:36:06.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-02-24T21:00:57.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1007/978-3-319-25007-6_38>;
+    npx:supersedes <https://w3id.org/np/RA3Km4ZU2scW0ofyA9i5gOmNLgHFbflbduiiFWSqOug6I>;
     rdfs:label "Publishing Without Publishers: A Decentralized Approach to Dissemination, Retrieval, and Archiving of Data" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "CPjg2T7ebFYCZPjtf3VyUd9hqWRn+9rnKkR81i1xGQhCw7Um+tD1Y5hD9DU75mtdZ7c5zuTvrA7i32xFE6iGHsWqRxE5A42TXcRKegIsgIoQMkATk9UWes+PBKm7cxbCDdLCLdYHeEA40GA1zADTK05gTx1jZmimdQtwXU6S50agHPg218BT9NT2J2rAdC+LhcSXUlCjWhF6e0XgSDGqreWjntLpNTBRl+rWvTQrpzVOJvf5Dy8oRzKg3WswV9MxaelhF/psg2Y5pzNzZpefXa/dIp15tgOSrUfE2mf7ncj1IUPyCQZSMjaeQNJERve2o7WyDx0Cn6gFOjihk0wTvQ==";
+    npx:hasSignature "OhBH3UuxGsATgXDhbIB0NQxVCZK0KcuLRHUAztbhzln8qiUUHxYNvIPxViRlb5Z4n7oD/XnnltQl+ZKux/v5Z1Nrf9MRf04gx4NpFC0gny6HhDOkFFJFpXNySqRtD5YHBljK2/8udgg+B16XpKx5y/NMN03P5R3klkPY3nVgfZjj3/PdrBrQWKoXf4VG4PBVun8Hd6/J1e2a+CW37PE6rFfxvKZx/OmxyqBgsGZ0gk3NDkM0iXXB7P6y6ApnXqLcUOOKnylC7s9R8tlZIobkGDDVbCwepb5WbaKftekKXZKNP8W/LazUTLXcRAEcY5Ko2H6ONQ3GYGoUPbMKTuj4jQ==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

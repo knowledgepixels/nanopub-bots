@@ -1,13 +1,15 @@
-@prefix this: <https://w3id.org/np/RADzfBrBMNqWDp32kHCIWikeLxjrvAJgRbWggnDF6RZQA> .
-@prefix sub: <https://w3id.org/np/RADzfBrBMNqWDp32kHCIWikeLxjrvAJgRbWggnDF6RZQA/> .
+@prefix this: <https://w3id.org/np/RAHSzp54p6-mCeyjX8ax7ASWZwIbb1GnGr6UBZ_9Wl2BE> .
+@prefix sub: <https://w3id.org/np/RAHSzp54p6-mCeyjX8ax7ASWZwIbb1GnGr6UBZ_9Wl2BE/> .
+@prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -30,7 +32,10 @@ sub:assertion {
     bibo:pageEnd "20";
     bibo:pageStart "1" .
   
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:02crff812;
+    foaf:name "Tobias Kuhn" .
+  
+  ror:02crff812 foaf:name "University of Zurich, Switzerland" .
   
   sub:author-list rdf:_1 orcid:0000-0002-1267-0234 .
 }
@@ -43,16 +48,17 @@ sub:provenance {
 sub:pubinfo {
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
   
-  this: dct:created "2026-02-23T12:52:39.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-02-24T21:00:57.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1007/978-3-642-14418-9_1>;
+    npx:supersedes <https://w3id.org/np/RADzfBrBMNqWDp32kHCIWikeLxjrvAJgRbWggnDF6RZQA>;
     rdfs:label "An Evaluation Framework for Controlled Natural Languages" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "ELnNgTth0Ly2xWXMQ3UO+tnuuaSRXxLCgF0CWgeGjqJ8U40XHplVEmWj20C2eZhTkPC2u9SkbJzZds3Kxc9bu74jDsmsE/sJerjxY7OxP5G+J8Da0yscqrhG3uoY7MA2B6/W4jNUTK8fZIyIP7G3SEKK0wsizqgpii20x25KBYpiAvIAQfZ+Io9n4UbgoPD0ii7XBayt3rZNQIJzoN28pBMSGj5UG3YxKfVv8/u4BA/7YMo18d8v+rj7QNVnsNKuymfFcXv+Gh+PJMtdMC0kVvUyQZtJItv8f3ezTDg2rgZrZLqaofJASF/t1rX3ZktwXrZqjr3zTf9xhOHk4xRQuw==";
+    npx:hasSignature "YuOKAgtCjBNOS0pLrAlwQN6ATTM03igHkMrCpw0fxUAQ/QBiuuLVs+7DIUG06hlFKZuCqM09kWmx+trmiwP4YpDVHVZqzIzP0ULl/UFDeM59PRfrMXu/qB0c1vRrWReJQgSoOojzwfhHBHbCZyNbLUJtMMlnrEzXoBITYCPxb1K+BWkpa4g80YJNbaZawigou6sqjEMjWXMx6wWIXW2AEba6J7X/GjcOwVOvC0GS6Sb/1mm7QTdC2/jNguBuj3Grzvy6K+ZjazGD0wo6FugrEae++cAE3DPlqRxj2EDSaZrjUCWmZQNOLPSb6tN2OZKyAvV4PtTN8B2Kh2inegpPEQ==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

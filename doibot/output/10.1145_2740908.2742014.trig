@@ -32,7 +32,10 @@
 
   :author-list rdf:_1 orcid:0000-0002-1267-0234 .
 
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:05a28rw58;
+    foaf:name "Tobias Kuhn" .
+
+  ror:05a28rw58 foaf:name "ETH Zurich, Switzerland" .
 
 }
 
@@ -42,12 +45,12 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-22T10:51:40.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-02-24T21:00:57.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1145/2740908.2742014>;
-    npx:supersedes <https://w3id.org/np/RASVwclwhXInbLyMk61olxSHDhUFrXZ1tGzJpRxFIOofw> ;
+    npx:supersedes <https://w3id.org/np/RA0SLh0jrgrcu6AH2gI2VbJV9g7-fh-QRCClaibDmYDdY> ;
     rdfs:label "Science Bots: A Model for the Future of Scientific Computation?" .
 
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .

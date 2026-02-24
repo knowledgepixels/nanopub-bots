@@ -1,13 +1,15 @@
-@prefix this: <https://w3id.org/np/RA3jbVz5n7kzkSBbFeKkyb2xj84bP8zrA0i40-cNxX9xs> .
-@prefix sub: <https://w3id.org/np/RA3jbVz5n7kzkSBbFeKkyb2xj84bP8zrA0i40-cNxX9xs/> .
+@prefix this: <https://w3id.org/np/RAW8YY5WH_w1W6c7OpLr6H9CMeo6KNyr93hbgsEzXPPtY> .
+@prefix sub: <https://w3id.org/np/RAW8YY5WH_w1W6c7OpLr6H9CMeo6KNyr93hbgsEzXPPtY/> .
+@prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -31,9 +33,15 @@ sub:assertion {
     bibo:pageStart "2390";
     bibo:volume "27" .
   
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:05a28rw58;
+    foaf:name "Tobias Kuhn" .
   
-  orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
+  orcid:0000-0003-4727-9435 schema:affiliation ror:00f54p054;
+    foaf:name "Michel Dumontier" .
+  
+  ror:00f54p054 foaf:name "Stanford University, Stanford, United States" .
+  
+  ror:05a28rw58 foaf:name "ETH Zurich, Switzerland" .
   
   sub:author-list rdf:_1 orcid:0000-0002-1267-0234;
     rdf:_2 orcid:0000-0003-4727-9435 .
@@ -49,17 +57,17 @@ sub:pubinfo {
   
   orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
   
-  this: dct:created "2026-02-22T10:51:40.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-02-24T21:00:57.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1109/TKDE.2015.2419657>;
-    npx:supersedes <https://w3id.org/np/RA9YpXw3uvDrvd8feeJLTFqRFcMQIRTQ4lVlfOZhYskXk>;
+    npx:supersedes <https://w3id.org/np/RA3jbVz5n7kzkSBbFeKkyb2xj84bP8zrA0i40-cNxX9xs>;
     rdfs:label "Making Digital Artifacts on the Web Verifiable and Reliable" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "O+ZVFpVAdUZS6FQ5E/Q9H2zoCfpZN1i19jadLEUyXj9mGwtvqnJb2I0Z2emfpPzk12KjcP89b/3J9/eJek6Uq3qU33Ju5yCIgeWslgDaj1yS41/Dw3+s7CVOcYt8XXc5ukKLviYApXUC5DmbiFBiDywfnyNfWuLChNm5galYl9QX6M6Zjwofx6zPPeavhKdlgRafKDJqY/zNGOmKPGPHwv22BsC8fBQlXScrS1uiqM8QZnZaGeOjXftKafabrwr4uFVzBjykhX6JWlHMR5rv2Bxb4fnzQFgQYac+kHbiiPPbid8dQAd1KJ7dqwVysa+20Tq4QbNKTN0mjqYa+0eXgQ==";
+    npx:hasSignature "IChlwmIDCWRP6OFljWWwLCmXEB0+NjEu4LNjKLJe+g3SEUocGEhEinGGLUN3J93psOuxPq+Sl65awgQbQGKoZRfVgtdgzZ8KmRZqXM0zs5BmAtdEG+rJflg4TXsILeutkhCb1WXfwa0mYvvK8gGXjQNO3fOlXAXM63U//yPAxVJdwx87IuYegAYyGPN762dN4iCeFvqj5PYliljKgL38JzW5a1k3LVlZS1tDphK07z3Fr+pZVwIrhWSexuUOWb7VVnvZDV2kBwGJfxbBeQnfhALtyp1AwuKF63PbRDd5B6GqEZ/dIHcj4RkLdhIiCH6m+waly6ZPxxGscs6CHoRBKw==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }
