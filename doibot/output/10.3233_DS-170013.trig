@@ -36,8 +36,14 @@
   :author-list rdf:_1 orcid:0000-0003-4727-9435 .
   :author-list rdf:_2 orcid:0000-0002-1267-0234 .
 
-  orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0003-4727-9435 schema:affiliation ror:02jz4aj89;
+    foaf:name "Michel Dumontier" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:008xxew50;
+    foaf:name "Tobias Kuhn" .
+
+  ror:02jz4aj89 foaf:name "Maastricht University" .
+  ror:008xxew50 foaf:name "Vrije Universiteit Amsterdam" .
+
 }
 
 :provenance {
@@ -46,11 +52,12 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-23T12:28:38.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-02-24T21:00:57.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.3233/DS-170013>;
+    npx:supersedes <https://w3id.org/np/RA3vCtjhVKZXvsZN5CEhQPP1qos5b0dWoyaAg43UCMpLM> ;
     rdfs:label "Data Science – Methods, infrastructure, and applications" .
 
   orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .

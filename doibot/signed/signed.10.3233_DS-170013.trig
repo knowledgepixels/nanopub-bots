@@ -1,13 +1,15 @@
-@prefix this: <https://w3id.org/np/RA3vCtjhVKZXvsZN5CEhQPP1qos5b0dWoyaAg43UCMpLM> .
-@prefix sub: <https://w3id.org/np/RA3vCtjhVKZXvsZN5CEhQPP1qos5b0dWoyaAg43UCMpLM/> .
+@prefix this: <https://w3id.org/np/RAMbrUbTJvip2Bc-XtaiTH1YDksRHzdg37zBBWycnJPqQ> .
+@prefix sub: <https://w3id.org/np/RAMbrUbTJvip2Bc-XtaiTH1YDksRHzdg37zBBWycnJPqQ/> .
+@prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -30,9 +32,15 @@ sub:assertion {
     bibo:pageEnd "5";
     bibo:pageStart "1" .
   
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:008xxew50;
+    foaf:name "Tobias Kuhn" .
   
-  orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
+  orcid:0000-0003-4727-9435 schema:affiliation ror:02jz4aj89;
+    foaf:name "Michel Dumontier" .
+  
+  ror:008xxew50 foaf:name "Vrije Universiteit Amsterdam" .
+  
+  ror:02jz4aj89 foaf:name "Maastricht University" .
   
   sub:author-list rdf:_1 orcid:0000-0003-4727-9435;
     rdf:_2 orcid:0000-0002-1267-0234 .
@@ -48,16 +56,17 @@ sub:pubinfo {
   
   orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
   
-  this: dct:created "2026-02-23T12:28:38.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-02-24T21:00:57.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.3233/DS-170013>;
+    npx:supersedes <https://w3id.org/np/RA3vCtjhVKZXvsZN5CEhQPP1qos5b0dWoyaAg43UCMpLM>;
     rdfs:label "Data Science – Methods, infrastructure, and applications" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "Ay28jVnG1xh9T/ZqxmflArdaUUL1Lg7qROrCz/VMZjQGofU6CKDv1L68XZgzxISKi5eUSGGH+/+VVPbqfLd59tfiHyvyuQ3fqcXpIRkj0rfMur4H1hYmb7kbNrQicAwzzUSi9pTMHDYwyoP3voi+m1/Ba2rbMini+eT5KK3tVVINGHZPoR8q34+GY97DIXv2uLXu/nPjeJ3H8lQLeFkQkM4blhpYTnPPW1DPxhDGcbPUqcAIKXIU0UVad6DZgF5TymawI3NyL6P12tUvVJUqbHxXgPr5ZC40sCVE/Deyj5NUISa9+uhqJAhwXedzR08si6wRjI1D0ixxSVFu5L9wag==";
+    npx:hasSignature "M//6F1wDEKIkbpTYNJJiEKBf9iTboCGpIH7ITLmklZbYhdlQZQjRkcUWMowXtxp6PZZ3y2dlQxG0OlPYVcp4uTodcDluxkQbOVJ8tyzCb59TLIRigftoBfFZXdjUg4kF4D+EbIfZe7v9Drz8MstUInvaiOxzNsOmp3Pl0Jj+kwQvpt3vwhEvXAyiucZ9D1LUl3ypR7rI5HSvdJqiluaM4puvgFdMrfvDwlCO2+AmdhRx6MT1HnXpS9+sBNDg8txuBx93CsEq1wFTj9UA6E50wl5zo2yovWyo6b3LkphxTV5W87lBm86+dAmuHAFdW7Cgx4OH6hkAtSxxxhBu9TIdYg==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

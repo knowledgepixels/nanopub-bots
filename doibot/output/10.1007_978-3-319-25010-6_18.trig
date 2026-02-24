@@ -38,10 +38,18 @@
   :author-list rdf:_3 orcid:0000-0001-9385-7158 .
   :author-list rdf:_4 orcid:0000-0003-4727-9435 .
 
-  orcid:0000-0001-8499-824X foaf:name "Juan M. Banda" .
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
-  orcid:0000-0001-9385-7158 foaf:name "Nigam H. Shah" .
-  orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
+  orcid:0000-0001-8499-824X schema:affiliation ror:00f54p054;
+    foaf:name "Juan M. Banda" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:05a28rw58;
+    foaf:name "Tobias Kuhn" .
+  orcid:0000-0001-9385-7158 schema:affiliation ror:00f54p054;
+    foaf:name "Nigam H. Shah" .
+  orcid:0000-0003-4727-9435 schema:affiliation ror:00f54p054;
+    foaf:name "Michel Dumontier" .
+
+  ror:05a28rw58 foaf:name "ETH Zurich, Switzerland" .
+  ror:00f54p054 foaf:name "Stanford University, Stanford, United States" .
+
 }
 
 :provenance {
@@ -50,11 +58,12 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-23T12:43:30.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-02-24T21:00:57.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1007/978-3-319-25010-6_18>;
+    npx:supersedes <https://w3id.org/np/RAH3U89j2Q-jeZcVzBd925vqM5Cai8tRLrmi8b6ot4WSw> ;
     rdfs:label "Provenance-Centered Dataset of Drug-Drug Interactions" .
 
   orcid:0000-0001-8499-824X foaf:name "Juan M. Banda" .
