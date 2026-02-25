@@ -35,7 +35,10 @@
 
   :author-list rdf:_1 orcid:0000-0002-1267-0234 .
 
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:03v76x132;
+    foaf:name "Tobias Kuhn" .
+
+  ror:03v76x132 foaf:name "Yale University, New Haven, United States" .
 }
 
 :provenance {
@@ -44,11 +47,12 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-23T12:29:07.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-02-25T10:27:16.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1007/978-3-642-31175-8_6>;
+    npx:supersedes <https://w3id.org/np/RA_zrKkUhXsk2-efaEy7raRxIsbZnir2xOea4yavXYa7k> ;
     rdfs:label "Codeco: A Practical Notation for Controlled English Grammars in Predictive Editors" .
 
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .

@@ -37,9 +37,16 @@
   :author-list rdf:_2 orcid:0000-0002-1267-0234 .
   :author-list rdf:_3 orcid:0000-0002-2063-4516 .
 
-  orcid:0000-0003-0197-9743 foaf:name "Kurt Winkler" .
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
-  orcid:0000-0002-2063-4516 foaf:name "Martin Volk" .
+  orcid:0000-0003-0197-9743 schema:affiliation ror:04pzmmv39;
+    foaf:name "Kurt Winkler" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:05a28rw58;
+    foaf:name "Tobias Kuhn" .
+  orcid:0000-0002-2063-4516 schema:affiliation ror:02crff812;
+    foaf:name "Martin Volk" .
+
+  ror:04pzmmv39 foaf:name "WSL Institute for Snow and Avalanche Research SLF, Davos, Switzerland" .
+  ror:05a28rw58 foaf:name "ETH Zurich, Switzerland" .
+  ror:02crff812 foaf:name "University of Zurich, Switzerland" .
 }
 
 :provenance {
@@ -48,11 +55,12 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-23T12:52:50.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-02-25T10:39:45.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1007/978-3-319-10223-8_5>;
+    npx:supersedes <https://w3id.org/np/RAjg97VZOxrZPZyD2Af7I7WloxndtnYd_wclOqgF1HUKM> ;
     rdfs:label "Evaluating the Fully Automatic Multi-language Translation of the Swiss Avalanche Bulletin" .
 
   orcid:0000-0003-0197-9743 foaf:name "Kurt Winkler" .

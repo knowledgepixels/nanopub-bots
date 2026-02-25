@@ -37,9 +37,16 @@
   :author-list rdf:_2 orcid:0000-0002-1267-0234 .
   :author-list rdf:_3 :laura-canedo .
 
-  :kaarel-kaljurand foaf:name "Kaarel Kaljurand" .
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
-  :laura-canedo foaf:name "Laura Canedo" .
+  :kaarel-kaljurand schema:affiliation ror:04ggpbw68;
+    foaf:name "Kaarel Kaljurand" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:05a28rw58;
+    foaf:name "Tobias Kuhn" .
+  :laura-canedo schema:affiliation ror:02crff812;
+    foaf:name "Laura Canedo" .
+
+  ror:04ggpbw68 foaf:name "Nuance Communications, Vienna, Austria" .
+  ror:05a28rw58 foaf:name "ETH Zurich, Switzerland" .
+  ror:02crff812 foaf:name "University of Zurich, Switzerland" .
 }
 
 :provenance {
@@ -48,11 +55,12 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-23T12:28:46.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-02-25T10:39:45.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.3233/SW-140152>;
+    npx:supersedes <https://w3id.org/np/RAFYVJI-9m3t36pb3rh1522GvX50GpZQNGYOvbKzyb0n4> ;
     rdfs:label "Collaborative multilingual knowledge management based on controlled natural language" .
 
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .

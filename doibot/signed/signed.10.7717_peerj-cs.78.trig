@@ -1,13 +1,15 @@
-@prefix this: <https://w3id.org/np/RAqRODJv4Q9mAUjOZkrKZDnxShdrusCWtKdhNCTl3EJeg> .
-@prefix sub: <https://w3id.org/np/RAqRODJv4Q9mAUjOZkrKZDnxShdrusCWtKdhNCTl3EJeg/> .
+@prefix this: <https://w3id.org/np/RAKTFMF7wqBCbreLKDRrFls4xRxNMr-iiIiOjL6vGVpe8> .
+@prefix sub: <https://w3id.org/np/RAKTFMF7wqBCbreLKDRrFls4xRxNMr-iiIiOjL6vGVpe8/> .
+@prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -32,19 +34,42 @@ sub:assertion {
   
   orcid:0000-0001-6818-334X foaf:name "Christine Chichester" .
   
-  orcid:0000-0001-7112-3516 foaf:name "Axel-Cyrille Ngonga Ngomo" .
+  orcid:0000-0001-7112-3516 schema:affiliation ror:03s7gtk40;
+    foaf:name "Axel-Cyrille Ngonga Ngomo" .
   
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:008xxew50;
+    foaf:name "Tobias Kuhn" .
   
-  orcid:0000-0002-4808-1845 foaf:name "Michael Krauthammer" .
+  orcid:0000-0002-4808-1845 schema:affiliation ror:03v76x132;
+    foaf:name "Michael Krauthammer" .
   
-  orcid:0000-0002-8596-222X foaf:name "Ruben Verborgh" .
+  orcid:0000-0002-8596-222X schema:affiliation ror:00cv9y106;
+    foaf:name "Ruben Verborgh" .
   
-  orcid:0000-0003-0169-8159 foaf:name "Núria Queralt-Rosinach" .
+  orcid:0000-0003-0169-8159 schema:affiliation ror:042nkmz09;
+    foaf:name "Núria Queralt-Rosinach" .
   
-  orcid:0000-0003-3094-139X foaf:name "Raffaele Viglianti" .
+  orcid:0000-0003-3094-139X schema:affiliation ror:047s2c258;
+    foaf:name "Raffaele Viglianti" .
   
-  orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
+  orcid:0000-0003-4727-9435 schema:affiliation ror:00f54p054;
+    foaf:name "Michel Dumontier" .
+  
+  ror:008xxew50 foaf:name "Vrije Universiteit Amsterdam" .
+  
+  ror:00cv9y106 foaf:name "IDLab, Ghent University, Ghent, Belgium" .
+  
+  ror:00f54p054 foaf:name "Stanford University, Stanford, United States" .
+  
+  ror:038jp4m40 foaf:name "NCSR Demokritos, Athens, Greece" .
+  
+  ror:03s7gtk40 foaf:name "Leipzig University, Leipzig, Germany" .
+  
+  ror:03v76x132 foaf:name "Yale University, New Haven, United States" .
+  
+  ror:042nkmz09 foaf:name "Hospital del Mar Research Institute (IMIM), Barcelona, Spain" .
+  
+  ror:047s2c258 foaf:name "University of Maryland, College Park, United States" .
   
   sub:author-list rdf:_1 orcid:0000-0002-1267-0234;
     rdf:_2 orcid:0000-0001-6818-334X;
@@ -56,7 +81,8 @@ sub:assertion {
     rdf:_8 orcid:0000-0003-3094-139X;
     rdf:_9 orcid:0000-0003-4727-9435 .
   
-  sub:george-giannakopoulos foaf:name "George Giannakopoulos" .
+  sub:george-giannakopoulos schema:affiliation ror:038jp4m40;
+    foaf:name "George Giannakopoulos" .
 }
 
 sub:provenance {
@@ -83,17 +109,17 @@ sub:pubinfo {
   
   orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
   
-  this: dct:created "2026-02-22T10:51:40.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-02-25T10:15:48.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.7717/peerj-cs.78>;
-    npx:supersedes <https://w3id.org/np/RAjpPQOpiLWit8MFRYywDmHgvbGx1MX27aCC6ZEpf_Hv8>;
+    npx:supersedes <https://w3id.org/np/RAqRODJv4Q9mAUjOZkrKZDnxShdrusCWtKdhNCTl3EJeg>;
     rdfs:label "Decentralized provenance-aware publishing with nanopublications" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "opqfeLCpRdymg17wvKOIf41iLKBv3hEZAyeRClPjJqYpkzyu3g/APTmPQA/FzOkiGCGgvEy9y/jJM3Gl85c9Q/29Phlha4M/54KTPGhokSV2R10BOBepPKEldqMaB4KfV4p2lurYhgNcAWJy8lPmsamsIpYerjvg0EAuz7LeT2Ab6MK5mfx1tp/q6pmUEP9mODK3peFL7KMqZs9shITrIH4oDuY9s0Wh56vKV72YgnrxDdQoBaqjQ7KucV1rlEC40EyDrEhQwbPyYZF5ToJTDk7aYT7CkLgP2PGj5MlrMLjNO4Bpb6pq1FeU15sIVrcTiiKl+keZJYRE571rzuJm9w==";
+    npx:hasSignature "EeyXr8dBXxG5wHdzXjjibq0w98jYdfEJL77oMw9JOddPrjWLK33oRymQj448dBqwdS+FxX5BP5hO2IIBiIcgRH0rSeipONyg6ASAFxq7ST9lbL4iLBc7lIMI4PWSKztBN3Ngrh7xfCr4onmizstyVIkv9IO6F4mHNNyMUgb6iFLznPsShNN9e6RB836MjG7sDLBatjj/m3nAJLcHCgnFK+F1fN5hs6VRDzvLGZBcXtjGS6wf+IA1X9sRYCZ48ZlRqBBnoSuNO+MmgW8v/hEqmycHMf66NS1YzBS7g54/51g+2yuz8VviD57K3ifptOvnAUZkWNFi+Eb6JsnMyKno4A==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

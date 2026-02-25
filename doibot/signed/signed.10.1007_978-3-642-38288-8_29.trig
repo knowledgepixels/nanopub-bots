@@ -1,13 +1,15 @@
-@prefix this: <https://w3id.org/np/RAc57KExW0lkPJhJpWH062AB75JupCTN6XoMsp7_DbGZI> .
-@prefix sub: <https://w3id.org/np/RAc57KExW0lkPJhJpWH062AB75JupCTN6XoMsp7_DbGZI/> .
+@prefix this: <https://w3id.org/np/RAwso0vUjZIsthYnufKMrbp6lBYosdMFfLHTpa2O4yvKw> .
+@prefix sub: <https://w3id.org/np/RAwso0vUjZIsthYnufKMrbp6lBYosdMFfLHTpa2O4yvKw/> .
+@prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -30,12 +32,18 @@ sub:assertion {
     bibo:pageEnd "441";
     bibo:pageStart "427" .
   
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:05a28rw58;
+    foaf:name "Tobias Kuhn" .
+  
+  ror:02crff812 foaf:name "University of Zurich, Switzerland" .
+  
+  ror:05a28rw58 foaf:name "ETH Zurich, Switzerland" .
   
   sub:author-list rdf:_1 sub:kaarel-kaljurand;
     rdf:_2 orcid:0000-0002-1267-0234 .
   
-  sub:kaarel-kaljurand foaf:name "Kaarel Kaljurand" .
+  sub:kaarel-kaljurand schema:affiliation ror:02crff812;
+    foaf:name "Kaarel Kaljurand" .
 }
 
 sub:provenance {
@@ -44,16 +52,17 @@ sub:provenance {
 }
 
 sub:pubinfo {
-  this: dct:created "2026-02-23T13:29:26.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-02-25T10:27:16.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1007/978-3-642-38288-8_29>;
+    npx:supersedes <https://w3id.org/np/RAc57KExW0lkPJhJpWH062AB75JupCTN6XoMsp7_DbGZI>;
     rdfs:label "A Multilingual Semantic Wiki Based on Attempto Controlled English and Grammatical Framework" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "Pi4Fk9jJ4qYcsQHiBNLQ+T9AD3E7Z49eG+zSv9qRd7kSFfMiokp+6CDtZGEudGdPSYw89WyHJRvLvPwW9pbh7H4fRGbPG/jWDUh9ksuWRvHDgNaaVHtg/Kb+Y7pj/ViqiMtS35X5Orz7Tmq9Aaspsaj2J+J1As07hxDq8EmzIPz0JdiqhGuio1dVnL47yhfUHQEQ/tMkCEKJ3oL5vt6L+EffU1TiDMbmhHzvOTRxTAfwX/x0B/1JgeJrY1lNqCOxRkXa+ACa7K0hmIOFwc/y0nrvtYTQVBtWepV76pm1znv0sNKYG2rKid/BUgu+OPsmlucy92zBX1joXO2PHiyCwA==";
+    npx:hasSignature "psdV/4JzjHstFT/X1nY1e8cwQplv8ze3tDnmP/Vx1PBXwHRn20dBdO7JWSCpjhpjiVuOJwBHxduRTm2O0TlVDud3w2NN8iAwFhfcXpWpbBXckpT93PtjDwKvhiaYvroB915e3FPiBYumXb/Kphbj2kpp3jm/Bt94WO6ZvbKmqd208HIskBWM7X9IO2wamGpl6QYlGvvghZCaY0GUYv9DG+agwhXaiJScVphE4dwIytWO4Dz7ykGBrdveHPoDAO1sOm/p8SuENsexmIwm31uSECS4GVpzmDJa2Zg0l5idPCsu4qwoDKSQUDTNeURnwwYTPZ6Pa6Z3iwpUaP25uT3VXg==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

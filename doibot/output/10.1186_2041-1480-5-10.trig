@@ -37,10 +37,17 @@
   :author-list rdf:_3 :thaibinh-luong .
   :author-list rdf:_4 orcid:0000-0002-4808-1845 .
 
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
-  :mate-nagy foaf:name "Mate Nagy" .
-  :thaibinh-luong foaf:name "ThaiBinh Luong" .
-  orcid:0000-0002-4808-1845 foaf:name "Michael Krauthammer" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:05a28rw58;
+    foaf:name "Tobias Kuhn" .
+  :mate-nagy schema:affiliation ror:03v76x132;
+    foaf:name "Mate Nagy" .
+  :thaibinh-luong schema:affiliation ror:03v76x132;
+    foaf:name "ThaiBinh Luong" .
+  orcid:0000-0002-4808-1845 schema:affiliation ror:03v76x132;
+    foaf:name "Michael Krauthammer" .
+
+  ror:05a28rw58 foaf:name "ETH Zurich, Switzerland" .
+  ror:03v76x132 foaf:name "Yale University, New Haven, United States" .
 }
 
 :provenance {
@@ -49,11 +56,12 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-23T11:53:27.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-02-25T10:39:45.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1186/2041-1480-5-10>;
+    npx:supersedes <https://w3id.org/np/RANufceAdRZpr702sDmowNpnu771eRYR8ft5NyISzMY3k> ;
     rdfs:label "Mining images in biomedical publications: Detection and analysis of gel diagrams" .
 
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .

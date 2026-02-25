@@ -1,13 +1,15 @@
-@prefix this: <https://w3id.org/np/RAh9ha7RbfRf1Z93bhjGypgoujueKbiwIbKVA8DE9sCIg> .
-@prefix sub: <https://w3id.org/np/RAh9ha7RbfRf1Z93bhjGypgoujueKbiwIbKVA8DE9sCIg/> .
+@prefix this: <https://w3id.org/np/RAJ1jtzMW3wnq9NehnBzncHMAI5jKEusR3LV-VxNkZiBk> .
+@prefix sub: <https://w3id.org/np/RAJ1jtzMW3wnq9NehnBzncHMAI5jKEusR3LV-VxNkZiBk/> .
+@prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -30,7 +32,10 @@ sub:assertion {
     bibo:pageEnd "70";
     bibo:pageStart "33" .
   
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:05a28rw58;
+    foaf:name "Tobias Kuhn" .
+  
+  ror:05a28rw58 foaf:name "ETH Zurich, Switzerland" .
   
   sub:author-list rdf:_1 orcid:0000-0002-1267-0234 .
 }
@@ -43,16 +48,17 @@ sub:provenance {
 sub:pubinfo {
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
   
-  this: dct:created "2026-02-23T12:15:35.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-02-25T10:27:16.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1007/s10849-012-9167-z>;
+    npx:supersedes <https://w3id.org/np/RAh9ha7RbfRf1Z93bhjGypgoujueKbiwIbKVA8DE9sCIg>;
     rdfs:label "A Principled Approach to Grammars for Controlled Natural Languages and Predictive Editors" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "C5reHx44yoS2gtZdfy//8xwgwARS6sdpkHTKMhqu64qV+m+3kMcxxPaHI9Wy6RatkGATnM7QG+nrjbRMMS2UmE6rAPPMv7tyvEdQNYG3RpDETTtsK1jBFUiKvDdXNilRU9z4OkdzuIkm8utxOCR5of2Vdp5MNV5Pk0FXDhdNHbQ0hvWQTBQ2xLzpYeI/R2QGV2jzec9pcZ8kr592pXyyX8H2Gk54yhTZsPtvbpIfG4jYPsGn6bTmOuFPegYdTL2GLvzFmuFGaXXREjDlEJmrgXR1xygEJSXerUCE46eLyFFbw/64dX2npg49qFr4qRDwFN/504BKxUPP/cyBiRVU1g==";
+    npx:hasSignature "d7RPhpYhIO0sMo76C0lFipEgEj7nnNhiIszekkTbMF58yP0dTFVTvEHdHX7UY0c2kIWxpjta92FJ1JdSZqvm4ufxBUSKIcPt1QWrlXNZdb960wirbvSywzd/OBBwZ/5Jm2T2L61YJdoMfL40pd6DjSbGdonAo2pMb6aUvszaFvNe3ouYNaqcsQb6SEEqPQMQj03BHQyuZr6s32KzfDumAJqH7Bb6R0OSclKtj2pDkzLipd7ZCsdyWOs7sgFubgdwT1dUe77NAeagSdj2M0R4l9l/oaETYn2nqiDyB9k8m7tQQS5ae3SEWjlmKefEY/bxZoK+mnTE6xSvLRyjpVTSSA==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

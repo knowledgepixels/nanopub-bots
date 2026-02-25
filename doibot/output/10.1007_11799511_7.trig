@@ -37,10 +37,17 @@
   :author-list rdf:_3 :norbert-e-fuchs .
   :author-list rdf:_4 :michael-schroeder .
 
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
-  :loic-royer foaf:name "Loic Royer" .
-  :norbert-e-fuchs foaf:name "Norbert E. Fuchs" .
-  :michael-schroeder foaf:name "Michael Schroeder" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:02crff812;
+    foaf:name "Tobias Kuhn" .
+  :loic-royer schema:affiliation ror:042aqky30;
+    foaf:name "Loic Royer" .
+  :norbert-e-fuchs schema:affiliation ror:02crff812;
+    foaf:name "Norbert E. Fuchs" .
+  :michael-schroeder schema:affiliation ror:042aqky30;
+    foaf:name "Michael Schroeder" .
+
+  ror:02crff812 foaf:name "University of Zurich, Switzerland" .
+  ror:042aqky30 foaf:name "Technische Universität Dresden, Dresden, Germany" .
 
 }
 
@@ -50,12 +57,12 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-22T10:51:40.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-02-25T10:39:45.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1007/11799511_7>;
-    npx:supersedes <https://w3id.org/np/RA9OPnyNj7BPsCXWkvIrtXZZhlFOuub8lefTWxXkPCFFw> ;
+    npx:supersedes <https://w3id.org/np/RA5OYsuycbDDSV7IUGHMxp5WpSga4LSmf0HJB-Q-wPBa8> ;
     rdfs:label "Improving Text Mining with Controlled Natural Language: A Case Study for Protein Interactions" .
 
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .

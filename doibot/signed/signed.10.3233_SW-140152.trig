@@ -1,13 +1,15 @@
-@prefix this: <https://w3id.org/np/RAFYVJI-9m3t36pb3rh1522GvX50GpZQNGYOvbKzyb0n4> .
-@prefix sub: <https://w3id.org/np/RAFYVJI-9m3t36pb3rh1522GvX50GpZQNGYOvbKzyb0n4/> .
+@prefix this: <https://w3id.org/np/RA-Nc3Nm7Zh6EP6zhorsjZQcNIdDzk0MPUChYu4n0pf8E> .
+@prefix sub: <https://w3id.org/np/RA-Nc3Nm7Zh6EP6zhorsjZQcNIdDzk0MPUChYu4n0pf8E/> .
+@prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -30,15 +32,24 @@ sub:assertion {
     bibo:pageEnd "258";
     bibo:pageStart "241" .
   
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:05a28rw58;
+    foaf:name "Tobias Kuhn" .
+  
+  ror:02crff812 foaf:name "University of Zurich, Switzerland" .
+  
+  ror:04ggpbw68 foaf:name "Nuance Communications, Vienna, Austria" .
+  
+  ror:05a28rw58 foaf:name "ETH Zurich, Switzerland" .
   
   sub:author-list rdf:_1 sub:kaarel-kaljurand;
     rdf:_2 orcid:0000-0002-1267-0234;
     rdf:_3 sub:laura-canedo .
   
-  sub:kaarel-kaljurand foaf:name "Kaarel Kaljurand" .
+  sub:kaarel-kaljurand schema:affiliation ror:04ggpbw68;
+    foaf:name "Kaarel Kaljurand" .
   
-  sub:laura-canedo foaf:name "Laura Canedo" .
+  sub:laura-canedo schema:affiliation ror:02crff812;
+    foaf:name "Laura Canedo" .
 }
 
 sub:provenance {
@@ -49,16 +60,17 @@ sub:provenance {
 sub:pubinfo {
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
   
-  this: dct:created "2026-02-23T12:28:46.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-02-25T10:39:45.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.3233/SW-140152>;
+    npx:supersedes <https://w3id.org/np/RAFYVJI-9m3t36pb3rh1522GvX50GpZQNGYOvbKzyb0n4>;
     rdfs:label "Collaborative multilingual knowledge management based on controlled natural language" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "nLWHucTUsPOLJVQCuZu91306uaQ9pzU8hKMIxKkZpX3lOig8+pUJ7+JMb7Zjh92outT+r4/W0RpdevNtwgeB/QbrUosulpELEI6Ax1rOoskKG6fJoqdSt2+ZD7gXbaGvwwuasb8ynjb55cUZYdndO+QXRl+1K/OteWzWi8xbBH4RFZRf0J7udwAZK2oV9O+8+H//D1SD5ccIV6CniulThPZU1HPa5wS929l5jQZIZuMyE5AbGjxYzRnipJSJsWh/7HmypLLvOvii4vuvgxmvwOKmVNYwu0r/OFirISN8TJhf5G23e/Xkv3aUl2KfrcaJam3J+Tgutvi6Aux1HCoC5w==";
+    npx:hasSignature "PhsIBpgtIz1SxLl8o4hYIFxmpeHUOHItdNqP2mZTrQUVBrXGqVgjZqvUYCAfdM5adhgq/VDe2YekDCDAF1/E0KNwrhy96xjwKlSGgWAZxTdHBGtShT4CDfzIHO4jN/bplNRnFzGsNuhMt12kAPs1WdsXa4nlHQ1s/9COO6M7ilYXwy/GIGuNib52AUy8Yn/JaJvVURD0QZzMrPAmaLZAPo6JWEiCrtihMOtUxrPyYg4eUYwnZFaf1m/Z5DlbvPQtjJOwt6ZrewHMDRTm6OmzIopkM7aD9758fy9c4nVlElDB43yYEN4/G/dRZ7O6yAaNut4EIn/Mqa9qRSnQqIRlDg==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

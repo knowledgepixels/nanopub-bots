@@ -1,13 +1,15 @@
-@prefix this: <https://w3id.org/np/RA5OYsuycbDDSV7IUGHMxp5WpSga4LSmf0HJB-Q-wPBa8> .
-@prefix sub: <https://w3id.org/np/RA5OYsuycbDDSV7IUGHMxp5WpSga4LSmf0HJB-Q-wPBa8/> .
+@prefix this: <https://w3id.org/np/RA3ynam1bWWwGynJTWVdYtxneUu6dr2O3ePoofL1YMnT4> .
+@prefix sub: <https://w3id.org/np/RA3ynam1bWWwGynJTWVdYtxneUu6dr2O3ePoofL1YMnT4/> .
+@prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -29,18 +31,26 @@ sub:assertion {
     dct:title "Improving Text Mining with Controlled Natural Language: A Case Study for Protein Interactions";
     bibo:authorList sub:author-list .
   
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:02crff812;
+    foaf:name "Tobias Kuhn" .
+  
+  ror:02crff812 foaf:name "University of Zurich, Switzerland" .
+  
+  ror:042aqky30 foaf:name "Technische Universität Dresden, Dresden, Germany" .
   
   sub:author-list rdf:_1 orcid:0000-0002-1267-0234;
     rdf:_2 sub:loic-royer;
     rdf:_3 sub:norbert-e-fuchs;
     rdf:_4 sub:michael-schroeder .
   
-  sub:loic-royer foaf:name "Loic Royer" .
+  sub:loic-royer schema:affiliation ror:042aqky30;
+    foaf:name "Loic Royer" .
   
-  sub:michael-schroeder foaf:name "Michael Schroeder" .
+  sub:michael-schroeder schema:affiliation ror:042aqky30;
+    foaf:name "Michael Schroeder" .
   
-  sub:norbert-e-fuchs foaf:name "Norbert E. Fuchs" .
+  sub:norbert-e-fuchs schema:affiliation ror:02crff812;
+    foaf:name "Norbert E. Fuchs" .
 }
 
 sub:provenance {
@@ -52,12 +62,12 @@ sub:provenance {
 sub:pubinfo {
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
   
-  this: dct:created "2026-02-22T10:51:40.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-02-25T10:39:45.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1007/11799511_7>;
-    npx:supersedes <https://w3id.org/np/RA9OPnyNj7BPsCXWkvIrtXZZhlFOuub8lefTWxXkPCFFw>;
+    npx:supersedes <https://w3id.org/np/RA5OYsuycbDDSV7IUGHMxp5WpSga4LSmf0HJB-Q-wPBa8>;
     rdfs:label "Improving Text Mining with Controlled Natural Language: A Case Study for Protein Interactions" .
   
   sub:loic-royer foaf:name "Loic Royer" .
@@ -68,7 +78,7 @@ sub:pubinfo {
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "j205xKCQ6h/T69uodeh7qtYy0HBTLKahq1aBgsUBswyth0YEWlPvSKvqiPNEU6147I+kvcceT9yKub9Yc7i5PNfVJBrG7chWucWxhQSB+OHpmu/FiV9w/jkueZ+XKQiyHeaHzLNnSMKEx1LG4O6j9MHw/KGmypUFTZH6Iu9QD7+3Y+UmlFfAfvj0Ek9pnu5PWuuEBj15A3Obfn5QKJjTAcGYTOn2snrr2TVf+qHoXNpaFNuQMZY+utM2r0bYRdXIL0v2pbywUeiRZgy3/F93OKmR4lt70Ku5xP4UQxJiLBIEpozXJV8M+Vx1lJDyXtHCLjMCaKKR9N1wLecL52VcHg==";
+    npx:hasSignature "ihSTuWszAFVLV4G62reIjGDqFWvQLf4NsGeLuAXID0Yn/8A10sM8OR5rM8W/1+SBRQnMD1HrLXQ+p6dNrUrNdZZyjZqyVa9ISBH3YxY76H1mQPAP2D6zc4BN7TN3piuIiHKmCpUB5731C0dQ7bBvok6VWj2iDXXuGBgzkKVA0+1DVvrbxzyzbAUoz/WGCJb8deo6/DBZpFOlHWzv3/WmTfE4P3XqZLCYLPKp1Ur/n7j68BTDpxjsIQK/+9lKv36Ium+JXogY7RuZM+5/sG2b7a3OdKeAWrU51ZpYZLmQ8zKW26A5U2BZJGn8/zPy9sVeyRk54ZXW+scop/BNxgoBKQ==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

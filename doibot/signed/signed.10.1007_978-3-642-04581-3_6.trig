@@ -1,13 +1,15 @@
-@prefix this: <https://w3id.org/np/RADVPVJPiE0m_ZAbo6dpB0gAURSGFBsqTztOjcEcWEbbQ> .
-@prefix sub: <https://w3id.org/np/RADVPVJPiE0m_ZAbo6dpB0gAURSGFBsqTztOjcEcWEbbQ/> .
+@prefix this: <https://w3id.org/np/RAmQNevwkPMLYz1xF0TPfpG7maGB13k9OL9E_8QpJ0pTM> .
+@prefix sub: <https://w3id.org/np/RAmQNevwkPMLYz1xF0TPfpG7maGB13k9OL9E_8QpJ0pTM/> .
+@prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -32,16 +34,21 @@ sub:assertion {
   
   orcid:0000-0001-8417-4371 foaf:name "Juri Luca De Coi" .
   
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:02crff812;
+    foaf:name "Tobias Kuhn" .
+  
+  ror:02crff812 foaf:name "University of Zurich, Switzerland" .
   
   sub:author-list rdf:_1 orcid:0000-0001-8417-4371;
     rdf:_2 sub:norbert-e-fuchs;
     rdf:_3 sub:kaarel-kaljurand;
     rdf:_4 orcid:0000-0002-1267-0234 .
   
-  sub:kaarel-kaljurand foaf:name "Kaarel Kaljurand" .
+  sub:kaarel-kaljurand schema:affiliation ror:02crff812;
+    foaf:name "Kaarel Kaljurand" .
   
-  sub:norbert-e-fuchs foaf:name "Norbert E. Fuchs" .
+  sub:norbert-e-fuchs schema:affiliation ror:02crff812;
+    foaf:name "Norbert E. Fuchs" .
 }
 
 sub:provenance {
@@ -54,16 +61,17 @@ sub:pubinfo {
   
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
   
-  this: dct:created "2026-02-23T12:43:37.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-02-25T10:39:45.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1007/978-3-642-04581-3_6>;
+    npx:supersedes <https://w3id.org/np/RADVPVJPiE0m_ZAbo6dpB0gAURSGFBsqTztOjcEcWEbbQ>;
     rdfs:label "Controlled English for Reasoning on the Semantic Web" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "BdecC1XsvB2tX2PgdW/IPJtN+UhJ/7xaVzo4k7XYRcV3G+4roOrbc/sKevPVCduDU2v4hy633pxMEwvuaChSKHLK6dvgBM3a6DUjAUJtyDkfUSrkzhQGwO9wkYY4ZFB0yFaCsXZvjUG6f7/do25WRwvRhzMZrbPt8vZw8oGOlAEVUsoL5UCkHrGCZwnWB2inWdZMnd7wcWiTGSLc6zrtO/vNwMsZ+ltSfXwqkOXlKt1yK+fVsMj7TbTwcgTKi2/mfDqlAUqGznPSr1dZnre14xBO/ann8fcg3IXJ1CHDuD2I6oJ38zK7HdIiBeR0v1FAyEh3Z++MQexYmDD+IyCbhQ==";
+    npx:hasSignature "Y1ouVxgoPrW94IwN3d01idGIyqSB3gCb/vyKO1g+tOYNCwYaqQpwZ2xjg43G0if7FpIfIgLCNFliJtiZ1FqH3GIYyo7R01QPpR0rvfqFrBRvQXwMMn1e43lDC9kQLqbOhCWmUrXtwujAbKfco2kR1kf/pxF3/fLIQCDRYH3n5WLDy7AnN1daP3LjwUsV3b++4vp9SBzx+woMWUg5OGqUfLBVGVdEVVaIh1k4LjAY/f8ca84VVuFu8oBnRwwZeqLN7CLKz73qPC9eiUKCceoZXk9U6eDF6bfIhS8/gJZJES/KNHtFMauc+dKMKKRWuPQ2qfT4VujZWQnfnyWEuZ09Og==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

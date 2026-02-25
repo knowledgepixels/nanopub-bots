@@ -1,13 +1,15 @@
-@prefix this: <https://w3id.org/np/RAcDEn3LIK9553mKRBJ13f8O6MhNnKWaD6ApDXayeshOo> .
-@prefix sub: <https://w3id.org/np/RAcDEn3LIK9553mKRBJ13f8O6MhNnKWaD6ApDXayeshOo/> .
+@prefix this: <https://w3id.org/np/RA7Z1RG8ReBMcNOM9EJb59G6EZgutYuZgrE-AF1evfqK8> .
+@prefix sub: <https://w3id.org/np/RA7Z1RG8ReBMcNOM9EJb59G6EZgutYuZgrE-AF1evfqK8/> .
+@prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -30,9 +32,15 @@ sub:assertion {
     bibo:pageEnd "280";
     bibo:pageStart "265" .
   
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:02crff812;
+    foaf:name "Tobias Kuhn" .
   
-  orcid:0000-0002-4808-1845 foaf:name "Michael Krauthammer" .
+  orcid:0000-0002-4808-1845 schema:affiliation ror:03v76x132;
+    foaf:name "Michael Krauthammer" .
+  
+  ror:02crff812 foaf:name "University of Zurich, Switzerland" .
+  
+  ror:03v76x132 foaf:name "Yale University, New Haven, United States" .
   
   sub:author-list rdf:_1 sub:richard-n-shiffman;
     rdf:_2 sub:george-michel;
@@ -41,13 +49,17 @@ sub:assertion {
     rdf:_5 sub:kaarel-kaljurand;
     rdf:_6 orcid:0000-0002-1267-0234 .
   
-  sub:george-michel foaf:name "George Michel" .
+  sub:george-michel schema:affiliation ror:03v76x132;
+    foaf:name "George Michel" .
   
-  sub:kaarel-kaljurand foaf:name "Kaarel Kaljurand" .
+  sub:kaarel-kaljurand schema:affiliation ror:02crff812;
+    foaf:name "Kaarel Kaljurand" .
   
-  sub:norbert-e-fuchs foaf:name "Norbert E. Fuchs" .
+  sub:norbert-e-fuchs schema:affiliation ror:02crff812;
+    foaf:name "Norbert E. Fuchs" .
   
-  sub:richard-n-shiffman foaf:name "Richard N. Shiffman" .
+  sub:richard-n-shiffman schema:affiliation ror:03v76x132;
+    foaf:name "Richard N. Shiffman" .
 }
 
 sub:provenance {
@@ -60,16 +72,17 @@ sub:pubinfo {
   
   orcid:0000-0002-4808-1845 foaf:name "Michael Krauthammer" .
   
-  this: dct:created "2026-02-23T12:52:44.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-02-25T10:39:45.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1007/978-3-642-14418-9_16>;
+    npx:supersedes <https://w3id.org/np/RAcDEn3LIK9553mKRBJ13f8O6MhNnKWaD6ApDXayeshOo>;
     rdfs:label "Writing Clinical Practice Guidelines in Controlled Natural Language" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "XlmevL1vc8lQOxyUIB+Aad94p4i+O1BrYjyj9NwdwMkDcbBGX4xxLVT2CR7I/aiqmn+rii7tynXjKjVMZn9ir/Ef5c5hBxG4VJF4/Ip15R18KFxCyUXkP/Q3mKAhG0VgPE/kG9kKRNKFZEac0QaP81APAkTYJ9zug38gIMPsag0tDXqa13ghpHwga5x3Ky28b9YLMpmc6yX5JiFhaygOfme6mGXOckezd4EyifX5dffM41Xkd0sJjaR64TOHbJTzwxE4bBYnmf6qc83sMpc2X99dbvbFk5lnTj8oeDnF7SSCMSuA1zXm8GckIDnHC40YvR615GJU7wEgtZt5wKJjlw==";
+    npx:hasSignature "iX/fHklwvspWEVxZ47tpVBwYukG5WngYRifEl1gu9WCXO9nL2IFhhs5VjOv7475QFvGOs/xFeydqi4BBXL2SCuwBPa56+FAPmcu81pF9hZziy2jd0AicdfWIg8mTMZJcSRmpont0+GWjHsftHpFCK+53I0XO9qm3BRzB9uFSU3A/OPrrD8ujJ7BsWn6WKqOsH6IGuCo2fVNnCt26wFA8S//NrvKeKOSYIw28NpHJOsJo6/0HflLtverzRaGRKaoU19BtjyB3wAe1czepmWAAd0ZBb9yTS//5Q90scFhIsvs0181KM5WrGb/+cewpoUKXtiq9oKIACQ/FYxK2VImr0Q==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

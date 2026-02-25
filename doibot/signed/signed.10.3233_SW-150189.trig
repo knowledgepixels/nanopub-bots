@@ -1,13 +1,15 @@
-@prefix this: <https://w3id.org/np/RAry8QqeXrYJVqxtXDKCCFe9Phau99ys6OwcWDRs2Z9z0> .
-@prefix sub: <https://w3id.org/np/RAry8QqeXrYJVqxtXDKCCFe9Phau99ys6OwcWDRs2Z9z0/> .
+@prefix this: <https://w3id.org/np/RAVAWyt3rAOoSJNRJlrrpCSjcB7xDtGkDtRlNVPuCOPX8> .
+@prefix sub: <https://w3id.org/np/RAVAWyt3rAOoSJNRJlrrpCSjcB7xDtGkDtRlNVPuCOPX8/> .
+@prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -33,15 +35,28 @@ sub:assertion {
   
   orcid:0000-0001-6818-334X foaf:name "Christine Chichester" .
   
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:008xxew50;
+    foaf:name "Tobias Kuhn" .
   
-  orcid:0000-0002-7534-7661 foaf:name "Ferran Sanz" .
+  orcid:0000-0002-7534-7661 schema:affiliation ror:04n0g0b29;
+    foaf:name "Ferran Sanz" .
   
-  orcid:0000-0002-9383-528X foaf:name "Laura I. Furlong" .
+  orcid:0000-0002-9383-528X schema:affiliation ror:042nkmz09;
+    foaf:name "Laura I. Furlong" .
   
-  orcid:0000-0003-0169-8159 foaf:name "Núria Queralt-Rosinach" .
+  orcid:0000-0003-0169-8159 schema:affiliation ror:042nkmz09;
+    foaf:name "Núria Queralt-Rosinach" .
   
-  orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
+  orcid:0000-0003-4727-9435 schema:affiliation ror:00f54p054;
+    foaf:name "Michel Dumontier" .
+  
+  ror:008xxew50 foaf:name "Vrije Universiteit Amsterdam" .
+  
+  ror:00f54p054 foaf:name "Stanford University, Stanford, United States" .
+  
+  ror:042nkmz09 foaf:name "Hospital del Mar Research Institute (IMIM), Barcelona, Spain" .
+  
+  ror:04n0g0b29 foaf:name "Pompeu Fabra University, Barcelona, Spain" .
   
   sub:author-list rdf:_1 orcid:0000-0003-0169-8159;
     rdf:_2 orcid:0000-0002-1267-0234;
@@ -70,17 +85,17 @@ sub:pubinfo {
   
   orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
   
-  this: dct:created "2026-02-22T10:51:40.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-02-25T10:39:45.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.3233/SW-150189>;
-    npx:supersedes <https://w3id.org/np/RApRnYHZRsFz8nCTXRvDbFdlJWgdMEepw5Iw8hCY4zU0o>;
+    npx:supersedes <https://w3id.org/np/RAry8QqeXrYJVqxtXDKCCFe9Phau99ys6OwcWDRs2Z9z0>;
     rdfs:label "Publishing DisGeNET as nanopublications" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "p+SCUjNitFlkDFP5sFyrN5/yv0B8cnDTY+RIQNMcRiAn3VMoSHQUF4u8Xps6s7JD/eqy5H6gUbVPfEROZNLsI6OQLrQLiDrgYdtqlKqmBhPsJwDKQthaE3AiRG2hva124xQju/K9lp5qqb5E1BXqlOrPR6GJEFBe2alZIsWUwDDTrsjPNzB9TSQRzz4AYqBro/QSZeZYxFuBY9XikTygHI2uc4s1mmCf7VdxM4/RzEG4aTKzwfnCLM0vf8cmhXOuXisjZak99hLabLloM7aIWmzjtjqq8NBcnq9oYX/16r2RoSl+5rjKX8C9aAB9w6x9EI46cVblyz1I//tI170K/A==";
+    npx:hasSignature "Ope2dnPn5asW1j42ogSYfsAnvDumFiBOJyVynibTxRAgVqvsm8d1oRjvNvhqoFELPZxGjHe51gbzRxA0HG4TnDOUU5uktA1VX6hozwpD6GJv+AI32plMjxo90XIoxdelS+l32uHJczpbt/KS3f7ASCN9DihcsMvejDx/b6bMV5FOzgz3S6SOQ8A5vDtDlKf9IhjnAOTfgw27mWqknoiYEErPQChASXTwKT9YQNKr7MAgYxDQoytRiKLFTatztXcoMwtoWHXi3nhPBzXETViu2gY13rJ5PSnmVrwm7pFVxvHaCoHDaDC81w4ME79Z3Y3TPXGs5b5Rvn2JP6x+sxuipg==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

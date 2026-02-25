@@ -1,13 +1,15 @@
-@prefix this: <https://w3id.org/np/RARek7HLXcFR_z4aYJve6mxO02mW1Jf6mWtHWcA0u02jU> .
-@prefix sub: <https://w3id.org/np/RARek7HLXcFR_z4aYJve6mxO02mW1Jf6mWtHWcA0u02jU/> .
+@prefix this: <https://w3id.org/np/RAy45iNu6CaZSeOTuSSgETNNwshIi28uCOalLAWqKvvHk> .
+@prefix sub: <https://w3id.org/np/RAy45iNu6CaZSeOTuSSgETNNwshIi28uCOalLAWqKvvHk/> .
+@prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -31,12 +33,18 @@ sub:assertion {
     bibo:pageEnd "206";
     bibo:pageStart "187" .
   
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:03v76x132;
+    foaf:name "Tobias Kuhn" .
+  
+  ror:02crff812 foaf:name "University of Zurich, Switzerland" .
+  
+  ror:03v76x132 foaf:name "Yale University, New Haven, United States" .
   
   sub:author-list rdf:_1 orcid:0000-0002-1267-0234;
     rdf:_2 sub:stefan-hofler .
   
-  sub:stefan-hofler foaf:name "Stefan Höfler" .
+  sub:stefan-hofler schema:affiliation ror:02crff812;
+    foaf:name "Stefan Höfler" .
 }
 
 sub:provenance {
@@ -47,16 +55,17 @@ sub:provenance {
 sub:pubinfo {
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
   
-  this: dct:created "2026-02-23T12:43:25.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-02-25T10:27:16.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.3366/cor.2012.0026>;
+    npx:supersedes <https://w3id.org/np/RARek7HLXcFR_z4aYJve6mxO02mW1Jf6mWtHWcA0u02jU>;
     rdfs:label "Coral: Corpus Access in Controlled Language" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "MFSPLQtQce9vLEOEBJ9f77C2CsSQMh4z6w7dm+0/Gt/QkLXf3iyDCmc/SoGUUpb0z0aiRozIn6Kc9eEo0Ldc9W63lATAdCgvYLq0mZ4EmLZBMgNOU3hjkZ1qkesMa2A4PpGAL2GSuzs5hfljERAudQl98UQYLomZk1LdVa56AGNSEfkIwxwDc/YBM+5KV0Ewzaw8Gg6OfSY7sW6UA57axncACz+cVcAa+pSf/7k/cxo/ko/t5juBoPfvrvRNkdnLxrStdbCWIZrvS8e+l/whbzHre06yHWycsdfrjAQQpyJRVMimg/b0tEoAZofUU1G0xJ656MCSCCtG3bs9IVyjJg==";
+    npx:hasSignature "cejGfU+mwVKbqYsomQPJOfA/CNOfwTIcbSeqWmsJLngicRH6o0PIn/gxLsdz2EhCEgG2VcM+Ip5knbd1f4UveOKcpbxM0wWTss1+oFJPrpS4T6w3UYXBZmA0Gmoh3aLg2z+N2lsJsPIhjdofsLlq4m1RlTTqE+CxfxoZGGepmBg3mHzSfm8PQ4VG+ZjKyoXgvZgvVJEj4G/cJEH3x1NYlGzKN2cihiXY8IMhEPt2KYukRQJugQdkFZFOFsVBWWt7aN8ZX4US1l5V++LtJoKVDg0NsQ8avJNJRsQ9Ed7akiTxMf7eani2jtJ+5Ph/KNh0XlbGyMpeaPBiPGv36WE77g==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

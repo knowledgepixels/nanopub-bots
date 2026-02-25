@@ -1,13 +1,15 @@
-@prefix this: <https://w3id.org/np/RA4MTDXtptAFjzf2a2pPyMcrzzwiG0gW-hhdasNPWdF3k> .
-@prefix sub: <https://w3id.org/np/RA4MTDXtptAFjzf2a2pPyMcrzzwiG0gW-hhdasNPWdF3k/> .
+@prefix this: <https://w3id.org/np/RASs3IMz_wi-GuEqT2vPQT-a9nzgnLaK6f7dh-gcPGTA8> .
+@prefix sub: <https://w3id.org/np/RASs3IMz_wi-GuEqT2vPQT-a9nzgnLaK6f7dh-gcPGTA8/> .
+@prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -30,18 +32,26 @@ sub:assertion {
     bibo:pageEnd "501";
     bibo:pageStart "487" .
   
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:05a28rw58;
+    foaf:name "Tobias Kuhn" .
   
-  orcid:0000-0002-4808-1845 foaf:name "Michael Krauthammer" .
+  orcid:0000-0002-4808-1845 schema:affiliation ror:03v76x132;
+    foaf:name "Michael Krauthammer" .
+  
+  ror:03v76x132 foaf:name "Yale University, New Haven, United States" .
+  
+  ror:05a28rw58 foaf:name "ETH Zurich, Switzerland" .
   
   sub:author-list rdf:_1 orcid:0000-0002-1267-0234;
     rdf:_2 sub:paolo-emilio-barbano;
     rdf:_3 sub:mate-levente-nagy;
     rdf:_4 orcid:0000-0002-4808-1845 .
   
-  sub:mate-levente-nagy foaf:name "Mate Levente Nagy" .
+  sub:mate-levente-nagy schema:affiliation ror:03v76x132;
+    foaf:name "Mate Levente Nagy" .
   
-  sub:paolo-emilio-barbano foaf:name "Paolo Emilio Barbano" .
+  sub:paolo-emilio-barbano schema:affiliation ror:03v76x132;
+    foaf:name "Paolo Emilio Barbano" .
 }
 
 sub:provenance {
@@ -54,17 +64,17 @@ sub:pubinfo {
   
   orcid:0000-0002-4808-1845 foaf:name "Michael Krauthammer" .
   
-  this: dct:created "2026-02-22T10:51:40.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-02-25T10:39:45.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1007/978-3-642-38288-8_33>;
-    npx:supersedes <https://w3id.org/np/RA2Y3nedeecBUPv8Vj28CngJUz3Q1WaPHCoOD4DclU5mQ>;
+    npx:supersedes <https://w3id.org/np/RA4MTDXtptAFjzf2a2pPyMcrzzwiG0gW-hhdasNPWdF3k>;
     rdfs:label "Broadening the Scope of Nanopublications" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "HP88g9aUWXOdwHbctRyfMKNLbclTIViGh04u6KYZQ41g77c4Eqb5B+9pG/8w6ZzUtNmHYJfZHOuOR2LhF7RYshAJNE05edKNdamLl5JT4QHGax9ZNqiwh/GlJ9oM3N9t6FF5PL8AhOb7KPrb1+Xkz1zy9iWY6XrA+baFJsi+pHVttb0vwCknbNfZPVutNfLLnIrhHCc8vvusTDSsS6N7NGFS/zKeZZU5sMtDsVjnOvHBWEOBOWLUdy1FjnLKgYnu3NFT7MeZnkNkrw7rHy3jPblL8uR2DiqfaEm8gqyIkLDGO1N1XWHTu/dRe75McBYdx3Gr2pHeSB2ctK6d+TOQiA==";
+    npx:hasSignature "TZ+fTbeACOgZrj8/hr16IDm/APtfQ71O7Tn4u8I7TfksrqKMwWIDZgV4P9UYn6dd8CPb1yqlHAdACbWU+A8kNeg0V1mLL1odHTXyGzGMUk45zia6cLf3qLLUUcq1akLy9HULowexvfq+Z1EeAa0rv5pQAcnvR81bPWZHlgKwWsjqjB8wwNjnEz1HSwYm3gJ52/4s1gw+JXvkqD4FbRSc2AihdJl6z/ExNm7EWzCrG+o3eoyuJKLE1CdRstymvgzA0YgPEinoFOiphSeyqvj7WCEm6s6BoXcrby6up8q3IcuONe70Lwo+Ro1GBpnGhPn/MIuQcg7Z6W2rO36I7hzP2g==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

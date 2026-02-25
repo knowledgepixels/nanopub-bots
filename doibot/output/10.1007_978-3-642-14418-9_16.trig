@@ -40,12 +40,21 @@
   :author-list rdf:_5 :kaarel-kaljurand .
   :author-list rdf:_6 orcid:0000-0002-1267-0234 .
 
-  :richard-n-shiffman foaf:name "Richard N. Shiffman" .
-  :george-michel foaf:name "George Michel" .
-  orcid:0000-0002-4808-1845 foaf:name "Michael Krauthammer" .
-  :norbert-e-fuchs foaf:name "Norbert E. Fuchs" .
-  :kaarel-kaljurand foaf:name "Kaarel Kaljurand" .
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  :richard-n-shiffman schema:affiliation ror:03v76x132;
+    foaf:name "Richard N. Shiffman" .
+  :george-michel schema:affiliation ror:03v76x132;
+    foaf:name "George Michel" .
+  orcid:0000-0002-4808-1845 schema:affiliation ror:03v76x132;
+    foaf:name "Michael Krauthammer" .
+  :norbert-e-fuchs schema:affiliation ror:02crff812;
+    foaf:name "Norbert E. Fuchs" .
+  :kaarel-kaljurand schema:affiliation ror:02crff812;
+    foaf:name "Kaarel Kaljurand" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:02crff812;
+    foaf:name "Tobias Kuhn" .
+
+  ror:03v76x132 foaf:name "Yale University, New Haven, United States" .
+  ror:02crff812 foaf:name "University of Zurich, Switzerland" .
 }
 
 :provenance {
@@ -54,11 +63,12 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-23T12:52:44.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-02-25T10:39:45.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1007/978-3-642-14418-9_16>;
+    npx:supersedes <https://w3id.org/np/RAcDEn3LIK9553mKRBJ13f8O6MhNnKWaD6ApDXayeshOo> ;
     rdfs:label "Writing Clinical Practice Guidelines in Controlled Natural Language" .
 
   orcid:0000-0002-4808-1845 foaf:name "Michael Krauthammer" .

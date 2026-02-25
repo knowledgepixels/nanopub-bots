@@ -39,9 +39,14 @@
   :author-list rdf:_4 orcid:0000-0002-1267-0234 .
 
   orcid:0000-0001-8417-4371 foaf:name "Juri Luca De Coi" .
-  :norbert-e-fuchs foaf:name "Norbert E. Fuchs" .
-  :kaarel-kaljurand foaf:name "Kaarel Kaljurand" .
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  :norbert-e-fuchs schema:affiliation ror:02crff812;
+    foaf:name "Norbert E. Fuchs" .
+  :kaarel-kaljurand schema:affiliation ror:02crff812;
+    foaf:name "Kaarel Kaljurand" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:02crff812;
+    foaf:name "Tobias Kuhn" .
+
+  ror:02crff812 foaf:name "University of Zurich, Switzerland" .
 }
 
 :provenance {
@@ -50,11 +55,12 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-23T12:43:37.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-02-25T10:39:45.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1007/978-3-642-04581-3_6>;
+    npx:supersedes <https://w3id.org/np/RADVPVJPiE0m_ZAbo6dpB0gAURSGFBsqTztOjcEcWEbbQ> ;
     rdfs:label "Controlled English for Reasoning on the Semantic Web" .
 
   orcid:0000-0001-8417-4371 foaf:name "Juri Luca De Coi" .

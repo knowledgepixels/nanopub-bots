@@ -37,9 +37,16 @@
   :author-list rdf:_2 orcid:0000-0002-1267-0234 .
   :author-list rdf:_3 :kaarel-kaljurand .
 
-  orcid:0000-0002-5759-2655 foaf:name "Brian Davis" .
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
-  :kaarel-kaljurand foaf:name "Kaarel Kaljurand" .
+  orcid:0000-0002-5759-2655 schema:affiliation ror:03bea9k73;
+    foaf:name "Brian Davis" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:008xxew50;
+    foaf:name "Tobias Kuhn" .
+  :kaarel-kaljurand schema:affiliation ror:04ggpbw68;
+    foaf:name "Kaarel Kaljurand" .
+
+  ror:03bea9k73 foaf:name "University of Galway (NUI Galway), Galway, Ireland" .
+  ror:008xxew50 foaf:name "Vrije Universiteit Amsterdam" .
+  ror:04ggpbw68 foaf:name "Nuance Communications, Vienna, Austria" .
 }
 
 :provenance {
@@ -48,11 +55,12 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-23T15:43:41.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-02-25T10:39:45.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1007/s10579-016-9375-2>;
+    npx:supersedes <https://w3id.org/np/RAEAJvfEooZQ4M5mG0_z6iZexUTSGoOZqkr_oDd3otvno> ;
     rdfs:label "LRE journal CNL introduction" .
 
   orcid:0000-0002-5759-2655 foaf:name "Brian Davis" .
