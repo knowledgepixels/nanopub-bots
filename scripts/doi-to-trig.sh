@@ -239,7 +239,15 @@ L += [
     f'    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;',
     f'    npx:hasNanopubType fabio:ScholarlyWork;',
     f'    npx:introduces <https://doi.org/{DOI}>;',
-    f'    rdfs:label "{title}" .',
+    f'    rdfs:label "{title}";',
+    # Template links — keep in sync with the "Template links" section of CLAUDE.md.
+    # assertion: doibot's derived "Describing core article metadata" template (adds fabio:Article/
+    # fabio:ConferencePaper and accepts authors without an ORCID); provenance: attributed-to + derived-from.
+    f'    nt:wasCreatedFromProvenanceTemplate ns1:RAGXx_k9eQMnXaCbsXMsJbGClwZtQEGNg0GVJu6amdAVw;',
+    f'    nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RACJ58Gvyn91LqCKIO9zu1eijDQIeEff28iyDrJgjSJF8>,',
+    f'      <https://w3id.org/np/RAoTD7udB2KtUuOuAe74tJi1t3VzK0DyWS7rYVAq1GRvw>,',
+    f'      <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;',
+    f'    nt:wasCreatedFromTemplate <https://w3id.org/np/RA6NErVvGFJ1AflK02qqnB4jiQeF2EHl7mlbA7kp0d-lk> .',
     '',
 ]
 for a in orcid_authors:

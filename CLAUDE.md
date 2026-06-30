@@ -18,8 +18,9 @@ The sibling repo **`../nanopub-skill`** (`SKILL.md` + downloaded `queries/`, `as
 |---|---|
 | `dct:license` = CC-BY 4.0 | **CC0** (see License below) |
 | Timestamps via `date -u` (UTC) | **Local time, never `date -u`** (`scripts/timestamp.sh`) |
-| Always add `nt:wasCreatedFromTemplate` etc. | Bot-generated nanopubs use **no** template links |
 | Work in `tmp/`, download jar from Maven | `./np` wrapper, `output/`+`signed/`, `scripts/` |
+
+doibot nanopubs **do** carry `nt:wasCreatedFrom*Template` links so they render through Nanodash's template UI — see [Template links](#template-links) for the exact URIs.
 
 ## Repository Structure
 
@@ -49,11 +50,13 @@ The `plain.introtemplate.trig` at the repo root is a template for introducing ne
 
 ## nanopub-java CLI
 
-The `./np` wrapper script runs the nanopub-java CLI from the sibling `../nanopub-java` repo. If the JAR isn't built yet:
+The `./np` wrapper script runs the nanopub-java CLI from the sibling `../nanopub-java` repo. The wrapper needs the **fat** jar (`nanopub-*-jar-with-dependencies.jar`), which upstream now builds only under the `cli` Maven profile. If the JAR isn't built yet:
 
 ```bash
-mvn -f ../nanopub-java clean package -DskipTests
+mvn -f ../nanopub-java clean package -DskipTests -P cli
 ```
+
+(Plain `mvn package` without `-P cli` produces only the thin jar and the `./np` wrapper will report "No nanopub jar found".)
 
 Raw CLI reference (use the scripts below for common operations):
 
@@ -249,6 +252,26 @@ All bot nanopublications must be published under **CC0** (https://creativecommon
 - `fabio:ConferencePaper` — standalone conference papers without a journal ISSN (e.g. ACM, IEEE proceedings); `dct:isPartOf` can be omitted
 
 All doibot nanopubs use `npx:hasNanopubType fabio:ScholarlyWork` in pubinfo regardless of the specific FaBiO type.
+
+The specific type (in the assertion) **must be one of the values the doibot article template allows** (see Template links). That template's allowed types are `fabio:Article`, `fabio:BookChapter`, `fabio:ConferencePaper`, plus `InUsePaper`, `JournalEditorial`, `MethodsPaper`, `PositionPaper`, `ResearchPaper`, `ResourcePaper`, `ReviewPaper`, `ScholarlyWork`. Using a type outside that list makes the `rdf:type` triple fail to match the template.
+
+### Template links
+
+doibot nanopubs carry `nt:wasCreatedFrom*Template` links in pubinfo so they render through Nanodash's template UI. `doi-to-trig.sh` emits these automatically; when hand-editing, keep them in sync (the prefix `ns1:` = `<http://purl.org/np/>`, `nt:` = `<https://w3id.org/np/o/ntemplate/>`):
+
+```turtle
+  nt:wasCreatedFromProvenanceTemplate ns1:RAGXx_k9eQMnXaCbsXMsJbGClwZtQEGNg0GVJu6amdAVw;
+  nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RACJ58Gvyn91LqCKIO9zu1eijDQIeEff28iyDrJgjSJF8>,
+    <https://w3id.org/np/RAoTD7udB2KtUuOuAe74tJi1t3VzK0DyWS7rYVAq1GRvw>,
+    <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
+  nt:wasCreatedFromTemplate <https://w3id.org/np/RA6NErVvGFJ1AflK02qqnB4jiQeF2EHl7mlbA7kp0d-lk> .
+```
+
+- **Assertion template** `RA6NErVv…` — "Describing core article metadata", a doibot-specific **derived** version of the community template `RAYRjIrbLSDIX5Mp1cb6MK4vRV0Vd5o0TZ8NTIEHwCPOI`. The original (published at petapico.org with a key we don't hold) (a) restricted the type list and (b) required every author to be an ORCID. The derived version adds `fabio:Article` + `fabio:ConferencePaper` to the type list and relaxes the author placeholder regex to `https?://.+` so authors **without an ORCID** are accepted as local URIs. Because the original was signed with a different key, the derived template links back via `prov:wasDerivedFrom` (in its provenance graph), **not** `npx:supersedes`. Signed with the local default key (Tobias Kuhn's ORCID). To revise it, derive again (download the latest into `../nanopub-skill` first); do not try to supersede the petapico original.
+- **Provenance template** `RAGXx_k9…` — "Attributed to myself/others and (partly) derived from an existing entity": `prov:wasAttributedTo` (repeatable) + `prov:wasDerivedFrom`. This matches the doibot provenance (authors + DOI). **Do not** use `RANwQa4…` ("Attributed to myself") — it only covers `wasAttributedTo nt:CREATOR` and has no `wasDerivedFrom`, so it fails to match.
+- **Pubinfo templates** — License (`RACJ58Gv…`, CC0 is an allowed value), Supersedes (`RAoTD7ud…`, listed but unused), Creator (`RAukAcWHR…`, the DOI-bot IRI).
+
+**Authors without an ORCID:** use a local blank-node-style URI (`:firstname-lastname`) carrying `foaf:name` (and `schema:affiliation`); the derived template accepts these. Only ORCID authors go into `prov:wasAttributedTo` — so the provenance template needs ≥1 ORCID author to match (a paper with zero ORCID authors would need its provenance reconsidered).
 
 ### Provenance patterns per bot
 

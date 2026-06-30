@@ -1,0 +1,113 @@
+@prefix this: <https://w3id.org/np/RAmQjW3UGrCyTnzNUlaCYlwHU9niMY2SPL47TC35ZDtVw> .
+@prefix sub: <https://w3id.org/np/RAmQjW3UGrCyTnzNUlaCYlwHU9niMY2SPL47TC35ZDtVw/> .
+@prefix schema: <http://schema.org/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  <http://id.crossref.org/issn/1460-2229> dct:title "Family Practice" .
+  
+  <https://doi.org/10.1093/fampra/cmaf031> a fabio:Article;
+    dct:abstract "Abstract Background Mapping general practitioners’ antibiotic prescribing practices is essential to optimize antibiotic use in primary care and mitigate antibiotic resistance. Objectives The objective of this study was to examine the adherence of Dutch general practitioners to prescribing guidelines for ear and respiratory tract symptoms and conditions. Methods A cross-sectional study was conducted on Dutch electronic health records from 2018 to 2021. Antibiotic prescribing frequency and type were examined for ear and respiratory tract symptoms and conditions based on professional prescribing guidelines. Descriptive statistics and multilevel logistic regression analyses were applied. Results Patient records from up to 384 general practices were analysed for 15 ear and 27 respiratory tract conditions. For 11 of the 15 (73%) ear and 17 of the 27 (63%) respiratory tract conditions, more than 95% of patients were treated according to the prescribing guidelines. Most potential non-adherence to antibiotic prescribing guidelines occurred for acute otitis media (31%–34%), acute bronchitis/bronchiolitis (26%–39%), and acute sinusitis (25%–34%). Several other respiratory tract conditions showed non-indicated prescribing rates above 10%. For otitis externa, many broad-spectrum antibiotics were prescribed, which rarely happened for respiratory conditions. High variation in prescribing frequency and type between general practices occurred. Conclusions For most conditions, Dutch general practitioners adhere well to antibiotic prescribing guidelines. There are conditions for which there is a high potential for inappropriate prescribing. High variation between practices suggests room for improvement. Stricter implementation of prescribing guidelines may help improve prescribing practice. Alternatively, a practice-specific approach could be effective. The Dutch setting may be exemplary for international antibiotic prescribing practice.";
+    dct:date "2025-06-04";
+    dct:isPartOf <http://id.crossref.org/issn/1460-2229>;
+    dct:title "Adherence to antibiotic prescribing guidelines in Dutch primary care: an analysis of national prescription data on ear and respiratory tract symptoms and conditions among 384 general practices";
+    bibo:authorList sub:author-list .
+  
+  orcid:0000-0001-8539-2004 schema:affiliation ror:012p63287;
+    foaf:name "Katja Taxis" .
+  
+  orcid:0000-0001-9550-5674 schema:affiliation ror:02jz4aj89;
+    foaf:name "Jochen W L Cals" .
+  
+  orcid:0000-0001-9551-1564 schema:affiliation ror:015xq7480;
+    foaf:name "Karin Hek" .
+  
+  orcid:0000-0002-3384-9858 schema:affiliation ror:012m0jg51;
+    foaf:name "Anke Lambooij" .
+  
+  orcid:0000-0003-3277-4740 schema:affiliation ror:012p63287, ror:015xq7480;
+    foaf:name "Liset van Dijk" .
+  
+  orcid:0000-0003-4958-9920 schema:affiliation ror:012p63287;
+    foaf:name "Maarten Lambert" .
+  
+  ror:012m0jg51 foaf:name "Dutch Institute for Rational Use of Medicine, Utrecht, Netherlands" .
+  
+  ror:012p63287 foaf:name "University of Groningen, Groningen, Netherlands" .
+  
+  ror:015xq7480 foaf:name "Nivel, Utrecht, Netherlands" .
+  
+  ror:02jz4aj89 foaf:name "Maastricht University, Maastricht, Netherlands" .
+  
+  sub:author-list rdf:_1 orcid:0000-0003-4958-9920;
+    rdf:_2 sub:renee-veldkamp;
+    rdf:_3 sub:yvette-weesie;
+    rdf:_4 orcid:0000-0002-3384-9858;
+    rdf:_5 orcid:0000-0001-9550-5674;
+    rdf:_6 orcid:0000-0001-8539-2004;
+    rdf:_7 orcid:0000-0003-3277-4740;
+    rdf:_8 orcid:0000-0001-9551-1564 .
+  
+  sub:renee-veldkamp schema:affiliation ror:015xq7480;
+    foaf:name "Renee Veldkamp" .
+  
+  sub:yvette-weesie schema:affiliation ror:015xq7480;
+    foaf:name "Yvette Weesie" .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0001-8539-2004, orcid:0000-0001-9550-5674,
+      orcid:0000-0001-9551-1564, orcid:0000-0002-3384-9858, orcid:0000-0003-3277-4740, orcid:0000-0003-4958-9920;
+    prov:wasDerivedFrom <https://doi.org/10.1093/fampra/cmaf031> .
+}
+
+sub:pubinfo {
+  orcid:0000-0001-8539-2004 foaf:name "Katja Taxis" .
+  
+  orcid:0000-0001-9550-5674 foaf:name "Jochen W L Cals" .
+  
+  orcid:0000-0001-9551-1564 foaf:name "Karin Hek" .
+  
+  orcid:0000-0002-3384-9858 foaf:name "Anke Lambooij" .
+  
+  orcid:0000-0003-3277-4740 foaf:name "Liset van Dijk" .
+  
+  orcid:0000-0003-4958-9920 foaf:name "Maarten Lambert" .
+  
+  this: dct:created "2026-06-30T14:43:21.000+02:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.1093/fampra/cmaf031>;
+    rdfs:label "Adherence to antibiotic prescribing guidelines in Dutch primary care: an analysis of national prescription data on ear and respiratory tract symptoms and conditions among 384 general practices";
+    nt:wasCreatedFromProvenanceTemplate ns1:RAGXx_k9eQMnXaCbsXMsJbGClwZtQEGNg0GVJu6amdAVw;
+    nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RACJ58Gvyn91LqCKIO9zu1eijDQIeEff28iyDrJgjSJF8>,
+      <https://w3id.org/np/RAoTD7udB2KtUuOuAe74tJi1t3VzK0DyWS7rYVAq1GRvw>, <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
+    nt:wasCreatedFromTemplate <https://w3id.org/np/RA6NErVvGFJ1AflK02qqnB4jiQeF2EHl7mlbA7kp0d-lk> .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
+    npx:hasSignature "GGN1owIQ4qSW6d7unYhYwHlCVpfluTl08gHzLka943BPx9MoIoF6kfl0j2gYp45q0cP+5SrkgLmV0mBGJzlTdedsqmM5BbFbjNQlCnv1ntwmXS/otE0XOBpmQvg9Itel7iT2aK2FWeXcW7pVurZ0GCcH3EhRw5kUWX5dXOmzQdEfQzJdXau3T9deWt9qznoE1/CY5RZHJWjKxb6w/zwHEp30nLWHGTjHjJE/DxC7v35ktyy1Eu7sgrHyNmi9u1hSJUrmX32geT4GCi2Tldjt5q3ZCjVccvSUnMvITyUcSy0KiNyQSE4MbwmkUqlxrptrBBrXQbIEvRAcAhi8+I8xXA==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy orcid:0000-0002-1267-0234, <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}
