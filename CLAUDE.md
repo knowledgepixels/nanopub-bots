@@ -8,6 +8,19 @@ This is a **data repository** containing nanopublications created by three speci
 
 The project creator is Tobias Kuhn (ORCID: 0000-0002-1267-0234).
 
+## Related: the generic nanopub skill
+
+The sibling repo **`../nanopub-skill`** (`SKILL.md` + downloaded `queries/`, `assertion-templates/`, `resource-views/`) is the canonical reference for *general* nanopub work — querying the network via the Nanopub Query API, grlc query templates, resource views, the `spaces`/`trust` admin repos, presets, and the full retract/supersede CLI details. Consult it when a task goes beyond this repo's bot-generation workflow. (Ignore `../nanopub-agent-utilities` — it is deprecated.)
+
+**This `CLAUDE.md` is authoritative for the bots.** Where the generic skill's defaults differ, follow this file:
+
+| Generic skill default | This repo's rule |
+|---|---|
+| `dct:license` = CC-BY 4.0 | **CC0** (see License below) |
+| Timestamps via `date -u` (UTC) | **Local time, never `date -u`** (`scripts/timestamp.sh`) |
+| Always add `nt:wasCreatedFromTemplate` etc. | Bot-generated nanopubs use **no** template links |
+| Work in `tmp/`, download jar from Maven | `./np` wrapper, `output/`+`signed/`, `scripts/` |
+
 ## Repository Structure
 
 Each bot has its own directory with a consistent layout:
@@ -68,6 +81,16 @@ this:pubinfo {
 
 Then sign and publish the new nanopub. The old one remains immutable on the network but is marked as superseded.
 
+**Before superseding, resolve the actual head of the chain** — a known URI may not be the latest version. Query `get-latest-version-of-np` and supersede the head it returns:
+
+```bash
+curl -s "https://query.knowledgepixels.com/api/RAiRsB2YywxjsBMkVRTREJBooXhf2ZOHoUs5lxciEl37I/get-latest-version-of-np?np=<uri>"
+```
+
+If the chain has **forked** into two heads (e.g. a republish built on a stale base), publish one new version with `npx:supersedes` triples for **both** heads to collapse the fork.
+
+**`npx:supersedes` requires the same signing key** as the original (same public-key hash). For a given bot this always holds; if the keys would differ, use `prov:wasDerivedFrom` instead.
+
 For index nanopubs, `mkindex -x <old-index-uri>` adds the supersedes link automatically:
 
 ```bash
@@ -86,6 +109,8 @@ scripts/publish.sh <bot> <name>       # publish signed/signed.<name>.trig
 scripts/sign-publish.sh <bot> <name>  # sign + publish in one step
 scripts/check.sh <bot> <name>         # validate output/<name>.trig
 ```
+
+After signing, confirm `npx:signedBy` in the signed file is the correct ORCID — not the all-zeros `orcid:0000-0000-0000-0000` placeholder. That value is written when the Python `nanopub` library overwrites `~/.nanopub/profile.yml`; if you see it, restore the profile and re-sign before publishing.
 
 ### Timestamps
 
