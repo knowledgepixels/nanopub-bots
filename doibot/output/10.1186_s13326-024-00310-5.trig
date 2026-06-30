@@ -57,12 +57,18 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-22T17:12:15.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-06-30T15:12:45.000+02:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1186/s13326-024-00310-5>;
-    rdfs:label "Semantic units: organizing knowledge graphs into semantically meaningful units of representation" .
+    rdfs:label "Semantic units: organizing knowledge graphs into semantically meaningful units of representation";
+    npx:supersedes <https://w3id.org/np/RAA1vf_GK8NLXPv36aXQIWMda4KwSayKMDcI3XP-T090A>;
+    nt:wasCreatedFromProvenanceTemplate ns1:RAGXx_k9eQMnXaCbsXMsJbGClwZtQEGNg0GVJu6amdAVw;
+    nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RACJ58Gvyn91LqCKIO9zu1eijDQIeEff28iyDrJgjSJF8>,
+      <https://w3id.org/np/RAoTD7udB2KtUuOuAe74tJi1t3VzK0DyWS7rYVAq1GRvw>,
+      <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
+    nt:wasCreatedFromTemplate <https://w3id.org/np/RA6NErVvGFJ1AflK02qqnB4jiQeF2EHl7mlbA7kp0d-lk> .
 
   orcid:0000-0002-8280-0487 foaf:name "Lars Vogt" .
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .

@@ -1,11 +1,13 @@
-@prefix this: <https://w3id.org/np/RA4c57BIY99eHu-WTrS7v3WFBoWkP9f-j2jAuV_dp0uoE> .
-@prefix sub: <https://w3id.org/np/RA4c57BIY99eHu-WTrS7v3WFBoWkP9f-j2jAuV_dp0uoE/> .
+@prefix this: <https://w3id.org/np/RA57SdGJyXYF6icyJCIR_DSzmWqrNY7UJA1-cLobaZK8E> .
+@prefix sub: <https://w3id.org/np/RA57SdGJyXYF6icyJCIR_DSzmWqrNY7UJA1-cLobaZK8E/> .
 @prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix ror: <https://ror.org/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -83,16 +85,21 @@ sub:pubinfo {
   
   orcid:0000-0003-3934-0072 foaf:name "Barend Mons" .
   
-  this: dct:created "2026-02-22T20:38:10.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-06-30T15:12:45.000+02:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.3897/rio.8.e94150>;
-    rdfs:label "The Comparative Anatomy of Nanopublications and FAIR Digital Objects" .
+    npx:supersedes <https://w3id.org/np/RA4c57BIY99eHu-WTrS7v3WFBoWkP9f-j2jAuV_dp0uoE>;
+    rdfs:label "The Comparative Anatomy of Nanopublications and FAIR Digital Objects";
+    nt:wasCreatedFromProvenanceTemplate ns1:RAGXx_k9eQMnXaCbsXMsJbGClwZtQEGNg0GVJu6amdAVw;
+    nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RACJ58Gvyn91LqCKIO9zu1eijDQIeEff28iyDrJgjSJF8>,
+      <https://w3id.org/np/RAoTD7udB2KtUuOuAe74tJi1t3VzK0DyWS7rYVAq1GRvw>, <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
+    nt:wasCreatedFromTemplate <https://w3id.org/np/RA6NErVvGFJ1AflK02qqnB4jiQeF2EHl7mlbA7kp0d-lk> .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "VmCVp3m5p+1AmS++iBLcLydObeM3Iee5wDGTLDquRjcfefZ7Luw6vIxJKiNqrRx1QeN+SwQcH2hV/0aP3336SjGsnRYx14B5Iizdy6N2F1bqGq7WXKkjgTRPXsDCi0xWLg2ewaNEMD7eyNg88Sd8vKESR5nWj8rEKEXeTxd/3pAV3PjNxsg0ovSIk7JTi7/mpwMgffdnPCHwwWeJxFzlGK+r4EX+f71+COdY4TNkm5IyJsGVPWy2ewONFMhEr4beLLIDSEAtHlGfNyhY+2RRUgzajK8ISGLDx5iEnQYYfWYi3mnu5SH77ieWtXNeg/2eazeIxpngV+eWVWsk4bRrqg==";
+    npx:hasSignature "UYJhr7IZF01FJzzqXfOKqai8nAxmOAMoSuGH3K7qen5xmhIqgK1Ap/Tyyjmi0QogvR06cj8BXmyIqMLkdDzqqjwWOQ0EE0FCJsnq9uSkgakfEpgO2ZmW0ZBLyDOsnHwi4msmTNWwfmKirmDrODXvW6jt+Qy6EusAJx92ZabFWbOUA+8ETYaNDgvkks9rmPEjnJW1WwMQuTkCYiEAZdl/YeR3pK8JZXifg3DVRyw7HBOdDl1MvrAMskRcxTTBIEyBPTHB6b1z+LdjqpqIp6JAB+LnSxgf6YwHbVmuaQJqqjg7TASFtqDMcMXNDJtIndhVoc/pjXZsWkt/0X422EXZGw==";
     npx:hasSignatureTarget this:;
-    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+    npx:signedBy orcid:0000-0002-1267-0234, <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

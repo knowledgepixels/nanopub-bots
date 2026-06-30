@@ -1,11 +1,13 @@
-@prefix this: <https://w3id.org/np/RAjg_CiZk1KUas15hpkYrxZRoro-umA0aTl_l2IEIjplY> .
-@prefix sub: <https://w3id.org/np/RAjg_CiZk1KUas15hpkYrxZRoro-umA0aTl_l2IEIjplY/> .
+@prefix this: <https://w3id.org/np/RAAepGfvwUpTeKPPWxNLs-rc1Xp44AfFpb5CQAQ3HJAis> .
+@prefix sub: <https://w3id.org/np/RAAepGfvwUpTeKPPWxNLs-rc1Xp44AfFpb5CQAQ3HJAis/> .
 @prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix ror: <https://ror.org/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -66,16 +68,21 @@ sub:pubinfo {
   
   orcid:0000-0002-7748-4715 foaf:name "Jacco van Ossenbruggen" .
   
-  this: dct:created "2026-02-22T17:36:53.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-06-30T15:12:45.000+02:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.3233/SSW240006>;
-    rdfs:label "Zero-Shot Topic Classification of Column Headers: Leveraging LLMs for Metadata Enrichment" .
+    npx:supersedes <https://w3id.org/np/RAjg_CiZk1KUas15hpkYrxZRoro-umA0aTl_l2IEIjplY>;
+    rdfs:label "Zero-Shot Topic Classification of Column Headers: Leveraging LLMs for Metadata Enrichment";
+    nt:wasCreatedFromProvenanceTemplate ns1:RAGXx_k9eQMnXaCbsXMsJbGClwZtQEGNg0GVJu6amdAVw;
+    nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RACJ58Gvyn91LqCKIO9zu1eijDQIeEff28iyDrJgjSJF8>,
+      <https://w3id.org/np/RAoTD7udB2KtUuOuAe74tJi1t3VzK0DyWS7rYVAq1GRvw>, <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
+    nt:wasCreatedFromTemplate <https://w3id.org/np/RA6NErVvGFJ1AflK02qqnB4jiQeF2EHl7mlbA7kp0d-lk> .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "PKv1MVA/4qMw7Pemeg1xGGWWB9QTFjx2dSM9Ac7Az82ZzS1xGY3GAGyyKELrEnwAIk7tlZZNrTeAurar045rIYnU6cg6EV8E37ZfdV+LgC5FHj+wsHT9h86VjBgToDkio69gicCP+KWr8vQnTHPmo1lTx6zgkPiTxLuIE/UGyQ6acgkVgQFg4M0+c60qdnXPLGKU331tJW60IxRa1dZQo7c54dKJSE+Xk6HVHoI8MCA4s4e6xw6U42qUiouLHLY5yOe+Pw1haAAo1URhftNDhE+5huycBlKEVjOKfsvInPhJ9HentE9l9Tt8LnzTpjZgAXBxlYB2igi41dcjVfH3nQ==";
+    npx:hasSignature "RKgWYLR79xblJDCNA9DA1ScyjGJ3HGOdi7GMlBrROrsWx6v4AG9CZBi/r7fT2DklXn7WkJIDaYeD12VKJ9UFFk7d3jg6mLqpBRIkGy1OH8JZPvddpdy4JUWZedDfYEOO+lVDWZCdhZ7TDASdJUHEkzkuv6m/MiZEhdcO7LqQs1MkKHoDUNhx02k6kmxIcYPd/8iBNwmQMRNJlzONgTHF0XLe0qeW7FjIkNpKApP/S3fvFFXO4t25w0SXLZKHISjr9dCFECgG9R4nPBNPYezuUdn3BaZQo/gN/BolfIZInk/MYrbiMofxL+oHgzFlGcP4zAQsJUqefClSaQXvb90ecA==";
     npx:hasSignatureTarget this:;
-    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+    npx:signedBy orcid:0000-0002-1267-0234, <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

@@ -1,11 +1,13 @@
-@prefix this: <https://w3id.org/np/RApixDn98tCrSjBztT-FIdwNOzqFTrDa0bhj3k2Fk6CMM> .
-@prefix sub: <https://w3id.org/np/RApixDn98tCrSjBztT-FIdwNOzqFTrDa0bhj3k2Fk6CMM/> .
+@prefix this: <https://w3id.org/np/RAlJzQq6g2ttb1f40Ss_MRqbdCrjLT47j-yAlxRx0uG_4> .
+@prefix sub: <https://w3id.org/np/RAlJzQq6g2ttb1f40Ss_MRqbdCrjLT47j-yAlxRx0uG_4/> .
 @prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix ror: <https://ror.org/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -62,17 +64,21 @@ sub:pubinfo {
   
   orcid:0000-0002-5759-2655 foaf:name "Brian Davis" .
   
-  this: dct:created "2026-02-25T10:39:45.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-06-30T15:12:45.000+02:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1007/s10579-016-9375-2>;
-    npx:supersedes <https://w3id.org/np/RAEAJvfEooZQ4M5mG0_z6iZexUTSGoOZqkr_oDd3otvno>;
-    rdfs:label "LRE journal CNL introduction" .
+    npx:supersedes <https://w3id.org/np/RApixDn98tCrSjBztT-FIdwNOzqFTrDa0bhj3k2Fk6CMM>;
+    rdfs:label "LRE journal CNL introduction";
+    nt:wasCreatedFromProvenanceTemplate ns1:RAGXx_k9eQMnXaCbsXMsJbGClwZtQEGNg0GVJu6amdAVw;
+    nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RACJ58Gvyn91LqCKIO9zu1eijDQIeEff28iyDrJgjSJF8>,
+      <https://w3id.org/np/RAoTD7udB2KtUuOuAe74tJi1t3VzK0DyWS7rYVAq1GRvw>, <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
+    nt:wasCreatedFromTemplate <https://w3id.org/np/RA6NErVvGFJ1AflK02qqnB4jiQeF2EHl7mlbA7kp0d-lk> .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "PJo1YpqTtqNPfnwNqjFpuHn6hesfCTSBigPw4gSYVe6AVqd2a2xZMFM62JwAr7PgcS8YdlRLM2XH+QW9tg2Ea1va+ylJLjLxcUaPtQWR/O3Z13ysX/Ksi1AA6XfVgPMgQNq85xqkHzv/nUiouOIPxJBz+oTf9sRi4bovwciNe94W+RXA/N41XCZPRPcweeYoy60G1JIRAeRwdA81alCbqWKM7drDt7HutImncdLlVyA4OGNXiEFnjZJijqH7V9tXlbLdjzLTmLY4h/af8cRu3hTvsW3UTqbaphCExXwuXubhg0BoEPM0pWa/iAJy+6X/Vj+dtu8VaY7hBwPT/KzAeA==";
+    npx:hasSignature "Rqw+AbZ4VpnWQXbIHwiVXKGifrxDEBGlQ9A+z+Fhxrhrv1XRKlTyiPVe88lugv6CSr7KrT62LHt/eeiKn7IdjTZ/7QYp7Hf3+/0xfCIea804MXjQG0k1xU1qKWubaBHao2MQDzlV2v5v+Pf/omW3A8/Ka5a8JnL9mG3V6wS7/nPeFUWVIn7rgwhuQHCHdvz8np7Yo3D7wszbA8iYprskCc2gCGIsrM840AGrGLOmd+0IijRKQJQymxrWnqPJ1YgSweUGXbHiYg+IVKx6fb3tSP9m5rD/hgzEXSE56HLT3lJAYbz9p1xcDh1KVin0FjXiAuD4gyzMRsYJuIX8VAsGUQ==";
     npx:hasSignatureTarget this:;
-    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+    npx:signedBy orcid:0000-0002-1267-0234, <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

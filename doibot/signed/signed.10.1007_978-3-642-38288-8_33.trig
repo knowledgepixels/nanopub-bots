@@ -1,11 +1,13 @@
-@prefix this: <https://w3id.org/np/RASs3IMz_wi-GuEqT2vPQT-a9nzgnLaK6f7dh-gcPGTA8> .
-@prefix sub: <https://w3id.org/np/RASs3IMz_wi-GuEqT2vPQT-a9nzgnLaK6f7dh-gcPGTA8/> .
+@prefix this: <https://w3id.org/np/RAiahKAFvJUDjeKZYiMIPlmVoDWDaSKCEv4BBxbUm2l08> .
+@prefix sub: <https://w3id.org/np/RAiahKAFvJUDjeKZYiMIPlmVoDWDaSKCEv4BBxbUm2l08/> .
 @prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix ror: <https://ror.org/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -64,17 +66,21 @@ sub:pubinfo {
   
   orcid:0000-0002-4808-1845 foaf:name "Michael Krauthammer" .
   
-  this: dct:created "2026-02-25T10:39:45.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-06-30T15:12:45.000+02:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1007/978-3-642-38288-8_33>;
-    npx:supersedes <https://w3id.org/np/RA4MTDXtptAFjzf2a2pPyMcrzzwiG0gW-hhdasNPWdF3k>;
-    rdfs:label "Broadening the Scope of Nanopublications" .
+    npx:supersedes <https://w3id.org/np/RASs3IMz_wi-GuEqT2vPQT-a9nzgnLaK6f7dh-gcPGTA8>;
+    rdfs:label "Broadening the Scope of Nanopublications";
+    nt:wasCreatedFromProvenanceTemplate ns1:RAGXx_k9eQMnXaCbsXMsJbGClwZtQEGNg0GVJu6amdAVw;
+    nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RACJ58Gvyn91LqCKIO9zu1eijDQIeEff28iyDrJgjSJF8>,
+      <https://w3id.org/np/RAoTD7udB2KtUuOuAe74tJi1t3VzK0DyWS7rYVAq1GRvw>, <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
+    nt:wasCreatedFromTemplate <https://w3id.org/np/RA6NErVvGFJ1AflK02qqnB4jiQeF2EHl7mlbA7kp0d-lk> .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "TZ+fTbeACOgZrj8/hr16IDm/APtfQ71O7Tn4u8I7TfksrqKMwWIDZgV4P9UYn6dd8CPb1yqlHAdACbWU+A8kNeg0V1mLL1odHTXyGzGMUk45zia6cLf3qLLUUcq1akLy9HULowexvfq+Z1EeAa0rv5pQAcnvR81bPWZHlgKwWsjqjB8wwNjnEz1HSwYm3gJ52/4s1gw+JXvkqD4FbRSc2AihdJl6z/ExNm7EWzCrG+o3eoyuJKLE1CdRstymvgzA0YgPEinoFOiphSeyqvj7WCEm6s6BoXcrby6up8q3IcuONe70Lwo+Ro1GBpnGhPn/MIuQcg7Z6W2rO36I7hzP2g==";
+    npx:hasSignature "KfAo3F2DM+1GfKRi+4DARszgc9aQkew6x9lIxBsUt+/XdNjqrqCmP+GqJ/TlLbwCjY6d2KR3VXWypdvo2zQhMflJee10Z2IFMbx0tCeWl5EOeN4hcK3ukEEze246dzjVik1NfgUXWSePB+xIEHTueCpk8bzGDCzdTeVx3VpJlYXdkVLmY6Lq/HV+j8qPErcSTNjXAdoXBH9GUsNRDoPyx2ZaXWpIPDdH/yelcbbBC9AGXB2WtPPc1W+R/HkQarvFec079/Xeyb4uspQeHvQuh2A4MyLjU22rlTKIqbNvlSCojAHVSf6zUn65hwd5PMcfqxy95sgmWLTT/33Pmcwo8g==";
     npx:hasSignatureTarget this:;
-    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+    npx:signedBy orcid:0000-0002-1267-0234, <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

@@ -1,11 +1,13 @@
-@prefix this: <https://w3id.org/np/RANL1j-BlZngTpK4sguQ_72cz73CxEj9DzV4inICqj22U> .
-@prefix sub: <https://w3id.org/np/RANL1j-BlZngTpK4sguQ_72cz73CxEj9DzV4inICqj22U/> .
+@prefix this: <https://w3id.org/np/RAaywn7AbJ-XQEdQ4CBoNbEwCP8hQw4NmgllrDmA5H2fA> .
+@prefix sub: <https://w3id.org/np/RAaywn7AbJ-XQEdQ4CBoNbEwCP8hQw4NmgllrDmA5H2fA/> .
 @prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix ror: <https://ror.org/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -86,17 +88,21 @@ sub:pubinfo {
   
   orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
   
-  this: dct:created "2026-02-22T10:51:40.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-06-30T15:12:45.000+02:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.7717/peerj-cs.387>;
-    npx:supersedes <https://w3id.org/np/RAClabf2_nh8Xn_qGnASQojIAX-o4E7wqv5WfiEVTKdw8>;
-    rdfs:label "Semantic micro-contributions with decentralized nanopublication services" .
+    npx:supersedes <https://w3id.org/np/RANL1j-BlZngTpK4sguQ_72cz73CxEj9DzV4inICqj22U>;
+    rdfs:label "Semantic micro-contributions with decentralized nanopublication services";
+    nt:wasCreatedFromProvenanceTemplate ns1:RAGXx_k9eQMnXaCbsXMsJbGClwZtQEGNg0GVJu6amdAVw;
+    nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RACJ58Gvyn91LqCKIO9zu1eijDQIeEff28iyDrJgjSJF8>,
+      <https://w3id.org/np/RAoTD7udB2KtUuOuAe74tJi1t3VzK0DyWS7rYVAq1GRvw>, <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
+    nt:wasCreatedFromTemplate <https://w3id.org/np/RA6NErVvGFJ1AflK02qqnB4jiQeF2EHl7mlbA7kp0d-lk> .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "NiWtYDoYkVrvL7tHOcC9NOWTcSnpdwYmvJifLzzMNMkvxYpzsaODjA1kNiBMPOv8IHF35lWAag7b3awkKxtFIQgKd8GtIBnC+YGYWb6io9tuBNpbMSWMfGRuTRTh2yKQPl/4c4MrrebmX2tkILv0x/uLFqZccEmSHUGxzXNoLDKW5TdgmavuF4cOsJ4ipQ/q+yWxVrIKVYv1fAQxa3781ltJMfB8aC17Q8W2VFImK4Zwj65TnfjwpKT8vP7G8t+oAthPwHuAFkaSevs0FzHpGK5YYT3PazzzrtgvjaJx8hEU6Gbieh2bi5B8udBQmewGzX7jlQXxge2Eh++FdADfdA==";
+    npx:hasSignature "FdueDITaO5fcXk1glc72pPTWYRqsizUUzYyTyKmufNBe0M//YWYe4pEI+X3PdS5u7vXxxR9N89xhQPTAtj8sNpu/Not1l/vxDrY+lNzA0OCKsBnNjzS6fi2o0VlrrCML8XtZHxZgkX9Ae35hCmvKhzgZKcdQsp9QlpF8XxhxpiFq+3lT5vJMyttv6Uu4NRB5prXUSQKdRpiiIqAOreT6tlbf89X+QxBGFgtIzIpabJGrXC+gVpRvwCV59d/Z+Ri/M8FHezYofO90X9lt1+mLiQqjWkR2h1juNJO6132sojvRoYcW6gLRAdpLcq1bMlu0bk89Dtd/mDxX6rXoUx9QnA==";
     npx:hasSignatureTarget this:;
-    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+    npx:signedBy orcid:0000-0002-1267-0234, <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

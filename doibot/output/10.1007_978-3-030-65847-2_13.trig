@@ -68,12 +68,18 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-22T20:41:04.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-06-30T15:12:45.000+02:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1007/978-3-030-65847-2_13>;
-    rdfs:label "Reusable FAIR Implementation Profiles as Accelerators of FAIR Convergence" .
+    rdfs:label "Reusable FAIR Implementation Profiles as Accelerators of FAIR Convergence";
+    npx:supersedes <https://w3id.org/np/RAOmP3ek4MbCaQujWEWq6gqA23-9HOQXNAPl7BQJhdaSM>;
+    nt:wasCreatedFromProvenanceTemplate ns1:RAGXx_k9eQMnXaCbsXMsJbGClwZtQEGNg0GVJu6amdAVw;
+    nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RACJ58Gvyn91LqCKIO9zu1eijDQIeEff28iyDrJgjSJF8>,
+      <https://w3id.org/np/RAoTD7udB2KtUuOuAe74tJi1t3VzK0DyWS7rYVAq1GRvw>,
+      <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
+    nt:wasCreatedFromTemplate <https://w3id.org/np/RA6NErVvGFJ1AflK02qqnB4jiQeF2EHl7mlbA7kp0d-lk> .
 
   orcid:0000-0001-8888-635X foaf:name "Erik Schultes" .
   orcid:0000-0003-2195-3997 foaf:name "Barbara Magagna" .

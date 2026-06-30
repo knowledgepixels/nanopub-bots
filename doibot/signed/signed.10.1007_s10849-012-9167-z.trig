@@ -1,11 +1,13 @@
-@prefix this: <https://w3id.org/np/RAJ1jtzMW3wnq9NehnBzncHMAI5jKEusR3LV-VxNkZiBk> .
-@prefix sub: <https://w3id.org/np/RAJ1jtzMW3wnq9NehnBzncHMAI5jKEusR3LV-VxNkZiBk/> .
+@prefix this: <https://w3id.org/np/RACrTmxU5BioqfpqqADMHt_qMgEsaj1lnrbedzKu6Ke5k> .
+@prefix sub: <https://w3id.org/np/RACrTmxU5BioqfpqqADMHt_qMgEsaj1lnrbedzKu6Ke5k/> .
 @prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix ror: <https://ror.org/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -48,17 +50,21 @@ sub:provenance {
 sub:pubinfo {
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
   
-  this: dct:created "2026-02-25T10:27:16.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-06-30T15:12:45.000+02:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1007/s10849-012-9167-z>;
-    npx:supersedes <https://w3id.org/np/RAh9ha7RbfRf1Z93bhjGypgoujueKbiwIbKVA8DE9sCIg>;
-    rdfs:label "A Principled Approach to Grammars for Controlled Natural Languages and Predictive Editors" .
+    npx:supersedes <https://w3id.org/np/RAJ1jtzMW3wnq9NehnBzncHMAI5jKEusR3LV-VxNkZiBk>;
+    rdfs:label "A Principled Approach to Grammars for Controlled Natural Languages and Predictive Editors";
+    nt:wasCreatedFromProvenanceTemplate ns1:RAGXx_k9eQMnXaCbsXMsJbGClwZtQEGNg0GVJu6amdAVw;
+    nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RACJ58Gvyn91LqCKIO9zu1eijDQIeEff28iyDrJgjSJF8>,
+      <https://w3id.org/np/RAoTD7udB2KtUuOuAe74tJi1t3VzK0DyWS7rYVAq1GRvw>, <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
+    nt:wasCreatedFromTemplate <https://w3id.org/np/RA6NErVvGFJ1AflK02qqnB4jiQeF2EHl7mlbA7kp0d-lk> .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "d7RPhpYhIO0sMo76C0lFipEgEj7nnNhiIszekkTbMF58yP0dTFVTvEHdHX7UY0c2kIWxpjta92FJ1JdSZqvm4ufxBUSKIcPt1QWrlXNZdb960wirbvSywzd/OBBwZ/5Jm2T2L61YJdoMfL40pd6DjSbGdonAo2pMb6aUvszaFvNe3ouYNaqcsQb6SEEqPQMQj03BHQyuZr6s32KzfDumAJqH7Bb6R0OSclKtj2pDkzLipd7ZCsdyWOs7sgFubgdwT1dUe77NAeagSdj2M0R4l9l/oaETYn2nqiDyB9k8m7tQQS5ae3SEWjlmKefEY/bxZoK+mnTE6xSvLRyjpVTSSA==";
+    npx:hasSignature "A8A29XFqycuaG1XE/CWAy/c46XBfs603Saurku4LnYspABl+S2ad30LmxfnaTFux9m916UxWaCHZo3ZaxuVPV8DnEhhSu5AreVLtcFbLmJNPUYBW2Nd9Qyw2Htg8EoM3Iorlvl5MCOsXyhTkUVGmyEPm2KtQ84mJqQW1twTX+zEyeKJL76Haj7arhDehs4VVuGe43eDJdMWTbUz1xAs4oU58V1ubkppsGnEXTFngqwzo+WjofkM+fgjT6GKUVj84xfBuUokv7mIcBsOqCPZHPTjKlPOFuY8/6rxIridVsgbNGvCfx9x192wR0uZh4u1xZnl3+PO6DSYwa424nDonfA==";
     npx:hasSignatureTarget this:;
-    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+    npx:signedBy orcid:0000-0002-1267-0234, <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

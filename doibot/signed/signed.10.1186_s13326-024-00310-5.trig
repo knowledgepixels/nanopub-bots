@@ -1,11 +1,13 @@
-@prefix this: <https://w3id.org/np/RAA1vf_GK8NLXPv36aXQIWMda4KwSayKMDcI3XP-T090A> .
-@prefix sub: <https://w3id.org/np/RAA1vf_GK8NLXPv36aXQIWMda4KwSayKMDcI3XP-T090A/> .
+@prefix this: <https://w3id.org/np/RAtbYNIssYyaxmOYehHO2nUHjvTDRuZUXOs1_LZycVP18> .
+@prefix sub: <https://w3id.org/np/RAtbYNIssYyaxmOYehHO2nUHjvTDRuZUXOs1_LZycVP18/> .
 @prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix ror: <https://ror.org/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -64,16 +66,21 @@ sub:pubinfo {
   
   orcid:0000-0002-8280-0487 foaf:name "Lars Vogt" .
   
-  this: dct:created "2026-02-22T17:12:15.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-06-30T15:12:45.000+02:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1186/s13326-024-00310-5>;
-    rdfs:label "Semantic units: organizing knowledge graphs into semantically meaningful units of representation" .
+    npx:supersedes <https://w3id.org/np/RAA1vf_GK8NLXPv36aXQIWMda4KwSayKMDcI3XP-T090A>;
+    rdfs:label "Semantic units: organizing knowledge graphs into semantically meaningful units of representation";
+    nt:wasCreatedFromProvenanceTemplate ns1:RAGXx_k9eQMnXaCbsXMsJbGClwZtQEGNg0GVJu6amdAVw;
+    nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RACJ58Gvyn91LqCKIO9zu1eijDQIeEff28iyDrJgjSJF8>,
+      <https://w3id.org/np/RAoTD7udB2KtUuOuAe74tJi1t3VzK0DyWS7rYVAq1GRvw>, <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
+    nt:wasCreatedFromTemplate <https://w3id.org/np/RA6NErVvGFJ1AflK02qqnB4jiQeF2EHl7mlbA7kp0d-lk> .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "hanHiUqgo/bsqD4GpJUL7Rpv1FfKhVL8hv/AW7v8H6WJnIetcIOkJhkwGjkfjnfT83VYX181wch7z/6mLdCcX+CLi8Gi22A9sK0IfpMhdx53mKpDU2eea5zWIgtEJxZTMKiPxigxPx/pJkWKT8kr3VfaQBae+woLnUbhCULHY+IYoBpSTa9JAtXmbCP0FmReaelr2k32o46orYkNxDv+aCVBtDcQpD09Ejyj23YmOZ9x8283pTASZ5VcHQaR8XL1rEYszTpMec8EmicFe+EmEQrxpJmnKRQxTVKTXToAALTVzdHTgxiFCxElHMdPhkXZToBVU+855yh5zBjsFoe1Qg==";
+    npx:hasSignature "Z4MChYjbLiIWvCVBWl1hp93dg1ydaKrz9DlRoO+07+MTUsO+XkRTEhZdli1XyfkQWcBfkLGo1rYlbmRey3tGl3nLYUKpa+l+r9IZPSJBmsq8sJ6wzaLSKg5S0Az+8U7wJRIEj22QWRx/pWohODAKIdzGjmdrW4cWPbc97xJKcT4f74AX/6RORBSoJQxNSM9NXx0yf3ecX+VZQku3Kb/hXtKaLhkUhrNyc/k483pAHYxApRTOvDJtFRfPGJaPd0yVDaZ293PfBZ8ahe1Wu4mOAY+sRqa2B89JJct/8tWIKJ8S1LoBr7Ahhq8DAHNl0Z/xiMB+0KYh8EV395Gs1w8ckw==";
     npx:hasSignatureTarget this:;
-    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+    npx:signedBy orcid:0000-0002-1267-0234, <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

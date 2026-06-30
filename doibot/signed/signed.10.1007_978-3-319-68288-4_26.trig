@@ -1,11 +1,13 @@
-@prefix this: <https://w3id.org/np/RAMsHfDerYaSS6RbNjFWS7Lu2AR1-uNGacc3Qx86Rcb60> .
-@prefix sub: <https://w3id.org/np/RAMsHfDerYaSS6RbNjFWS7Lu2AR1-uNGacc3Qx86Rcb60/> .
+@prefix this: <https://w3id.org/np/RA07Q-BpDJefbVijBivRXgeKKiokr9hX3NTBd2ZNu7tek> .
+@prefix sub: <https://w3id.org/np/RA07Q-BpDJefbVijBivRXgeKKiokr9hX3NTBd2ZNu7tek/> .
 @prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix ror: <https://ror.org/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -85,17 +87,21 @@ sub:pubinfo {
   
   orcid:0000-0003-2798-978X foaf:name "Emilio Centeno" .
   
-  this: dct:created "2026-02-24T21:00:57.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-06-30T15:12:45.000+02:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1007/978-3-319-68288-4_26>;
-    npx:supersedes <https://w3id.org/np/RAT2Tb3naksNYpurkJbQAdP-chmGH0EaXCgdxVeASrVp8>;
-    rdfs:label "Reliable Granular References to Changing Linked Data" .
+    npx:supersedes <https://w3id.org/np/RAMsHfDerYaSS6RbNjFWS7Lu2AR1-uNGacc3Qx86Rcb60>;
+    rdfs:label "Reliable Granular References to Changing Linked Data";
+    nt:wasCreatedFromProvenanceTemplate ns1:RAGXx_k9eQMnXaCbsXMsJbGClwZtQEGNg0GVJu6amdAVw;
+    nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RACJ58Gvyn91LqCKIO9zu1eijDQIeEff28iyDrJgjSJF8>,
+      <https://w3id.org/np/RAoTD7udB2KtUuOuAe74tJi1t3VzK0DyWS7rYVAq1GRvw>, <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
+    nt:wasCreatedFromTemplate <https://w3id.org/np/RA6NErVvGFJ1AflK02qqnB4jiQeF2EHl7mlbA7kp0d-lk> .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "WuOgr2qaoX01rp3j90rI6dCoeb0sTSzU9f8yTXbjfBCnbSmyOyKmaXGmlHw86EegAo+v/1nx73bFV8CNXdlfCQEVyLLUi3C7TdJuSxA4JMnJmE74nW+cmb7kMrPz6SFB7Tulzv7Ny05vqGqsUqee2OUnTxvqW24st+n6ZbaWRjTCZ9XeUpOf5kJ7hnarIf3R9yeeKcVZTTmzeL0DAsAInU0fd2Ldf/LqAT39AoYZ5pzA10lcKhZTpwYK0g+LPpEWvnEXwUerv4rg+syIitl1JB8xF35qcwz2yqnp4Iq+UE3MwWWD/9l1s9k8acVfK4I7rgwiKLKplh2DNiAVGbS4bQ==";
+    npx:hasSignature "WvOLXYwZVcflkit0+Xm46tLcr/edmr7AwjzzBy4wHcqlV3K+6pPYf//AVVy4KktHuTNK0DvgnLiu3t2BRg4B7JWi1h8Rd5yJftabNgkM6zoqu5c+1x01xRO42wwR2s7/Ng/+vU7BiVHKvQZoKjLUZOMNxwkJ3DXP2rUP8YrbWXDEbXpaJZzqVdws9cFotXv+ooSsoN4N5D/x2h8n8tIHVoiOZVkPAI0DDfGvLNQJeHXNGdbiboCpdOuhcQCt7VZ8g7cN8Lon9tRY+YZ5vGIqgx88RQDGDUFexX2AXeM9s66ylHhuy5vGEjaOP1OmDnK7m9FmQMWWRgP3SztPAmJ0dA==";
     npx:hasSignatureTarget this:;
-    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+    npx:signedBy orcid:0000-0002-1267-0234, <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

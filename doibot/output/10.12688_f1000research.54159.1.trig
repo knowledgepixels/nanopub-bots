@@ -159,13 +159,18 @@
 }
 
 :pubinfo {
-  : dct:created "2026-03-05T11:40:38.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-06-30T15:12:45.000+02:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.12688/f1000research.54159.1>;
-    npx:supersedes <https://w3id.org/np/RAfthV06gC8oUEZ5vsJEZddH2pP8RFST-PZU3cog_Rxac>;
-    rdfs:label "Perspectives on automated composition of workflows in the life sciences" .
+    npx:supersedes <https://w3id.org/np/RAA73nc1zabSyHtZr6gupgsnlijzqcQYOJrXDJtK0V1kA>;
+    rdfs:label "Perspectives on automated composition of workflows in the life sciences";
+    nt:wasCreatedFromProvenanceTemplate ns1:RAGXx_k9eQMnXaCbsXMsJbGClwZtQEGNg0GVJu6amdAVw;
+    nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RACJ58Gvyn91LqCKIO9zu1eijDQIeEff28iyDrJgjSJF8>,
+      <https://w3id.org/np/RAoTD7udB2KtUuOuAe74tJi1t3VzK0DyWS7rYVAq1GRvw>,
+      <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
+    nt:wasCreatedFromTemplate <https://w3id.org/np/RA6NErVvGFJ1AflK02qqnB4jiQeF2EHl7mlbA7kp0d-lk> .
 
   orcid:0000-0003-1953-5606 foaf:name "Anna-Lena Lamprecht" .
   orcid:0000-0002-5865-8994 foaf:name "Magnus Palmblad" .

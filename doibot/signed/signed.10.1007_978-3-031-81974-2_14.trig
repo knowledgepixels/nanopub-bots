@@ -1,11 +1,13 @@
-@prefix this: <https://w3id.org/np/RANaTltVHqPetTymeOxVkWxJSzSQSe2DEuQAyz_8xmu-8> .
-@prefix sub: <https://w3id.org/np/RANaTltVHqPetTymeOxVkWxJSzSQSe2DEuQAyz_8xmu-8/> .
+@prefix this: <https://w3id.org/np/RAs4msdEgtJ7b1yy2IMMDfkjoPWT-0G7UF1BhBkrVPbHY> .
+@prefix sub: <https://w3id.org/np/RAs4msdEgtJ7b1yy2IMMDfkjoPWT-0G7UF1BhBkrVPbHY/> .
 @prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix ror: <https://ror.org/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -99,16 +101,21 @@ sub:pubinfo {
   
   orcid:0009-0009-7320-864X foaf:name "Tycho Hofstra" .
   
-  this: dct:created "2026-02-22T20:50:17.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-06-30T15:12:45.000+02:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1007/978-3-031-81974-2_14>;
-    rdfs:label "Aligning Data Management Plans with Community Standards Using FAIR Implementation Profiles" .
+    npx:supersedes <https://w3id.org/np/RANaTltVHqPetTymeOxVkWxJSzSQSe2DEuQAyz_8xmu-8>;
+    rdfs:label "Aligning Data Management Plans with Community Standards Using FAIR Implementation Profiles";
+    nt:wasCreatedFromProvenanceTemplate ns1:RAGXx_k9eQMnXaCbsXMsJbGClwZtQEGNg0GVJu6amdAVw;
+    nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RACJ58Gvyn91LqCKIO9zu1eijDQIeEff28iyDrJgjSJF8>,
+      <https://w3id.org/np/RAoTD7udB2KtUuOuAe74tJi1t3VzK0DyWS7rYVAq1GRvw>, <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
+    nt:wasCreatedFromTemplate <https://w3id.org/np/RA6NErVvGFJ1AflK02qqnB4jiQeF2EHl7mlbA7kp0d-lk> .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "Jfr+qo3yiRQbPeQ36vzARJOPJ1US7y7JU5YN9MSCuS3Ud00USNsgEK9w5YLpgUJZtd2PFomZJ9DkGmSjLxQdHpZAdzBmh1GYXB5np0AM4mnWuXddvPC6hJ8/A6IlBtthYtWJ3P+dHDltGw+aknkBQlKeMeFoF30VeR/K9pLXEs9LeiF2IzWcll/rpG5vpdlSlZjWckf5A64Kc7IK8DnjNCu1Jzy55bO3aoGkouNASmNWQXL4R6q76vYlAvAWg318XZTiFjGolYhLf9rlNXMmb7oYAQH8oAP54QUE17AosCV/xMF+WWPeWzUl/ylCTVxuvY2MbXwpaHeoLq7F2zU6gA==";
+    npx:hasSignature "GDLeZsjGTzDJdX3Vln1yc/ERVOeau9Mu/SNjetzSJoyAO73vFXmhxIZEGM+2whHkzlSl9N0y8lRerUrJKJj8ReH8u32GPn1Kf6aErYDDyaRenrFcvpE3DWs4F1yD3v+10jX4N8Vm9f5ZiReg5Dj9fGgU0pKGW6NE/vwBNDf2rWf2tSzuq5T9xRQVgnRhQLBuMESgHz5axlGPp/dEHB+QSt7W1ckcxyIpZpKu8OhU8fdVXhQzJVImTVG61FJ0GYZZ1Lm1VYgN1NudbyDHwS1ZiIspQbpqKBoCgAtVgBzet+w8jycFM6ATPbaVivXCFgjghV3CeJXih4ab2g45AXYHHQ==";
     npx:hasSignatureTarget this:;
-    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+    npx:signedBy orcid:0000-0002-1267-0234, <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

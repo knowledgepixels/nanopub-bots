@@ -58,12 +58,18 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-22T20:52:13.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-06-30T15:12:45.000+02:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.3897/rio.8.e94451>;
-    rdfs:label "FIPs and Practice" .
+    rdfs:label "FIPs and Practice";
+    npx:supersedes <https://w3id.org/np/RAMng7e2Gatirb7XKCOdHHw8V5sNjZW1sZ7dqrHuZzk54>;
+    nt:wasCreatedFromProvenanceTemplate ns1:RAGXx_k9eQMnXaCbsXMsJbGClwZtQEGNg0GVJu6amdAVw;
+    nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RACJ58Gvyn91LqCKIO9zu1eijDQIeEff28iyDrJgjSJF8>,
+      <https://w3id.org/np/RAoTD7udB2KtUuOuAe74tJi1t3VzK0DyWS7rYVAq1GRvw>,
+      <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
+    nt:wasCreatedFromTemplate <https://w3id.org/np/RA6NErVvGFJ1AflK02qqnB4jiQeF2EHl7mlbA7kp0d-lk> .
 
   orcid:0000-0003-2195-3997 foaf:name "Barbara Magagna" .
   orcid:0000-0001-8888-635X foaf:name "Erik Schultes" .

@@ -1,11 +1,13 @@
-@prefix this: <https://w3id.org/np/RAdz-aHYBhV1c2WpieJnDhP3_LptK4YHc_vRaZa9Q2Mac> .
-@prefix sub: <https://w3id.org/np/RAdz-aHYBhV1c2WpieJnDhP3_LptK4YHc_vRaZa9Q2Mac/> .
+@prefix this: <https://w3id.org/np/RALL0wAU1OwfnKjaCYz7kcPZv95ES41Ng7vmpe8IBhJSM> .
+@prefix sub: <https://w3id.org/np/RALL0wAU1OwfnKjaCYz7kcPZv95ES41Ng7vmpe8IBhJSM/> .
 @prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix ror: <https://ror.org/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -68,16 +70,21 @@ sub:pubinfo {
   
   orcid:0000-0002-7748-4715 foaf:name "Jacco van Ossenbruggen" .
   
-  this: dct:created "2026-02-22T20:45:15.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-06-30T15:12:45.000+02:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1145/3587259.3627559>;
-    rdfs:label "Advancing data sharing and reusability for restricted access data on the Web: introducing the DataSet-Variable Ontology" .
+    npx:supersedes <https://w3id.org/np/RAdz-aHYBhV1c2WpieJnDhP3_LptK4YHc_vRaZa9Q2Mac>;
+    rdfs:label "Advancing data sharing and reusability for restricted access data on the Web: introducing the DataSet-Variable Ontology";
+    nt:wasCreatedFromProvenanceTemplate ns1:RAGXx_k9eQMnXaCbsXMsJbGClwZtQEGNg0GVJu6amdAVw;
+    nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RACJ58Gvyn91LqCKIO9zu1eijDQIeEff28iyDrJgjSJF8>,
+      <https://w3id.org/np/RAoTD7udB2KtUuOuAe74tJi1t3VzK0DyWS7rYVAq1GRvw>, <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
+    nt:wasCreatedFromTemplate <https://w3id.org/np/RA6NErVvGFJ1AflK02qqnB4jiQeF2EHl7mlbA7kp0d-lk> .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "UR6+wT/FCZd6YkOIKQkpcbNVzXjigMmoKv1/Ona0k78UwEfe29LqyAaST9h+3YbGO/8y+E/Woe15qFq2koywSPVol0sL1Rfg03SM728HK6rOiEBdQ8UbQIvbzLG8ycZb4lD17uq7vSsnb+9sX5vbj8MAhckeo16Cjyjr7d7fVJPMEI7Er5IBpgRXumWg6oi0b0O3HwvHAx+4jy9kYse3/Q36Hs26G3ZQ1EaJY5gaZzrxtuQ96FPD5D0hycIusPQIUX0nZO1yPPNfFrblFalKQ8iQsH5Hk9IEissdqKrCm/n2fk/ifOBH5oG9hL/jxUURTX/vxhmZTffKb9QVdnjALg==";
+    npx:hasSignature "ZT7l9D/c05w8yA3BSqrf8T/OAPsooFKb5ikSWDtRIWgwEeKTc1Xybf98kaFJ4adt4hgwq2hXjwNUxtJm+24D7jcMG04GE8LfXRyzccWVEJM0/8fRvlpRSAovRgz+i7vLVW6tyskDSmDTu60kDsBci27ghMBASq9KOYWlbBLMQBaOTNet1L3Kpcsa5oVGYeuIuSFVygyPQpm7IrYs1Ce2mF1iKyftaY6C7DIB72LYHZqHu7ackTQ5wLjpAIdWdLAnMo+TjOiqo6nKKpV3zE29esjasOX6VVtJiNwHB/V1OPUnL4nBV5MEMdhjr7megw9+SP1GPPg60gtQJz+WHVV0LQ==";
     npx:hasSignatureTarget this:;
-    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+    npx:signedBy orcid:0000-0002-1267-0234, <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

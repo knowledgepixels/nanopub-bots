@@ -1,11 +1,13 @@
-@prefix this: <https://w3id.org/np/RABArNmo4SpVur8rUAuSLLcV0gd_uTIekrcmBop4z2Ww0> .
-@prefix sub: <https://w3id.org/np/RABArNmo4SpVur8rUAuSLLcV0gd_uTIekrcmBop4z2Ww0/> .
+@prefix this: <https://w3id.org/np/RAS2pARCueHN7_rsbeWyoNloGgavEWrY3xgji2NC3RRkE> .
+@prefix sub: <https://w3id.org/np/RAS2pARCueHN7_rsbeWyoNloGgavEWrY3xgji2NC3RRkE/> .
 @prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix ror: <https://ror.org/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -56,17 +58,21 @@ sub:pubinfo {
   
   orcid:0000-0003-0197-9743 foaf:name "Kurt Winkler" .
   
-  this: dct:created "2026-02-24T21:00:57.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-06-30T15:12:45.000+02:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1007/s10579-015-9316-5>;
-    npx:supersedes <https://w3id.org/np/RA0KU9f6IEZa8AP05C3RSNqVm0RyhtHw5R2MazHDzIZAw>;
-    rdfs:label "Fully automatic multi-language translation with a catalogue of phrases: successful employment for the Swiss avalanche bulletin" .
+    npx:supersedes <https://w3id.org/np/RABArNmo4SpVur8rUAuSLLcV0gd_uTIekrcmBop4z2Ww0>;
+    rdfs:label "Fully automatic multi-language translation with a catalogue of phrases: successful employment for the Swiss avalanche bulletin";
+    nt:wasCreatedFromProvenanceTemplate ns1:RAGXx_k9eQMnXaCbsXMsJbGClwZtQEGNg0GVJu6amdAVw;
+    nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RACJ58Gvyn91LqCKIO9zu1eijDQIeEff28iyDrJgjSJF8>,
+      <https://w3id.org/np/RAoTD7udB2KtUuOuAe74tJi1t3VzK0DyWS7rYVAq1GRvw>, <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
+    nt:wasCreatedFromTemplate <https://w3id.org/np/RA6NErVvGFJ1AflK02qqnB4jiQeF2EHl7mlbA7kp0d-lk> .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "I64RYzjE9Q5xR8is81z4oGdjPfHIuSqk9eFxB9P5VcNf9aIQG1t8HgQKvMsgUZtatWOntCFy48csVsQzkr9KzxRHr5ZyRyrdtFFfB/j5lJaq2mu5dMM356BTtd7jo/qu9sFNyJf50pfV+jh2fDfYY622SwkajHW+yHptNGsA/CywgSTgBA2BtvDr39qF2iaNFWAsVhw8xAYCa47IfmL+nR4NM7CfDCPJB+2TyfKpFMXNJ3S8L+uP0TcJ8Afq86zA5MZ08KLM6vEiMk+j0+7I7b8dz/PMePBt6qr2+/kc8bwmipR+tLWGNQARVdKIU2gtvglIjWuMs07QNTBScXTYFw==";
+    npx:hasSignature "a6K2VvqH/HNz0gUkUuF2JQXMMJozCv+6wjXnLMjM6z+uh8Wn+w7N5L6lRMAwUzp6Aw2KCVo7j8LcxaaVOfawom6wJv+Myk+PxTuEj9seSTjR63nufINUB+Lr8OKSNmYlUuDOFbNZq6dqe+O8RNtaoNDNKCG5xsDcMTrvKIb6RMsIdWgntII9QYNSn42Erw7a/HLFoCT6PclY9JIKHKMuvq2CW/v0iydXmAndq3Ijob3jZTemzfkfR80xk/BWcNFfuvL/DlKXRbKP3o1/+E6YXbZhtjc+QAlzYvJc4PiZobN6TfxDNzoLP23TyYmNx2ZCWCrrgSjmlaYZIFzQqftBhQ==";
     npx:hasSignatureTarget this:;
-    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+    npx:signedBy orcid:0000-0002-1267-0234, <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

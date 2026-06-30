@@ -212,13 +212,18 @@
 }
 
 :pubinfo {
-  : dct:created "2026-03-05T11:45:18.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-06-30T15:12:45.000+02:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1038/sdata.2016.18>;
-    npx:supersedes <https://w3id.org/np/RAnLfi9hhU1XyoKq_7KqIUpzi1DdDv0t0ri3iZyA4vdYE> ;
-    rdfs:label "The FAIR Guiding Principles for scientific data management and stewardship" .
+    npx:supersedes <https://w3id.org/np/RAkEfRqNgUm2rSDdeJJvaIwRvqsu_U56UxA7rM4AS_o0c> ;
+    rdfs:label "The FAIR Guiding Principles for scientific data management and stewardship";
+    nt:wasCreatedFromProvenanceTemplate ns1:RAGXx_k9eQMnXaCbsXMsJbGClwZtQEGNg0GVJu6amdAVw;
+    nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RACJ58Gvyn91LqCKIO9zu1eijDQIeEff28iyDrJgjSJF8>,
+      <https://w3id.org/np/RAoTD7udB2KtUuOuAe74tJi1t3VzK0DyWS7rYVAq1GRvw>,
+      <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
+    nt:wasCreatedFromTemplate <https://w3id.org/np/RA6NErVvGFJ1AflK02qqnB4jiQeF2EHl7mlbA7kp0d-lk> .
 
   orcid:0000-0001-6960-357X foaf:name "Mark D. Wilkinson" .
   orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .

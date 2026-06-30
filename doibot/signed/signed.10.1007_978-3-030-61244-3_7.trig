@@ -1,11 +1,13 @@
-@prefix this: <https://w3id.org/np/RAxZ0qev1P7TROw0baRlrMOXuB7jtESos3IErGOOFmbQs> .
-@prefix sub: <https://w3id.org/np/RAxZ0qev1P7TROw0baRlrMOXuB7jtESos3IErGOOFmbQs/> .
+@prefix this: <https://w3id.org/np/RALK_S1S45B31Fj2OQItnFJlCM7B0vVNZs3EAUaml4HHY> .
+@prefix sub: <https://w3id.org/np/RALK_S1S45B31Fj2OQItnFJlCM7B0vVNZs3EAUaml4HHY/> .
 @prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix ror: <https://ror.org/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -64,16 +66,21 @@ sub:pubinfo {
   
   orcid:0000-0002-7114-6459 foaf:name "Cristina-Iulia Bucur" .
   
-  this: dct:created "2026-02-22T18:02:21.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-06-30T15:12:45.000+02:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1007/978-3-030-61244-3_7>;
-    rdfs:label "A Unified Nanopublication Model for Effective and User-Friendly Access to the Elements of Scientific Publishing" .
+    npx:supersedes <https://w3id.org/np/RAxZ0qev1P7TROw0baRlrMOXuB7jtESos3IErGOOFmbQs>;
+    rdfs:label "A Unified Nanopublication Model for Effective and User-Friendly Access to the Elements of Scientific Publishing";
+    nt:wasCreatedFromProvenanceTemplate ns1:RAGXx_k9eQMnXaCbsXMsJbGClwZtQEGNg0GVJu6amdAVw;
+    nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RACJ58Gvyn91LqCKIO9zu1eijDQIeEff28iyDrJgjSJF8>,
+      <https://w3id.org/np/RAoTD7udB2KtUuOuAe74tJi1t3VzK0DyWS7rYVAq1GRvw>, <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
+    nt:wasCreatedFromTemplate <https://w3id.org/np/RA6NErVvGFJ1AflK02qqnB4jiQeF2EHl7mlbA7kp0d-lk> .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "Qf7BSk+dQAL+l+Mv9GZUgiNeYy7Hp3j4D+aSoXWaAX8LCnSa3LjxL2uz2vNPZVKSjiq7expinxeCVNf7d9zuRoH7URVChUM6nfKyW4WRaNR2q+NfsdoiH12bfpoE3RsFPH6bMV7OcIpjbsqFphOtYiuLxDjvE995ekDDYT5zSOqwvOO03h5xIBAb5hNzGOsiTmQxFW2pD/jJvBecpViqdqtiOsLyyw76k204ojMOl4uUiXDiWe3K5XxXEM1B+1FodpYxZ0gkGTZKeAwTCzsmZ3rzMf4ZOxLcLymg/zOAlI2sjeTKu9VVYIadIuey+7jPTjb2/7rv64xlyICfdL/A0Q==";
+    npx:hasSignature "lBRCHA4OmHZ19yfzjs74GKAKw30bW7/2Cjzz0Yafr2W4/pbTo3bVzlXRc2MxOLj80SENpMISp2ik2zaOy6ut+TQWSW3pU4M+4BM84dq3L0plXgQZujK+VwGnq6kuWAH2Sfe/11PLo+CFhvFIWtYVT4wBo7OIYyBn/bzju6b6qTtPig1wj4eXAEjt3TOMEiP/8gIvoxCvX5VzM/ZNkrxTamxoMwDop7VwTTlk1Nav7JGOqySQKdjXoIhdcO+GLDu+RxVvJCiDrh1zUjRo8S5shq2BVMSSBnSr2rg8jjOrRrtBR708VaUkbMXljFe2NRBgAAtUZQwJMHlnK/UsrNVlJA==";
     npx:hasSignatureTarget this:;
-    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+    npx:signedBy orcid:0000-0002-1267-0234, <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

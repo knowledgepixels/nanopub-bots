@@ -81,13 +81,18 @@
 }
 
 :pubinfo {
-  : dct:created "2026-03-05T11:23:59.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-06-30T15:12:45.000+02:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1038/s41597-019-0184-5>;
-    npx:supersedes <https://w3id.org/np/RAuSQWTXRTrgk_ONfl-7p6_MM4D7ENoaJny9fbJwjzwLY> ;
-    rdfs:label "Evaluating FAIR maturity through a scalable, automated, community-governed framework" .
+    npx:supersedes <https://w3id.org/np/RAf2arM57QSYuW7fV-Po8Ql97cJlGFdoPpczWgvFpdYZg> ;
+    rdfs:label "Evaluating FAIR maturity through a scalable, automated, community-governed framework";
+    nt:wasCreatedFromProvenanceTemplate ns1:RAGXx_k9eQMnXaCbsXMsJbGClwZtQEGNg0GVJu6amdAVw;
+    nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RACJ58Gvyn91LqCKIO9zu1eijDQIeEff28iyDrJgjSJF8>,
+      <https://w3id.org/np/RAoTD7udB2KtUuOuAe74tJi1t3VzK0DyWS7rYVAq1GRvw>,
+      <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
+    nt:wasCreatedFromTemplate <https://w3id.org/np/RA6NErVvGFJ1AflK02qqnB4jiQeF2EHl7mlbA7kp0d-lk> .
 
   orcid:0000-0001-6960-357X foaf:name "Mark D. Wilkinson" .
 

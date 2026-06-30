@@ -68,13 +68,18 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-24T21:00:57.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-06-30T15:12:45.000+02:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1145/3460210.3493546>;
-    npx:supersedes <https://w3id.org/np/RAEpxvLaBCKLzifw2YZsbgjXqB1oivI9Wewm4T9xCW5s4> ;
-    rdfs:label "User-friendly Composition of FAIR Workflows in a Notebook Environment" .
+    npx:supersedes <https://w3id.org/np/RA95Kx-NNacbMUqN3D2lKrhSH7zfqOZKy8t7mKwgZf_80> ;
+    rdfs:label "User-friendly Composition of FAIR Workflows in a Notebook Environment";
+    nt:wasCreatedFromProvenanceTemplate ns1:RAGXx_k9eQMnXaCbsXMsJbGClwZtQEGNg0GVJu6amdAVw;
+    nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RACJ58Gvyn91LqCKIO9zu1eijDQIeEff28iyDrJgjSJF8>,
+      <https://w3id.org/np/RAoTD7udB2KtUuOuAe74tJi1t3VzK0DyWS7rYVAq1GRvw>,
+      <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
+    nt:wasCreatedFromTemplate <https://w3id.org/np/RA6NErVvGFJ1AflK02qqnB4jiQeF2EHl7mlbA7kp0d-lk> .
 
   orcid:0000-0002-9984-2720 foaf:name "Robin A. Richardson" .
   orcid:0000-0001-7769-4272 foaf:name "Remzi Celebi" .

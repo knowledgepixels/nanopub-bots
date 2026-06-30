@@ -1,11 +1,13 @@
-@prefix this: <https://w3id.org/np/RA7Z1RG8ReBMcNOM9EJb59G6EZgutYuZgrE-AF1evfqK8> .
-@prefix sub: <https://w3id.org/np/RA7Z1RG8ReBMcNOM9EJb59G6EZgutYuZgrE-AF1evfqK8/> .
+@prefix this: <https://w3id.org/np/RA76vwf_OkCl78h4Q1u-wqNRZLhiOvWzraDpmgr0-4KYY> .
+@prefix sub: <https://w3id.org/np/RA76vwf_OkCl78h4Q1u-wqNRZLhiOvWzraDpmgr0-4KYY/> .
 @prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix ror: <https://ror.org/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -72,17 +74,21 @@ sub:pubinfo {
   
   orcid:0000-0002-4808-1845 foaf:name "Michael Krauthammer" .
   
-  this: dct:created "2026-02-25T10:39:45.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-06-30T15:12:45.000+02:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1007/978-3-642-14418-9_16>;
-    npx:supersedes <https://w3id.org/np/RAcDEn3LIK9553mKRBJ13f8O6MhNnKWaD6ApDXayeshOo>;
-    rdfs:label "Writing Clinical Practice Guidelines in Controlled Natural Language" .
+    npx:supersedes <https://w3id.org/np/RA7Z1RG8ReBMcNOM9EJb59G6EZgutYuZgrE-AF1evfqK8>;
+    rdfs:label "Writing Clinical Practice Guidelines in Controlled Natural Language";
+    nt:wasCreatedFromProvenanceTemplate ns1:RAGXx_k9eQMnXaCbsXMsJbGClwZtQEGNg0GVJu6amdAVw;
+    nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RACJ58Gvyn91LqCKIO9zu1eijDQIeEff28iyDrJgjSJF8>,
+      <https://w3id.org/np/RAoTD7udB2KtUuOuAe74tJi1t3VzK0DyWS7rYVAq1GRvw>, <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
+    nt:wasCreatedFromTemplate <https://w3id.org/np/RA6NErVvGFJ1AflK02qqnB4jiQeF2EHl7mlbA7kp0d-lk> .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "iX/fHklwvspWEVxZ47tpVBwYukG5WngYRifEl1gu9WCXO9nL2IFhhs5VjOv7475QFvGOs/xFeydqi4BBXL2SCuwBPa56+FAPmcu81pF9hZziy2jd0AicdfWIg8mTMZJcSRmpont0+GWjHsftHpFCK+53I0XO9qm3BRzB9uFSU3A/OPrrD8ujJ7BsWn6WKqOsH6IGuCo2fVNnCt26wFA8S//NrvKeKOSYIw28NpHJOsJo6/0HflLtverzRaGRKaoU19BtjyB3wAe1czepmWAAd0ZBb9yTS//5Q90scFhIsvs0181KM5WrGb/+cewpoUKXtiq9oKIACQ/FYxK2VImr0Q==";
+    npx:hasSignature "aSQRJ0VLFu9ivfk2wvI+R9JzqqP97Pyc3Y3i6PEUkmDYoBlxvhNRnyDYeIkzOewLeYUaeaQaGGAO4cMD22a5WZUquErbxP56tkWxrne7jKji8V+DaGh/pt10Xh6qnk2uTh8a+g8T3jBimi70xM91WYLBkuoADwc24VVdcuYZZcczR9nb/rYM5YPvCeHktJx7ms5VWgSo/NBBHcdnJn8l4iAFzBh75ohzrV48DaPggzOrocIzuWB8EqUeLd7tToCF+IQGZ2tWzZVODy7aNAa64p6gt4HAiBFo8tF2d4YuBNJ/1jBYFHrCXr5sPMj8Xo0yGEFa9t79/GU0jV378NqTig==";
     npx:hasSignatureTarget this:;
-    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+    npx:signedBy orcid:0000-0002-1267-0234, <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

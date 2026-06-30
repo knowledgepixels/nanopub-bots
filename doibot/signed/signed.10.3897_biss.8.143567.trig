@@ -1,11 +1,13 @@
-@prefix this: <https://w3id.org/np/RA0TI2Lw7bgjJVHxGWriqk4qSViWxsa5v6uGjuhiKNa3U> .
-@prefix sub: <https://w3id.org/np/RA0TI2Lw7bgjJVHxGWriqk4qSViWxsa5v6uGjuhiKNa3U/> .
+@prefix this: <https://w3id.org/np/RAVuBnAkOvFrfCZ17ebPersOba1LxmAsV1Fc1nvi-pM4U> .
+@prefix sub: <https://w3id.org/np/RAVuBnAkOvFrfCZ17ebPersOba1LxmAsV1Fc1nvi-pM4U/> .
 @prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix ror: <https://ror.org/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -90,17 +92,21 @@ sub:pubinfo {
   
   orcid:0000-0002-4842-6487 foaf:name "Dimitris Koureas" .
   
-  this: dct:created "2026-02-22T21:42:40.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-06-30T15:12:45.000+02:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.3897/biss.8.143567>;
-    npx:supersedes <https://w3id.org/np/RA0UTJ9VSDkUDmZjiJe1eNkNsgljlEZ_BAMo1cKR4ONQg>;
-    rdfs:label "Nanopublications: Universal, Anti-Silo and FAIR Method for Publishing, Annotating and Sharing of Open Linked Data for Biodiversity" .
+    npx:supersedes <https://w3id.org/np/RA0TI2Lw7bgjJVHxGWriqk4qSViWxsa5v6uGjuhiKNa3U>;
+    rdfs:label "Nanopublications: Universal, Anti-Silo and FAIR Method for Publishing, Annotating and Sharing of Open Linked Data for Biodiversity";
+    nt:wasCreatedFromProvenanceTemplate ns1:RAGXx_k9eQMnXaCbsXMsJbGClwZtQEGNg0GVJu6amdAVw;
+    nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RACJ58Gvyn91LqCKIO9zu1eijDQIeEff28iyDrJgjSJF8>,
+      <https://w3id.org/np/RAoTD7udB2KtUuOuAe74tJi1t3VzK0DyWS7rYVAq1GRvw>, <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
+    nt:wasCreatedFromTemplate <https://w3id.org/np/RA6NErVvGFJ1AflK02qqnB4jiQeF2EHl7mlbA7kp0d-lk> .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "F1qvLk6ixSp3GLrK94O/Vahjcp6f7CCT4+qAjKXMuMYI0+ZSMk4wKZnR96CWD1SNaPCs7AW8XIIlVTPovD5fHC6o9TawDBpWozII6qF1lvUH+MgFpJW1K05gt2y8/6lFImfcbGnIoxkP46keNxH7X8f2nXXy2OCVW2efHYe5YUZD0IA6dtjvu9bMIWwKv4+A5XkRK/B74Gmau0hx9I4eKTmJzekfXpQme8L0v0dHyVDxU9HP1WGrbUjPX3RB2KB9yG8+TiBqqN0Aek3X5Q8RTicGJBkK0XuTSZN3uABFRqZ3HUZsK1339xGkn/oHgp7FfmpmBV6rzUTVwOVqYuteRA==";
+    npx:hasSignature "V4pLb9E/dWCDBRcaq4+zhISBw/6EfM5wTScpdwQkGsosTL0eqVFiuyfqPL5//UYYN8fCL5zvinxkYnKUtQHW3RHxu6KwzLwzxOXRq5M6/ov2mPkoChzDTSs94ol+zSzbzL4j/AUCE9KvA5vVwrbc9duDITdz2zRD/JhzrhKK0JSXH0NqzBJ4yipZaKQr/Iy7zlLsao9IfkKxzT8rNY3YEzOztk1YzFKCjxOn1yBFIQr2t33h2Jmn8c+mAUFyPn6ZZCieYBhh8Tlo+T2hBpDpEEvkMUPuMfjOAJdIJ215Ld7zAGC62aeSb3QRQI8lxJFdqqYlM+M+h4r9BDqanlnb0Q==";
     npx:hasSignatureTarget this:;
-    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+    npx:signedBy orcid:0000-0002-1267-0234, <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }
