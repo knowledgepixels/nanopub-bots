@@ -44,28 +44,35 @@
   :author-list rdf:_10 orcid:0000-0003-1304-1939 .
   :author-list rdf:_11 orcid:0000-0001-8888-635X .
 
-  orcid:0000-0001-6960-357X foaf:name "Mark D. Wilkinson" .
+  orcid:0000-0001-6960-357X foaf:name "Mark D. Wilkinson" ;
+    schema:affiliation ror:03n6nwv02 .
+  orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" ;
+    schema:affiliation ror:02jz4aj89 .
+  orcid:0000-0001-5306-5690 foaf:name "Susanna-Assunta Sansone" ;
+    schema:affiliation ror:052gg0110 .
+  orcid:0000-0002-1164-1351 foaf:name "Luiz Olavo Bonino da Silva Santos" ;
+    schema:affiliation ror:05xvt9f17 .
+  orcid:0000-0001-9833-8031 foaf:name "Mario Prieto" ;
+    schema:affiliation ror:03n6nwv02 .
+  orcid:0000-0002-2109-489X foaf:name "Dominique Batista" ;
+    schema:affiliation ror:052gg0110 .
+  orcid:0000-0003-2687-1982 foaf:name "Peter McQuilton" ;
+    schema:affiliation ror:052gg0110 .
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" ;
+    schema:affiliation ror:008xxew50 .
+  orcid:0000-0001-9853-5668 foaf:name "Philippe Rocca-Serra" ;
+    schema:affiliation ror:052gg0110 .
+  orcid:0000-0003-1304-1939 foaf:name "Mercè Crosas" ;
+    schema:affiliation ror:03vek6s52 .
+  orcid:0000-0001-8888-635X foaf:name "Erik Schultes" ;
+    schema:affiliation ror:05xvt9f17 .
 
-  orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
-
-  orcid:0000-0001-5306-5690 foaf:name "Susanna-Assunta Sansone" .
-
-  orcid:0000-0002-1164-1351 foaf:name "Luiz Olavo Bonino da Silva Santos" .
-
-  orcid:0000-0001-9833-8031 foaf:name "Mario Prieto" .
-
-  orcid:0000-0002-2109-489X foaf:name "Dominique Batista" .
-
-  orcid:0000-0003-2687-1982 foaf:name "Peter McQuilton" .
-
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
-
-  orcid:0000-0001-9853-5668 foaf:name "Philippe Rocca-Serra" .
-
-  orcid:0000-0003-1304-1939 foaf:name "Mercè Crosas" .
-
-  orcid:0000-0001-8888-635X foaf:name "Erik Schultes" .
-
+  ror:03n6nwv02 foaf:name "Universidad Politécnica de Madrid, Madrid, Spain" .
+  ror:02jz4aj89 foaf:name "Maastricht University, Maastricht, Netherlands" .
+  ror:052gg0110 foaf:name "University of Oxford, Oxford, United Kingdom" .
+  ror:05xvt9f17 foaf:name "Leiden University Medical Center, Leiden, Netherlands" .
+  ror:008xxew50 foaf:name "Vrije Universiteit Amsterdam, Amsterdam, Netherlands" .
+  ror:03vek6s52 foaf:name "Harvard University, Cambridge, United States" .
 }
 
 :provenance {
@@ -74,12 +81,12 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-22T10:51:40.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-03-05T11:23:59.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1038/s41597-019-0184-5>;
-    npx:supersedes <https://w3id.org/np/RAn0hxYDPb1aXNzTW3YtFFpZ1AVvH34dW__A8PfLIbBv0> ;
+    npx:supersedes <https://w3id.org/np/RAuSQWTXRTrgk_ONfl-7p6_MM4D7ENoaJny9fbJwjzwLY> ;
     rdfs:label "Evaluating FAIR maturity through a scalable, automated, community-governed framework" .
 
   orcid:0000-0001-6960-357X foaf:name "Mark D. Wilkinson" .

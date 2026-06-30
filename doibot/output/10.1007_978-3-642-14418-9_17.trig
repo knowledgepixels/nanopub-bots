@@ -49,21 +49,40 @@
   :author-list rdf:_14 orcid:0000-0001-8998-7005 .
   :author-list rdf:_15 :john-sowa .
 
-  orcid:0000-0002-2958-3428 foaf:name "Adam Wyner" .
-  orcid:0000-0001-7703-3503 foaf:name "Krasimir Angelov" .
-  orcid:0000-0002-3804-2498 foaf:name "Guntis Barzdins" .
-  :danica-damljanovic foaf:name "Danica Damljanovic" .
-  orcid:0000-0002-5759-2655 foaf:name "Brian Davis" .
-  :norbert-fuchs foaf:name "Norbert Fuchs" .
-  :stefan-hoefler foaf:name "Stefan Hoefler" .
+  orcid:0000-0002-2958-3428 foaf:name "Adam Wyner" ;
+    schema:affiliation ror:02jx3x895 .
+  orcid:0000-0001-7703-3503 foaf:name "Krasimir Angelov" ;
+    schema:affiliation ror:040wg7k59 .
+  orcid:0000-0002-3804-2498 foaf:name "Guntis Barzdins" ;
+    schema:affiliation ror:05g3mes96 .
+  :danica-damljanovic foaf:name "Danica Damljanovic" ;
+    schema:affiliation ror:05krs5044 .
+  orcid:0000-0002-5759-2655 foaf:name "Brian Davis" ;
+    schema:affiliation ror:03bea9k73 .
+  :norbert-fuchs foaf:name "Norbert Fuchs" ;
+    schema:affiliation ror:02crff812 .
+  :stefan-hoefler foaf:name "Stefan Hoefler" ;
+    schema:affiliation ror:02crff812 .
   :ken-jones foaf:name "Ken Jones" .
-  :kaarel-kaljurand foaf:name "Kaarel Kaljurand" .
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  :kaarel-kaljurand foaf:name "Kaarel Kaljurand" ;
+    schema:affiliation ror:02crff812 .
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" ;
+    schema:affiliation ror:02crff812 .
   :martin-luts foaf:name "Martin Luts" .
   orcid:0000-0001-7864-5229 foaf:name "Jonathan Pool" .
-  :mike-rosner foaf:name "Mike Rosner" .
-  orcid:0000-0001-8998-7005 foaf:name "Rolf Schwitter" .
-  :john-sowa foaf:name "John Sowa" .
+  :mike-rosner foaf:name "Mike Rosner" ;
+    schema:affiliation ror:03a62bv60 .
+  orcid:0000-0001-8998-7005 foaf:name "Rolf Schwitter" ;
+    schema:affiliation ror:01sf06y89 .
+
+  ror:02jx3x895 foaf:name "University College London, London, United Kingdom" .
+  ror:040wg7k59 foaf:name "Chalmers University of Technology, Gothenburg, Sweden" .
+  ror:05g3mes96 foaf:name "University of Latvia, Riga, Latvia" .
+  ror:05krs5044 foaf:name "University of Sheffield, Sheffield, United Kingdom" .
+  ror:03bea9k73 foaf:name "University of Galway, Galway, Ireland" .
+  ror:02crff812 foaf:name "University of Zurich, Zurich, Switzerland" .
+  ror:03a62bv60 foaf:name "University of Malta, Msida, Malta" .
+  ror:01sf06y89 foaf:name "Macquarie University, Sydney, Australia" .
 }
 
 :provenance {
@@ -72,11 +91,12 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-23T13:37:38.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-03-05T11:18:00.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1007/978-3-642-14418-9_17>;
+    npx:supersedes <https://w3id.org/np/RAj4JnM3A7dUpngPKorXta80eU_ZKvv1NsI2FHaGXhJM0>;
     rdfs:label "On Controlled Natural Languages: Properties and Prospects" .
 
   orcid:0000-0002-2958-3428 foaf:name "Adam Wyner" .

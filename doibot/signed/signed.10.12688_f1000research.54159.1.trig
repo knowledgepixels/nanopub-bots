@@ -1,13 +1,15 @@
-@prefix this: <https://w3id.org/np/RAfthV06gC8oUEZ5vsJEZddH2pP8RFST-PZU3cog_Rxac> .
-@prefix sub: <https://w3id.org/np/RAfthV06gC8oUEZ5vsJEZddH2pP8RFST-PZU3cog_Rxac/> .
+@prefix this: <https://w3id.org/np/RAA73nc1zabSyHtZr6gupgsnlijzqcQYOJrXDJtK0V1kA> .
+@prefix sub: <https://w3id.org/np/RAA73nc1zabSyHtZr6gupgsnlijzqcQYOJrXDJtK0V1kA/> .
+@prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -30,67 +32,139 @@ sub:assertion {
     bibo:authorList sub:author-list;
     bibo:pageStart "897" .
   
-  orcid:0000-0001-6666-1520 foaf:name "Jon Ison" .
+  orcid:0000-0001-6666-1520 schema:affiliation ror:045f7pv37;
+    foaf:name "Jon Ison" .
   
-  orcid:0000-0001-6801-2559 foaf:name "Timothy J. Griffin" .
+  orcid:0000-0001-6801-2559 schema:affiliation ror:017zqws13;
+    foaf:name "Timothy J. Griffin" .
   
-  orcid:0000-0001-6811-9196 foaf:name "Alireza Khanteymoori" .
+  orcid:0000-0001-6811-9196 schema:affiliation ror:0245cg223;
+    foaf:name "Alireza Khanteymoori" .
   
-  orcid:0000-0001-8465-8341 foaf:name "Yolanda Gil" .
+  orcid:0000-0001-8465-8341 schema:affiliation ror:03taz7m60;
+    foaf:name "Yolanda Gil" .
   
-  orcid:0000-0001-9727-2544 foaf:name "Hans Ienasescu" .
+  orcid:0000-0001-9727-2544 schema:affiliation ror:04qtj9h94;
+    foaf:name "Hans Ienasescu" .
   
-  orcid:0000-0001-9842-9718 foaf:name "Stian Soiland-Reyes" .
+  orcid:0000-0001-9842-9718 schema:affiliation ror:027m9bs27;
+    foaf:name "Stian Soiland-Reyes" .
   
-  orcid:0000-0002-0097-1056 foaf:name "Vedran Kasalica" .
+  orcid:0000-0002-0097-1056 schema:affiliation ror:04pp8hn57;
+    foaf:name "Vedran Kasalica" .
   
-  orcid:0000-0002-0309-604X foaf:name "Salvador Capella-Gutierrez" .
+  orcid:0000-0002-0309-604X schema:affiliation ror:05sd8tv96;
+    foaf:name "Salvador Capella-Gutierrez" .
   
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:008xxew50;
+    foaf:name "Tobias Kuhn" .
   
-  orcid:0000-0002-1279-5133 foaf:name "Katherine Wolstencroft" .
+  orcid:0000-0002-1279-5133 schema:affiliation ror:027bh9e22;
+    foaf:name "Katherine Wolstencroft" .
   
-  orcid:0000-0002-1509-4981 foaf:name "Matúš Kalaš" .
+  orcid:0000-0002-1509-4981 schema:affiliation ror:03zga2b32;
+    foaf:name "Matúš Kalaš" .
   
-  orcid:0000-0002-2196-0305 foaf:name "Ilkay Altintas" .
+  orcid:0000-0002-2196-0305 schema:affiliation ror:0168r3w48;
+    foaf:name "Ilkay Altintas" .
   
-  orcid:0000-0002-2961-9670 foaf:name "Michael R. Crusoe" .
+  orcid:0000-0002-2961-9670 schema:affiliation ror:008xxew50;
+    foaf:name "Michael R. Crusoe" .
   
-  orcid:0000-0002-5865-8994 foaf:name "Magnus Palmblad" .
+  orcid:0000-0002-5865-8994 schema:affiliation ror:05xvt9f17;
+    foaf:name "Magnus Palmblad" .
   
-  orcid:0000-0002-6038-9025 foaf:name "Robert Stevens" .
+  orcid:0000-0002-6038-9025 schema:affiliation ror:027m9bs27;
+    foaf:name "Robert Stevens" .
   
   orcid:0000-0002-6899-4262 foaf:name "Paulos Charonyktakis" .
   
-  orcid:0000-0002-7187-4683 foaf:name "Steffen Möller" .
+  orcid:0000-0002-7187-4683 schema:affiliation ror:04dm1cm79;
+    foaf:name "Steffen Möller" .
   
-  orcid:0000-0002-7552-1009 foaf:name "Hervé Ménager" .
+  orcid:0000-0002-7552-1009 schema:affiliation ror:0495fxg12;
+    foaf:name "Hervé Ménager" .
   
-  orcid:0000-0002-9370-4677 foaf:name "Vincent Robert" .
+  orcid:0000-0002-9370-4677 schema:affiliation ror:030a5r161;
+    foaf:name "Vincent Robert" .
   
-  orcid:0000-0002-9609-9505 foaf:name "Suzan Verberne" .
+  orcid:0000-0002-9609-9505 schema:affiliation ror:027bh9e22;
+    foaf:name "Suzan Verberne" .
   
-  orcid:0000-0002-9708-6722 foaf:name "Veit Schwämmle" .
+  orcid:0000-0002-9708-6722 schema:affiliation ror:03yrrjy16;
+    foaf:name "Veit Schwämmle" .
   
-  orcid:0000-0002-9984-2720 foaf:name "Robin A. Richardson" .
+  orcid:0000-0002-9984-2720 schema:affiliation ror:00rbjv475;
+    foaf:name "Robin A. Richardson" .
   
-  orcid:0000-0003-0183-6910 foaf:name "Paul Groth" .
+  orcid:0000-0003-0183-6910 schema:affiliation ror:04dkp9463;
+    foaf:name "Paul Groth" .
   
-  orcid:0000-0003-0373-9372 foaf:name "Aswin Verhoeven" .
+  orcid:0000-0003-0373-9372 schema:affiliation ror:05xvt9f17;
+    foaf:name "Aswin Verhoeven" .
   
-  orcid:0000-0003-0984-0973 foaf:name "Pratik Jagtap" .
+  orcid:0000-0003-0984-0973 schema:affiliation ror:017zqws13;
+    foaf:name "Pratik Jagtap" .
   
-  orcid:0000-0003-1219-2137 foaf:name "Carole Goble" .
+  orcid:0000-0003-1219-2137 schema:affiliation ror:027m9bs27;
+    foaf:name "Carole Goble" .
   
-  orcid:0000-0003-1781-5508 foaf:name "Hailiang Mei" .
+  orcid:0000-0003-1781-5508 schema:affiliation ror:05xvt9f17;
+    foaf:name "Hailiang Mei" .
   
-  orcid:0000-0003-1953-5606 foaf:name "Anna-Lena Lamprecht" .
+  orcid:0000-0003-1953-5606 schema:affiliation ror:04pp8hn57;
+    foaf:name "Anna-Lena Lamprecht" .
   
-  orcid:0000-0003-4004-6479 foaf:name "Christopher J. O. Baker" .
+  orcid:0000-0003-4004-6479 schema:affiliation ror:05nkf0n29;
+    foaf:name "Christopher J. O. Baker" .
   
-  orcid:0000-0003-4647-3877 foaf:name "Mohammad Sadnan Al Manir" .
+  orcid:0000-0003-4647-3877 schema:affiliation ror:0153tk833;
+    foaf:name "Mohammad Sadnan Al Manir" .
   
-  sub:ammar-ben-hadj-amor foaf:name "Ammar Ben Hadj Amor" .
+  ror:008xxew50 foaf:name "Vrije Universiteit Amsterdam, Amsterdam, Netherlands" .
+  
+  ror:00rbjv475 foaf:name "Netherlands eScience Center, Amsterdam, Netherlands" .
+  
+  ror:0153tk833 foaf:name "University of Virginia, Charlottesville, United States" .
+  
+  ror:0168r3w48 foaf:name "University of California San Diego, La Jolla, United States" .
+  
+  ror:017zqws13 foaf:name "University of Minnesota, Minneapolis, United States" .
+  
+  ror:0245cg223 foaf:name "University of Freiburg, Freiburg, Germany" .
+  
+  ror:027bh9e22 foaf:name "Leiden University, Leiden, Netherlands" .
+  
+  ror:027m9bs27 foaf:name "University of Manchester, Manchester, United Kingdom" .
+  
+  ror:030a5r161 foaf:name "Westerdijk Fungal Biodiversity Institute, Utrecht, Netherlands" .
+  
+  ror:03taz7m60 foaf:name "University of Southern California, Los Angeles, United States" .
+  
+  ror:03yrrjy16 foaf:name "University of Southern Denmark, Odense, Denmark" .
+  
+  ror:03zga2b32 foaf:name "University of Bergen, Bergen, Norway" .
+  
+  ror:045f7pv37 foaf:name "Institut Français de Bioinformatique, Évry, France" .
+  
+  ror:0495fxg12 foaf:name "Institut Pasteur, Paris, France" .
+  
+  ror:04dkp9463 foaf:name "University of Amsterdam, Amsterdam, Netherlands" .
+  
+  ror:04dm1cm79 foaf:name "Rostock University Medical Center, Rostock, Germany" .
+  
+  ror:04pp8hn57 foaf:name "Utrecht University, Utrecht, Netherlands" .
+  
+  ror:04qtj9h94 foaf:name "Technical University of Denmark, Kongens Lyngby, Denmark" .
+  
+  ror:05nkf0n29 foaf:name "University of New Brunswick, Saint John, Canada" .
+  
+  ror:05sd8tv96 foaf:name "Barcelona Supercomputing Center, Barcelona, Spain" .
+  
+  ror:05xvt9f17 foaf:name "Leiden University Medical Center, Leiden, Netherlands" .
+  
+  sub:ammar-ben-hadj-amor schema:affiliation ror:030a5r161;
+    foaf:name "Ammar Ben Hadj Amor" .
   
   sub:author-list rdf:_1 orcid:0000-0003-1953-5606;
     rdf:_10 orcid:0000-0002-6899-4262;
@@ -125,7 +199,8 @@ sub:assertion {
     rdf:_8 sub:ammar-ben-hadj-amor;
     rdf:_9 orcid:0000-0002-0309-604X .
   
-  sub:szoke-szaniszlo foaf:name "Szoke Szaniszlo" .
+  sub:szoke-szaniszlo schema:affiliation ror:030a5r161;
+    foaf:name "Szoke Szaniszlo" .
 }
 
 sub:provenance {
@@ -201,16 +276,17 @@ sub:pubinfo {
   
   orcid:0000-0003-4647-3877 foaf:name "Mohammad Sadnan Al Manir" .
   
-  this: dct:created "2026-02-23T15:32:44.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-03-05T11:40:38.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.12688/f1000research.54159.1>;
+    npx:supersedes <https://w3id.org/np/RAfthV06gC8oUEZ5vsJEZddH2pP8RFST-PZU3cog_Rxac>;
     rdfs:label "Perspectives on automated composition of workflows in the life sciences" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "pr0HFECmCbho24NaNYtipDByUomtzXPsheNOKGZ+M1F7Q5qP2JeffzYaOh0sZrK9YeEa7g2xp9B0sXFmBXyiavPAPuukgsgc1e+WOepo6jsYrCMhq90V5pCn/yk9YmheQDIvFvwpMIAs+VW07L1oMs3pi+2kl9JLfmI8vzuqo2ypndc9rFY84mFOm02331yv37OQ7UGqfDJWM04p211VP53AP7420+BJmZMy6CFAwZqX0Sdb0uc4Stbb/TjkWJy+A6TqE9Jg1rd7nejLLG7MnJ1msrKTnBmGtejsnZQV6HJvoq72IZBxPAJ6DfSAW5QErsTNcyX3MQc/ZgBjjPV/1g==";
+    npx:hasSignature "ELfn2ihrfkbWmjrzJuejFT3FMrO5iiCZY8bfwvP4weTSXt5CCfLXugUPnWtdB/phFEDG8zdW5WJeihR9e0M6M2U50kKpL8vtTR7q6ACF6E1Dq3HQCwQf+f5ZGljn9FqsZBo9Xp+N9WOwY+5R5yqHX+7Unb+yWbgTsdxN0JNqG4RJVslcSyH9W1FKxujZ9Y31wouURzIF5HH1Lq2vJMsVpw1UCJ6SZiJP2kjd/AvTw1SH4MFu7tjpU5mLgwQNPDvvKv0zAIiC4nmOLDlP7U621HmSgeC4DmTiwrE6yladGmncJEWlaUdYenzbCesHEoTd5uPd86RBt/4gv2b0L5k5JA==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

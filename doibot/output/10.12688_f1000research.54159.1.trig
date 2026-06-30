@@ -66,38 +66,91 @@
   :author-list rdf:_31 orcid:0000-0003-0373-9372 .
   :author-list rdf:_32 orcid:0000-0002-1279-5133 .
 
-  orcid:0000-0003-1953-5606 foaf:name "Anna-Lena Lamprecht" .
-  orcid:0000-0002-5865-8994 foaf:name "Magnus Palmblad" .
-  orcid:0000-0001-6666-1520 foaf:name "Jon Ison" .
-  orcid:0000-0002-9708-6722 foaf:name "Veit Schwämmle" .
-  orcid:0000-0003-4647-3877 foaf:name "Mohammad Sadnan Al Manir" .
-  orcid:0000-0002-2196-0305 foaf:name "Ilkay Altintas" .
-  orcid:0000-0003-4004-6479 foaf:name "Christopher J. O. Baker" .
-  :ammar-ben-hadj-amor foaf:name "Ammar Ben Hadj Amor" .
-  orcid:0000-0002-0309-604X foaf:name "Salvador Capella-Gutierrez" .
+  orcid:0000-0003-1953-5606 foaf:name "Anna-Lena Lamprecht" ;
+    schema:affiliation ror:04pp8hn57 .
+  orcid:0000-0002-5865-8994 foaf:name "Magnus Palmblad" ;
+    schema:affiliation ror:05xvt9f17 .
+  orcid:0000-0001-6666-1520 foaf:name "Jon Ison" ;
+    schema:affiliation ror:045f7pv37 .
+  orcid:0000-0002-9708-6722 foaf:name "Veit Schwämmle" ;
+    schema:affiliation ror:03yrrjy16 .
+  orcid:0000-0003-4647-3877 foaf:name "Mohammad Sadnan Al Manir" ;
+    schema:affiliation ror:0153tk833 .
+  orcid:0000-0002-2196-0305 foaf:name "Ilkay Altintas" ;
+    schema:affiliation ror:0168r3w48 .
+  orcid:0000-0003-4004-6479 foaf:name "Christopher J. O. Baker" ;
+    schema:affiliation ror:05nkf0n29 .
+  :ammar-ben-hadj-amor foaf:name "Ammar Ben Hadj Amor" ;
+    schema:affiliation ror:030a5r161 .
+  orcid:0000-0002-0309-604X foaf:name "Salvador Capella-Gutierrez" ;
+    schema:affiliation ror:05sd8tv96 .
   orcid:0000-0002-6899-4262 foaf:name "Paulos Charonyktakis" .
-  orcid:0000-0002-2961-9670 foaf:name "Michael R. Crusoe" .
-  orcid:0000-0001-8465-8341 foaf:name "Yolanda Gil" .
-  orcid:0000-0003-1219-2137 foaf:name "Carole Goble" .
-  orcid:0000-0001-6801-2559 foaf:name "Timothy J. Griffin" .
-  orcid:0000-0003-0183-6910 foaf:name "Paul Groth" .
-  orcid:0000-0001-9727-2544 foaf:name "Hans Ienasescu" .
-  orcid:0000-0003-0984-0973 foaf:name "Pratik Jagtap" .
-  orcid:0000-0002-1509-4981 foaf:name "Matúš Kalaš" .
-  orcid:0000-0002-0097-1056 foaf:name "Vedran Kasalica" .
-  orcid:0000-0001-6811-9196 foaf:name "Alireza Khanteymoori" .
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
-  orcid:0000-0003-1781-5508 foaf:name "Hailiang Mei" .
-  orcid:0000-0002-7552-1009 foaf:name "Hervé Ménager" .
-  orcid:0000-0002-7187-4683 foaf:name "Steffen Möller" .
-  orcid:0000-0002-9984-2720 foaf:name "Robin A. Richardson" .
-  orcid:0000-0002-9370-4677 foaf:name "Vincent Robert" .
-  orcid:0000-0001-9842-9718 foaf:name "Stian Soiland-Reyes" .
-  orcid:0000-0002-6038-9025 foaf:name "Robert Stevens" .
-  :szoke-szaniszlo foaf:name "Szoke Szaniszlo" .
-  orcid:0000-0002-9609-9505 foaf:name "Suzan Verberne" .
-  orcid:0000-0003-0373-9372 foaf:name "Aswin Verhoeven" .
-  orcid:0000-0002-1279-5133 foaf:name "Katherine Wolstencroft" .
+  orcid:0000-0002-2961-9670 foaf:name "Michael R. Crusoe" ;
+    schema:affiliation ror:008xxew50 .
+  orcid:0000-0001-8465-8341 foaf:name "Yolanda Gil" ;
+    schema:affiliation ror:03taz7m60 .
+  orcid:0000-0003-1219-2137 foaf:name "Carole Goble" ;
+    schema:affiliation ror:027m9bs27 .
+  orcid:0000-0001-6801-2559 foaf:name "Timothy J. Griffin" ;
+    schema:affiliation ror:017zqws13 .
+  orcid:0000-0003-0183-6910 foaf:name "Paul Groth" ;
+    schema:affiliation ror:04dkp9463 .
+  orcid:0000-0001-9727-2544 foaf:name "Hans Ienasescu" ;
+    schema:affiliation ror:04qtj9h94 .
+  orcid:0000-0003-0984-0973 foaf:name "Pratik Jagtap" ;
+    schema:affiliation ror:017zqws13 .
+  orcid:0000-0002-1509-4981 foaf:name "Matúš Kalaš" ;
+    schema:affiliation ror:03zga2b32 .
+  orcid:0000-0002-0097-1056 foaf:name "Vedran Kasalica" ;
+    schema:affiliation ror:04pp8hn57 .
+  orcid:0000-0001-6811-9196 foaf:name "Alireza Khanteymoori" ;
+    schema:affiliation ror:0245cg223 .
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" ;
+    schema:affiliation ror:008xxew50 .
+  orcid:0000-0003-1781-5508 foaf:name "Hailiang Mei" ;
+    schema:affiliation ror:05xvt9f17 .
+  orcid:0000-0002-7552-1009 foaf:name "Hervé Ménager" ;
+    schema:affiliation ror:0495fxg12 .
+  orcid:0000-0002-7187-4683 foaf:name "Steffen Möller" ;
+    schema:affiliation ror:04dm1cm79 .
+  orcid:0000-0002-9984-2720 foaf:name "Robin A. Richardson" ;
+    schema:affiliation ror:00rbjv475 .
+  orcid:0000-0002-9370-4677 foaf:name "Vincent Robert" ;
+    schema:affiliation ror:030a5r161 .
+  orcid:0000-0001-9842-9718 foaf:name "Stian Soiland-Reyes" ;
+    schema:affiliation ror:027m9bs27 .
+  orcid:0000-0002-6038-9025 foaf:name "Robert Stevens" ;
+    schema:affiliation ror:027m9bs27 .
+  :szoke-szaniszlo foaf:name "Szoke Szaniszlo" ;
+    schema:affiliation ror:030a5r161 .
+  orcid:0000-0002-9609-9505 foaf:name "Suzan Verberne" ;
+    schema:affiliation ror:027bh9e22 .
+  orcid:0000-0003-0373-9372 foaf:name "Aswin Verhoeven" ;
+    schema:affiliation ror:05xvt9f17 .
+  orcid:0000-0002-1279-5133 foaf:name "Katherine Wolstencroft" ;
+    schema:affiliation ror:027bh9e22 .
+
+  ror:04pp8hn57 foaf:name "Utrecht University, Utrecht, Netherlands" .
+  ror:05xvt9f17 foaf:name "Leiden University Medical Center, Leiden, Netherlands" .
+  ror:045f7pv37 foaf:name "Institut Français de Bioinformatique, Évry, France" .
+  ror:03yrrjy16 foaf:name "University of Southern Denmark, Odense, Denmark" .
+  ror:0153tk833 foaf:name "University of Virginia, Charlottesville, United States" .
+  ror:0168r3w48 foaf:name "University of California San Diego, La Jolla, United States" .
+  ror:05nkf0n29 foaf:name "University of New Brunswick, Saint John, Canada" .
+  ror:030a5r161 foaf:name "Westerdijk Fungal Biodiversity Institute, Utrecht, Netherlands" .
+  ror:05sd8tv96 foaf:name "Barcelona Supercomputing Center, Barcelona, Spain" .
+  ror:008xxew50 foaf:name "Vrije Universiteit Amsterdam, Amsterdam, Netherlands" .
+  ror:03taz7m60 foaf:name "University of Southern California, Los Angeles, United States" .
+  ror:027m9bs27 foaf:name "University of Manchester, Manchester, United Kingdom" .
+  ror:017zqws13 foaf:name "University of Minnesota, Minneapolis, United States" .
+  ror:04dkp9463 foaf:name "University of Amsterdam, Amsterdam, Netherlands" .
+  ror:04qtj9h94 foaf:name "Technical University of Denmark, Kongens Lyngby, Denmark" .
+  ror:03zga2b32 foaf:name "University of Bergen, Bergen, Norway" .
+  ror:0245cg223 foaf:name "University of Freiburg, Freiburg, Germany" .
+  ror:0495fxg12 foaf:name "Institut Pasteur, Paris, France" .
+  ror:04dm1cm79 foaf:name "Rostock University Medical Center, Rostock, Germany" .
+  ror:00rbjv475 foaf:name "Netherlands eScience Center, Amsterdam, Netherlands" .
+  ror:027bh9e22 foaf:name "Leiden University, Leiden, Netherlands" .
 }
 
 :provenance {
@@ -106,11 +159,12 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-23T15:32:44.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-03-05T11:40:38.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.12688/f1000research.54159.1>;
+    npx:supersedes <https://w3id.org/np/RAfthV06gC8oUEZ5vsJEZddH2pP8RFST-PZU3cog_Rxac>;
     rdfs:label "Perspectives on automated composition of workflows in the life sciences" .
 
   orcid:0000-0003-1953-5606 foaf:name "Anna-Lena Lamprecht" .

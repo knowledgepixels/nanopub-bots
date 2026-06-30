@@ -1,13 +1,15 @@
-@prefix this: <https://w3id.org/np/RAvv5T9KPJzFDD6Q4wki7mysExLli_7RtdmTZvnIzlx2U> .
-@prefix sub: <https://w3id.org/np/RAvv5T9KPJzFDD6Q4wki7mysExLli_7RtdmTZvnIzlx2U/> .
+@prefix this: <https://w3id.org/np/RAWuoM5YpU8oYFQf6ZAf4RnIKNyaFnbEUKRW1R3Pl_mhU> .
+@prefix sub: <https://w3id.org/np/RAWuoM5YpU8oYFQf6ZAf4RnIKNyaFnbEUKRW1R3Pl_mhU/> .
+@prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -30,33 +32,60 @@ sub:assertion {
   
   orcid:0000-0001-6818-334X foaf:name "Christine Chichester" .
   
-  orcid:0000-0001-7542-0286 foaf:name "Egon Willighagen" .
+  orcid:0000-0001-7542-0286 schema:affiliation ror:02jz4aj89;
+    foaf:name "Egon Willighagen" .
   
-  orcid:0000-0001-8499-824X foaf:name "Juan M. Banda" .
+  orcid:0000-0001-8499-824X schema:affiliation ror:03qt6ba18;
+    foaf:name "Juan M. Banda" .
   
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:008xxew50;
+    foaf:name "Tobias Kuhn" .
   
-  orcid:0000-0002-2759-8079 foaf:name "Tareq B. Malas" .
+  orcid:0000-0002-2759-8079 schema:affiliation ror:05xvt9f17;
+    foaf:name "Tareq B. Malas" .
   
-  orcid:0000-0002-5301-3142 foaf:name "Chris Evelo" .
+  orcid:0000-0002-5301-3142 schema:affiliation ror:02jz4aj89;
+    foaf:name "Chris Evelo" .
   
-  orcid:0000-0002-5678-9907 foaf:name "Allen H. Hurlbert" .
+  orcid:0000-0002-5678-9907 schema:affiliation ror:0130frc33;
+    foaf:name "Allen H. Hurlbert" .
   
-  orcid:0000-0002-7770-620X foaf:name "Friederike Ehrhart" .
+  orcid:0000-0002-7770-620X schema:affiliation ror:02jz4aj89;
+    foaf:name "Friederike Ehrhart" .
   
-  orcid:0000-0002-8394-3439 foaf:name "Alexander Malic" .
+  orcid:0000-0002-8394-3439 schema:affiliation ror:02jz4aj89;
+    foaf:name "Alexander Malic" .
   
-  orcid:0000-0002-9383-528X foaf:name "Laura I. Furlong" .
+  orcid:0000-0002-9383-528X schema:affiliation ror:042nkmz09;
+    foaf:name "Laura I. Furlong" .
   
-  orcid:0000-0003-0169-8159 foaf:name "Núria Queralt-Rosinach" .
+  orcid:0000-0003-0169-8159 schema:affiliation ror:02dxx6824;
+    foaf:name "Núria Queralt-Rosinach" .
   
-  orcid:0000-0003-2798-978X foaf:name "Emilio Centeno Ortiz" .
+  orcid:0000-0003-2798-978X schema:affiliation ror:042nkmz09;
+    foaf:name "Emilio Centeno Ortiz" .
   
   orcid:0000-0003-3138-4118 foaf:name "Jorrit H. Poelen" .
   
-  orcid:0000-0003-4646-5842 foaf:name "Albert Meroño-Peñuela" .
+  orcid:0000-0003-4646-5842 schema:affiliation ror:008xxew50;
+    foaf:name "Albert Meroño-Peñuela" .
   
-  orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
+  orcid:0000-0003-4727-9435 schema:affiliation ror:02jz4aj89;
+    foaf:name "Michel Dumontier" .
+  
+  ror:008xxew50 foaf:name "Vrije Universiteit Amsterdam, Amsterdam, Netherlands" .
+  
+  ror:0130frc33 foaf:name "University of North Carolina at Chapel Hill, United States" .
+  
+  ror:02dxx6824 foaf:name "Scripps Research Institute, La Jolla, United States" .
+  
+  ror:02jz4aj89 foaf:name "Maastricht University, Maastricht, Netherlands" .
+  
+  ror:03qt6ba18 foaf:name "Georgia State University, Atlanta, United States" .
+  
+  ror:042nkmz09 foaf:name "Hospital del Mar Research Institute (IMIM), Barcelona, Spain" .
+  
+  ror:05xvt9f17 foaf:name "Leiden University Medical Center, Leiden, Netherlands" .
   
   sub:author-list rdf:_1 orcid:0000-0002-1267-0234;
     rdf:_10 orcid:0000-0001-8499-824X;
@@ -117,17 +146,17 @@ sub:pubinfo {
   
   orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
   
-  this: dct:created "2026-02-22T11:02:28.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-03-05T11:30:07.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1109/eScience.2018.00024>;
-    npx:supersedes <https://w3id.org/np/RA9eI9jkWJ3ftivKCGaf6ToV1HQuTGfC96QjFakL7w3b4>;
+    npx:supersedes <https://w3id.org/np/RAvv5T9KPJzFDD6Q4wki7mysExLli_7RtdmTZvnIzlx2U>;
     rdfs:label "Nanopublications: A Growing Resource of Provenance-Centric Scientific Linked Data" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "BpChNse+tQvb0rzc9Fwf/+hXqtoZfteEjfyWgsjoVpusmKQv+BTEm/yheSOtlRg8hNN9oBJLW3nST1OG7RHP+qVUfv84yRtxyzOkRcidLJy1pwnOoQYhC5wgwACLEtEyIEU2TQ9O9XK1t7tx7wXTSg1W1kW0eEXogsRMvKjzYD7lF5zLzjgFzqwvxBuVi0tIPzFbnmeUbyvfSaEchtxsThRC5hakrC1os8AOa3Yks5h/63jdc09AdGmwHdLoqvzu+7GLG3PuncSj4Yfjz0edpubkPB7lxR6tqDKX1vnSOPq04gFircgoCVk0VPXwmsvl67J8LCoJADTpLDr0w/1CNw==";
+    npx:hasSignature "V6brRtEyq6P5jPbleclBib8ZW6HABchu30Xbb3w9PMpASBVHtCdzI/01T3wHdw4gPEyS/+L42g6h2drJtZ37BEpk/9hMb4vE0EgsNK8lsywVuR6AVPg+aZ+yAk3jVra2H7EPDawTl1drjlkEY8WmzBLs9rb9wJkW2cA7SPEkNbNajEWYt5zS1w8OcVPEx/kMB7J5nXZwUbE3pyRSyz4awYELYE/cNyhUD8J1qlql2KIT71CB2qnUGOcItFyhTDQ64o46HTMDqi7dhaYgp6fy7DNbGq8RrF9qVAOXd2SYzexSwofYpMww03ZkTDucl+gg26c9iM49isi8MjPhCMBjTQ==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

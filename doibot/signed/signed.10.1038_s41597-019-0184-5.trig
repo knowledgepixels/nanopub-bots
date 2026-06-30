@@ -1,13 +1,15 @@
-@prefix this: <https://w3id.org/np/RAuSQWTXRTrgk_ONfl-7p6_MM4D7ENoaJny9fbJwjzwLY> .
-@prefix sub: <https://w3id.org/np/RAuSQWTXRTrgk_ONfl-7p6_MM4D7ENoaJny9fbJwjzwLY/> .
+@prefix this: <https://w3id.org/np/RAf2arM57QSYuW7fV-Po8Ql97cJlGFdoPpczWgvFpdYZg> .
+@prefix sub: <https://w3id.org/np/RAf2arM57QSYuW7fV-Po8Ql97cJlGFdoPpczWgvFpdYZg/> .
+@prefix schema: <http://schema.org/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix orcid: <https://orcid.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -29,27 +31,50 @@ sub:assertion {
     bibo:authorList sub:author-list;
     bibo:volume "6" .
   
-  orcid:0000-0001-5306-5690 foaf:name "Susanna-Assunta Sansone" .
+  orcid:0000-0001-5306-5690 schema:affiliation ror:052gg0110;
+    foaf:name "Susanna-Assunta Sansone" .
   
-  orcid:0000-0001-6960-357X foaf:name "Mark D. Wilkinson" .
+  orcid:0000-0001-6960-357X schema:affiliation ror:03n6nwv02;
+    foaf:name "Mark D. Wilkinson" .
   
-  orcid:0000-0001-8888-635X foaf:name "Erik Schultes" .
+  orcid:0000-0001-8888-635X schema:affiliation ror:05xvt9f17;
+    foaf:name "Erik Schultes" .
   
-  orcid:0000-0001-9833-8031 foaf:name "Mario Prieto" .
+  orcid:0000-0001-9833-8031 schema:affiliation ror:03n6nwv02;
+    foaf:name "Mario Prieto" .
   
-  orcid:0000-0001-9853-5668 foaf:name "Philippe Rocca-Serra" .
+  orcid:0000-0001-9853-5668 schema:affiliation ror:052gg0110;
+    foaf:name "Philippe Rocca-Serra" .
   
-  orcid:0000-0002-1164-1351 foaf:name "Luiz Olavo Bonino da Silva Santos" .
+  orcid:0000-0002-1164-1351 schema:affiliation ror:05xvt9f17;
+    foaf:name "Luiz Olavo Bonino da Silva Santos" .
   
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0002-1267-0234 schema:affiliation ror:008xxew50;
+    foaf:name "Tobias Kuhn" .
   
-  orcid:0000-0002-2109-489X foaf:name "Dominique Batista" .
+  orcid:0000-0002-2109-489X schema:affiliation ror:052gg0110;
+    foaf:name "Dominique Batista" .
   
-  orcid:0000-0003-1304-1939 foaf:name "Mercè Crosas" .
+  orcid:0000-0003-1304-1939 schema:affiliation ror:03vek6s52;
+    foaf:name "Mercè Crosas" .
   
-  orcid:0000-0003-2687-1982 foaf:name "Peter McQuilton" .
+  orcid:0000-0003-2687-1982 schema:affiliation ror:052gg0110;
+    foaf:name "Peter McQuilton" .
   
-  orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
+  orcid:0000-0003-4727-9435 schema:affiliation ror:02jz4aj89;
+    foaf:name "Michel Dumontier" .
+  
+  ror:008xxew50 foaf:name "Vrije Universiteit Amsterdam, Amsterdam, Netherlands" .
+  
+  ror:02jz4aj89 foaf:name "Maastricht University, Maastricht, Netherlands" .
+  
+  ror:03n6nwv02 foaf:name "Universidad Politécnica de Madrid, Madrid, Spain" .
+  
+  ror:03vek6s52 foaf:name "Harvard University, Cambridge, United States" .
+  
+  ror:052gg0110 foaf:name "University of Oxford, Oxford, United Kingdom" .
+  
+  ror:05xvt9f17 foaf:name "Leiden University Medical Center, Leiden, Netherlands" .
   
   sub:author-list rdf:_1 orcid:0000-0001-6960-357X;
     rdf:_10 orcid:0000-0003-1304-1939;
@@ -95,17 +120,17 @@ sub:pubinfo {
   
   orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
   
-  this: dct:created "2026-02-22T10:51:40.000+01:00"^^xsd:dateTime;
+  this: dct:created "2026-03-05T11:23:59.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1038/s41597-019-0184-5>;
-    npx:supersedes <https://w3id.org/np/RAn0hxYDPb1aXNzTW3YtFFpZ1AVvH34dW__A8PfLIbBv0>;
+    npx:supersedes <https://w3id.org/np/RAuSQWTXRTrgk_ONfl-7p6_MM4D7ENoaJny9fbJwjzwLY>;
     rdfs:label "Evaluating FAIR maturity through a scalable, automated, community-governed framework" .
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
-    npx:hasSignature "jZsNJaaIVbyY2n6ar5WPhsJpEUiYaEFSfUJ730Ep91psLq4lPd33F2x89idABQ8CBfSlxWpldPqh4DwzZuvoVppYNIM1f3iRqatpQHu9x4WuS9H3R/+vjOpIB3Gqqf2t/mJI3+DFj5cyJF7O2QB1AyZIjN9fz+RmUae4ItpfMz3ZT8xSpDfDShq5YCAxFs9DgrVMk+FtAk2LzXpeV7i1oulZ9H8ul2pAeNG63Ma4rvCkPg2W4QkDw29p1yoykvinnegyG1V9yWRqftjsR97ZwxwIiAUf9TZ/gJuwe2pKEOR29fNFf5ctXJj8m5IM/IZM9Z9Hmy+30iu1cQk6WwyjmA==";
+    npx:hasSignature "o1vqdeDT87WeoKNYpg3SpRTBDbjpyV6TBC13ecc9tLEMLUcTPtph9H+eo/Ry5G3CyFTvC4Gh9DAiwWv4rI/Mp+fSWIhjXdcnrutvZgeEsgcHKCe8Cw80fUgCDT1MkkUA6mQkqmHSu50JCTftiGAB3i36CK5vSLWslaBsXKUiz0dNHA6c9l6Kcdn904MemXzxkJ0+hXDtqGAJgOLkL8CX5jMsee7idhWImMx9CmpzaajqKva8G76JBry+Czu1CMJX4UWBW4XrZnl5QH/FG1p8PV2Qic3GU/78+3cpSwuWZLv/qW4iATs9iGtnmWQaC9fEJkmB5suebCoUaNp0lMT92w==";
     npx:hasSignatureTarget this:;
     npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
 }

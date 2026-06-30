@@ -86,60 +86,124 @@
   :author-list rdf:_52 orcid:0000-0001-6935-9028 .
   :author-list rdf:_53 orcid:0000-0003-3934-0072 .
   
-  orcid:0000-0001-6960-357X foaf:name "Mark D. Wilkinson" .
-  orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" .
-  orcid:0000-0002-0209-4480 foaf:name "IJsbrand Jan Aalbersberg" .
+  orcid:0000-0001-6960-357X foaf:name "Mark D. Wilkinson" ;
+    schema:affiliation ror:03n6nwv02 .
+  orcid:0000-0003-4727-9435 foaf:name "Michel Dumontier" ;
+    schema:affiliation ror:00f54p054 .
+  orcid:0000-0002-0209-4480 foaf:name "IJsbrand Jan Aalbersberg" ;
+    schema:affiliation ror:013fhv752 .
   orcid:0000-0003-0179-7384 foaf:name "Gabrielle Appleton" .
   orcid:0000-0002-8042-4131 foaf:name "Myles Axton" .
   orcid:0000-0003-2829-6715 foaf:name "Arie Baak" .
-  orcid:0000-0003-4155-5910 foaf:name "Niklas Blomberg" .
+  orcid:0000-0003-4155-5910 foaf:name "Niklas Blomberg" ;
+    schema:affiliation ror:044rwnt51 .
   orcid:0000-0003-0327-638X foaf:name "Jan-Willem Boiten" .
-  orcid:0000-0002-1164-1351 foaf:name "Luiz Bonino da Silva Santos" .
-  orcid:0000-0002-7618-7292 foaf:name "Philip E. Bourne" .
-  :jildau-bouwman foaf:name "Jildau Bouwman" .
-  orcid:0000-0001-8686-0017 foaf:name "Anthony J. Brookes" .
-  orcid:0000-0003-4060-7360 foaf:name "Tim Clark" .
-  orcid:0000-0003-1304-1939 foaf:name "Mercè Crosas" .
-  orcid:0000-0001-5654-2392 foaf:name "Ingrid Dillo" .
+  orcid:0000-0002-1164-1351 foaf:name "Luiz Bonino da Silva Santos" ;
+    schema:affiliation ror:008xxew50 .
+  orcid:0000-0002-7618-7292 foaf:name "Philip E. Bourne" ;
+    schema:affiliation ror:01cwqze88 .
+  :jildau-bouwman foaf:name "Jildau Bouwman" ;
+    schema:affiliation ror:01bnjb948 .
+  orcid:0000-0001-8686-0017 foaf:name "Anthony J. Brookes" ;
+    schema:affiliation ror:04h699437 .
+  orcid:0000-0003-4060-7360 foaf:name "Tim Clark" ;
+    schema:affiliation ror:03vek6s52 .
+  orcid:0000-0003-1304-1939 foaf:name "Mercè Crosas" ;
+    schema:affiliation ror:03vek6s52 .
+  orcid:0000-0001-5654-2392 foaf:name "Ingrid Dillo" ;
+    schema:affiliation ror:008pnp284 .
   orcid:0000-0001-8599-7345 foaf:name "Olivier Dumon" .
-  orcid:0000-0001-6444-1436 foaf:name "Scott Edmunds" .
-  orcid:0000-0002-5301-3142 foaf:name "Chris T. Evelo" .
-  orcid:0000-0002-4368-8058 foaf:name "Richard Finkers" .
-  orcid:0000-0003-3499-8262 foaf:name "Alejandra Gonzalez-Beltran" .
-  orcid:0000-0002-5711-4872 foaf:name "Alasdair J.G. Gray" .
+  orcid:0000-0001-6444-1436 foaf:name "Scott Edmunds" ;
+    schema:affiliation ror:0155ctq43 .
+  orcid:0000-0002-5301-3142 foaf:name "Chris T. Evelo" ;
+    schema:affiliation ror:02jz4aj89 .
+  orcid:0000-0002-4368-8058 foaf:name "Richard Finkers" ;
+    schema:affiliation ror:04qw24q55 .
+  orcid:0000-0003-3499-8262 foaf:name "Alejandra Gonzalez-Beltran" ;
+    schema:affiliation ror:052gg0110 .
+  orcid:0000-0002-5711-4872 foaf:name "Alasdair J.G. Gray" ;
+    schema:affiliation ror:04mghma93 .
   orcid:0000-0003-0183-6910 foaf:name "Paul Groth" .
-  orcid:0000-0003-1219-2137 foaf:name "Carole Goble" .
-  orcid:0000-0001-5212-7052 foaf:name "Jeffrey S. Grethe" .
+  orcid:0000-0003-1219-2137 foaf:name "Carole Goble" ;
+    schema:affiliation ror:027m9bs27 .
+  orcid:0000-0001-5212-7052 foaf:name "Jeffrey S. Grethe" ;
+    schema:affiliation ror:0168r3w48 .
   orcid:0000-0001-8641-4930 foaf:name "Jaap Heringa" .
-  orcid:0000-0003-4450-3112 foaf:name "Peter A.C 't Hoen" .
+  orcid:0000-0003-4450-3112 foaf:name "Peter A.C 't Hoen" ;
+    schema:affiliation ror:05xvt9f17 .
   orcid:0000-0001-6825-9439 foaf:name "Rob Hooft" .
-  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" ;
+    schema:affiliation ror:008xxew50 .
   :ruben-kok foaf:name "Ruben Kok" .
-  orcid:0000-0002-7352-1400 foaf:name "Joost Kok" .
-  orcid:0000-0003-2401-4223 foaf:name "Scott J. Lusher" .
-  orcid:0000-0002-8406-3871 foaf:name "Maryann E. Martone" .
+  orcid:0000-0002-7352-1400 foaf:name "Joost Kok" ;
+    schema:affiliation ror:027bh9e22 .
+  orcid:0000-0003-2401-4223 foaf:name "Scott J. Lusher" ;
+    schema:affiliation ror:00rbjv475 .
+  orcid:0000-0002-8406-3871 foaf:name "Maryann E. Martone" ;
+    schema:affiliation ror:0168r3w48 .
   :albert-mons foaf:name "Albert Mons" .
-  orcid:0000-0001-9610-5728 foaf:name "Abel L. Packer" .
-  orcid:0000-0003-3165-5344 foaf:name "Bengt Persson" .
-  orcid:0000-0001-9853-5668 foaf:name "Philippe Rocca-Serra" .
-  orcid:0000-0002-8691-772X foaf:name "Marco Roos" .
+  orcid:0000-0001-9610-5728 foaf:name "Abel L. Packer" ;
+    schema:affiliation ror:02k5swt12 .
+  orcid:0000-0003-3165-5344 foaf:name "Bengt Persson" ;
+    schema:affiliation ror:048a87296 .
+  orcid:0000-0001-9853-5668 foaf:name "Philippe Rocca-Serra" ;
+    schema:affiliation ror:052gg0110 .
+  orcid:0000-0002-8691-772X foaf:name "Marco Roos" ;
+    schema:affiliation ror:05xvt9f17 .
   :rene-van-schaik foaf:name "Rene van Schaik" .
-  orcid:0000-0001-5306-5690 foaf:name "Susanna-Assunta Sansone" .
-  orcid:0000-0001-8888-635X foaf:name "Erik Schultes" .
-  orcid:0000-0002-7516-6246 foaf:name "Thierry Sengstag" .
+  orcid:0000-0001-5306-5690 foaf:name "Susanna-Assunta Sansone" ;
+    schema:affiliation ror:052gg0110 .
+  orcid:0000-0001-8888-635X foaf:name "Erik Schultes" ;
+    schema:affiliation ror:05xvt9f17 .
+  orcid:0000-0002-7516-6246 foaf:name "Thierry Sengstag" ;
+    schema:affiliation ror:002n09z45 .
   orcid:0000-0003-1386-0731 foaf:name "Ted Slater" .
   :george-strawn foaf:name "George Strawn" .
-  orcid:0000-0002-0979-3401 foaf:name "Morris A. Swertz" .
-  orcid:0000-0002-7633-1442 foaf:name "Mark Thompson" .
-  :johan-van-der-lei foaf:name "Johan van der Lei" .
-  orcid:0000-0003-1377-9386 foaf:name "Erik van Mulligen" .
+  orcid:0000-0002-0979-3401 foaf:name "Morris A. Swertz" ;
+    schema:affiliation ror:012p63287 .
+  orcid:0000-0002-7633-1442 foaf:name "Mark Thompson" ;
+    schema:affiliation ror:05xvt9f17 .
+  :johan-van-der-lei foaf:name "Johan van der Lei" ;
+    schema:affiliation ror:018906e22 .
+  orcid:0000-0003-1377-9386 foaf:name "Erik van Mulligen" ;
+    schema:affiliation ror:018906e22 .
   orcid:0000-0002-4836-6568 foaf:name "Jan Velterop" .
   orcid:0000-0001-9773-4008 foaf:name "Andra Waagmeester" .
-  :peter-wittenburg foaf:name "Peter Wittenburg" .
-  orcid:0000-0002-1279-5133 foaf:name "Katherine Wolstencroft" .
-  orcid:0000-0001-6935-9028 foaf:name "Jun Zhao" .
-  orcid:0000-0003-3934-0072 foaf:name "Barend Mons" .
+  :peter-wittenburg foaf:name "Peter Wittenburg" ;
+    schema:affiliation ror:03e21z229 .
+  orcid:0000-0002-1279-5133 foaf:name "Katherine Wolstencroft" ;
+    schema:affiliation ror:027bh9e22 .
+  orcid:0000-0001-6935-9028 foaf:name "Jun Zhao" ;
+    schema:affiliation ror:052gg0110 .
+  orcid:0000-0003-3934-0072 foaf:name "Barend Mons" ;
+    schema:affiliation ror:05xvt9f17 .
 
+  ror:03n6nwv02 foaf:name "Universidad Politécnica de Madrid, Madrid, Spain" .
+  ror:00f54p054 foaf:name "Stanford University, Stanford, United States" .
+  ror:013fhv752 foaf:name "Elsevier, Amsterdam, Netherlands" .
+  ror:044rwnt51 foaf:name "ELIXIR, Hinxton, United Kingdom" .
+  ror:008xxew50 foaf:name "Vrije Universiteit Amsterdam, Amsterdam, Netherlands" .
+  ror:01cwqze88 foaf:name "National Institutes of Health, Bethesda, United States" .
+  ror:01bnjb948 foaf:name "TNO, The Hague, Netherlands" .
+  ror:04h699437 foaf:name "University of Leicester, Leicester, United Kingdom" .
+  ror:03vek6s52 foaf:name "Harvard University, Cambridge, United States" .
+  ror:008pnp284 foaf:name "Data Archiving and Networked Services (DANS), The Hague, Netherlands" .
+  ror:0155ctq43 foaf:name "BGI Genomics, Shenzhen, China" .
+  ror:02jz4aj89 foaf:name "Maastricht University, Maastricht, Netherlands" .
+  ror:04qw24q55 foaf:name "Wageningen University & Research, Wageningen, Netherlands" .
+  ror:052gg0110 foaf:name "University of Oxford, Oxford, United Kingdom" .
+  ror:04mghma93 foaf:name "Heriot-Watt University, Edinburgh, United Kingdom" .
+  ror:027m9bs27 foaf:name "University of Manchester, Manchester, United Kingdom" .
+  ror:0168r3w48 foaf:name "University of California San Diego, La Jolla, United States" .
+  ror:05xvt9f17 foaf:name "Leiden University Medical Center, Leiden, Netherlands" .
+  ror:027bh9e22 foaf:name "Leiden University, Leiden, Netherlands" .
+  ror:00rbjv475 foaf:name "Netherlands eScience Center, Amsterdam, Netherlands" .
+  ror:02k5swt12 foaf:name "Universidade Federal de São Paulo, São Paulo, Brazil" .
+  ror:048a87296 foaf:name "Uppsala University, Uppsala, Sweden" .
+  ror:002n09z45 foaf:name "SIB Swiss Institute of Bioinformatics, Switzerland" .
+  ror:012p63287 foaf:name "University of Groningen, Groningen, Netherlands" .
+  ror:018906e22 foaf:name "Erasmus MC, Rotterdam, Netherlands" .
+  ror:03e21z229 foaf:name "Max Planck Computing and Data Facility, Garching, Germany" .
 }
 
 :provenance {
@@ -148,12 +212,12 @@
 }
 
 :pubinfo {
-  : dct:created "2026-02-22T10:51:40.000+01:00"^^xsd:dateTime;
+  : dct:created "2026-03-05T11:45:18.000+01:00"^^xsd:dateTime;
     dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
     dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
     npx:hasNanopubType fabio:ScholarlyWork;
     npx:introduces <https://doi.org/10.1038/sdata.2016.18>;
-    npx:supersedes <https://w3id.org/np/RAf3JPCTEgbQhfcdJlI0w9jB2Un-MgX6QMnxIpg179Kus> ;
+    npx:supersedes <https://w3id.org/np/RAnLfi9hhU1XyoKq_7KqIUpzi1DdDv0t0ri3iZyA4vdYE> ;
     rdfs:label "The FAIR Guiding Principles for scientific data management and stewardship" .
 
   orcid:0000-0001-6960-357X foaf:name "Mark D. Wilkinson" .
