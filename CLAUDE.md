@@ -113,7 +113,7 @@ scripts/sign-publish.sh <bot> <name>  # sign + publish in one step
 scripts/check.sh <bot> <name>         # validate output/<name>.trig
 ```
 
-After signing, confirm `npx:signedBy` in the signed file is the correct ORCID — not the all-zeros `orcid:0000-0000-0000-0000` placeholder. That value is written when the Python `nanopub` library overwrites `~/.nanopub/profile.yml`; if you see it, restore the profile and re-sign before publishing.
+`scripts/sign.sh` passes `-s <bot IRI>`, so the bot is the **one and only** `npx:signedBy` value — that is why each bot has its own key. A nanopub must **never** have more than one `npx:signedBy`, and a bot nanopub must never be signed by an ORCID. Without `-s`, `./np sign` adds the ORCID from `~/.nanopub/profile.yml` as a second signer; the script aborts if the signed file does not have exactly one signer. Never call `./np sign -k <bot key>` directly without `-s`.
 
 ### Timestamps
 
@@ -264,10 +264,10 @@ doibot nanopubs carry `nt:wasCreatedFrom*Template` links in pubinfo so they rend
   nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RACJ58Gvyn91LqCKIO9zu1eijDQIeEff28iyDrJgjSJF8>,
     <https://w3id.org/np/RAoTD7udB2KtUuOuAe74tJi1t3VzK0DyWS7rYVAq1GRvw>,
     <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
-  nt:wasCreatedFromTemplate <https://w3id.org/np/RA6NErVvGFJ1AflK02qqnB4jiQeF2EHl7mlbA7kp0d-lk> .
+  nt:wasCreatedFromTemplate <https://w3id.org/np/RA1rI_yT9nle4IIF3OoErhbuQiFWQWF6eVTO_DQdD4c44> .
 ```
 
-- **Assertion template** `RA6NErVv…` — "Describing core article metadata", a doibot-specific **derived** version of the community template `RAYRjIrbLSDIX5Mp1cb6MK4vRV0Vd5o0TZ8NTIEHwCPOI`. The original (published at petapico.org with a key we don't hold) (a) restricted the type list and (b) required every author to be an ORCID. The derived version adds `fabio:Article` + `fabio:ConferencePaper` to the type list and relaxes the author placeholder regex to `https?://.+` so authors **without an ORCID** are accepted as local URIs. Because the original was signed with a different key, the derived template links back via `prov:wasDerivedFrom` (in its provenance graph), **not** `npx:supersedes`. Signed with the local default key (Tobias Kuhn's ORCID). To revise it, derive again (download the latest into `../nanopub-skill` first); do not try to supersede the petapico original.
+- **Assertion template** `RA1rI_yT…` (supersedes `RA6NErVv…`, which used `http://schema.org/`) — "Describing core article metadata", a doibot-specific **derived** version of the community template `RAYRjIrbLSDIX5Mp1cb6MK4vRV0Vd5o0TZ8NTIEHwCPOI`. The original (published at petapico.org with a key we don't hold) (a) restricted the type list and (b) required every author to be an ORCID. The derived version adds `fabio:Article` + `fabio:ConferencePaper` to the type list and relaxes the author placeholder regex to `https?://.+` so authors **without an ORCID** are accepted as local URIs. Because the original was signed with a different key, the derived template links back via `prov:wasDerivedFrom` (in its provenance graph), **not** `npx:supersedes`. Signed with the local default key (Tobias Kuhn's ORCID). To revise it, derive again (download the latest into `../nanopub-skill` first); do not try to supersede the petapico original.
 - **Provenance template** `RAGXx_k9…` — "Attributed to myself/others and (partly) derived from an existing entity": `prov:wasAttributedTo` (repeatable) + `prov:wasDerivedFrom`. This matches the doibot provenance (authors + DOI). **Do not** use `RANwQa4…` ("Attributed to myself") — it only covers `wasAttributedTo nt:CREATOR` and has no `wasDerivedFrom`, so it fails to match.
 - **Pubinfo templates** — License (`RACJ58Gv…`, CC0 is an allowed value), Supersedes (`RAoTD7ud…`, listed but unused), Creator (`RAukAcWHR…`, the DOI-bot IRI).
 
@@ -278,6 +278,10 @@ doibot nanopubs carry `nt:wasCreatedFrom*Template` links in pubinfo so they rend
 - **doibot**: `prov:wasAttributedTo` (paper authors) + `prov:wasDerivedFrom` (paper DOI)
 - **biodivbot**: `prov:wasAttributedTo` (researchers who made the observation)
 - **ai-in-edu-bot**: `prov:wasDerivedFrom` (paper DOI)
+
+### schema.org namespace
+
+Always use `https://schema.org/` (`@prefix schema: <https://schema.org/> .`), never the `http://` counterpart — the nanopub verifier rejects `http://schema.org/` URIs ("Unallowed uri").
 
 ### Temp URI prefix
 

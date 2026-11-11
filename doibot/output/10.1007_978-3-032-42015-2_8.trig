@@ -1,0 +1,89 @@
+@prefix : <http://purl.org/nanopub/temp/np1/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix ror: <https://ror.org/> .
+@prefix schema: <https://schema.org/> .
+
+:Head {
+  : a np:Nanopublication;
+    np:hasAssertion :assertion;
+    np:hasProvenance :provenance;
+    np:hasPublicationInfo :pubinfo .
+}
+
+:assertion {
+  <https://doi.org/10.1007/978-3-032-42015-2_8> a fabio:BookChapter;
+    dct:date "2026-10-24";
+    dct:title "A Robust Decentralized Infrastructure for Trust-Aware Open Knowledge Sharing";
+    bibo:authorList :author-list;
+    bibo:pageStart "152";
+    bibo:pageEnd "170";
+    dct:isPartOf <http://id.crossref.org/issn/0302-9743> .
+
+  <http://id.crossref.org/issn/0302-9743> dct:title "Lecture Notes in Computer Science" .
+
+  :author-list rdf:_1 orcid:0000-0002-1267-0234 .
+  :author-list rdf:_2 orcid:0009-0009-0118-9195 .
+  :author-list rdf:_3 orcid:0000-0001-8492-0354 .
+  :author-list rdf:_4 orcid:0009-0008-3635-347X .
+  :author-list rdf:_5 orcid:0000-0002-2543-9461 .
+  :author-list rdf:_6 orcid:0000-0002-3080-0303 .
+
+  orcid:0000-0002-1267-0234 schema:affiliation :knowledge-pixels, ror:008xxew50;
+    foaf:name "Tobias Kuhn" .
+  orcid:0009-0009-0118-9195 schema:affiliation :knowledge-pixels;
+    foaf:name "Virginia Balseiro" .
+  orcid:0000-0001-8492-0354 schema:affiliation :knowledge-pixels, ror:01swzsf04;
+    foaf:name "Ashley Caselli" .
+  orcid:0009-0008-3635-347X schema:affiliation :knowledge-pixels;
+    foaf:name "Ziroli Plutschow" .
+  orcid:0000-0002-2543-9461 schema:affiliation :neverblink;
+    foaf:name "Piotr Sowiński" .
+  orcid:0000-0002-3080-0303 schema:affiliation :neverblink;
+    foaf:name "Anastasiya Danilenka" .
+
+  :knowledge-pixels foaf:name "Knowledge Pixels, Switzerland" .
+  ror:008xxew50 foaf:name "Vrije Universiteit Amsterdam, Netherlands" .
+  :neverblink foaf:name "NeverBlink, Poland" .
+  ror:01swzsf04 foaf:name "University of Geneva, Switzerland" .
+}
+
+:provenance {
+  :assertion prov:wasAttributedTo orcid:0000-0002-1267-0234, orcid:0009-0009-0118-9195, orcid:0000-0001-8492-0354, orcid:0009-0008-3635-347X, orcid:0000-0002-2543-9461, orcid:0000-0002-3080-0303 .
+  :assertion prov:wasDerivedFrom <https://doi.org/10.1007/978-3-032-42015-2_8> .
+}
+
+:pubinfo {
+  : dct:created "2026-11-11T19:02:10.000+01:00"^^xsd:dateTime;
+    npx:supersedes <https://w3id.org/np/RAASrFRTeCxbvJzOaXi2ac-SN3wCH7kaRpUmDDSP-lZ50>;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.1007/978-3-032-42015-2_8>;
+    rdfs:label "A Robust Decentralized Infrastructure for Trust-Aware Open Knowledge Sharing";
+    nt:wasCreatedFromProvenanceTemplate ns1:RAGXx_k9eQMnXaCbsXMsJbGClwZtQEGNg0GVJu6amdAVw;
+    nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RACJ58Gvyn91LqCKIO9zu1eijDQIeEff28iyDrJgjSJF8>,
+      <https://w3id.org/np/RAoTD7udB2KtUuOuAe74tJi1t3VzK0DyWS7rYVAq1GRvw>,
+      <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
+    nt:wasCreatedFromTemplate <https://w3id.org/np/RA1rI_yT9nle4IIF3OoErhbuQiFWQWF6eVTO_DQdD4c44> .
+
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  orcid:0009-0009-0118-9195 foaf:name "Virginia Balseiro" .
+  orcid:0000-0001-8492-0354 foaf:name "Ashley Caselli" .
+  orcid:0009-0008-3635-347X foaf:name "Ziroli Plutschow" .
+  orcid:0000-0002-2543-9461 foaf:name "Piotr Sowiński" .
+  orcid:0000-0002-3080-0303 foaf:name "Anastasiya Danilenka" .
+
+  :sig npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}

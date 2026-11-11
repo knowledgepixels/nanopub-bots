@@ -170,7 +170,7 @@ L += [
     '@prefix bibo: <http://purl.org/ontology/bibo/> .',
     '@prefix fabio: <http://purl.org/spar/fabio/> .',
     '@prefix ror: <https://ror.org/> .',
-    '@prefix schema: <http://schema.org/> .',
+    '@prefix schema: <https://schema.org/> .',
     '',
     ':Head {',
     '  : a np:Nanopublication;',
@@ -247,7 +247,7 @@ L += [
     f'    nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RACJ58Gvyn91LqCKIO9zu1eijDQIeEff28iyDrJgjSJF8>,',
     f'      <https://w3id.org/np/RAoTD7udB2KtUuOuAe74tJi1t3VzK0DyWS7rYVAq1GRvw>,',
     f'      <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;',
-    f'    nt:wasCreatedFromTemplate <https://w3id.org/np/RA6NErVvGFJ1AflK02qqnB4jiQeF2EHl7mlbA7kp0d-lk> .',
+    f'    nt:wasCreatedFromTemplate <https://w3id.org/np/RA1rI_yT9nle4IIF3OoErhbuQiFWQWF6eVTO_DQdD4c44> .',
     '',
 ]
 for a in orcid_authors:

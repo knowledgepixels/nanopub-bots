@@ -1,0 +1,107 @@
+@prefix this: <https://w3id.org/np/RAAZ6MNigLuGAbTcxp-l4YY7T6IH83bFxupjgAXXJyjXE> .
+@prefix sub: <https://w3id.org/np/RAAZ6MNigLuGAbTcxp-l4YY7T6IH83bFxupjgAXXJyjXE/> .
+@prefix schema: <https://schema.org/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ror: <https://ror.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  <http://id.crossref.org/issn/0302-9743> dct:title "Lecture Notes in Computer Science" .
+  
+  <https://doi.org/10.1007/978-3-032-42015-2_8> a fabio:BookChapter;
+    dct:date "2026-10-24";
+    dct:isPartOf <http://id.crossref.org/issn/0302-9743>;
+    dct:title "A Robust Decentralized Infrastructure for Trust-Aware Open Knowledge Sharing";
+    bibo:authorList sub:author-list;
+    bibo:pageEnd "170";
+    bibo:pageStart "152" .
+  
+  orcid:0000-0001-8492-0354 foaf:name "Ashley Caselli";
+    schema:affiliation ror:01swzsf04, sub:knowledge-pixels .
+  
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn";
+    schema:affiliation ror:008xxew50, sub:knowledge-pixels .
+  
+  orcid:0000-0002-2543-9461 foaf:name "Piotr Sowiński";
+    schema:affiliation sub:neverblink .
+  
+  orcid:0000-0002-3080-0303 foaf:name "Anastasiya Danilenka";
+    schema:affiliation sub:neverblink .
+  
+  orcid:0009-0008-3635-347X foaf:name "Ziroli Plutschow";
+    schema:affiliation sub:knowledge-pixels .
+  
+  orcid:0009-0009-0118-9195 foaf:name "Virginia Balseiro";
+    schema:affiliation sub:knowledge-pixels .
+  
+  ror:008xxew50 foaf:name "Vrije Universiteit Amsterdam, Netherlands" .
+  
+  ror:01swzsf04 foaf:name "University of Geneva, Switzerland" .
+  
+  sub:author-list rdf:_1 orcid:0000-0002-1267-0234;
+    rdf:_2 orcid:0009-0009-0118-9195;
+    rdf:_3 orcid:0000-0001-8492-0354;
+    rdf:_4 orcid:0009-0008-3635-347X;
+    rdf:_5 orcid:0000-0002-2543-9461;
+    rdf:_6 orcid:0000-0002-3080-0303 .
+  
+  sub:knowledge-pixels foaf:name "Knowledge Pixels, Switzerland" .
+  
+  sub:neverblink foaf:name "NeverBlink, Poland" .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0001-8492-0354, orcid:0000-0002-1267-0234,
+      orcid:0000-0002-2543-9461, orcid:0000-0002-3080-0303, orcid:0009-0008-3635-347X, orcid:0009-0009-0118-9195;
+    prov:wasDerivedFrom <https://doi.org/10.1007/978-3-032-42015-2_8> .
+}
+
+sub:pubinfo {
+  orcid:0000-0001-8492-0354 foaf:name "Ashley Caselli" .
+  
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0002-2543-9461 foaf:name "Piotr Sowiński" .
+  
+  orcid:0000-0002-3080-0303 foaf:name "Anastasiya Danilenka" .
+  
+  orcid:0009-0008-3635-347X foaf:name "Ziroli Plutschow" .
+  
+  orcid:0009-0009-0118-9195 foaf:name "Virginia Balseiro" .
+  
+  this: dct:created "2026-11-11T19:02:10.000+01:00"^^xsd:dateTime;
+    dct:creator <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType fabio:ScholarlyWork;
+    npx:introduces <https://doi.org/10.1007/978-3-032-42015-2_8>;
+    npx:supersedes <https://w3id.org/np/RAASrFRTeCxbvJzOaXi2ac-SN3wCH7kaRpUmDDSP-lZ50>;
+    rdfs:label "A Robust Decentralized Infrastructure for Trust-Aware Open Knowledge Sharing";
+    nt:wasCreatedFromProvenanceTemplate ns1:RAGXx_k9eQMnXaCbsXMsJbGClwZtQEGNg0GVJu6amdAVw;
+    nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RACJ58Gvyn91LqCKIO9zu1eijDQIeEff28iyDrJgjSJF8>,
+      <https://w3id.org/np/RAoTD7udB2KtUuOuAe74tJi1t3VzK0DyWS7rYVAq1GRvw>, <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
+    nt:wasCreatedFromTemplate <https://w3id.org/np/RA1rI_yT9nle4IIF3OoErhbuQiFWQWF6eVTO_DQdD4c44> .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArRL5MjH1KfuE89dpKsIiscF/THrJ4uSvhl0NgaC8x3TdTDrL00kCnlH+2g7PMYhaUQIGWq27TTXHAGp7ehO8yLjRNeDCc8zjUCQJqLbzay3DB51PCiz50OsMgxiZC1+e0bVdk/CAQV4oVo+VgI+awHI1bTT4Yp7pR2I67imf1PIcwczGVhn8EQwtNdWQOZ63wDgUCY+6IubHBQzjLfbYh0828UETEyIV28T7fvf5+y4A5M590InmgkLGpJbRXoL0pnCm1BtFOoxeAVqfivbxIZWPYN2Yd0cSfqwIIUYyaLFpjDrBwc4iJdOus4UQ9OYqkeZDMpU3opU8jWKDIm77jwIDAQAB";
+    npx:hasSignature "ULYjozK3UAgUyEbPb/yOfhXRIpvTa4LCAxeEHYNhSM4zeMy2/MibtWPVtR0rFcevI5wbcIZEe91uZfvdj49Gs+tz6DrzuCcZSmn+RLhMemelpn3VxGr8Yd1vSIrQ1Bwh6R5hLSYcHq2vv5xD/5qByTZ1A9BM3Om7AQUpPTmqO5/jwoCZNFBWd0xZN3LLD4nGLQIyY/NHV9o1kA9nCdox8eOrppJnYH1XA7wjQ8vsnaJvHBL+Sq/WDeSPqX1nWsyNbbrKYn28hARgHRuyZk60LIMfvCpxsYSL6q4q4xkyGXneVboFEE5fOGDWgr4QlsvxAmBsZKt7MFGgowrBn8VLKw==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy <https://w3id.org/np/RAkkUz7qBJ-BIOCHV_4WCTgHCdTyI25_bnRuw166SXjwM/DOI-bot> .
+}
